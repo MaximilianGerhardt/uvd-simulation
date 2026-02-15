@@ -3,9 +3,16 @@ import { RTMSimulator } from "@/components/rtm-simulator";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "RTM Live Simulator — Universe Dollar Simulation",
+  title: "RTM Simulator — Relative Theorie des Geldes",
   description:
-    "Visualize the Relative Theory of Money in real time. Adjust member count, growth rate, and time horizon to explore symmetric money creation dynamics.",
+    "Interaktive Visualisierung der Relativen Theorie des Geldes. Universaldividende, symmetrische Geldschöpfung, zeitliche Symmetrie — live simulieren und verstehen.",
+  keywords: ["RTM", "Relative Theorie des Geldes", "Universaldividende", "Universal Dividend", "Symmetrische Geldschöpfung", "Stéphane Laborde", "UVD Simulation"],
+  alternates: { canonical: "https://uvd.trading/simulation/rtm" },
+  openGraph: {
+    title: "RTM Simulator — Symmetrische Geldschöpfung live erleben",
+    description: "Relative Theorie des Geldes interaktiv: Parameter anpassen, mathematische Invarianten in Echtzeit beobachten.",
+    url: "https://uvd.trading/simulation/rtm",
+  },
 };
 
 export default function RTMPage() {

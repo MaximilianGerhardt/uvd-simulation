@@ -4,9 +4,16 @@ import { ExternalLink } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Methodology: RTM Simulator — UVD Simulation",
+  title: "Methodik: RTM Simulator — Universaldividende Herleitung",
   description:
-    "Complete derivation of the Universal Dividend formula from the Relative Theory of Money. Data sources, mathematical proof, and implementation details.",
+    "Vollständige Herleitung der Universaldividende-Formel aus der Relativen Theorie des Geldes. Mathematischer Beweis, Symmetrie-Eigenschaften, Implementierung.",
+  keywords: ["RTM Methodik", "Universaldividende Formel", "Relative Theorie des Geldes", "Stéphane Laborde", "Symmetrische Geldschöpfung Beweis", "Duniter"],
+  alternates: { canonical: "https://uvd.trading/methodology/rtm" },
+  openGraph: {
+    title: "Methodik: RTM — Universaldividende mathematisch hergeleitet",
+    description: "Formel-Herleitung, Symmetrie-Beweis und Implementierung der Relativen Theorie des Geldes.",
+    url: "https://uvd.trading/methodology/rtm",
+  },
 };
 
 export default function RTMMethodology() {

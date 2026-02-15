@@ -123,6 +123,34 @@ export function Footer() {
                 <ExternalLink className="h-3 w-3" />
               </a>
             </div>
+
+            <h4 className="mb-4 mt-8 text-xs font-semibold uppercase tracking-[0.05em] text-white/30">
+              Rechtliches
+            </h4>
+            <div className="space-y-3">
+              <a
+                href="/impressum"
+                className="block text-sm text-white/50 hover:text-white transition-colors"
+              >
+                Impressum
+              </a>
+              <a
+                href="/datenschutz"
+                className="block text-sm text-white/50 hover:text-white transition-colors"
+              >
+                Datenschutzerklärung
+              </a>
+              <button
+                onClick={() => {
+                  if (typeof window !== "undefined" && (window as unknown as Record<string, unknown>).Cookiebot) {
+                    (window as unknown as Record<string, { show?: () => void }>).Cookiebot.show?.();
+                  }
+                }}
+                className="block text-sm text-white/50 hover:text-white transition-colors text-left"
+              >
+                Cookie-Einstellungen
+              </button>
+            </div>
           </div>
         </div>
 
@@ -152,10 +180,13 @@ export function Footer() {
 
         <div className="mt-8 flex flex-col items-center justify-between gap-4 border-t border-white/[0.06] pt-8 md:flex-row">
           <p className="text-xs text-white/20">
-            Independent companion site &middot; Not affiliated with or endorsed by any financial institution
+            Independent companion site &middot; Not financial advice &middot;{" "}
+            <a href="/impressum" className="hover:text-white/40 transition-colors">Impressum</a>
+            {" "}&middot;{" "}
+            <a href="/datenschutz" className="hover:text-white/40 transition-colors">Datenschutz</a>
           </p>
           <p className="text-xs text-white/20">
-            &copy; {new Date().getFullYear()} UVD Simulation
+            &copy; {new Date().getFullYear()} Prime Associates LLC
           </p>
         </div>
       </div>
