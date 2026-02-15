@@ -22,17 +22,9 @@ export default function PrivacyPolicy() {
             <div className="text-base leading-[1.8] text-[#1b1b1b]/60">
               <p className="font-medium text-[#1b1b1b]">Prime Associates LLC</p>
               <p>23160 Fashion Dr Ste 220, Estero, FL 33928, United States</p>
-              <p>EIN: 41-3650497</p>
               <p className="mt-2">
-                <span className="text-[#1b1b1b]">Email:</span>{" "}
+                <span className="text-[#1b1b1b]">Contact:</span>{" "}
                 <a href="mailto:info@p-a.llc" className="text-[#297FF3] hover:underline">info@p-a.llc</a>
-              </p>
-              <p>
-                <span className="text-[#1b1b1b]">Privacy Contact:</span>{" "}
-                Maximilian Gerhardt —{" "}
-                <a href="mailto:maximiliangerhardtofficial@gmail.com" className="text-[#297FF3] hover:underline">
-                  maximiliangerhardtofficial@gmail.com
-                </a>
               </p>
             </div>
           </section>
@@ -169,8 +161,8 @@ export default function PrivacyPolicy() {
             </p>
             <p className="mt-4 text-base leading-[1.8] text-[#1b1b1b]/60">
               To exercise any of your rights, contact us at:{" "}
-              <a href="mailto:maximiliangerhardtofficial@gmail.com" className="text-[#297FF3] hover:underline">
-                maximiliangerhardtofficial@gmail.com
+              <a href="mailto:info@p-a.llc" className="text-[#297FF3] hover:underline">
+                info@p-a.llc
               </a>
             </p>
           </section>

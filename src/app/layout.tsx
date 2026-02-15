@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     "Cryptocurrency",
     "Basket Currency",
   ],
-  authors: [{ name: "Maximilian Gerhardt", url: BASE_URL }],
+  authors: [{ name: "Prime Associates LLC", url: BASE_URL }],
   creator: "Prime Associates LLC",
   publisher: "Prime Associates LLC",
   robots: {

@@ -6,10 +6,6 @@ export function StructuredData() {
     url: "https://uvd.trading",
     description:
       "Independent educational companion exploring the economic model behind Universe Dollar through interactive simulations.",
-    founder: {
-      "@type": "Person",
-      name: "Maximilian Gerhardt",
-    },
     parentOrganization: {
       "@type": "Organization",
       name: "Prime Associates LLC",
