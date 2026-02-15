@@ -130,6 +130,77 @@ export function StoryProof() {
   );
 }
 
+export function StoryInstitutional() {
+  return (
+    <section className="relative px-6 py-32 bg-white">
+      <div className="mx-auto max-w-4xl">
+        <ScrollReveal>
+          <p className="mb-6 text-[clamp(0.875rem,1.2vw,1rem)] font-medium uppercase tracking-[0.05em] text-[#297FF3]">
+            Beyond Individuals
+          </p>
+        </ScrollReveal>
+        <ScrollReveal delay={0.1}>
+          <h2 className="mb-8 text-[clamp(2.5rem,6vw,4.5rem)] font-light leading-[1.05] tracking-[-0.04em] text-[#1b1b1b]">
+            A monetary anchor<br />
+            for <span className="gradient-text">institutions.</span>
+          </h2>
+        </ScrollReveal>
+        <ScrollReveal delay={0.2}>
+          <p className="mb-8 max-w-2xl text-[clamp(1.125rem,2vw,1.25rem)] leading-[1.6] text-[#1b1b1b]/45">
+            The Sovereign Basket is not just a personal hedge — it is a framework
+            for states, pension funds, central banks, and multilateral institutions.
+            Instead of pegging to a single reserve currency (typically USD), a nation
+            can anchor its monetary policy to a diversified, transparent index of
+            real-world value.
+          </p>
+        </ScrollReveal>
+        <ScrollReveal delay={0.25}>
+          <div className="mb-12 grid gap-4 sm:grid-cols-3">
+            <div className="rounded-2xl border border-[#D0D0D0]/50 bg-[#f8f8f8] p-5">
+              <p className="mb-2 text-sm font-semibold text-[#1b1b1b]">
+                Sovereign Funds
+              </p>
+              <p className="text-xs leading-relaxed text-[#1b1b1b]/40">
+                A government can allocate reserves across gold, energy, agriculture,
+                and stable fiat currencies — reducing dependence on any single
+                geopolitical actor.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-[#D0D0D0]/50 bg-[#f8f8f8] p-5">
+              <p className="mb-2 text-sm font-semibold text-[#1b1b1b]">
+                Pension Systems
+              </p>
+              <p className="text-xs leading-relaxed text-[#1b1b1b]/40">
+                Retirement funds denominated in a basket-indexed unit maintain
+                purchasing power across decades — unlike fiat-denominated pensions
+                that silently erode.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-[#D0D0D0]/50 bg-[#f8f8f8] p-5">
+              <p className="mb-2 text-sm font-semibold text-[#1b1b1b]">
+                Trade Settlement
+              </p>
+              <p className="text-xs leading-relaxed text-[#1b1b1b]/40">
+                International trade priced in a neutral, basket-indexed unit eliminates
+                exchange-rate risk and the structural advantage of reserve-currency
+                issuers.
+              </p>
+            </div>
+          </div>
+        </ScrollReveal>
+        <ScrollReveal delay={0.3}>
+          <p className="max-w-2xl text-[clamp(1.125rem,2vw,1.25rem)] leading-[1.6] text-[#1b1b1b]/45">
+            Below, you can construct your own basket. Drag in currencies, commodities,
+            and real assets. Adjust the weights. Watch how the composition changes
+            the stability metrics in real time — the same way a treasury or central
+            bank would model its reserves.
+          </p>
+        </ScrollReveal>
+      </div>
+    </section>
+  );
+}
+
 export function StoryLearn() {
   return (
     <section className="relative px-6 py-32 bg-white">

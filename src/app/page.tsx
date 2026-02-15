@@ -4,12 +4,14 @@ import {
   StoryProblem,
   StorySolution,
   StoryProof,
+  StoryInstitutional,
   StoryLearn,
   StoryClosing,
 } from "@/components/story-sections";
 import { TimeTheftCalculator } from "@/components/time-theft-calculator";
 import { RTMSimulator } from "@/components/rtm-simulator";
 import { BasketVisualizer } from "@/components/basket-visualizer";
+import { BasketBuilder } from "@/components/basket-builder";
 import { Glossary } from "@/components/glossary";
 import { Footer } from "@/components/footer";
 
@@ -25,6 +27,8 @@ export default function Home() {
         <RTMSimulator />
         <StoryProof />
         <BasketVisualizer />
+        <StoryInstitutional />
+        <BasketBuilder />
         <StoryLearn />
         <Glossary />
         <StoryClosing />
