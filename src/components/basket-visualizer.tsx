@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { ShoppingBasket, ArrowUpRight, ArrowDownRight, Code2 } from "lucide-react";
 import {
   AreaChart,

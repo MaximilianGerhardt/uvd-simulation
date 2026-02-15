@@ -1,37 +1,35 @@
 "use client";
 
-import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { ArrowRight, Activity, ShoppingBasket, BookOpen } from "lucide-react";
 import { ScrollReveal } from "@/components/scroll-reveal";
+import { Link } from "@/i18n/navigation";
 
 export function StoryProblem() {
+  const t = useTranslations("storyProblem");
+
   return (
     <section id="story" className="relative px-6 py-32 bg-white">
       <div className="mx-auto max-w-4xl">
         <ScrollReveal>
           <p className="mb-6 text-[clamp(0.875rem,1.2vw,1rem)] font-medium uppercase tracking-[0.05em] text-[#FF6B00]">
-            The Problem
+            {t("label")}
           </p>
         </ScrollReveal>
         <ScrollReveal delay={0.1}>
           <h2 className="mb-8 text-[clamp(2.5rem,6vw,4.5rem)] font-light leading-[1.05] tracking-[-0.04em] text-[#1b1b1b]">
-            Every day, your savings<br />
-            lose purchasing power.
+            {t("title1")}<br />
+            {t("title2")}
           </h2>
         </ScrollReveal>
         <ScrollReveal delay={0.2}>
           <p className="mb-10 max-w-2xl text-[clamp(1.125rem,2vw,1.25rem)] leading-[1.6] text-[#1b1b1b]/45">
-            When central banks expand the money supply, the first recipients — financial
-            institutions, governments, large corporations — spend at yesterday&apos;s prices.
-            By the time new money reaches ordinary people, prices have already adjusted
-            upward. Economists call this the Cantillon Effect. We call it a structural
-            transfer of wealth from the many to the few.
+            {t("p1")}
           </p>
         </ScrollReveal>
         <ScrollReveal delay={0.3}>
           <p className="max-w-2xl text-[clamp(1.125rem,2vw,1.25rem)] leading-[1.6] text-[#1b1b1b]/45">
-            The question is not whether this happens — it is measurable, documented, and
-            ongoing. The question is: <span className="text-[#1b1b1b]">how much has it cost you, personally?</span>
+            {t("p2start")}<span className="text-[#1b1b1b]">{t("p2highlight")}</span>
           </p>
         </ScrollReveal>
       </div>
@@ -40,35 +38,30 @@ export function StoryProblem() {
 }
 
 export function StorySolution() {
+  const t = useTranslations("storySolution");
+
   return (
     <section className="relative px-6 py-32 bg-white">
       <div className="mx-auto max-w-4xl">
         <ScrollReveal>
           <p className="mb-6 text-[clamp(0.875rem,1.2vw,1rem)] font-medium uppercase tracking-[0.05em] text-[#297FF3]">
-            The Model
+            {t("label")}
           </p>
         </ScrollReveal>
         <ScrollReveal delay={0.1}>
           <h2 className="mb-8 text-[clamp(2.5rem,6vw,4.5rem)] font-light leading-[1.05] tracking-[-0.04em] text-[#1b1b1b]">
-            Symmetric money<br />
-            creation, <span className="gradient-text">proven.</span>
+            {t("title1")}<br />
+            {t("title2")}<span className="gradient-text">{t("titleHighlight")}</span>
           </h2>
         </ScrollReveal>
         <ScrollReveal delay={0.2}>
           <p className="mb-8 max-w-2xl text-[clamp(1.125rem,2vw,1.25rem)] leading-[1.6] text-[#1b1b1b]/45">
-            The Relative Theory of Money, formalized by Stéphane Laborde in 2010,
-            demonstrates that there is exactly one class of monetary systems where
-            no individual is structurally advantaged over another: systems where
-            newly created units are distributed equally to all participants via a
-            Universal Dividend.
+            {t("p1")}
           </p>
         </ScrollReveal>
         <ScrollReveal delay={0.25}>
           <p className="mb-12 max-w-2xl text-[clamp(1.125rem,2vw,1.25rem)] leading-[1.6] text-[#1b1b1b]/45">
-            Universe Dollar implements this framework on a blockchain layer. The
-            simulation below lets you adjust the parameters — member count,
-            growth rate, time horizon — and observe the mathematical invariants
-            in real time.
+            {t("p2")}
           </p>
         </ScrollReveal>
         <ScrollReveal delay={0.3}>
@@ -78,8 +71,8 @@ export function StorySolution() {
               className="group inline-flex items-center gap-3 rounded-full bg-[#1b1b1b] px-8 py-4 text-[clamp(0.9375rem,1.5vw,1.0625rem)] font-medium text-white transition-all hover:bg-[#333]"
             >
               <Activity className="h-4 w-4" />
-              RTM Live Simulator
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              {t("cta")}
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1 rtl:rotate-180" />
             </Link>
           </div>
         </ScrollReveal>
@@ -89,6 +82,8 @@ export function StorySolution() {
 }
 
 export function StoryProof() {
+  const t = useTranslations("storyProof");
+
   return (
     <section className="relative px-6 py-32 bg-[#f8f8f8]">
       <div className="mx-auto max-w-4xl">
@@ -96,23 +91,19 @@ export function StoryProof() {
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#4ade80]/20 bg-[#4ade80]/5 px-4 py-1.5">
             <ShoppingBasket className="h-3.5 w-3.5 text-[#4ade80]" />
             <span className="text-xs font-medium text-[#16a34a]">
-              Real-World Comparison
+              {t("badge")}
             </span>
           </div>
         </ScrollReveal>
         <ScrollReveal delay={0.1}>
           <h2 className="mb-8 text-[clamp(2.5rem,6vw,4.5rem)] font-light leading-[1.05] tracking-[-0.04em] text-[#1b1b1b]">
-            Same groceries,<br />
-            two <span className="text-[#FF6B00]">price tags.</span>
+            {t("title1")}<br />
+            {t("title2")}<span className="text-[#FF6B00]">{t("titleHighlight")}</span>
           </h2>
         </ScrollReveal>
         <ScrollReveal delay={0.2}>
           <p className="mb-12 max-w-2xl text-[clamp(1.125rem,2vw,1.25rem)] leading-[1.6] text-[#1b1b1b]/45">
-            Pick a country. See a standardized basket of essential goods — housing,
-            energy, food, transport — priced in both the local fiat currency and
-            UVD over time. The divergence is not hypothetical. It is arithmetic
-            applied to publicly available inflation data from the World Bank,
-            ECB, and FRED.
+            {t("p1")}
           </p>
         </ScrollReveal>
         <ScrollReveal delay={0.3}>
@@ -121,8 +112,8 @@ export function StoryProof() {
             className="group inline-flex items-center gap-3 rounded-full bg-[#1b1b1b] px-8 py-4 text-[clamp(0.9375rem,1.5vw,1.0625rem)] font-medium text-white transition-all hover:bg-[#333]"
           >
             <ShoppingBasket className="h-4 w-4" />
-            Sovereign Basket Index
-            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            {t("cta")}
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1 rtl:rotate-180" />
           </Link>
         </ScrollReveal>
       </div>
@@ -131,69 +122,58 @@ export function StoryProof() {
 }
 
 export function StoryInstitutional() {
+  const t = useTranslations("storyInstitutional");
+
   return (
     <section className="relative px-6 py-32 bg-white">
       <div className="mx-auto max-w-4xl">
         <ScrollReveal>
           <p className="mb-6 text-[clamp(0.875rem,1.2vw,1rem)] font-medium uppercase tracking-[0.05em] text-[#297FF3]">
-            Beyond Individuals
+            {t("label")}
           </p>
         </ScrollReveal>
         <ScrollReveal delay={0.1}>
           <h2 className="mb-8 text-[clamp(2.5rem,6vw,4.5rem)] font-light leading-[1.05] tracking-[-0.04em] text-[#1b1b1b]">
-            A monetary anchor<br />
-            for <span className="gradient-text">institutions.</span>
+            {t("title1")}<br />
+            {t("title2")}<span className="gradient-text">{t("titleHighlight")}</span>
           </h2>
         </ScrollReveal>
         <ScrollReveal delay={0.2}>
           <p className="mb-8 max-w-2xl text-[clamp(1.125rem,2vw,1.25rem)] leading-[1.6] text-[#1b1b1b]/45">
-            The Sovereign Basket is not just a personal hedge — it is a framework
-            for states, pension funds, central banks, and multilateral institutions.
-            Instead of pegging to a single reserve currency (typically USD), a nation
-            can anchor its monetary policy to a diversified, transparent index of
-            real-world value.
+            {t("p1")}
           </p>
         </ScrollReveal>
         <ScrollReveal delay={0.25}>
           <div className="mb-12 grid gap-4 sm:grid-cols-3">
             <div className="rounded-2xl border border-[#D0D0D0]/50 bg-[#f8f8f8] p-5">
               <p className="mb-2 text-sm font-semibold text-[#1b1b1b]">
-                Sovereign Funds
+                {t("card1Title")}
               </p>
               <p className="text-xs leading-relaxed text-[#1b1b1b]/40">
-                A government can allocate reserves across gold, energy, agriculture,
-                and stable fiat currencies — reducing dependence on any single
-                geopolitical actor.
+                {t("card1Text")}
               </p>
             </div>
             <div className="rounded-2xl border border-[#D0D0D0]/50 bg-[#f8f8f8] p-5">
               <p className="mb-2 text-sm font-semibold text-[#1b1b1b]">
-                Pension Systems
+                {t("card2Title")}
               </p>
               <p className="text-xs leading-relaxed text-[#1b1b1b]/40">
-                Retirement funds denominated in a basket-indexed unit maintain
-                purchasing power across decades — unlike fiat-denominated pensions
-                that silently erode.
+                {t("card2Text")}
               </p>
             </div>
             <div className="rounded-2xl border border-[#D0D0D0]/50 bg-[#f8f8f8] p-5">
               <p className="mb-2 text-sm font-semibold text-[#1b1b1b]">
-                Trade Settlement
+                {t("card3Title")}
               </p>
               <p className="text-xs leading-relaxed text-[#1b1b1b]/40">
-                International trade priced in a neutral, basket-indexed unit eliminates
-                exchange-rate risk and the structural advantage of reserve-currency
-                issuers.
+                {t("card3Text")}
               </p>
             </div>
           </div>
         </ScrollReveal>
         <ScrollReveal delay={0.3}>
           <p className="max-w-2xl text-[clamp(1.125rem,2vw,1.25rem)] leading-[1.6] text-[#1b1b1b]/45">
-            Below, you can construct your own basket. Drag in currencies, commodities,
-            and real assets. Adjust the weights. Watch how the composition changes
-            the stability metrics in real time — the same way a treasury or central
-            bank would model its reserves.
+            {t("p2")}
           </p>
         </ScrollReveal>
       </div>
@@ -202,25 +182,25 @@ export function StoryInstitutional() {
 }
 
 export function StoryLearn() {
+  const t = useTranslations("storyLearn");
+
   return (
     <section className="relative px-6 py-32 bg-white">
       <div className="mx-auto max-w-4xl">
         <ScrollReveal>
           <p className="mb-6 text-[clamp(0.875rem,1.2vw,1rem)] font-medium uppercase tracking-[0.05em] text-[#1b1b1b]/30">
-            Go Deeper
+            {t("label")}
           </p>
         </ScrollReveal>
         <ScrollReveal delay={0.1}>
           <h2 className="mb-8 text-[clamp(2.5rem,6vw,4.5rem)] font-light leading-[1.05] tracking-[-0.04em] text-[#1b1b1b]">
-            Understand the<br />
-            <span className="gradient-text">language of money.</span>
+            {t("title1")}<br />
+            <span className="gradient-text">{t("titleHighlight")}</span>
           </h2>
         </ScrollReveal>
         <ScrollReveal delay={0.2}>
           <p className="mb-12 max-w-2xl text-[clamp(1.125rem,2vw,1.25rem)] leading-[1.6] text-[#1b1b1b]/45">
-            Every term used on this site is precisely defined, with deep dives
-            and primary source references. From the Cantillon Effect to Lazy Claiming —
-            the glossary is your entry point into the economic theory behind the protocol.
+            {t("p1")}
           </p>
         </ScrollReveal>
         <ScrollReveal delay={0.3}>
@@ -229,8 +209,8 @@ export function StoryLearn() {
             className="group inline-flex items-center gap-3 rounded-full border border-[#D0D0D0] px-8 py-4 text-[clamp(0.9375rem,1.5vw,1.0625rem)] font-medium text-[#1b1b1b] transition-all hover:border-[#999]"
           >
             <BookOpen className="h-4 w-4" />
-            Open Glossary
-            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            {t("cta")}
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1 rtl:rotate-180" />
           </Link>
         </ScrollReveal>
       </div>
@@ -239,20 +219,20 @@ export function StoryLearn() {
 }
 
 export function StoryClosing() {
+  const t = useTranslations("storyClosing");
+
   return (
     <section className="relative px-6 py-40 bg-[#1b1b1b]">
       <div className="mx-auto max-w-4xl text-center">
         <ScrollReveal>
           <h2 className="mb-8 text-[clamp(2.5rem,6vw,4.5rem)] font-light leading-[1.05] tracking-[-0.04em] text-white">
-            The math is public.<br />
-            The protocol is open.
+            {t("title1")}<br />
+            {t("title2")}
           </h2>
         </ScrollReveal>
         <ScrollReveal delay={0.15}>
           <p className="mx-auto mb-12 max-w-xl text-[clamp(1.125rem,2vw,1.25rem)] leading-[1.6] text-white/40">
-            This companion site presents the economic simulations and research
-            supporting Universe Dollar. For the full project — whitepaper,
-            shortpaper, and roadmap — visit the official site.
+            {t("p1")}
           </p>
         </ScrollReveal>
         <ScrollReveal delay={0.25}>
@@ -263,8 +243,8 @@ export function StoryClosing() {
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-[clamp(0.9375rem,1.5vw,1.0625rem)] font-medium text-[#1b1b1b] transition-all hover:bg-white/90"
             >
-              Visit uvd.xyz
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              {t("ctaOfficial")}
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1 rtl:rotate-180" />
             </a>
             <a
               href="https://rose-biological-bird-527.mypinata.cloud/ipfs/bafkreig5445hg6o5lgjjtq7ftprhdbrvbfmoekjopimibxazqv3xtwsqi4"
@@ -272,7 +252,7 @@ export function StoryClosing() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-white/15 px-8 py-4 text-[clamp(0.9375rem,1.5vw,1.0625rem)] font-medium text-white/60 transition-all hover:border-white/30 hover:text-white"
             >
-              Read Shortpaper
+              {t("ctaShortpaper")}
             </a>
           </div>
         </ScrollReveal>

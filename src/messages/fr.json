@@ -1,0 +1,308 @@
+{
+  "nav": {
+    "timeTheft": "Vol de Temps",
+    "rtmModel": "Modèle RTM",
+    "basketIndex": "Indice Panier",
+    "glossary": "Glossaire",
+    "faq": "FAQ",
+    "aboutUvd": "À propos d'UVD",
+    "officialSite": "uvd.xyz"
+  },
+  "hero": {
+    "badge": "Compagnon interactif de",
+    "title1": "Et si l'argent",
+    "title2": "était",
+    "titleHighlight": "juste",
+    "subtitle": "Ce pitch deck interactif explore le modèle économique derrière Universe Dollar — un protocole où la création monétaire est mathématiquement égale pour chaque participant. Lancez les simulations. Voyez la preuve.",
+    "ctaStory": "Commencer l'histoire",
+    "ctaOfficial": "Site officiel"
+  },
+  "storyProblem": {
+    "label": "Le Problème",
+    "title1": "Chaque jour, votre épargne",
+    "title2": "perd du pouvoir d'achat.",
+    "p1": "Lorsque les banques centrales élargissent la masse monétaire, les premiers bénéficiaires — institutions financières, gouvernements, grandes entreprises — dépensent aux prix d'hier. Le temps que le nouvel argent atteigne les gens ordinaires, les prix se sont déjà ajustés à la hausse. Les économistes appellent cela l'Effet Cantillon. Nous l'appelons un transfert structurel de richesse des nombreux vers les quelques-uns.",
+    "p2start": "La question n'est pas de savoir si cela se produit — c'est mesurable, documenté et continu. La question est : ",
+    "p2highlight": "combien cela vous a-t-il coûté personnellement ?"
+  },
+  "storySolution": {
+    "label": "Le Modèle",
+    "title1": "Création monétaire",
+    "title2": "symétrique, ",
+    "titleHighlight": "prouvée.",
+    "p1": "La Théorie Relative de la Monnaie, formalisée par Stéphane Laborde en 2010, démontre qu'il existe exactement une classe de systèmes monétaires où aucun individu n'est structurellement avantagé par rapport à un autre : les systèmes où les unités nouvellement créées sont distribuées également à tous les participants via un Dividende Universel.",
+    "p2": "Universe Dollar implémente ce cadre sur une couche blockchain. La simulation ci-dessous vous permet d'ajuster les paramètres — nombre de membres, taux de croissance, horizon temporel — et d'observer les invariants mathématiques en temps réel.",
+    "cta": "Simulateur RTM en Direct"
+  },
+  "storyProof": {
+    "badge": "Comparaison Réelle",
+    "title1": "Mêmes courses,",
+    "title2": "deux ",
+    "titleHighlight": "étiquettes de prix.",
+    "p1": "Choisissez un pays. Observez un panier standardisé de biens essentiels — logement, énergie, alimentation, transport — avec des prix en monnaie fiduciaire locale et en UVD au fil du temps. La divergence n'est pas hypothétique. C'est de l'arithmétique appliquée aux données d'inflation publiquement disponibles de la Banque mondiale, de la BCE et du FRED.",
+    "cta": "Indice du Panier Souverain"
+  },
+  "storyInstitutional": {
+    "label": "Au-delà des Individus",
+    "title1": "Un ancrage monétaire",
+    "title2": "pour les ",
+    "titleHighlight": "institutions.",
+    "p1": "Le Panier Souverain n'est pas qu'une couverture personnelle — c'est un cadre pour les États, les fonds de pension, les banques centrales et les institutions multilatérales. Au lieu de s'arrimer à une seule monnaie de réserve (typiquement l'USD), une nation peut ancrer sa politique monétaire à un indice diversifié et transparent de valeur réelle.",
+    "card1Title": "Fonds Souverains",
+    "card1Text": "Un gouvernement peut allouer des réserves à travers l'or, l'énergie, l'agriculture et les monnaies fiduciaires stables — réduisant la dépendance envers tout acteur géopolitique unique.",
+    "card2Title": "Systèmes de Retraite",
+    "card2Text": "Les fonds de retraite libellés dans une unité indexée sur un panier maintiennent le pouvoir d'achat sur des décennies — contrairement aux pensions en monnaie fiduciaire qui s'érodent silencieusement.",
+    "card3Title": "Règlement Commercial",
+    "card3Text": "Le commerce international évalué dans une unité neutre indexée sur un panier élimine le risque de change et l'avantage structurel des émetteurs de monnaie de réserve.",
+    "p2": "Ci-dessous, vous pouvez construire votre propre panier. Ajoutez des devises, des matières premières et des actifs réels. Ajustez les pondérations. Observez comment la composition modifie les métriques de stabilité en temps réel — de la même manière qu'un ministère des finances ou une banque centrale modéliserait ses réserves."
+  },
+  "storyLearn": {
+    "label": "Approfondir",
+    "title1": "Comprendre le",
+    "titleHighlight": "langage de l'argent.",
+    "p1": "Chaque terme utilisé sur ce site est défini avec précision, avec des explications approfondies et des références aux sources primaires. De l'Effet Cantillon au Lazy Claiming — le glossaire est votre point d'entrée dans la théorie économique derrière le protocole.",
+    "cta": "Ouvrir le Glossaire"
+  },
+  "storyClosing": {
+    "title1": "Les mathématiques sont publiques.",
+    "title2": "Le protocole est ouvert.",
+    "p1": "Ce site compagnon présente les simulations économiques et la recherche soutenant Universe Dollar. Pour le projet complet — whitepaper, shortpaper et feuille de route — visitez le site officiel.",
+    "ctaOfficial": "Visiter uvd.xyz",
+    "ctaShortpaper": "Lire le Shortpaper"
+  },
+  "glossary": {
+    "badge": "Base de Connaissances",
+    "title": "Glossaire de ",
+    "titleHighlight": "Vérité",
+    "subtitle": "Définitions précises soutenues par des sources primaires. Comprendre le langage de l'argent est la première étape vers la souveraineté monétaire.",
+    "terms": {
+      "inflation": {
+        "term": "Inflation",
+        "definition": "L'expansion de la masse monétaire, qui entraîne une augmentation générale des prix. Communément mal comprise comme 'hausse des prix' — les prix sont le symptôme, l'expansion monétaire est la cause.",
+        "deepDive": "Lorsque les banques centrales augmentent la masse monétaire (via l'assouplissement quantitatif ou la réduction des réserves obligatoires), chaque unité de monnaie existante représente une fraction plus petite du total. Cette dilution se manifeste par des prix plus élevés — mais pas uniformément. Les actifs (actions, immobilier) gonflent d'abord, les biens de consommation suivent plus tard.",
+        "sourceLabel": "Données de Masse Monétaire de la BCE"
+      },
+      "cantillon": {
+        "term": "Effet Cantillon",
+        "definition": "La distribution inégale de la monnaie nouvellement créée. Ceux qui reçoivent le nouvel argent en premier (banques, gouvernements) bénéficient des anciens prix, tandis que ceux qui le reçoivent en dernier souffrent de prix déjà gonflés.",
+        "deepDive": "Nommé d'après Richard Cantillon (1680-1734), cela décrit comment la création monétaire est intrinsèquement redistributive. Dans les systèmes fiduciaires modernes, les banques commerciales créent de l'argent par le prêt. Les emprunteurs (entreprises, investisseurs immobiliers) reçoivent du pouvoir d'achat aux prix pré-inflation. Les salariés — derniers de la file — font face à des prix plus élevés avec des revenus inchangés. C'est l'injustice fondamentale que la RTM adresse.",
+        "sourceLabel": "Essai Original (Cantillon, 1755)"
+      },
+      "rtm": {
+        "term": "Théorie Relative de la Monnaie (TRM)",
+        "definition": "Un cadre mathématique de Stéphane Laborde (2010) prouvant que le seul système monétaire assurant la symétrie spatiale et temporelle est celui où la création monétaire est distribuée également à tous les membres via un Dividende Universel.",
+        "deepDive": "La TRM démontre que tout système monétaire respectant la liberté économique individuelle doit suivre des contraintes mathématiques spécifiques. L'idée clé : si la création monétaire n'est pas symétrique (égale pour tous les membres), elle crée des transferts involontaires de richesse. Le Dividende Universel n'est pas de la charité — c'est la condition mathématiquement nécessaire pour un système monétaire libre.",
+        "sourceLabel": "Théorie Relative de la Monnaie (Laborde, 2010)"
+      },
+      "ud": {
+        "term": "Dividende Universel (DU)",
+        "definition": "La part égale de monnaie nouvellement créée distribuée à chaque membre vérifié du système monétaire. Calculé comme : DU(t+1) = DU(t) + c² × (M(t) / N(t+1)), où c ≈ 10% par an.",
+        "deepDive": "Le taux de croissance du DU c est dérivé de l'espérance de vie humaine (~80 ans). Il assure que sur une vie entière, aucune génération n'est avantagée par rapport à une autre. La formule garantit que quel que soit le moment où quelqu'un rejoint, après une période de 'demi-vie', il détient approximativement la même part relative que tous les autres. C'est la symétrie temporelle."
+      },
+      "wot": {
+        "term": "Réseau de Confiance (WoT)",
+        "definition": "Un système de vérification d'identité décentralisé où les membres existants certifient les nouveaux membres par des relations personnelles. Empêche les attaques Sybil (une personne créant plusieurs comptes).",
+        "deepDive": "Contrairement au Proof-of-Work (gaspillage d'énergie) ou au Proof-of-Stake (ploutocratie), le Réseau de Confiance base le consensus sur les relations humaines. Pour rejoindre, une personne doit être certifiée par 5 'Forgerons' (validateurs) existants. Cela assure un-compte-par-personne sans KYC centralisé. Le statut de Forgeron requiert une participation communautaire continue."
+      },
+      "basket": {
+        "term": "Panier Souverain",
+        "definition": "Un ensemble standardisé de biens et services essentiels (logement, énergie, alimentation, transport) utilisé pour mesurer le pouvoir d'achat réel à travers les devises et les périodes.",
+        "deepDive": "Contrairement à l'IPC (Indice des Prix à la Consommation), que les gouvernements peuvent manipuler par des changements méthodologiques (ajustements hédoniques, effets de substitution), le Panier Souverain est transparent et fixe. Chaque communauté définit son propre panier, permettant des comparaisons honnêtes entre pays. UVD sert d'unité de compte universelle pour ces paniers."
+      },
+      "timeEquity": {
+        "term": "Équité Temporelle",
+        "definition": "Le principe que le temps de chaque personne a une valeur monétaire égale dans le processus de création. UVD présente la création monétaire non comme une redistribution des revenus (impôts), mais comme un 'droit monétaire de naissance' — infrastructure, pas assistance sociale.",
+        "deepDive": "Le cadrage traditionnel des dividendes universels comme 'revenu de base' déclenche une résistance politique (association avec l'aide sociale). L'Équité Temporelle recadre : tout comme chaque citoyen a un accès égal aux routes, tribunaux et air pur, chaque personne devrait avoir un accès égal aux unités monétaires nouvellement créées. Ce n'est pas de la redistribution — c'est une distribution initiale équitable."
+      },
+      "lazyClaiming": {
+        "term": "Lazy Claiming",
+        "definition": "Une optimisation on-chain où au lieu de mettre à jour chaque compte à chaque bloc, un Indice DU global est maintenu. Les comptes individuels calculent leur DU accumulé uniquement lors d'une transaction.",
+        "deepDive": "Si N = 1 000 000 de membres, mettre à jour chaque compte à chaque bloc serait calculatoirement prohibitif. Le Lazy Claiming stocke un Indice DU croissant de manière monotone. Quand un utilisateur initie une transaction, le runtime calcule : pending_du = (indice_actuel - dernier_indice_réclamé) × du_par_unité. C'est O(1) par réclamation au lieu de O(N) par bloc."
+      }
+    }
+  },
+  "footer": {
+    "brand": "UVD Simulation",
+    "brandDescription": "Un compagnon éducatif indépendant explorant le modèle économique derrière le protocole Universe Dollar.",
+    "simulations": "Simulations",
+    "officialResources": "Ressources Officielles",
+    "shortpaper": "Shortpaper (IPFS)",
+    "whitepaper": "Whitepaper (IPFS)",
+    "twitter": "X / Twitter",
+    "foundation": "Fondements",
+    "relativeTheory": "Théorie Relative de la Monnaie",
+    "cantillonEffect": "Effet Cantillon",
+    "legal": "Juridique",
+    "legalNotice": "Mentions Légales",
+    "privacyPolicy": "Politique de Confidentialité",
+    "cookieSettings": "Paramètres des Cookies",
+    "disclaimerTitle": "Avertissement",
+    "disclaimer": "Ce site web est un compagnon éducatif indépendant créé en soutien au projet Universe Dollar. Ce n'est pas le site officiel d'Universe Dollar — le projet officiel se trouve sur uvd.xyz. Tout le contenu de ce site représente l'interprétation indépendante de l'auteur de recherches publiquement disponibles, y compris la Théorie Relative de la Monnaie de Stéphane Laborde et des données économiques publiquement disponibles de la Banque mondiale, de la BCE et du FRED. Aucun contenu de ce site ne constitue un conseil financier, une recommandation d'investissement ou une sollicitation d'aucune sorte. Les résultats des simulations sont des projections mathématiques basées sur des moyennes historiques et ne garantissent pas de résultats futurs.",
+    "independentSite": "Site compagnon indépendant",
+    "notFinancialAdvice": "Pas un conseil financier",
+    "copyright": "Prime Associates LLC"
+  },
+  "subpage": {
+    "backToOverview": "Retour à l'Aperçu"
+  },
+  "cookie": {
+    "title": "Paramètres des Cookies",
+    "description": "Nous utilisons des cookies pour améliorer votre expérience. Vous pouvez personnaliser vos préférences ci-dessous.",
+    "necessary": "Nécessaires",
+    "necessaryDesc": "Requis pour le bon fonctionnement du site web. Ne peuvent pas être désactivés.",
+    "preferences": "Préférences",
+    "preferencesDesc": "Permettent au site web de mémoriser vos paramètres et préférences.",
+    "statistics": "Statistiques",
+    "statisticsDesc": "Nous aident à comprendre comment les visiteurs interagissent avec le site web.",
+    "acceptAll": "Tout Accepter",
+    "savePreferences": "Enregistrer les Préférences",
+    "rejectOptional": "Refuser les Optionnels"
+  },
+  "languageSwitcher": {
+    "label": "Langue"
+  },
+  "metadata": {
+    "home": {
+      "title": "UVD Simulation — Compagnon Interactif d'Universe Dollar",
+      "description": "Terminal de simulation interactif pour Universe Dollar. Calculateur d'inflation, visualisation RTM, Constructeur de Panier Souverain — transparent, open source."
+    },
+    "timeTheft": {
+      "title": "Calculateur de Vol de Temps — Combien l'inflation vous a-t-elle coûté ?",
+      "description": "Calculez combien de pouvoir d'achat l'inflation vous a volé. Calculateur personnel avec données de la Banque mondiale, BCE et FRED."
+    },
+    "rtm": {
+      "title": "Simulateur RTM — Théorie Relative de la Monnaie en Direct",
+      "description": "Visualisation interactive de la Théorie Relative de la Monnaie. Dividende Universel, création monétaire symétrique — simulez en temps réel."
+    },
+    "basket": {
+      "title": "Indice du Panier Souverain — Coût de la Vie Fiat vs. UVD",
+      "description": "Comparez le coût de la vie réel entre les pays. Simulation de panier : loyer, énergie, alimentation — inflation fiat vs. stabilité UVD."
+    },
+    "glossary": {
+      "title": "Glossaire — Théorie Monétaire Expliquée",
+      "description": "Définitions précises des concepts clés de théorie monétaire : Effet Cantillon, Dividende Universel, TRM, Pouvoir d'Achat."
+    },
+    "legal": {
+      "title": "Mentions Légales",
+      "description": "Mentions légales et informations sur l'entreprise pour UVD Simulation, opérée par Prime Associates LLC."
+    },
+    "privacy": {
+      "title": "Politique de Confidentialité",
+      "description": "Politique de confidentialité pour UVD Simulation. Traitement des données, utilisation des cookies et vos droits."
+    },
+    "faq": {
+      "title": "FAQ — Questions sur Universe Dollar",
+      "description": "Questions fréquemment posées sur Universe Dollar (UVD). UVD est-il une arnaque ? Comment ça marche ? Qui est derrière ? Toutes les réponses avec sources."
+    },
+    "aboutUvd": {
+      "title": "Qu'est-ce qu'Universe Dollar (UVD) ? — Explication Simple",
+      "description": "Universe Dollar expliqué : ce que c'est, comment ça fonctionne, qui l'a créé et pourquoi c'est important. Aperçu éducatif indépendant."
+    },
+    "methodologyTimeTheft": {
+      "title": "Méthodologie : Calculateur de Vol de Temps — Formules, Sources de Données",
+      "description": "Transparence totale : formule de perte de pouvoir d'achat, données d'inflation de la Banque mondiale/BCE/FRED."
+    },
+    "methodologyRtm": {
+      "title": "Méthodologie : Simulateur RTM — Dérivation du Dividende Universel",
+      "description": "Dérivation complète de la formule du Dividende Universel de la Théorie Relative de la Monnaie. Preuve mathématique."
+    },
+    "methodologyBasket": {
+      "title": "Méthodologie : Panier Souverain — Composition et Sources de Données",
+      "description": "Transparence totale : composition du panier par pays, données d'inflation, formules de projection des prix."
+    }
+  },
+  "faq": {
+    "badge": "Questions Fréquentes",
+    "title": "Vos questions, ",
+    "titleHighlight": "nos réponses.",
+    "subtitle": "Réponses transparentes aux questions les plus fréquentes sur Universe Dollar, la technologie et ce site compagnon.",
+    "disclaimer": "Cette FAQ est à titre éducatif uniquement. Rien ici ne constitue un conseil financier.",
+    "sections": {
+      "about": "À propos d'Universe Dollar",
+      "trust": "Confiance et Légitimité",
+      "technology": "Technologie",
+      "gettingStarted": "Pour Commencer"
+    },
+    "items": {
+      "whatIsUvd": {
+        "q": "Qu'est-ce qu'Universe Dollar (UVD) ?",
+        "a": "Universe Dollar est un protocole qui implémente la Théorie Relative de la Monnaie (TRM) de Stéphane Laborde. Il propose un système monétaire où la nouvelle monnaie est créée équitablement pour chaque participant vérifié à travers un Dividende Universel — assurant mathématiquement que personne n'est structurellement avantagé."
+      },
+      "whoCreated": {
+        "q": "Qui a créé Universe Dollar ?",
+        "a": "Le protocole UVD est basé sur la Théorie Relative de la Monnaie formalisée par Stéphane Laborde en 2010. Le projet Universe Dollar et son site officiel (uvd.xyz) implémentent cette théorie sur une couche blockchain. Ce site compagnon (uvd.trading) est un projet éducatif indépendant de Prime Associates LLC."
+      },
+      "isScam": {
+        "q": "Universe Dollar est-il une arnaque ?",
+        "a": "Ce site compagnon ne peut faire de déclarations sur la légitimité d'un investissement. Ce que nous pouvons dire : le cadre mathématique (TRM) est évalué par des pairs et accessible au public. Le protocole est open-source. Le whitepaper et le shortpaper sont accessibles via IPFS. Nous vous encourageons à lire les sources primaires, vérifier les mathématiques et vous forger votre propre opinion. N'investissez jamais plus que ce que vous pouvez vous permettre de perdre."
+      },
+      "isLegit": {
+        "q": "UVD est-il fiable ? Peut-on lui faire confiance ?",
+        "a": "La confiance doit reposer sur des faits vérifiables, pas sur des promesses. Les mathématiques de la TRM sont publiquement vérifiables. Le code du protocole est ouvert. Le whitepaper est sur IPFS. Ce site fournit des simulations interactives pour tester les affirmations mathématiques vous-même. Faites toujours vos propres recherches (DYOR) et consultez un conseiller financier."
+      },
+      "regulated": {
+        "q": "UVD est-il régulé ?",
+        "a": "Les protocoles crypto opèrent dans un paysage réglementaire en rapide évolution. Nous n'avons pas connaissance d'approbations ou de rejets réglementaires spécifiques. Ce site ne fournit pas de conseil juridique ou réglementaire. Consultez un professionnel juridique qualifié dans votre juridiction."
+      },
+      "kianHoss": {
+        "q": "Quel est le lien avec Kian Hoss ?",
+        "a": "Kian Hoss a été associé à la promotion du projet Universe Dollar sur les réseaux sociaux. Ce site compagnon est un projet éducatif indépendant et n'est ni affilié, ni soutenu, ni créé par Kian Hoss. Pour les informations officielles, référez-vous à uvd.xyz."
+      },
+      "howWorks": {
+        "q": "Comment fonctionne UVD techniquement ?",
+        "a": "UVD implémente la TRM sur une couche blockchain. Chaque membre vérifié reçoit un Dividende Universel — une part égale de la monnaie nouvellement créée. La vérification utilise un système de Réseau de Confiance (WoT) où les membres existants certifient les nouveaux. Le protocole utilise le 'Lazy Claiming' pour l'efficacité on-chain."
+      },
+      "stablecoin": {
+        "q": "UVD est-il un stablecoin ?",
+        "a": "Non. UVD n'est adossé à aucune monnaie fiduciaire. Au lieu de cela, sa valeur est conçue pour maintenir le pouvoir d'achat relatif à un Panier Souverain de biens et services réels. C'est fondamentalement différent des stablecoins qui suivent une seule monnaie fiduciaire."
+      },
+      "blockchain": {
+        "q": "Sur quelle blockchain UVD est-il construit ?",
+        "a": "Pour les détails techniques les plus récents sur l'implémentation blockchain d'UVD, veuillez consulter le whitepaper officiel et le site officiel à uvd.xyz."
+      },
+      "rtmExplained": {
+        "q": "Qu'est-ce que la Théorie Relative de la Monnaie ?",
+        "a": "La TRM est un cadre mathématique de Stéphane Laborde (2010) qui prouve qu'il existe exactement une classe de systèmes monétaires où aucun individu n'a d'avantage structurel : les systèmes avec un Dividende Universel. Elle démontre que la création monétaire symétrique est le seul moyen d'assurer la symétrie spatiale et temporelle."
+      },
+      "canBuy": {
+        "q": "Puis-je acheter du UVD ? Où ?",
+        "a": "Ce site compagnon ne vend, ne distribue et ne facilite l'achat d'aucun token ou cryptomonnaie. Pour des informations sur la disponibilité des tokens, consultez le projet officiel à uvd.xyz. Ceci n'est pas une recommandation d'achat ou de vente."
+      },
+      "whenLaunch": {
+        "q": "Quand UVD sera-t-il lancé ?",
+        "a": "Pour les dernières informations sur les délais et dates de lancement, veuillez consulter le site officiel à uvd.xyz et leurs canaux de réseaux sociaux officiels."
+      },
+      "whatIsThis": {
+        "q": "Qu'est-ce que ce site (uvd.trading) ?",
+        "a": "C'est un site éducatif compagnon indépendant. Nous fournissons des simulations interactives, des explications méthodologiques et du contenu éducatif sur la théorie économique derrière Universe Dollar. Nous ne sommes pas le projet officiel UVD — le site officiel est uvd.xyz. Opéré par Prime Associates LLC."
+      },
+      "cantillonWhat": {
+        "q": "Qu'est-ce que l'Effet Cantillon ?",
+        "a": "L'Effet Cantillon décrit comment la monnaie nouvellement créée bénéficie à ceux qui la reçoivent en premier (banques, gouvernements, grandes entreprises) aux dépens de ceux qui la reçoivent en dernier (les gens ordinaires). Le temps que le nouvel argent vous parvienne, les prix ont déjà augmenté. C'est le problème central que la TRM et UVD cherchent à résoudre."
+      },
+      "inflationCalc": {
+        "q": "Quelle est la précision du calculateur d'inflation ?",
+        "a": "Notre Calculateur de Vol de Temps utilise des données d'inflation officielles de la Banque mondiale, de la BCE et du FRED. La méthodologie, les formules, les hypothèses et les limites sont entièrement documentées sur notre page de méthodologie. Les résultats sont des projections mathématiques basées sur des moyennes historiques — ils ne prédisent pas les résultats futurs."
+      }
+    }
+  },
+  "aboutUvd": {
+    "badge": "Aperçu Éducatif",
+    "title": "Qu'est-ce qu'",
+    "titleHighlight": "Universe Dollar ?",
+    "subtitle": "Une explication indépendante et simple du protocole, de la théorie derrière et pourquoi c'est important.",
+    "whatTitle": "Qu'est-ce qu'UVD ?",
+    "whatText": "Universe Dollar (UVD) est un protocole qui implémente la Théorie Relative de la Monnaie — un cadre mathématique prouvant que le seul système monétaire équitable est celui où chaque participant reçoit une part égale de la monnaie nouvellement créée. Cette part s'appelle le Dividende Universel.",
+    "howTitle": "Comment ça marche ?",
+    "howText": "Au lieu que la monnaie soit créée par les banques centrales et distribuée inégalement (l'Effet Cantillon), UVD distribue les unités nouvellement créées équitablement à tous les membres vérifiés. La vérification se fait par un Réseau de Confiance — les membres existants certifient les nouveaux par des relations personnelles.",
+    "whyTitle": "Pourquoi est-ce important ?",
+    "whyText": "Dans les systèmes monétaires traditionnels, ceux les plus proches de la création monétaire (banques, gouvernements) en bénéficient aux dépens de tous les autres. Le cadre mathématique d'UVD élimine cette inégalité structurelle. Le concept de Panier Souverain assure en outre que le pouvoir d'achat soit mesuré contre des biens réels.",
+    "whoTitle": "Qui est derrière ?",
+    "whoText": "La base mathématique vient de la Théorie Relative de la Monnaie de Stéphane Laborde (2010). Le projet Universe Dollar implémente cette théorie. Ce site compagnon (uvd.trading) est un projet éducatif indépendant de Prime Associates LLC. Pour le projet officiel, visitez uvd.xyz.",
+    "learnMore": "Envie d'en savoir plus ?",
+    "learnMoreText": "Explorez nos simulations interactives pour voir les mathématiques en action, lisez le glossaire pour des définitions précises, ou visitez le site officiel pour le whitepaper et la feuille de route.",
+    "ctaSimulation": "Essayer les Simulations",
+    "ctaGlossary": "Lire le Glossaire",
+    "ctaOfficial": "Visiter uvd.xyz"
+  }
+}

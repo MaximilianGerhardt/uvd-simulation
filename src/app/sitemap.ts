@@ -1,68 +1,50 @@
 import type { MetadataRoute } from "next";
+import { routing } from "@/i18n/routing";
 
 const BASE_URL = "https://uvd.trading";
 
+const pages: { path: string; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"]; priority: number }[] = [
+  { path: "", changeFrequency: "weekly", priority: 1.0 },
+  { path: "/simulation/time-theft", changeFrequency: "monthly", priority: 0.9 },
+  { path: "/simulation/rtm", changeFrequency: "monthly", priority: 0.9 },
+  { path: "/simulation/basket", changeFrequency: "monthly", priority: 0.9 },
+  { path: "/faq", changeFrequency: "weekly", priority: 0.9 },
+  { path: "/about-uvd", changeFrequency: "monthly", priority: 0.9 },
+  { path: "/glossary", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/methodology/time-theft", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/methodology/rtm", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/methodology/basket", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/legal", changeFrequency: "yearly", priority: 0.3 },
+  { path: "/privacy", changeFrequency: "yearly", priority: 0.3 },
+];
+
+function getLocalizedUrl(locale: string, path: string): string {
+  const prefix = locale === routing.defaultLocale ? "" : `/${locale}`;
+  return `${BASE_URL}${prefix}${path}`;
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    {
-      url: BASE_URL,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 1.0,
-    },
-    {
-      url: `${BASE_URL}/simulation/time-theft`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/simulation/rtm`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/simulation/basket`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/glossary`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/methodology/time-theft`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${BASE_URL}/methodology/rtm`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${BASE_URL}/methodology/basket`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${BASE_URL}/legal`,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
-    {
-      url: `${BASE_URL}/privacy`,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
-  ];
+  const entries: MetadataRoute.Sitemap = [];
+
+  for (const page of pages) {
+    for (const locale of routing.locales) {
+      const alternates: Record<string, string> = {};
+      for (const altLocale of routing.locales) {
+        alternates[altLocale] = getLocalizedUrl(altLocale, page.path);
+      }
+      alternates["x-default"] = getLocalizedUrl(routing.defaultLocale, page.path);
+
+      entries.push({
+        url: getLocalizedUrl(locale, page.path),
+        lastModified: new Date(),
+        changeFrequency: page.changeFrequency,
+        priority: page.priority,
+        alternates: {
+          languages: alternates,
+        },
+      });
+    }
+  }
+
+  return entries;
 }

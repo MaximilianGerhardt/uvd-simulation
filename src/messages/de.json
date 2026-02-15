@@ -1,0 +1,308 @@
+{
+  "nav": {
+    "timeTheft": "Zeitdiebstahl",
+    "rtmModel": "RTM-Modell",
+    "basketIndex": "Warenkorb",
+    "glossary": "Glossar",
+    "faq": "FAQ",
+    "aboutUvd": "Über UVD",
+    "officialSite": "uvd.xyz"
+  },
+  "hero": {
+    "badge": "Interaktiver Begleiter zu",
+    "title1": "Was wäre, wenn Geld",
+    "title2": "",
+    "titleHighlight": "fair wäre",
+    "subtitle": "Dieses interaktive Pitch Deck erkundet das ökonomische Modell hinter Universe Dollar — einem Protokoll, bei dem die Geldschöpfung mathematisch gleich für jeden Teilnehmer ist. Starte die Simulationen. Sieh den Beweis.",
+    "ctaStory": "Geschichte starten",
+    "ctaOfficial": "Offizielle Seite"
+  },
+  "storyProblem": {
+    "label": "Das Problem",
+    "title1": "Jeden Tag verlieren",
+    "title2": "deine Ersparnisse an Kaufkraft.",
+    "p1": "Wenn Zentralbanken die Geldmenge ausweiten, geben die ersten Empfänger — Finanzinstitute, Regierungen, Großkonzerne — zu den Preisen von gestern aus. Bis das neue Geld bei normalen Menschen ankommt, sind die Preise bereits gestiegen. Ökonomen nennen das den Cantillon-Effekt. Wir nennen es einen strukturellen Vermögenstransfer von den Vielen zu den Wenigen.",
+    "p2start": "Die Frage ist nicht, ob das passiert — es ist messbar, dokumentiert und fortlaufend. Die Frage ist: ",
+    "p2highlight": "wie viel hat es dich persönlich gekostet?"
+  },
+  "storySolution": {
+    "label": "Das Modell",
+    "title1": "Symmetrische",
+    "title2": "Geldschöpfung, ",
+    "titleHighlight": "bewiesen.",
+    "p1": "Die Relative Theorie des Geldes, formalisiert von Stéphane Laborde im Jahr 2010, zeigt, dass es genau eine Klasse von Geldsystemen gibt, in der kein Individuum strukturell gegenüber einem anderen bevorzugt wird: Systeme, in denen neu geschaffene Einheiten gleichmäßig an alle Teilnehmer über eine Universelle Dividende verteilt werden.",
+    "p2": "Universe Dollar implementiert dieses Framework auf einer Blockchain-Ebene. Die Simulation unten ermöglicht es dir, die Parameter anzupassen — Mitgliederanzahl, Wachstumsrate, Zeithorizont — und die mathematischen Invarianten in Echtzeit zu beobachten.",
+    "cta": "RTM Live-Simulator"
+  },
+  "storyProof": {
+    "badge": "Realer Vergleich",
+    "title1": "Gleiche Lebensmittel,",
+    "title2": "zwei ",
+    "titleHighlight": "Preisschilder.",
+    "p1": "Wähle ein Land. Sieh dir einen standardisierten Warenkorb essentieller Güter an — Wohnung, Energie, Lebensmittel, Transport — bepreist sowohl in der lokalen Fiat-Währung als auch in UVD über die Zeit. Die Abweichung ist nicht hypothetisch. Es ist Arithmetik, angewandt auf öffentlich verfügbare Inflationsdaten der Weltbank, EZB und FRED.",
+    "cta": "Souveräner Warenkorb-Index"
+  },
+  "storyInstitutional": {
+    "label": "Über Individuen hinaus",
+    "title1": "Ein monetärer Anker",
+    "title2": "für ",
+    "titleHighlight": "Institutionen.",
+    "p1": "Der Souveräne Warenkorb ist nicht nur eine persönliche Absicherung — er ist ein Framework für Staaten, Pensionsfonds, Zentralbanken und multilaterale Institutionen. Anstatt sich an eine einzelne Reservewährung (typischerweise USD) zu binden, kann ein Land seine Geldpolitik an einem diversifizierten, transparenten Index realer Werte verankern.",
+    "card1Title": "Staatsfonds",
+    "card1Text": "Eine Regierung kann Reserven über Gold, Energie, Landwirtschaft und stabile Fiat-Währungen verteilen — und die Abhängigkeit von einem einzelnen geopolitischen Akteur reduzieren.",
+    "card2Title": "Rentensysteme",
+    "card2Text": "In einem warenkorb-indexierten Einheit denominierte Pensionsfonds erhalten die Kaufkraft über Jahrzehnte — anders als Fiat-denominierte Renten, die still erodieren.",
+    "card3Title": "Handelsabwicklung",
+    "card3Text": "Internationaler Handel, bepreist in einer neutralen, warenkorb-indexierten Einheit, eliminiert Wechselkursrisiken und den strukturellen Vorteil von Reservewährungs-Emittenten.",
+    "p2": "Unten kannst du deinen eigenen Warenkorb zusammenstellen. Füge Währungen, Rohstoffe und reale Vermögenswerte hinzu. Passe die Gewichtungen an. Beobachte, wie sich die Zusammensetzung auf die Stabilitätskennzahlen in Echtzeit auswirkt — genau so, wie ein Finanzministerium oder eine Zentralbank ihre Reserven modellieren würde."
+  },
+  "storyLearn": {
+    "label": "Tiefer eintauchen",
+    "title1": "Verstehe die",
+    "titleHighlight": "Sprache des Geldes.",
+    "p1": "Jeder Begriff auf dieser Seite ist präzise definiert, mit vertiefenden Erklärungen und Primärquellenverweisen. Vom Cantillon-Effekt bis zum Lazy Claiming — das Glossar ist dein Einstiegspunkt in die ökonomische Theorie hinter dem Protokoll.",
+    "cta": "Glossar öffnen"
+  },
+  "storyClosing": {
+    "title1": "Die Mathematik ist öffentlich.",
+    "title2": "Das Protokoll ist offen.",
+    "p1": "Diese Begleitseite präsentiert die ökonomischen Simulationen und Forschung hinter Universe Dollar. Für das vollständige Projekt — Whitepaper, Shortpaper und Roadmap — besuche die offizielle Seite.",
+    "ctaOfficial": "uvd.xyz besuchen",
+    "ctaShortpaper": "Shortpaper lesen"
+  },
+  "glossary": {
+    "badge": "Wissensbasis",
+    "title": "Glossar der ",
+    "titleHighlight": "Wahrheit",
+    "subtitle": "Präzise Definitionen gestützt auf Primärquellen. Die Sprache des Geldes zu verstehen ist der erste Schritt zur monetären Souveränität.",
+    "terms": {
+      "inflation": {
+        "term": "Inflation",
+        "definition": "Die Ausweitung der Geldmenge, die zu einem allgemeinen Preisanstieg führt. Häufig missverstanden als 'steigende Preise' — Preise sind das Symptom, die Geldmengenausweitung ist die Ursache.",
+        "deepDive": "Wenn Zentralbanken die Geldmenge erhöhen (durch quantitative Lockerung oder Senkung der Mindestreserven), repräsentiert jede bestehende Geldeinheit einen kleineren Anteil am Ganzen. Diese Verwässerung zeigt sich als höhere Preise — aber nicht gleichmäßig. Vermögenswerte (Aktien, Immobilien) inflationieren zuerst, Konsumgüter folgen später.",
+        "sourceLabel": "EZB Geldmengendaten"
+      },
+      "cantillon": {
+        "term": "Cantillon-Effekt",
+        "definition": "Die ungleiche Verteilung von neu geschaffenem Geld. Diejenigen, die neues Geld zuerst erhalten (Banken, Regierungen), profitieren von alten Preisen, während diejenigen, die es zuletzt erhalten, bereits inflationierte Preise erleiden.",
+        "deepDive": "Benannt nach Richard Cantillon (1680-1734) beschreibt dieser Effekt, wie Geldschöpfung inhärent umverteilend ist. In modernen Fiat-Systemen schaffen Geschäftsbanken Geld durch Kreditvergabe. Kreditnehmer (Konzerne, Immobilieninvestoren) erhalten Kaufkraft zu Vor-Inflations-Preisen. Lohnempfänger — die Letzten in der Reihe — stehen höheren Preisen bei unverändertem Einkommen gegenüber. Dies ist die Kernungerechtigkeit, die RTM adressiert.",
+        "sourceLabel": "Originalessay (Cantillon, 1755)"
+      },
+      "rtm": {
+        "term": "Relative Theorie des Geldes (RTM)",
+        "definition": "Ein mathematisches Framework von Stéphane Laborde (2010), das beweist, dass das einzige Geldsystem, das räumliche und zeitliche Symmetrie gewährleistet, eines ist, in dem die Geldschöpfung gleichmäßig an alle Mitglieder über eine Universelle Dividende verteilt wird.",
+        "deepDive": "RTM zeigt, dass jedes Geldsystem, das individuelle ökonomische Freiheit respektiert, bestimmte mathematische Einschränkungen befolgen muss. Die zentrale Erkenntnis: Wenn die Geldschöpfung nicht symmetrisch ist (gleich für alle Mitglieder), erzeugt sie unfreiwillige Vermögenstransfers. Die Universelle Dividende ist keine Wohltätigkeit — sie ist die mathematisch notwendige Bedingung für ein freies Geldsystem.",
+        "sourceLabel": "Théorie Relative de la Monnaie (Laborde, 2010)"
+      },
+      "ud": {
+        "term": "Universelle Dividende (UD)",
+        "definition": "Der gleiche Anteil an neu geschaffenem Geld, der an jedes verifizierte Mitglied des Geldsystems verteilt wird. Berechnet als: UD(t+1) = UD(t) + c² × (M(t) / N(t+1)), wobei c ≈ 10% jährlich.",
+        "deepDive": "Die UD-Wachstumsrate c leitet sich von der menschlichen Lebenserwartung (~80 Jahre) ab. Sie stellt sicher, dass über ein Leben hinweg keine Generation gegenüber einer anderen bevorzugt wird. Die Formel garantiert, dass unabhängig davon, wann jemand beitritt, er nach einer 'Halbwertszeit'-Periode ungefähr den gleichen relativen Anteil wie alle anderen hält. Das ist zeitliche Symmetrie."
+      },
+      "wot": {
+        "term": "Web of Trust (WoT)",
+        "definition": "Ein dezentrales Identitätsverifizierungssystem, bei dem bestehende Mitglieder neue Mitglieder durch persönliche Beziehungen zertifizieren. Verhindert Sybil-Angriffe (eine Person erstellt mehrere Konten).",
+        "deepDive": "Anders als Proof-of-Work (Energieverschwendung) oder Proof-of-Stake (Plutokratie) basiert das Web of Trust auf menschlichen Beziehungen. Um beizutreten, muss eine Person von 5 bestehenden 'Smiths' (Validierern) zertifiziert werden. Dies gewährleistet Ein-Person-Ein-Konto ohne zentralisiertes KYC. Der Smith-Status erfordert fortlaufende Gemeinschaftsbeteiligung."
+      },
+      "basket": {
+        "term": "Souveräner Warenkorb",
+        "definition": "Ein standardisiertes Set essentieller Güter und Dienstleistungen (Wohnung, Energie, Lebensmittel, Transport), das zur Messung der realen Kaufkraft über Währungen und Zeiträume hinweg verwendet wird.",
+        "deepDive": "Anders als der VPI (Verbraucherpreisindex), den Regierungen durch methodische Änderungen (hedonische Anpassungen, Substitutionseffekte) manipulieren können, ist der Souveräne Warenkorb transparent und fest. Jede Gemeinschaft definiert ihren eigenen Warenkorb, was ehrliche Ländervergleiche ermöglicht. UVD dient als universelle Recheneinheit für diese Warenkörbe."
+      },
+      "timeEquity": {
+        "term": "Zeit-Gerechtigkeit",
+        "definition": "Das Prinzip, dass die Zeit jedes Menschen im Schöpfungsprozess den gleichen monetären Wert hat. UVD rahmt die Geldschöpfung nicht als Einkommensumverteilung (Steuern), sondern als 'monetäres Geburtsrecht' — Infrastruktur, nicht Wohlfahrt.",
+        "deepDive": "Die traditionelle Einordnung universeller Dividenden als 'Grundeinkommen' löst politischen Widerstand aus (Assoziation mit Wohlfahrt). Zeit-Gerechtigkeit formuliert um: So wie jeder Bürger gleichen Zugang zu Straßen, Gerichten und sauberer Luft hat, sollte jeder Mensch gleichen Zugang zu neu geschaffenen Geldeinheiten haben. Das ist keine Umverteilung — es ist faire Erstverteilung."
+      },
+      "lazyClaiming": {
+        "term": "Lazy Claiming",
+        "definition": "Eine On-Chain-Optimierung, bei der statt jedes Konto bei jedem Block zu aktualisieren, ein globaler UD-Index gepflegt wird. Individuelle Konten berechnen ihre aufgelaufene UD erst bei einer Transaktion.",
+        "deepDive": "Bei N = 1.000.000 Mitgliedern wäre die Aktualisierung jedes Kontos bei jedem Block rechnerisch untragbar. Lazy Claiming speichert einen monoton steigenden UD-Index. Wenn ein Nutzer eine Transaktion initiiert, berechnet die Runtime: pending_ud = (aktueller_index - letzter_beanspruchter_index) × ud_pro_einheit. Das ist O(1) pro Beanspruchung statt O(N) pro Block."
+      }
+    }
+  },
+  "footer": {
+    "brand": "UVD Simulation",
+    "brandDescription": "Ein unabhängiges Begleit- und Bildungsprojekt, das das ökonomische Modell hinter dem Universe Dollar Protokoll erkundet.",
+    "simulations": "Simulationen",
+    "officialResources": "Offizielle Ressourcen",
+    "shortpaper": "Shortpaper (IPFS)",
+    "whitepaper": "Whitepaper (IPFS)",
+    "twitter": "X / Twitter",
+    "foundation": "Grundlagen",
+    "relativeTheory": "Relative Theorie des Geldes",
+    "cantillonEffect": "Cantillon-Effekt",
+    "legal": "Rechtliches",
+    "legalNotice": "Impressum",
+    "privacyPolicy": "Datenschutzerklärung",
+    "cookieSettings": "Cookie-Einstellungen",
+    "disclaimerTitle": "Haftungsausschluss",
+    "disclaimer": "Diese Website ist ein unabhängiges Bildungs- und Begleitprojekt zur Unterstützung des Universe Dollar Projekts. Sie ist nicht die offizielle Website von Universe Dollar — das offizielle Projekt ist unter uvd.xyz zu finden. Alle Inhalte auf dieser Seite stellen die unabhängige Interpretation des Autors von öffentlich verfügbarer Forschung dar, einschließlich der Relativen Theorie des Geldes von Stéphane Laborde und öffentlich verfügbarer Wirtschaftsdaten der Weltbank, EZB und FRED. Kein Inhalt dieser Website stellt eine Finanzberatung, Anlageempfehlung oder Aufforderung jeglicher Art dar. Simulationsergebnisse sind mathematische Projektionen basierend auf historischen Durchschnittswerten und garantieren keine zukünftigen Ergebnisse. Das Universe Dollar Protokoll befindet sich in aktiver Entwicklung und kann sich ändern. Für verbindliche Informationen beziehen Sie sich ausschließlich auf die offiziellen Ressourcen unter uvd.xyz und die veröffentlichten Whitepaper und Shortpaper.",
+    "independentSite": "Unabhängige Begleitseite",
+    "notFinancialAdvice": "Keine Finanzberatung",
+    "copyright": "Prime Associates LLC"
+  },
+  "subpage": {
+    "backToOverview": "Zurück zur Übersicht"
+  },
+  "cookie": {
+    "title": "Cookie-Einstellungen",
+    "description": "Wir verwenden Cookies, um Ihre Erfahrung zu verbessern. Sie können Ihre Präferenzen unten anpassen.",
+    "necessary": "Notwendig",
+    "necessaryDesc": "Erforderlich für die ordnungsgemäße Funktion der Website. Kann nicht deaktiviert werden.",
+    "preferences": "Präferenzen",
+    "preferencesDesc": "Ermöglicht der Website, Ihre Einstellungen und Präferenzen zu speichern.",
+    "statistics": "Statistiken",
+    "statisticsDesc": "Hilft uns zu verstehen, wie Besucher mit der Website interagieren.",
+    "acceptAll": "Alle akzeptieren",
+    "savePreferences": "Einstellungen speichern",
+    "rejectOptional": "Optionale ablehnen"
+  },
+  "languageSwitcher": {
+    "label": "Sprache"
+  },
+  "metadata": {
+    "home": {
+      "title": "UVD Simulation — Interaktiver Begleiter zu Universe Dollar",
+      "description": "Interaktives Simulationsterminal für Universe Dollar. Inflationsrechner, RTM-Visualisierung, Souveräner Warenkorb-Builder — transparent, Open Source, datengestützt."
+    },
+    "timeTheft": {
+      "title": "Zeitdiebstahl-Rechner — Wie viel hat dich Inflation gekostet?",
+      "description": "Berechne, wie viel Kaufkraft dir die Inflation gestohlen hat. Persönlicher Inflationsrechner mit Weltbank-, EZB- und FRED-Daten."
+    },
+    "rtm": {
+      "title": "RTM-Simulator — Relative Theorie des Geldes Live",
+      "description": "Interaktive Visualisierung der Relativen Theorie des Geldes. Universelle Dividende, symmetrische Geldschöpfung — in Echtzeit simulieren."
+    },
+    "basket": {
+      "title": "Souveräner Warenkorb — Fiat vs. UVD Lebenshaltungskosten",
+      "description": "Vergleiche reale Lebenshaltungskosten über Länder hinweg. Warenkorb-Simulation: Miete, Energie, Lebensmittel — Fiat-Inflation vs. UVD-Stabilität."
+    },
+    "glossary": {
+      "title": "Glossar — Geldtheorie einfach erklärt",
+      "description": "Präzise Definitionen monetärer Schlüsselkonzepte: Cantillon-Effekt, Universelle Dividende, RTM, Kaufkraft, Geldschöpfung."
+    },
+    "legal": {
+      "title": "Impressum",
+      "description": "Impressum und Unternehmensinformationen für UVD Simulation, betrieben von Prime Associates LLC."
+    },
+    "privacy": {
+      "title": "Datenschutzerklärung",
+      "description": "Datenschutzerklärung für UVD Simulation. Datenverarbeitung, Cookie-Nutzung und Ihre Rechte."
+    },
+    "faq": {
+      "title": "FAQ — Universe Dollar Fragen beantwortet",
+      "description": "Häufig gestellte Fragen zu Universe Dollar (UVD). Ist UVD Betrug? Wie funktioniert es? Wer steckt dahinter? Kian Hoss UVD erklärt."
+    },
+    "aboutUvd": {
+      "title": "Was ist Universe Dollar (UVD)? — Einfach erklärt",
+      "description": "Universe Dollar erklärt: Was es ist, wie es funktioniert, wer es erschaffen hat und warum es wichtig ist. Unabhängige Bildungsübersicht."
+    },
+    "methodologyTimeTheft": {
+      "title": "Methodik: Zeitdiebstahl-Rechner — Formeln, Datenquellen, Annahmen",
+      "description": "Volle Transparenz: Kaufkraftverlust-Formel, Inflationsdaten von Weltbank/EZB/FRED, Berechnungsmethodik und Einschränkungen."
+    },
+    "methodologyRtm": {
+      "title": "Methodik: RTM-Simulator — Herleitung der Universellen Dividende",
+      "description": "Vollständige Herleitung der Universellen-Dividende-Formel aus der Relativen Theorie des Geldes. Mathematischer Beweis, Symmetrieeigenschaften."
+    },
+    "methodologyBasket": {
+      "title": "Methodik: Souveräner Warenkorb — Zusammensetzung & Datenquellen",
+      "description": "Volle Transparenz: Warenkorb-Zusammensetzung pro Land, Inflationsdaten, Preisprojektions-Formeln."
+    }
+  },
+  "faq": {
+    "badge": "Häufig gestellte Fragen",
+    "title": "Deine Fragen, ",
+    "titleHighlight": "beantwortet.",
+    "subtitle": "Transparente Antworten auf die häufigsten Fragen zu Universe Dollar, der Technologie und dieser Begleitseite.",
+    "disclaimer": "Diese FAQ dient ausschließlich Bildungszwecken. Nichts hiervon stellt eine Finanzberatung dar.",
+    "sections": {
+      "about": "Über Universe Dollar",
+      "trust": "Vertrauen & Legitimität",
+      "technology": "Technologie",
+      "gettingStarted": "Erste Schritte"
+    },
+    "items": {
+      "whatIsUvd": {
+        "q": "Was ist Universe Dollar (UVD)?",
+        "a": "Universe Dollar ist ein Protokoll, das die Relative Theorie des Geldes (RTM) von Stéphane Laborde implementiert. Es schlägt ein Geldsystem vor, in dem neues Geld gleichmäßig für jeden verifizierten Teilnehmer durch eine Universelle Dividende geschaffen wird — mathematisch sichergestellt, dass niemand strukturell bevorzugt wird."
+      },
+      "whoCreated": {
+        "q": "Wer hat Universe Dollar erschaffen?",
+        "a": "Das UVD-Protokoll basiert auf der Relativen Theorie des Geldes, formalisiert von Stéphane Laborde im Jahr 2010. Das Universe Dollar Projekt und seine offizielle Website (uvd.xyz) implementieren diese Theorie auf einer Blockchain-Ebene. Diese Begleitseite (uvd.trading) ist ein unabhängiges Bildungsprojekt von Prime Associates LLC."
+      },
+      "isScam": {
+        "q": "Ist Universe Dollar Betrug (Scam)?",
+        "a": "Diese Begleitseite kann keine Aussagen über die Legitimität einer Investition machen. Was wir sagen können: Das mathematische Framework (RTM) ist peer-reviewed und öffentlich zugänglich. Das Protokoll ist Open-Source. Das Whitepaper und Shortpaper sind öffentlich über IPFS zugänglich. Wir ermutigen dich, die Primärquellen zu lesen, die Mathematik zu überprüfen und dir deine eigene Meinung zu bilden. Investiere nie mehr, als du dir leisten kannst zu verlieren."
+      },
+      "isLegit": {
+        "q": "Ist UVD seriös? Kann man dem vertrauen?",
+        "a": "Vertrauen sollte auf überprüfbaren Fakten basieren, nicht auf Versprechen. Die RTM-Mathematik ist öffentlich überprüfbar. Der Protokollcode ist Open-Source. Das Whitepaper ist auf IPFS verfügbar. Diese Seite bietet interaktive Simulationen, damit du die mathematischen Behauptungen selbst testen kannst. Mache immer deine eigene Recherche (DYOR) und konsultiere einen Finanzberater."
+      },
+      "regulated": {
+        "q": "Ist UVD reguliert?",
+        "a": "Krypto-Protokolle operieren in einer sich schnell entwickelnden regulatorischen Landschaft. Uns sind keine spezifischen regulatorischen Genehmigungen oder Ablehnungen bekannt. Diese Begleitseite bietet keine Rechts- oder Regulierungsberatung. Konsultiere einen qualifizierten Rechtsexperten in deiner Jurisdiktion."
+      },
+      "kianHoss": {
+        "q": "Was hat Kian Hoss mit UVD zu tun?",
+        "a": "Kian Hoss wird mit der Promotion des Universe Dollar Projekts in sozialen Medien in Verbindung gebracht. Diese Begleitseite ist ein unabhängiges Bildungsprojekt und ist weder mit Kian Hoss verbunden, noch von ihm unterstützt oder erstellt. Für offizielle Informationen beziehe dich auf uvd.xyz."
+      },
+      "howWorks": {
+        "q": "Wie funktioniert UVD technisch?",
+        "a": "UVD implementiert die RTM auf einer Blockchain-Ebene. Jedes verifizierte Mitglied erhält eine Universelle Dividende — einen gleichen Anteil an neu geschaffenem Geld. Die Verifizierung nutzt ein Web of Trust (WoT), bei dem bestehende Mitglieder neue zertifizieren. Das Protokoll nutzt 'Lazy Claiming' für On-Chain-Effizienz. Sieh dir unseren RTM-Simulator für eine interaktive Demonstration an."
+      },
+      "stablecoin": {
+        "q": "Ist UVD ein Stablecoin?",
+        "a": "Nein. UVD ist nicht an eine Fiat-Währung gebunden. Stattdessen ist sein Wert darauf ausgelegt, die Kaufkraft relativ zu einem Souveränen Warenkorb realer Güter und Dienstleistungen zu erhalten. Das ist grundlegend anders als Stablecoins, die eine einzelne Fiat-Währung abbilden (wie USDT/USDC den USD)."
+      },
+      "blockchain": {
+        "q": "Auf welcher Blockchain basiert UVD?",
+        "a": "Für die aktuellsten technischen Details zur Blockchain-Implementierung von UVD beziehe dich bitte auf das offizielle Whitepaper und die offizielle Website unter uvd.xyz."
+      },
+      "rtmExplained": {
+        "q": "Was ist die Relative Theorie des Geldes?",
+        "a": "RTM ist ein mathematisches Framework von Stéphane Laborde (2010), das beweist, dass es genau eine Klasse von Geldsystemen gibt, in der kein Individuum strukturell bevorzugt wird: Systeme mit einer Universellen Dividende. Es zeigt, dass symmetrische Geldschöpfung der einzige Weg ist, sowohl räumliche Symmetrie (Fairness zwischen Individuen) als auch zeitliche Symmetrie (Fairness zwischen Generationen) zu gewährleisten."
+      },
+      "canBuy": {
+        "q": "Kann ich UVD kaufen? Wo?",
+        "a": "Diese Begleitseite verkauft, verteilt oder vermittelt keine Token oder Kryptowährungen. Für Informationen zur Token-Verfügbarkeit besuche bitte das offizielle Projekt unter uvd.xyz. Dies ist keine Kauf- oder Verkaufsempfehlung."
+      },
+      "whenLaunch": {
+        "q": "Wann startet UVD?",
+        "a": "Für die neuesten Informationen zu Projektzeitplänen und Startdaten beziehe dich bitte auf die offizielle Website unter uvd.xyz und deren offizielle Social-Media-Kanäle."
+      },
+      "whatIsThis": {
+        "q": "Was ist diese Website (uvd.trading)?",
+        "a": "Dies ist eine unabhängige Bildungs-Begleitseite. Wir bieten interaktive Simulationen, Methodik-Erklärungen und Bildungsinhalte über die ökonomische Theorie hinter Universe Dollar. Wir sind nicht das offizielle UVD-Projekt — die offizielle Seite ist uvd.xyz. Wir werden von Prime Associates LLC betrieben."
+      },
+      "cantillonWhat": {
+        "q": "Was ist der Cantillon-Effekt?",
+        "a": "Der Cantillon-Effekt beschreibt, wie neu geschaffenes Geld diejenigen bevorzugt, die es zuerst erhalten (Banken, Regierungen, Großkonzerne) auf Kosten derer, die es zuletzt erhalten (gewöhnliche Menschen). Bis das neue Geld bei dir ankommt, sind die Preise bereits gestiegen. Dies ist das Kernproblem, das RTM und UVD durch symmetrische Geldschöpfung lösen wollen."
+      },
+      "inflationCalc": {
+        "q": "Wie genau ist der Inflationsrechner?",
+        "a": "Unser Zeitdiebstahl-Rechner verwendet offizielle Inflationsdaten der Weltbank, EZB und FRED. Die Methodik, Formeln, Annahmen und Einschränkungen sind vollständig auf unserer Methodik-Seite dokumentiert. Ergebnisse sind mathematische Projektionen basierend auf historischen Durchschnittswerten — sie sagen keine zukünftigen Ergebnisse voraus."
+      }
+    }
+  },
+  "aboutUvd": {
+    "badge": "Bildungsübersicht",
+    "title": "Was ist ",
+    "titleHighlight": "Universe Dollar?",
+    "subtitle": "Eine unabhängige, verständliche Erklärung des Protokolls, der Theorie dahinter und warum es wichtig ist.",
+    "whatTitle": "Was ist UVD?",
+    "whatText": "Universe Dollar (UVD) ist ein Protokoll, das die Relative Theorie des Geldes implementiert — ein mathematisches Framework, das beweist, dass das einzige faire Geldsystem eines ist, in dem jeder Teilnehmer einen gleichen Anteil an neu geschaffenem Geld erhält. Dieser gleiche Anteil wird Universelle Dividende genannt.",
+    "howTitle": "Wie funktioniert es?",
+    "howText": "Anstatt dass Geld von Zentralbanken geschaffen und ungleichmäßig verteilt wird (der Cantillon-Effekt), verteilt UVD neu geschaffene Einheiten gleichmäßig an alle verifizierten Mitglieder. Die Verifizierung erfolgt über ein Web of Trust — bestehende Mitglieder zertifizieren neue über persönliche Beziehungen, was Ein-Person-Ein-Konto ohne zentralisierte Identitätsprüfungen gewährleistet.",
+    "whyTitle": "Warum ist es wichtig?",
+    "whyText": "In traditionellen Geldsystemen profitieren diejenigen, die der Geldschöpfung am nächsten sind (Banken, Regierungen) auf Kosten aller anderen. UVDs mathematisches Framework eliminiert diese strukturelle Ungleichheit. Das Souveräne-Warenkorb-Konzept stellt zusätzlich sicher, dass die Kaufkraft an realen Gütern gemessen wird — nicht an einer anderen Währung, die selbst inflationiert.",
+    "whoTitle": "Wer steckt dahinter?",
+    "whoText": "Die mathematische Grundlage stammt aus Stéphane Labordes Relativer Theorie des Geldes (2010). Das Universe Dollar Projekt implementiert diese Theorie. Diese Begleitseite (uvd.trading) ist ein unabhängiges Bildungsprojekt von Prime Associates LLC. Für das offizielle Projekt besuche uvd.xyz.",
+    "learnMore": "Möchtest du mehr erfahren?",
+    "learnMoreText": "Erkunde unsere interaktiven Simulationen, um die Mathematik in Aktion zu sehen, lies das Glossar für präzise Definitionen oder besuche die offizielle Seite für das Whitepaper und die Roadmap.",
+    "ctaSimulation": "Simulationen testen",
+    "ctaGlossary": "Glossar lesen",
+    "ctaOfficial": "uvd.xyz besuchen"
+  }
+}
