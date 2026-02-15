@@ -1,9 +1,13 @@
 import { Navigation } from "@/components/navigation";
 import { Hero } from "@/components/hero";
-import { TimeTheftCalculator } from "@/components/time-theft-calculator";
-import { RTMSimulator } from "@/components/rtm-simulator";
-import { BasketVisualizer } from "@/components/basket-visualizer";
-import { Glossary } from "@/components/glossary";
+import {
+  StoryProblem,
+  StoryCalculator,
+  StorySolution,
+  StoryProof,
+  StoryLearn,
+  StoryClosing,
+} from "@/components/story-sections";
 import { Footer } from "@/components/footer";
 
 export default function Home() {
@@ -12,10 +16,12 @@ export default function Home() {
       <Navigation />
       <main>
         <Hero />
-        <TimeTheftCalculator />
-        <RTMSimulator />
-        <BasketVisualizer />
-        <Glossary />
+        <StoryProblem />
+        <StoryCalculator />
+        <StorySolution />
+        <StoryProof />
+        <StoryLearn />
+        <StoryClosing />
       </main>
       <Footer />
     </div>

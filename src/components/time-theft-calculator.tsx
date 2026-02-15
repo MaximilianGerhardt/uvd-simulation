@@ -53,7 +53,7 @@ export function TimeTheftCalculator() {
               Time-Theft Calculator
             </span>
           </div>
-          <h2 className="mb-4 text-[clamp(2rem,4vw,3rem)] font-normal tracking-[-0.03em] leading-[1.1] text-[#1b1b1b]">
+          <h2 className="mb-4 text-[clamp(2.5rem,5vw,4rem)] font-light tracking-[-0.04em] leading-[1.05] text-[#1b1b1b]">
             How much has inflation{" "}
             <span className="text-[#FF6B00]">stolen</span> from you?
           </h2>

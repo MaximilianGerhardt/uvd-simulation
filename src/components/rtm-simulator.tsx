@@ -48,7 +48,7 @@ export function RTMSimulator() {
               RTM Live Model
             </span>
           </div>
-          <h2 className="mb-4 text-[clamp(2rem,4vw,3rem)] font-normal tracking-[-0.03em] leading-[1.1] text-[#1b1b1b]">
+          <h2 className="mb-4 text-[clamp(2.5rem,5vw,4rem)] font-light tracking-[-0.04em] leading-[1.05] text-[#1b1b1b]">
             Relative Theory of Money —{" "}
             <span className="gradient-text">Visualized</span>
           </h2>

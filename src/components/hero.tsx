@@ -1,30 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowDown, ExternalLink, Shield, Scale, Eye, Globe } from "lucide-react";
-
-const pillars = [
-  {
-    icon: Scale,
-    title: "Just",
-    description: "Equal monetary creation for every human. No privilege, no Cantillon effect.",
-  },
-  {
-    icon: Eye,
-    title: "Transparent",
-    description: "Open-source protocol. Every rule visible, every transaction auditable.",
-  },
-  {
-    icon: Shield,
-    title: "Protective",
-    description: "Purchasing power preserved through basket-indexed stability.",
-  },
-  {
-    icon: Globe,
-    title: "Civilizational",
-    description: "A fair unit of account for humanity — infrastructure, not welfare.",
-  },
-];
+import { ArrowDown, ExternalLink } from "lucide-react";
 
 export function Hero() {
   return (
@@ -32,21 +9,20 @@ export function Hero() {
       <div className="relative z-10 mx-auto max-w-5xl text-center">
         {/* Badge */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="mb-8 inline-flex items-center gap-2 rounded-full border border-[#D0D0D0] bg-white px-4 py-2"
+          initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
+          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          transition={{ duration: 0.7, ease: [0.23, 1, 0.32, 1] }}
+          className="mb-10 inline-flex items-center gap-2 rounded-full border border-[#D0D0D0] bg-white px-4 py-2"
         >
           <div className="h-1.5 w-1.5 rounded-full bg-[#FF6B00] animate-pulse" />
-          <span className="text-xs text-[#1b1b1b]/50">
-            Economic Simulation Terminal
+          <span className="text-[clamp(0.75rem,1.2vw,0.875rem)] text-[#1b1b1b]/50">
+            Interactive Companion to
           </span>
-          <span className="text-xs text-[#D0D0D0]">|</span>
           <a
             href="https://www.uvd.xyz"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 text-xs text-[#FF6B00]/70 hover:text-[#FF6B00] transition-colors"
+            className="flex items-center gap-1 text-[clamp(0.75rem,1.2vw,0.875rem)] font-medium text-[#FF6B00]/80 hover:text-[#FF6B00] transition-colors"
           >
             uvd.xyz
             <ExternalLink className="h-2.5 w-2.5" />
@@ -55,75 +31,50 @@ export function Hero() {
 
         {/* Main Title */}
         <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="mb-6 text-[clamp(2.5rem,6vw,4.5rem)] font-normal leading-[1.15] tracking-[-0.035em] text-[#FF6B00]"
+          initial={{ opacity: 0, y: 30, filter: "blur(6px)" }}
+          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          transition={{ duration: 0.7, delay: 0.1, ease: [0.23, 1, 0.32, 1] }}
+          className="mb-8 text-[clamp(3rem,8vw,6rem)] font-light leading-[1.05] tracking-[-0.04em] text-[#1b1b1b]"
         >
-          Money for the People
+          What if money<br />
+          were <span className="text-[#FF6B00]">fair</span>?
         </motion.h1>
 
         {/* Subtitle */}
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="mx-auto mb-12 max-w-2xl text-base text-[#1b1b1b]/50 md:text-lg leading-relaxed"
+          initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
+          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          transition={{ duration: 0.7, delay: 0.2, ease: [0.23, 1, 0.32, 1] }}
+          className="mx-auto mb-14 max-w-2xl text-[clamp(1.125rem,2vw,1.25rem)] text-[#1b1b1b]/45 leading-[1.6]"
         >
-          Explore the mathematics behind symmetric money creation. This
-          interactive simulation proves how equal monetary access preserves
-          purchasing power across time and space.
+          This interactive pitch deck explores the economic model behind
+          Universe Dollar — a protocol where monetary creation is mathematically
+          equal for every participant. Run the simulations. See the proof.
         </motion.p>
 
         {/* CTA Buttons */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="mb-20 flex flex-col items-center justify-center gap-4 sm:flex-row"
+          initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
+          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          transition={{ duration: 0.7, delay: 0.3, ease: [0.23, 1, 0.32, 1] }}
+          className="flex flex-col items-center justify-center gap-4 sm:flex-row"
         >
           <a
-            href="#simulation"
-            className="group flex items-center gap-2 rounded-full bg-[#1b1b1b] px-8 py-3.5 text-base font-medium text-white transition-all hover:bg-[#333]"
+            href="#story"
+            className="group flex items-center gap-2 rounded-full bg-[#1b1b1b] px-8 py-4 text-[clamp(0.9375rem,1.5vw,1.0625rem)] font-medium text-white transition-all hover:bg-[#333]"
           >
-            Launch Simulation
+            Start the Story
             <ArrowDown className="h-4 w-4 transition-transform group-hover:translate-y-0.5" />
           </a>
           <a
             href="https://www.uvd.xyz"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 rounded-full border border-[#D0D0D0] px-8 py-3.5 text-base font-medium text-[#1b1b1b] transition-all hover:border-[#999]"
+            className="flex items-center gap-2 rounded-full border border-[#D0D0D0] px-8 py-4 text-[clamp(0.9375rem,1.5vw,1.0625rem)] font-medium text-[#1b1b1b] transition-all hover:border-[#999]"
           >
-            Visit uvd.xyz
+            Official Site
             <ExternalLink className="h-3.5 w-3.5" />
           </a>
-        </motion.div>
-
-        {/* Four Pillars */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4"
-        >
-          {pillars.map((pillar, index) => (
-            <motion.div
-              key={pillar.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
-              className="group rounded-2xl border border-[#D0D0D0]/50 bg-white px-5 py-6 text-left transition-all hover:border-[#D0D0D0] hover:shadow-sm"
-            >
-              <pillar.icon className="mb-3 h-5 w-5 text-[#FF6B00]/60 transition-colors group-hover:text-[#FF6B00]" />
-              <h3 className="mb-1.5 text-sm font-semibold text-[#1b1b1b]">
-                {pillar.title}
-              </h3>
-              <p className="text-xs leading-relaxed text-[#1b1b1b]/40">
-                {pillar.description}
-              </p>
-            </motion.div>
-          ))}
         </motion.div>
       </div>
 

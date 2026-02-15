@@ -4,18 +4,19 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import "./globals.css";
 
 const inter = Inter({
-  variable: "--font-geist-sans",
+  variable: "--font-inter",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
 });
 
 export const metadata: Metadata = {
-  title: "Universe Dollar — Simulation Terminal",
+  title: "UVD Simulation — Interactive Companion to Universe Dollar",
   description:
-    "Interactive economic simulation for the Universal Value Protocol. Explore how symmetric money creation preserves purchasing power across time and space.",
+    "An independent educational pitch deck exploring the economic model behind Universe Dollar. Run simulations on inflation impact, symmetric money creation, and sovereign basket pricing.",
   openGraph: {
-    title: "Universe Dollar — Simulation Terminal",
+    title: "UVD Simulation — Interactive Companion to Universe Dollar",
     description:
-      "Interactive economic simulation for the Universal Value Protocol.",
+      "Explore the mathematics of fair money creation through interactive simulations.",
     type: "website",
   },
 };

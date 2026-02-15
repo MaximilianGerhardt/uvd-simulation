@@ -5,10 +5,10 @@ import { Menu, X, ExternalLink } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
-  { href: "#simulation", label: "Simulation" },
-  { href: "#rtm-model", label: "RTM Model" },
-  { href: "#basket", label: "Basket Index" },
-  { href: "#glossary", label: "Glossary" },
+  { href: "/simulation/time-theft", label: "Time-Theft" },
+  { href: "/simulation/rtm", label: "RTM Model" },
+  { href: "/simulation/basket", label: "Basket Index" },
+  { href: "/glossary", label: "Glossary" },
 ];
 
 export function Navigation() {
