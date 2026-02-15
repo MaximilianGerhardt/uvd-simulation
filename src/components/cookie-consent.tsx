@@ -96,7 +96,7 @@ export function CookieConsent() {
               <div className="flex items-center gap-2.5">
                 <Cookie className="h-4 w-4 text-[#FF6B00]" />
                 <h3 className="text-sm font-semibold text-[#1b1b1b]">
-                  Cookie-Einstellungen
+                  Cookie Settings
                 </h3>
               </div>
               <button
@@ -110,11 +110,11 @@ export function CookieConsent() {
 
             {/* Description */}
             <p className="mb-4 text-xs leading-relaxed text-[#1b1b1b]/50">
-              Diese Website verwendet nur technisch notwendige Cookies. Alle Simulationen
-              laufen lokal in deinem Browser — es werden keine persönlichen Daten an
-              Server übermittelt. Mehr dazu in unserer{" "}
+              This website only uses technically necessary cookies. All simulations
+              run locally in your browser — no personal data is sent to any server.
+              Learn more in our{" "}
               <a href="/datenschutz" className="text-[#297FF3] hover:underline">
-                Datenschutzerklärung
+                Privacy Policy
               </a>.
             </p>
 
@@ -128,7 +128,7 @@ export function CookieConsent() {
               ) : (
                 <ChevronDown className="h-3 w-3" />
               )}
-              Details anzeigen
+              Show details
             </button>
 
             {/* Cookie Categories */}
@@ -146,14 +146,14 @@ export function CookieConsent() {
                     <div className="flex items-center justify-between">
                       <div>
                         <p className="text-xs font-medium text-[#1b1b1b]">
-                          Notwendig
+                          Necessary
                         </p>
                         <p className="text-[10px] text-[#1b1b1b]/40">
-                          Cookie-Einwilligung speichern. Immer aktiv.
+                          Stores your cookie consent. Always active.
                         </p>
                       </div>
                       <div className="rounded-full bg-[#4ade80]/20 px-2 py-0.5 text-[10px] font-medium text-[#16a34a]">
-                        Immer an
+                        Always on
                       </div>
                     </div>
 
@@ -161,10 +161,10 @@ export function CookieConsent() {
                     <div className="flex items-center justify-between">
                       <div>
                         <p className="text-xs font-medium text-[#1b1b1b]">
-                          Präferenzen
+                          Preferences
                         </p>
                         <p className="text-[10px] text-[#1b1b1b]/40">
-                          Speichert UI-Einstellungen wie gewähltes Land.
+                          Remembers UI settings like selected country.
                         </p>
                       </div>
                       <button
@@ -186,10 +186,10 @@ export function CookieConsent() {
                     <div className="flex items-center justify-between">
                       <div>
                         <p className="text-xs font-medium text-[#1b1b1b]">
-                          Statistik
+                          Statistics
                         </p>
                         <p className="text-[10px] text-[#1b1b1b]/40">
-                          Anonyme Nutzungsanalyse zur Verbesserung der Seite.
+                          Anonymous usage analytics to improve the site.
                         </p>
                       </div>
                       <button
@@ -217,19 +217,19 @@ export function CookieConsent() {
                 onClick={() => accept(true)}
                 className="flex-1 rounded-full bg-[#1b1b1b] px-5 py-2.5 text-xs font-medium text-white transition-colors hover:bg-[#333]"
               >
-                Alle akzeptieren
+                Accept all
               </button>
               <button
                 onClick={() => accept(false)}
                 className="flex-1 rounded-full border border-[#D0D0D0] px-5 py-2.5 text-xs font-medium text-[#1b1b1b] transition-colors hover:border-[#999]"
               >
-                Auswahl speichern
+                Save selection
               </button>
               <button
                 onClick={decline}
                 className="flex-1 rounded-full px-5 py-2.5 text-xs font-medium text-[#1b1b1b]/40 transition-colors hover:text-[#1b1b1b]/60"
               >
-                Nur notwendige
+                Necessary only
               </button>
             </div>
           </div>

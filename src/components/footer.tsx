@@ -126,26 +126,26 @@ export function Footer() {
             </div>
 
             <h4 className="mb-4 mt-8 text-xs font-semibold uppercase tracking-[0.05em] text-white/30">
-              Rechtliches
+              Legal
             </h4>
             <div className="space-y-3">
               <a
                 href="/impressum"
                 className="block text-sm text-white/50 hover:text-white transition-colors"
               >
-                Impressum
+                Legal Notice
               </a>
               <a
                 href="/datenschutz"
                 className="block text-sm text-white/50 hover:text-white transition-colors"
               >
-                Datenschutzerklärung
+                Privacy Policy
               </a>
               <button
                 onClick={() => reopenCookieConsent()}
                 className="block text-sm text-white/50 hover:text-white transition-colors text-left"
               >
-                Cookie-Einstellungen
+                Cookie Settings
               </button>
             </div>
           </div>
@@ -178,9 +178,9 @@ export function Footer() {
         <div className="mt-8 flex flex-col items-center justify-between gap-4 border-t border-white/[0.06] pt-8 md:flex-row">
           <p className="text-xs text-white/20">
             Independent companion site &middot; Not financial advice &middot;{" "}
-            <a href="/impressum" className="hover:text-white/40 transition-colors">Impressum</a>
+            <a href="/impressum" className="hover:text-white/40 transition-colors">Legal</a>
             {" "}&middot;{" "}
-            <a href="/datenschutz" className="hover:text-white/40 transition-colors">Datenschutz</a>
+            <a href="/datenschutz" className="hover:text-white/40 transition-colors">Privacy</a>
           </p>
           <p className="text-xs text-white/20">
             &copy; {new Date().getFullYear()} Prime Associates LLC
