@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Clock, Activity, ShoppingBasket, BookOpen } from "lucide-react";
+import { ArrowRight, Activity, ShoppingBasket, BookOpen } from "lucide-react";
 import { ScrollReveal } from "@/components/scroll-reveal";
 
 export function StoryProblem() {
@@ -33,46 +33,6 @@ export function StoryProblem() {
             The question is not whether this happens — it is measurable, documented, and
             ongoing. The question is: <span className="text-[#1b1b1b]">how much has it cost you, personally?</span>
           </p>
-        </ScrollReveal>
-      </div>
-    </section>
-  );
-}
-
-export function StoryCalculator() {
-  return (
-    <section className="relative px-6 py-32 bg-[#f8f8f8]">
-      <div className="mx-auto max-w-4xl">
-        <ScrollReveal>
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#FF6B00]/20 bg-[#FF6B00]/5 px-4 py-1.5">
-            <Clock className="h-3.5 w-3.5 text-[#FF6B00]" />
-            <span className="text-xs font-medium text-[#FF6B00]">
-              Interactive Simulation
-            </span>
-          </div>
-        </ScrollReveal>
-        <ScrollReveal delay={0.1}>
-          <h2 className="mb-8 text-[clamp(2.5rem,6vw,4.5rem)] font-light leading-[1.05] tracking-[-0.04em] text-[#1b1b1b]">
-            Calculate your<br />
-            <span className="text-[#FF6B00]">inflation exposure.</span>
-          </h2>
-        </ScrollReveal>
-        <ScrollReveal delay={0.2}>
-          <p className="mb-12 max-w-2xl text-[clamp(1.125rem,2vw,1.25rem)] leading-[1.6] text-[#1b1b1b]/45">
-            Enter your birth year, country, and income. Our model uses historical
-            central bank data to estimate how much purchasing power the current
-            monetary system has silently redirected away from you — and what a
-            symmetric alternative would look like.
-          </p>
-        </ScrollReveal>
-        <ScrollReveal delay={0.3}>
-          <Link
-            href="/simulation/time-theft"
-            className="group inline-flex items-center gap-3 rounded-full bg-[#1b1b1b] px-8 py-4 text-[clamp(0.9375rem,1.5vw,1.0625rem)] font-medium text-white transition-all hover:bg-[#333]"
-          >
-            Open Time-Theft Calculator
-            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </Link>
         </ScrollReveal>
       </div>
     </section>

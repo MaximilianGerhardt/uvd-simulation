@@ -2,12 +2,14 @@
 
 import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import {
   Clock,
   TrendingDown,
   Shield,
   ChevronDown,
   Info,
+  Code2,
 } from "lucide-react";
 import {
   XAxis,
@@ -24,7 +26,7 @@ export function TimeTheftCalculator() {
   const [birthYear, setBirthYear] = useState(1985);
   const [country, setCountry] = useState("DE");
   const [income, setIncome] = useState(3000);
-  const [hasCalculated, setHasCalculated] = useState(false);
+  const [hasCalculated, setHasCalculated] = useState(true);
 
   const result = useMemo(
     () => calculateTimeTheft(birthYear, country, income),
@@ -146,7 +148,7 @@ export function TimeTheftCalculator() {
                 onClick={handleCalculate}
                 className="w-full rounded-full bg-[#1b1b1b] px-6 py-3 text-sm font-medium text-white transition-all hover:bg-[#333]"
               >
-                Calculate Time Theft
+                Recalculate
               </button>
 
               <div className="flex items-start gap-2 rounded-xl border border-[#D0D0D0]/50 bg-[#f8f8f8] p-3">
@@ -157,6 +159,14 @@ export function TimeTheftCalculator() {
                   conditions. Sources: World Bank, FRED, ECB.
                 </p>
               </div>
+
+              <Link
+                href="/methodology/time-theft"
+                className="flex items-center justify-center gap-2 rounded-full border border-[#D0D0D0]/50 px-5 py-2.5 text-xs text-[#1b1b1b]/50 transition-all hover:border-[#D0D0D0] hover:text-[#1b1b1b]/70"
+              >
+                <Code2 className="h-3.5 w-3.5" />
+                How is this calculated?
+              </Link>
             </div>
           </motion.div>
 

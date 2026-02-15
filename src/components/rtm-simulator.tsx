@@ -2,7 +2,8 @@
 
 import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
-import { Activity, Users, Percent, Calendar, Info } from "lucide-react";
+import Link from "next/link";
+import { Activity, Users, Percent, Calendar, Info, Code2 } from "lucide-react";
 import {
   XAxis,
   YAxis,
@@ -371,6 +372,16 @@ export function RTMSimulator() {
             </div>
           </div>
         </motion.div>
+
+        <div className="mt-6 flex justify-center">
+          <Link
+            href="/methodology/rtm"
+            className="inline-flex items-center gap-2 rounded-full border border-[#D0D0D0]/50 px-5 py-2.5 text-xs text-[#1b1b1b]/50 transition-all hover:border-[#D0D0D0] hover:text-[#1b1b1b]/70"
+          >
+            <Code2 className="h-3.5 w-3.5" />
+            View RTM formula derivation &amp; data sources
+          </Link>
+        </div>
       </div>
     </section>
   );
