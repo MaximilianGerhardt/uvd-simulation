@@ -3,14 +3,14 @@ import { Glossary } from "@/components/glossary";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Glossar — Geldtheorie verständlich erklärt",
+  title: "Glossary — Monetary Theory Explained",
   description:
-    "Präzise Definitionen der wichtigsten geldtheoretischen Begriffe: Cantillon-Effekt, Universaldividende, RTM, Kaufkraft, Geldschöpfung. Mit Quellenverweisen und einfacher Sprache.",
-  keywords: ["Geldtheorie Glossar", "Cantillon Effekt", "Universaldividende", "RTM", "Geldschöpfung", "Kaufkraft", "Inflation erklärt"],
+    "Precise definitions of key monetary theory concepts: Cantillon Effect, Universal Dividend, RTM, Purchasing Power, Money Creation. With primary sources and plain language.",
+  keywords: ["Monetary Theory Glossary", "Cantillon Effect", "Universal Dividend", "RTM", "Money Creation", "Purchasing Power", "Inflation Explained"],
   alternates: { canonical: "https://uvd.trading/glossary" },
   openGraph: {
-    title: "Glossar — Die Sprache des fairen Geldes verstehen",
-    description: "Von Cantillon-Effekt bis Universaldividende: Alle Begriffe erklärt mit Primärquellen.",
+    title: "Glossary — The Language of Fair Money",
+    description: "From Cantillon Effect to Universal Dividend: every term explained with primary sources.",
     url: "https://uvd.trading/glossary",
   },
 };

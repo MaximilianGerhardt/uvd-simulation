@@ -4,14 +4,14 @@ import { ExternalLink } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Methodik: Inflationsrechner — Formeln, Datenquellen, Annahmen",
+  title: "Methodology: Time-Theft Calculator — Formulas, Data Sources, Assumptions",
   description:
-    "Volle Transparenz: Kaufkraftverlust-Formel, Inflationsdaten von Weltbank/EZB/FRED, Berechnungsgrundlagen und Limitierungen. Open Source.",
-  keywords: ["Inflationsrechner Methodik", "Kaufkraftverlust Formel", "Inflation Datenquellen", "Weltbank CPI", "FRED", "EZB", "Open Source Finanz-Simulation"],
+    "Full transparency: purchasing power loss formula, inflation data from World Bank/ECB/FRED, calculation methodology and limitations. Open source.",
+  keywords: ["Inflation Calculator Methodology", "Purchasing Power Formula", "Inflation Data Sources", "World Bank CPI", "FRED", "ECB", "Open Source Finance Simulation"],
   alternates: { canonical: "https://uvd.trading/methodology/time-theft" },
   openGraph: {
-    title: "Methodik: Inflationsrechner — Jede Zahl nachvollziehbar",
-    description: "Formeln, Datenquellen, Annahmen und Quellcode des Inflationsrechners. Volle Transparenz.",
+    title: "Methodology: Time-Theft Calculator — Every Number Traceable",
+    description: "Formulas, data sources, assumptions, and source code. Full transparency.",
     url: "https://uvd.trading/methodology/time-theft",
   },
 };

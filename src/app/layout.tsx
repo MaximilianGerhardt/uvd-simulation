@@ -20,11 +20,10 @@ export const metadata: Metadata = {
     template: "%s — UVD Simulation",
   },
   description:
-    "Interaktives Simulation Terminal für Universe Dollar. Inflationsrechner, RTM-Visualisierung, Sovereign Basket Builder — transparent, open source, datenbasiert.",
+    "Interactive simulation terminal for Universe Dollar. Inflation calculator, RTM visualization, Sovereign Basket Builder — transparent, open source, data-driven.",
   keywords: [
     "UVD",
     "Universe Dollar",
-    "Inflation Rechner",
     "Inflation Calculator",
     "Relative Theory of Money",
     "RTM",
@@ -35,9 +34,9 @@ export const metadata: Metadata = {
     "Purchasing Power",
     "Monetary Simulation",
     "Fair Money",
-    "Geldschöpfung",
-    "Inflationsschutz",
-    "Kryptowährung",
+    "Money Creation",
+    "Inflation Protection",
+    "Cryptocurrency",
     "Basket Currency",
   ],
   authors: [{ name: "Maximilian Gerhardt", url: BASE_URL }],
@@ -60,17 +59,17 @@ export const metadata: Metadata = {
   openGraph: {
     title: "UVD Simulation — Interactive Companion to Universe Dollar",
     description:
-      "Inflationsrechner, RTM-Simulation, Sovereign Basket Builder. Erlebe die Mathematik hinter fairem Geld — interaktiv und transparent.",
+      "Inflation calculator, RTM simulation, Sovereign Basket Builder. Experience the mathematics behind fair money — interactive and transparent.",
     type: "website",
     url: BASE_URL,
     siteName: "UVD Simulation",
-    locale: "de_DE",
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
     title: "UVD Simulation — Interactive Companion to Universe Dollar",
     description:
-      "Interaktives Simulation Terminal: Inflationsrechner, RTM-Visualisierung, Basket Builder. Datenbasiert & open source.",
+      "Interactive simulation terminal: Inflation calculator, RTM visualization, Basket Builder. Data-driven & open source.",
     creator: "@uvd99",
   },
   other: {
@@ -85,7 +84,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="de">
+    <html lang="en">
       <head>
         <StructuredData />
         <link rel="canonical" href={BASE_URL} />

@@ -102,7 +102,7 @@ export function CookieConsent() {
               <button
                 onClick={decline}
                 className="rounded-full p-1 text-[#D0D0D0] hover:text-[#1b1b1b] transition-colors"
-                aria-label="Schließen"
+                aria-label="Close"
               >
                 <X className="h-4 w-4" />
               </button>
@@ -113,7 +113,7 @@ export function CookieConsent() {
               This website only uses technically necessary cookies. All simulations
               run locally in your browser — no personal data is sent to any server.
               Learn more in our{" "}
-              <a href="/datenschutz" className="text-[#297FF3] hover:underline">
+              <a href="/privacy" className="text-[#297FF3] hover:underline">
                 Privacy Policy
               </a>.
             </p>
@@ -172,7 +172,7 @@ export function CookieConsent() {
                         className={`relative h-5 w-9 rounded-full transition-colors ${
                           preferences ? "bg-[#FF6B00]" : "bg-[#D0D0D0]"
                         }`}
-                        aria-label="Präferenzen umschalten"
+                        aria-label="Toggle preferences"
                       >
                         <span
                           className={`absolute top-0.5 h-4 w-4 rounded-full bg-white shadow-sm transition-transform ${
@@ -197,7 +197,7 @@ export function CookieConsent() {
                         className={`relative h-5 w-9 rounded-full transition-colors ${
                           statistics ? "bg-[#FF6B00]" : "bg-[#D0D0D0]"
                         }`}
-                        aria-label="Statistik umschalten"
+                        aria-label="Toggle statistics"
                       >
                         <span
                           className={`absolute top-0.5 h-4 w-4 rounded-full bg-white shadow-sm transition-transform ${

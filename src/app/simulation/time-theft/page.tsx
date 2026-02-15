@@ -3,14 +3,14 @@ import { TimeTheftCalculator } from "@/components/time-theft-calculator";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Inflationsrechner — Kaufkraftverlust berechnen",
+  title: "Time-Theft Calculator — How Much Has Inflation Cost You?",
   description:
-    "Berechne wie viel Kaufkraft Inflation dir gestohlen hat. Persönlicher Inflationsrechner mit Daten der Weltbank, EZB und FRED. Vergleich Fiat vs. symmetrische Geldschöpfung.",
-  keywords: ["Inflationsrechner", "Kaufkraftverlust", "Inflation berechnen", "Time Theft", "Cantillon Effect", "UVD", "Purchasing Power Calculator"],
+    "Calculate how much purchasing power inflation has stolen from you. Personal inflation calculator with World Bank, ECB, and FRED data. Fiat vs. symmetric money creation.",
+  keywords: ["Inflation Calculator", "Purchasing Power Loss", "Time Theft", "Cantillon Effect", "UVD", "Purchasing Power Calculator", "Cost of Inflation"],
   alternates: { canonical: "https://uvd.trading/simulation/time-theft" },
   openGraph: {
-    title: "Inflationsrechner — Wie viel hat Inflation dich gekostet?",
-    description: "Persönlicher Kaufkraftverlust-Rechner basierend auf historischen Zentralbankdaten.",
+    title: "Time-Theft Calculator — How Much Has Inflation Cost You?",
+    description: "Personal purchasing power calculator based on historical central bank data.",
     url: "https://uvd.trading/simulation/time-theft",
   },
 };

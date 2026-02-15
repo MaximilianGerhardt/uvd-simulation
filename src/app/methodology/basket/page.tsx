@@ -4,14 +4,14 @@ import { ExternalLink } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Methodik: Sovereign Basket — Warenkorb-Zusammensetzung & Datenquellen",
+  title: "Methodology: Sovereign Basket — Composition & Data Sources",
   description:
-    "Volle Transparenz: Warenkorb-Zusammensetzung pro Land, Inflationsdaten von Destatis/BLS/Weltbank, Preisprojektions-Formeln. Jede Zahl nachvollziehbar.",
-  keywords: ["Warenkorb Methodik", "Inflation Datenquellen", "Destatis", "BLS CPI", "Sovereign Basket", "Preisstabilität", "UVD Basket Composition"],
+    "Full transparency: basket composition per country, inflation data from Destatis/BLS/World Bank, price projection formulas. Every number traceable.",
+  keywords: ["Basket Methodology", "Inflation Data Sources", "Destatis", "BLS CPI", "Sovereign Basket", "Price Stability", "UVD Basket Composition"],
   alternates: { canonical: "https://uvd.trading/methodology/basket" },
   openGraph: {
-    title: "Methodik: Sovereign Basket — Jede Zutat nachvollziehbar",
-    description: "Warenkorb-Zusammensetzung, Inflationsdaten und Projektionsformeln. Volle Transparenz.",
+    title: "Methodology: Sovereign Basket — Every Ingredient Traceable",
+    description: "Basket composition, inflation data, and projection formulas. Full transparency.",
     url: "https://uvd.trading/methodology/basket",
   },
 };

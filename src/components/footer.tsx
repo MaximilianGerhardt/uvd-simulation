@@ -130,13 +130,13 @@ export function Footer() {
             </h4>
             <div className="space-y-3">
               <a
-                href="/impressum"
+                href="/legal"
                 className="block text-sm text-white/50 hover:text-white transition-colors"
               >
                 Legal Notice
               </a>
               <a
-                href="/datenschutz"
+                href="/privacy"
                 className="block text-sm text-white/50 hover:text-white transition-colors"
               >
                 Privacy Policy
@@ -178,9 +178,9 @@ export function Footer() {
         <div className="mt-8 flex flex-col items-center justify-between gap-4 border-t border-white/[0.06] pt-8 md:flex-row">
           <p className="text-xs text-white/20">
             Independent companion site &middot; Not financial advice &middot;{" "}
-            <a href="/impressum" className="hover:text-white/40 transition-colors">Legal</a>
+            <a href="/legal" className="hover:text-white/40 transition-colors">Legal</a>
             {" "}&middot;{" "}
-            <a href="/datenschutz" className="hover:text-white/40 transition-colors">Privacy</a>
+            <a href="/privacy" className="hover:text-white/40 transition-colors">Privacy</a>
           </p>
           <p className="text-xs text-white/20">
             &copy; {new Date().getFullYear()} Prime Associates LLC

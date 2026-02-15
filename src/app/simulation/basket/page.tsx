@@ -3,14 +3,14 @@ import { BasketVisualizer } from "@/components/basket-visualizer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Sovereign Basket Index — Warenkorb-Vergleich Fiat vs. UVD",
+  title: "Sovereign Basket Index — Fiat vs. UVD Cost of Living",
   description:
-    "Vergleiche die realen Lebenshaltungskosten in verschiedenen Ländern. Warenkorb-Simulation: Miete, Energie, Lebensmittel — Fiat-Inflation vs. UVD-Stabilität über 20 Jahre.",
-  keywords: ["Warenkorb", "Lebenshaltungskosten", "Inflation Vergleich", "Sovereign Basket", "Basket Currency", "UVD", "Kaufkraft"],
+    "Compare real cost of living across countries. Basket simulation: rent, energy, groceries — fiat inflation vs. UVD stability over 20 years.",
+  keywords: ["Cost of Living", "Inflation Comparison", "Sovereign Basket", "Basket Currency", "UVD", "Purchasing Power", "Price Index"],
   alternates: { canonical: "https://uvd.trading/simulation/basket" },
   openGraph: {
-    title: "Sovereign Basket — Gleicher Warenkorb, zwei Preisschilder",
-    description: "Miete, Strom, Lebensmittel: Wie sich Fiat-Preise vs. UVD-Preise über 20 Jahre entwickeln.",
+    title: "Sovereign Basket — Same Basket, Two Price Tags",
+    description: "Rent, energy, groceries: how fiat prices vs. UVD prices evolve over 20 years.",
     url: "https://uvd.trading/simulation/basket",
   },
 };
