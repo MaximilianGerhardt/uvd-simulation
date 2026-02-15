@@ -1,6 +1,7 @@
 "use client";
 
 import { ExternalLink } from "lucide-react";
+import { reopenCookieConsent } from "@/components/cookie-consent";
 
 export function Footer() {
   return (
@@ -141,11 +142,7 @@ export function Footer() {
                 Datenschutzerklärung
               </a>
               <button
-                onClick={() => {
-                  if (typeof window !== "undefined" && (window as unknown as Record<string, unknown>).Cookiebot) {
-                    (window as unknown as Record<string, { show?: () => void }>).Cookiebot.show?.();
-                  }
-                }}
+                onClick={() => reopenCookieConsent()}
                 className="block text-sm text-white/50 hover:text-white transition-colors text-left"
               >
                 Cookie-Einstellungen

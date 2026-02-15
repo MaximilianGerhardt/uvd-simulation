@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Script from "next/script";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { StructuredData } from "@/components/structured-data";
+import { CookieConsent } from "@/components/cookie-consent";
 import "./globals.css";
 
 const BASE_URL = "https://uvd.trading";
@@ -88,17 +88,11 @@ export default function RootLayout({
     <html lang="de">
       <head>
         <StructuredData />
-        <Script
-          id="Cookiebot"
-          src="https://consent.cookiebot.com/uc.js"
-          data-cbid="COOKIEBOT_ID_PLACEHOLDER"
-          data-blockingmode="auto"
-          strategy="beforeInteractive"
-        />
         <link rel="canonical" href={BASE_URL} />
       </head>
       <body className={`${inter.variable} antialiased`}>
         <TooltipProvider>{children}</TooltipProvider>
+        <CookieConsent />
       </body>
     </html>
   );
