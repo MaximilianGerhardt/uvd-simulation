@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { Link } from "@/i18n/navigation";
 import { ShoppingBasket, ArrowUpRight, ArrowDownRight, Code2 } from "lucide-react";
@@ -16,6 +17,7 @@ import {
 import { simulateBasketPrice, BASKETS, COUNTRY_INFLATION } from "@/lib/simulation";
 
 export function BasketVisualizer() {
+  const t = useTranslations("basketViz");
   const [selectedCountry, setSelectedCountry] = useState("DE");
   const [years, setYears] = useState(20);
 
@@ -44,16 +46,14 @@ export function BasketVisualizer() {
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#4ade80]/20 bg-[#4ade80]/5 px-4 py-1.5">
             <ShoppingBasket className="h-3.5 w-3.5 text-[#4ade80]" />
             <span className="text-xs font-medium text-[#16a34a]">
-              Sovereign Basket Index
+              {t("badge")}
             </span>
           </div>
           <h2 className="mb-4 text-[clamp(2.5rem,5vw,4rem)] font-light tracking-[-0.04em] leading-[1.05] text-[#1b1b1b]">
-            The <span className="text-[#FF6B00]">Inflation Reveal</span>
+            {t("title")}<span className="text-[#FF6B00]">{t("titleHighlight")}</span>
           </h2>
           <p className="mx-auto max-w-2xl text-base text-[#1b1b1b]/50 md:text-lg">
-            Same goods, two price tags. Watch how fiat inflation erodes the cost
-            of living while UVD maintains stable purchasing power through
-            basket-indexed measurement.
+            {t("subtitle")}
           </p>
         </motion.div>
 
@@ -76,7 +76,7 @@ export function BasketVisualizer() {
 
         {/* Year Slider */}
         <div className="mb-8 flex items-center justify-center gap-4">
-          <span className="text-sm text-[#1b1b1b]/40">Projection:</span>
+          <span className="text-sm text-[#1b1b1b]/40">{t("projection")}</span>
           <input
             type="range"
             min={5}
@@ -85,7 +85,7 @@ export function BasketVisualizer() {
             onChange={(e) => setYears(Number(e.target.value))}
             className="w-48 accent-[#FF6B00]"
           />
-          <span className="font-mono text-sm text-[#FF6B00]">{years} years</span>
+          <span className="font-mono text-sm text-[#FF6B00]">{years} {t("years")}</span>
         </div>
 
         <div className="grid gap-6 lg:grid-cols-3">
@@ -98,10 +98,10 @@ export function BasketVisualizer() {
             className="rounded-2xl border border-[#D0D0D0]/50 bg-white p-6"
           >
             <h4 className="mb-1 text-sm font-semibold text-[#1b1b1b]">
-              Basket: {basket.country}
+              {t("basketLabel")} {basket.country}
             </h4>
             <p className="mb-5 text-xs text-[#1b1b1b]/40">
-              Monthly cost of living index — {basket.currency}
+              {t("monthlyCostIndex")} — {basket.currency}
             </p>
 
             <div className="space-y-3">
@@ -113,7 +113,7 @@ export function BasketVisualizer() {
                   <div>
                     <div className="text-sm text-[#1b1b1b]/80">{item.name}</div>
                     <div className="text-xs text-[#1b1b1b]/30">
-                      Base: {basket.items[i].basePrice.toLocaleString()}{" "}
+                      {t("base")} {basket.items[i].basePrice.toLocaleString()}{" "}
                       {basket.currency}
                     </div>
                   </div>
@@ -134,7 +134,7 @@ export function BasketVisualizer() {
             <div className="mt-4 rounded-xl border border-[#D0D0D0]/30 bg-[#f8f8f8] p-4">
               <div className="flex items-center justify-between">
                 <span className="text-sm font-medium text-[#1b1b1b]/60">
-                  Total after {years} years
+                  {t("totalAfter", { years })}
                 </span>
               </div>
               <div className="mt-2 flex justify-between">
@@ -146,7 +146,7 @@ export function BasketVisualizer() {
                     <span className="text-xs font-normal">{basket.currency}</span>
                   </div>
                   <div className="text-xs text-[#ef4444]/60">
-                    +{fiatIncrease}% inflation
+                    +{fiatIncrease}% {t("inflation")}
                   </div>
                 </div>
                 <div className="text-right">
@@ -157,7 +157,7 @@ export function BasketVisualizer() {
                     <span className="text-xs font-normal">UVD</span>
                   </div>
                   <div className="text-xs text-[#297FF3]/60">
-                    +{uvdIncrease}% stable
+                    +{uvdIncrease}% {t("stable")}
                   </div>
                 </div>
               </div>
@@ -168,7 +168,7 @@ export function BasketVisualizer() {
           <div className="rounded-2xl border border-[#D0D0D0]/50 bg-white p-6 lg:col-span-2">
             <div className="mb-1 flex items-center justify-between">
               <h4 className="text-sm font-semibold text-[#1b1b1b]">
-                Basket Price Comparison
+                {t("chartTitle")}
               </h4>
               <div className="flex items-center gap-4">
                 <div className="flex items-center gap-1.5">
@@ -182,7 +182,7 @@ export function BasketVisualizer() {
               </div>
             </div>
             <p className="mb-6 text-xs text-[#1b1b1b]/40">
-              Total monthly basket cost — {country.name} ({(country.rate * 100).toFixed(1)}% avg. inflation)
+              {t("chartSubtitle")} — {country.name} ({(country.rate * 100).toFixed(1)}% {t("avgInflation")})
             </p>
 
             <div className="h-[380px]">
@@ -258,7 +258,7 @@ export function BasketVisualizer() {
             className="inline-flex items-center gap-2 rounded-full border border-[#D0D0D0]/50 px-5 py-2.5 text-xs text-[#1b1b1b]/50 transition-all hover:border-[#D0D0D0] hover:text-[#1b1b1b]/70"
           >
             <Code2 className="h-3.5 w-3.5" />
-            View basket composition &amp; inflation data sources
+            {t("methodology")}
           </Link>
         </div>
       </div>

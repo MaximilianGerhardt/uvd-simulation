@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { Link } from "@/i18n/navigation";
 import {
@@ -23,6 +24,7 @@ import {
 import { calculateTimeTheft, COUNTRY_INFLATION } from "@/lib/simulation";
 
 export function TimeTheftCalculator() {
+  const t = useTranslations("timeTheftCalc");
   const [birthYear, setBirthYear] = useState(1985);
   const [country, setCountry] = useState("DE");
   const [income, setIncome] = useState(3000);
@@ -52,17 +54,14 @@ export function TimeTheftCalculator() {
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#FF6B00]/20 bg-[#FF6B00]/5 px-4 py-1.5">
             <Clock className="h-3.5 w-3.5 text-[#FF6B00]" />
             <span className="text-xs font-medium text-[#FF6B00]">
-              Time-Theft Calculator
+              {t("badge")}
             </span>
           </div>
           <h2 className="mb-4 text-[clamp(2.5rem,5vw,4rem)] font-light tracking-[-0.04em] leading-[1.05] text-[#1b1b1b]">
-            How much has inflation{" "}
-            <span className="text-[#FF6B00]">stolen</span> from you?
+            {t("title")}<span className="text-[#FF6B00]">{t("titleHighlight")}</span>{t("titleEnd")}
           </h2>
           <p className="mx-auto max-w-2xl text-base text-[#1b1b1b]/50 md:text-lg">
-            Enter your details to discover how the current monetary system has
-            eroded your purchasing power — and what symmetric money creation
-            would have meant for you.
+            {t("subtitle")}
           </p>
         </motion.div>
 
@@ -76,14 +75,14 @@ export function TimeTheftCalculator() {
             className="rounded-2xl border border-[#D0D0D0]/50 bg-white p-6 lg:col-span-2"
           >
             <h3 className="mb-6 text-lg font-semibold text-[#1b1b1b]">
-              Your Parameters
+              {t("yourParams")}
             </h3>
 
             <div className="space-y-6">
               {/* Birth Year */}
               <div>
                 <label className="mb-2 flex items-center justify-between text-sm text-[#1b1b1b]/60">
-                  <span>Birth Year</span>
+                  <span>{t("birthYear")}</span>
                   <span className="font-mono text-[#FF6B00]">{birthYear}</span>
                 </label>
                 <input
@@ -103,7 +102,7 @@ export function TimeTheftCalculator() {
               {/* Country */}
               <div>
                 <label className="mb-2 block text-sm text-[#1b1b1b]/60">
-                  Country
+                  {t("country")}
                 </label>
                 <div className="relative">
                   <select
@@ -113,7 +112,7 @@ export function TimeTheftCalculator() {
                   >
                     {Object.entries(COUNTRY_INFLATION).map(([code, info]) => (
                       <option key={code} value={code}>
-                        {info.name} ({info.currency}) — avg. {(info.rate * 100).toFixed(1)}%/yr
+                        {info.name} ({info.currency}) — {t("avg")} {(info.rate * 100).toFixed(1)}%{t("perYear")}
                       </option>
                     ))}
                   </select>
@@ -124,7 +123,7 @@ export function TimeTheftCalculator() {
               {/* Monthly Income */}
               <div>
                 <label className="mb-2 flex items-center justify-between text-sm text-[#1b1b1b]/60">
-                  <span>Monthly Income ({countryInfo.currency})</span>
+                  <span>{t("monthlyIncome")} ({countryInfo.currency})</span>
                   <span className="font-mono text-[#FF6B00]">
                     {income.toLocaleString()}
                   </span>
@@ -148,15 +147,13 @@ export function TimeTheftCalculator() {
                 onClick={handleCalculate}
                 className="w-full rounded-full bg-[#1b1b1b] px-6 py-3 text-sm font-medium text-white transition-all hover:bg-[#333]"
               >
-                Recalculate
+                {t("recalculate")}
               </button>
 
               <div className="flex items-start gap-2 rounded-xl border border-[#D0D0D0]/50 bg-[#f8f8f8] p-3">
                 <Info className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[#1b1b1b]/30" />
                 <p className="text-xs leading-relaxed text-[#1b1b1b]/40">
-                  Based on historical average inflation rates. Actual individual
-                  impact varies by spending patterns, investments, and local
-                  conditions. Sources: World Bank, FRED, ECB.
+                  {t("disclaimer")}
                 </p>
               </div>
 
@@ -165,7 +162,7 @@ export function TimeTheftCalculator() {
                 className="flex items-center justify-center gap-2 rounded-full border border-[#D0D0D0]/50 px-5 py-2.5 text-xs text-[#1b1b1b]/50 transition-all hover:border-[#D0D0D0] hover:text-[#1b1b1b]/70"
               >
                 <Code2 className="h-3.5 w-3.5" />
-                How is this calculated?
+                {t("methodology")}
               </Link>
             </div>
           </motion.div>
@@ -186,14 +183,14 @@ export function TimeTheftCalculator() {
                     <div className="mb-2 flex items-center gap-2">
                       <TrendingDown className="h-4 w-4 text-[#ef4444]" />
                       <span className="text-xs text-[#1b1b1b]/40">
-                        Purchasing Power Lost
+                        {t("purchasingPowerLost")}
                       </span>
                     </div>
                     <div className="text-2xl font-bold text-[#ef4444]">
                       {result.lossPercentage}%
                     </div>
                     <div className="mt-1 text-xs text-[#1b1b1b]/30">
-                      over {result.yearsWorked} years
+                      {t("overYears", { years: result.yearsWorked })}
                     </div>
                   </div>
 
@@ -201,14 +198,14 @@ export function TimeTheftCalculator() {
                     <div className="mb-2 flex items-center gap-2">
                       <Clock className="h-4 w-4 text-[#FF6B00]" />
                       <span className="text-xs text-[#1b1b1b]/40">
-                        Total Value Lost
+                        {t("totalValueLost")}
                       </span>
                     </div>
                     <div className="text-2xl font-bold text-[#FF6B00]">
                       {result.totalInflationLoss.toLocaleString()}
                     </div>
                     <div className="mt-1 text-xs text-[#1b1b1b]/30">
-                      {countryInfo.currency} equivalent
+                      {t("currencyEquivalent", { currency: countryInfo.currency })}
                     </div>
                   </div>
 
@@ -216,14 +213,14 @@ export function TimeTheftCalculator() {
                     <div className="mb-2 flex items-center gap-2">
                       <Shield className="h-4 w-4 text-[#297FF3]" />
                       <span className="text-xs text-[#1b1b1b]/40">
-                        UVD Would Preserve
+                        {t("uvdWouldPreserve")}
                       </span>
                     </div>
                     <div className="text-2xl font-bold text-[#297FF3]">
                       ~{result.uvdEquivalentGain.toLocaleString()}
                     </div>
                     <div className="mt-1 text-xs text-[#1b1b1b]/30">
-                      {countryInfo.currency} in purchasing power
+                      {t("inPurchasingPower", { currency: countryInfo.currency })}
                     </div>
                   </div>
                 </div>
@@ -231,10 +228,10 @@ export function TimeTheftCalculator() {
                 {/* Chart */}
                 <div className="rounded-2xl border border-[#D0D0D0]/50 bg-white p-6">
                   <h4 className="mb-1 text-sm font-semibold text-[#1b1b1b]">
-                    Purchasing Power Over Time
+                    {t("chartTitle")}
                   </h4>
                   <p className="mb-6 text-xs text-[#1b1b1b]/40">
-                    Fiat currency vs. UVD — indexed to 100 at start
+                    {t("chartSubtitle")}
                   </p>
                   <div className="h-[300px]">
                     <ResponsiveContainer width="100%" height="100%">
@@ -308,7 +305,7 @@ export function TimeTheftCalculator() {
                           stroke="#297FF3"
                           fill="url(#blueGradient)"
                           strokeWidth={2}
-                          name="UVD Purchasing Power"
+                          name={t("uvdPurchasingPower")}
                           dot={false}
                         />
                         <Area
@@ -317,7 +314,7 @@ export function TimeTheftCalculator() {
                           stroke="#ef4444"
                           fill="url(#redGradient)"
                           strokeWidth={2}
-                          name={`${countryInfo.currency} Purchasing Power`}
+                          name={`${countryInfo.currency}`}
                           dot={false}
                         />
                       </AreaChart>
@@ -332,13 +329,13 @@ export function TimeTheftCalculator() {
                     <Clock className="h-7 w-7 text-[#1b1b1b]/20" />
                   </div>
                   <p className="text-sm text-[#1b1b1b]/40">
-                    Adjust parameters and click
+                    {t("emptyLine1")}
                   </p>
                   <p className="text-sm font-medium text-[#1b1b1b]/60">
-                    &quot;Calculate Time Theft&quot;
+                    {t("emptyLine2")}
                   </p>
                   <p className="mt-2 text-xs text-[#1b1b1b]/30">
-                    to reveal your personal inflation impact
+                    {t("emptyLine3")}
                   </p>
                 </div>
               </div>

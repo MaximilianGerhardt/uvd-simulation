@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { Link } from "@/i18n/navigation";
 import { Activity, Users, Percent, Calendar, Info, Code2 } from "lucide-react";
@@ -16,6 +17,7 @@ import {
 import { simulateRTM } from "@/lib/simulation";
 
 export function RTMSimulator() {
+  const t = useTranslations("rtmSim");
   const [members, setMembers] = useState(10000);
   const [growthRate, setGrowthRate] = useState(10);
   const [years, setYears] = useState(40);
@@ -46,17 +48,14 @@ export function RTMSimulator() {
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#297FF3]/20 bg-[#297FF3]/5 px-4 py-1.5">
             <Activity className="h-3.5 w-3.5 text-[#297FF3]" />
             <span className="text-xs font-medium text-[#297FF3]">
-              RTM Live Model
+              {t("badge")}
             </span>
           </div>
           <h2 className="mb-4 text-[clamp(2.5rem,5vw,4rem)] font-light tracking-[-0.04em] leading-[1.05] text-[#1b1b1b]">
-            Relative Theory of Money —{" "}
-            <span className="gradient-text">Visualized</span>
+            {t("title")}<span className="gradient-text">{t("titleHighlight")}</span>
           </h2>
           <p className="mx-auto max-w-2xl text-base text-[#1b1b1b]/50 md:text-lg">
-            Explore how the Universal Dividend distributes newly created money
-            symmetrically. Adjust parameters to see the mathematical proof in
-            real time.
+            {t("subtitle")}
           </p>
         </motion.div>
 
@@ -71,7 +70,7 @@ export function RTMSimulator() {
           <div className="rounded-2xl border border-[#D0D0D0]/50 bg-white p-5">
             <div className="mb-3 flex items-center gap-2">
               <Users className="h-4 w-4 text-[#FF6B00]" />
-              <span className="text-sm text-[#1b1b1b]/60">Members (N)</span>
+              <span className="text-sm text-[#1b1b1b]/60">{t("members")}</span>
             </div>
             <div className="mb-2 text-right font-mono text-lg font-bold text-[#1b1b1b]">
               {members.toLocaleString()}
@@ -95,7 +94,7 @@ export function RTMSimulator() {
             <div className="mb-3 flex items-center gap-2">
               <Percent className="h-4 w-4 text-[#297FF3]" />
               <span className="text-sm text-[#1b1b1b]/60">
-                Growth Rate (c) — % / year
+                {t("growthRate")}
               </span>
             </div>
             <div className="mb-2 text-right font-mono text-lg font-bold text-[#1b1b1b]">
@@ -120,7 +119,7 @@ export function RTMSimulator() {
             <div className="mb-3 flex items-center gap-2">
               <Calendar className="h-4 w-4 text-[#4ade80]" />
               <span className="text-sm text-[#1b1b1b]/60">
-                Simulation Period (years)
+                {t("simPeriod")}
               </span>
             </div>
             <div className="mb-2 text-right font-mono text-lg font-bold text-[#1b1b1b]">
@@ -136,8 +135,8 @@ export function RTMSimulator() {
               className="w-full accent-[#4ade80]"
             />
             <div className="mt-1 flex justify-between text-xs text-[#1b1b1b]/25">
-              <span>5 yrs</span>
-              <span>80 yrs (lifetime)</span>
+              <span>5 {t("yrs")}</span>
+              <span>80 {t("yrs")} ({t("lifetime")})</span>
             </div>
           </div>
         </motion.div>
@@ -151,7 +150,7 @@ export function RTMSimulator() {
           className="mb-8 flex items-center justify-center"
         >
           <div className="inline-flex items-center gap-4 rounded-full border border-[#D0D0D0]/50 bg-[#f8f8f8] px-6 py-3">
-            <span className="text-xs text-[#1b1b1b]/40">RTM Formula:</span>
+            <span className="text-xs text-[#1b1b1b]/40">{t("formulaLabel")}</span>
             <code className="font-mono text-sm text-[#FF6B00]">
               UD(t+1) = UD(t) + c&sup2; &times; (M(t) / N(t+1))
             </code>
@@ -169,10 +168,10 @@ export function RTMSimulator() {
             className="rounded-2xl border border-[#D0D0D0]/50 bg-white p-6"
           >
             <h4 className="mb-1 text-sm font-semibold text-[#1b1b1b]">
-              Total Money Supply (M)
+              {t("moneySupplyTitle")}
             </h4>
             <p className="mb-6 text-xs text-[#1b1b1b]/40">
-              Growth over time — shared equally via Universal Dividend
+              {t("moneySupplyDesc")}
             </p>
             <div className="h-[280px]">
               <ResponsiveContainer width="100%" height="100%">
@@ -236,7 +235,7 @@ export function RTMSimulator() {
                     labelStyle={{ color: "rgba(27,27,27,0.5)" }}
                     formatter={(value: number | undefined) => [
                       (value ?? 0).toLocaleString(),
-                      "Money Supply",
+                      t("moneySupplyTooltip"),
                     ]}
                   />
                   <Area
@@ -261,10 +260,10 @@ export function RTMSimulator() {
             className="rounded-2xl border border-[#D0D0D0]/50 bg-white p-6"
           >
             <h4 className="mb-1 text-sm font-semibold text-[#1b1b1b]">
-              Universal Dividend Per Person
+              {t("udPerPersonTitle")}
             </h4>
             <p className="mb-6 text-xs text-[#1b1b1b]/40">
-              Each member receives the same UD — no Cantillon effect
+              {t("udPerPersonDesc")}
             </p>
             <div className="h-[280px]">
               <ResponsiveContainer width="100%" height="100%">
@@ -320,7 +319,7 @@ export function RTMSimulator() {
                     labelStyle={{ color: "rgba(27,27,27,0.5)" }}
                     formatter={(value: number | undefined) => [
                       (value ?? 0).toLocaleString(),
-                      "UD / Person",
+                      t("udPerPersonTooltip"),
                     ]}
                   />
                   <Area
@@ -349,25 +348,10 @@ export function RTMSimulator() {
             <Info className="mt-0.5 h-5 w-5 shrink-0 text-[#FF6B00]" />
             <div>
               <h4 className="mb-2 text-sm font-semibold text-[#1b1b1b]">
-                Key Insight: Symmetric Money Creation
+                {t("keyInsightTitle")}
               </h4>
               <p className="text-sm leading-relaxed text-[#1b1b1b]/50">
-                In the current fiat system, new money enters through bank
-                lending — benefiting those closest to the source (the{" "}
-                <span className="text-[#FF6B00]">Cantillon Effect</span>). With
-                RTM, every member receives exactly the same share of new money
-                creation. After{" "}
-                <span className="font-mono text-[#1b1b1b]">{years} years</span>{" "}
-                with{" "}
-                <span className="font-mono text-[#1b1b1b]">
-                  {members.toLocaleString()} members
-                </span>
-                , each person&apos;s cumulative UD is{" "}
-                <span className="font-mono text-[#FF6B00]">
-                  {latestData.cumulativeUdPerPerson.toLocaleString()}
-                </span>{" "}
-                units — regardless of when they joined. This is{" "}
-                <span className="text-[#1b1b1b]">temporal symmetry</span>.
+                {t("keyInsightP1")}<span className="text-[#FF6B00]">{t("cantillonEffect")}</span>{t("keyInsightP2")}<span className="font-mono text-[#1b1b1b]">{years} {t("yrs")}</span>{t("keyInsightP3")}<span className="font-mono text-[#FF6B00]">{latestData.cumulativeUdPerPerson.toLocaleString()}</span>{t("keyInsightP4")}<span className="text-[#1b1b1b]">{t("temporalSymmetry")}</span>.
               </p>
             </div>
           </div>
@@ -379,7 +363,7 @@ export function RTMSimulator() {
             className="inline-flex items-center gap-2 rounded-full border border-[#D0D0D0]/50 px-5 py-2.5 text-xs text-[#1b1b1b]/50 transition-all hover:border-[#D0D0D0] hover:text-[#1b1b1b]/70"
           >
             <Code2 className="h-3.5 w-3.5" />
-            View RTM formula derivation &amp; data sources
+            {t("methodology")}
           </Link>
         </div>
       </div>

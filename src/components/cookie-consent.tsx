@@ -1,7 +1,9 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "@/i18n/navigation";
 import { Cookie, X, ChevronDown, ChevronUp } from "lucide-react";
 
 const CONSENT_KEY = "uvd_cookie_consent";
@@ -34,6 +36,7 @@ function storeConsent(consent: ConsentState) {
 }
 
 export function CookieConsent() {
+  const t = useTranslations("cookie");
   const [visible, setVisible] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
   const [preferences, setPreferences] = useState(false);
@@ -96,7 +99,7 @@ export function CookieConsent() {
               <div className="flex items-center gap-2.5">
                 <Cookie className="h-4 w-4 text-[#FF6B00]" />
                 <h3 className="text-sm font-semibold text-[#1b1b1b]">
-                  Cookie Settings
+                  {t("title")}
                 </h3>
               </div>
               <button
@@ -110,12 +113,11 @@ export function CookieConsent() {
 
             {/* Description */}
             <p className="mb-4 text-xs leading-relaxed text-[#1b1b1b]/50">
-              This website only uses technically necessary cookies. All simulations
-              run locally in your browser — no personal data is sent to any server.
-              Learn more in our{" "}
-              <a href="/privacy" className="text-[#297FF3] hover:underline">
-                Privacy Policy
-              </a>.
+              {t("description")}{" "}
+              {t("learnMore")}{" "}
+              <Link href="/privacy" className="text-[#297FF3] hover:underline">
+                {t("privacyPolicy")}
+              </Link>.
             </p>
 
             {/* Details Toggle */}
@@ -128,7 +130,7 @@ export function CookieConsent() {
               ) : (
                 <ChevronDown className="h-3 w-3" />
               )}
-              Show details
+              {t("showDetails")}
             </button>
 
             {/* Cookie Categories */}
@@ -146,14 +148,14 @@ export function CookieConsent() {
                     <div className="flex items-center justify-between">
                       <div>
                         <p className="text-xs font-medium text-[#1b1b1b]">
-                          Necessary
+                          {t("necessary")}
                         </p>
                         <p className="text-[10px] text-[#1b1b1b]/40">
-                          Stores your cookie consent. Always active.
+                          {t("necessaryDesc")}
                         </p>
                       </div>
                       <div className="rounded-full bg-[#4ade80]/20 px-2 py-0.5 text-[10px] font-medium text-[#16a34a]">
-                        Always on
+                        {t("alwaysOn")}
                       </div>
                     </div>
 
@@ -161,10 +163,10 @@ export function CookieConsent() {
                     <div className="flex items-center justify-between">
                       <div>
                         <p className="text-xs font-medium text-[#1b1b1b]">
-                          Preferences
+                          {t("preferences")}
                         </p>
                         <p className="text-[10px] text-[#1b1b1b]/40">
-                          Remembers UI settings like selected country.
+                          {t("preferencesDesc")}
                         </p>
                       </div>
                       <button
@@ -186,10 +188,10 @@ export function CookieConsent() {
                     <div className="flex items-center justify-between">
                       <div>
                         <p className="text-xs font-medium text-[#1b1b1b]">
-                          Statistics
+                          {t("statistics")}
                         </p>
                         <p className="text-[10px] text-[#1b1b1b]/40">
-                          Anonymous usage analytics to improve the site.
+                          {t("statisticsDesc")}
                         </p>
                       </div>
                       <button
@@ -217,19 +219,19 @@ export function CookieConsent() {
                 onClick={() => accept(true)}
                 className="flex-1 rounded-full bg-[#1b1b1b] px-5 py-2.5 text-xs font-medium text-white transition-colors hover:bg-[#333]"
               >
-                Accept all
+                {t("acceptAll")}
               </button>
               <button
                 onClick={() => accept(false)}
                 className="flex-1 rounded-full border border-[#D0D0D0] px-5 py-2.5 text-xs font-medium text-[#1b1b1b] transition-colors hover:border-[#999]"
               >
-                Save selection
+                {t("saveSelection")}
               </button>
               <button
                 onClick={decline}
                 className="flex-1 rounded-full px-5 py-2.5 text-xs font-medium text-[#1b1b1b]/40 transition-colors hover:text-[#1b1b1b]/60"
               >
-                Necessary only
+                {t("necessaryOnly")}
               </button>
             </div>
           </div>
