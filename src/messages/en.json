@@ -6,7 +6,8 @@
     "glossary": "Glossary",
     "faq": "FAQ",
     "aboutUvd": "About UVD",
-    "officialSite": "uvd.xyz"
+    "officialSite": "uvd.xyz",
+    "community": "Community"
   },
   "hero": {
     "badge": "Interactive Companion to",
@@ -286,6 +287,10 @@
     "methodologyBasket": {
       "title": "Methodology: Sovereign Basket — Composition & Data Sources",
       "description": "Full transparency: basket composition per country, inflation data, price projection formulas. Every number traceable."
+    },
+    "community": {
+      "title": "Universe Dollar — Independent Analysis & Community Discourse",
+      "description": "Independent analysis of UVD: whitepaper review, Kian Hoss background, technical risks, community poll. Not affiliated."
     }
   },
   "faq": {
@@ -381,5 +386,57 @@
     "ctaSimulation": "Try the Simulations",
     "ctaGlossary": "Read the Glossary",
     "ctaOfficial": "Visit uvd.xyz"
+  },
+  "community": {
+    "badge": "Independent Analysis",
+    "title": "Universe Dollar — ",
+    "titleHighlight": "Open Discourse",
+    "subtitle": "An independent, fact-based analysis of the Universe Dollar (UVD) protocol. We are not affiliated with the project. This page exists to inform, not to advise.",
+    "independenceTitle": "Independence Statement",
+    "independenceText": "This website (uvd.trading) is operated by Prime Associates LLC and is not affiliated with, endorsed by, or connected to the Universe Dollar project, Kian Hoss (Kiarash Hossainpour), or any related entities. All analyses are based on publicly available documents (whitepaper, shortpaper) and public statements. This is not financial advice.",
+    "whatIsTitle": "What is Universe Dollar?",
+    "whatIsText": "Universe Dollar (UVD) is a proposed cryptocurrency protocol described in a whitepaper published at uvd.money. According to the document, it implements the Relative Theory of Money (RTM) by Stéphane Laborde on a Bitcoin-anchored zero-knowledge rollup. The core concept: every verified participant receives an equal share of newly created currency units — the Universal Dividend.",
+    "whoTitle": "Who is behind it?",
+    "whoText": "The whitepaper is associated with Kiarash Hossainpour (known as Kian Hoss), a Berlin-born crypto influencer and co-host of the \"Hoss & Hopf\" podcast. He has promoted the project through his YouTube channel (@HossCrypto) and Instagram (@cryptobyhoss). He describes himself as an investor and analyst active in the crypto sector for over 8 years.",
+    "techTitle": "Technical Claims",
+    "techText": "According to the whitepaper, UVD would run on a custom zero-knowledge rollup that anchors state commitments to Bitcoin — not on Ethereum or Solana. It would use external price feeds (oracles) for basket valuation. As of now, there is no live implementation, mainnet, or token. The project remains in the conceptual/whitepaper phase.",
+    "debateTitle": "Public Debate",
+    "debateText": "The project has generated significant discussion in the German crypto community. The Blocktrainer forum has an active thread titled \"Hoss White Paper (UVD) Universe Dollar. Scam?\" where the community discusses the technical feasibility, oracle dependencies, and whether the project delivers on its promises. Opinions range from cautious interest to strong skepticism.",
+    "keyQuestionsTitle": "Key Questions Being Asked",
+    "keyQuestions": {
+      "q1": "Is there a working product or only a whitepaper?",
+      "a1": "As of now, only a whitepaper and shortpaper exist. No live chain, no token, no testnet has been announced.",
+      "q2": "Is UVD a scam?",
+      "a2": "We cannot make that determination. The whitepaper describes a technically ambitious concept. Whether it will be delivered as described remains to be seen. As with any pre-launch project, caution is warranted.",
+      "q3": "What are the main technical risks?",
+      "a3": "Oracle dependency for price feeds, complexity of building a custom ZK-rollup on Bitcoin, and the absence of any working implementation are the primary concerns raised by the community.",
+      "q4": "How does this differ from existing stablecoins?",
+      "a4": "Unlike USDT or USDC which peg to the US Dollar, UVD proposes a basket-indexed unit with symmetric money creation. The mathematical basis (RTM) is well-documented academic work by Stéphane Laborde."
+    },
+    "yourVoiceTitle": "Your Voice Matters",
+    "yourVoiceText": "We believe in open discourse. Share your perspective — whether you see innovation or cause for concern. All comments are automatically moderated for content policy compliance.",
+    "poll": {
+      "title": "How do you assess Universe Dollar?",
+      "subtitle": "Anonymous poll — one vote per visitor",
+      "options": {
+        "innovative": "Innovative — promising concept",
+        "interesting": "Interesting — worth watching",
+        "skeptical": "Skeptical — too many open questions",
+        "no_opinion": "No opinion yet"
+      },
+      "totalVotes": "{count} votes total"
+    },
+    "comments": {
+      "title": "Community Feedback",
+      "subtitle": "Share your thoughts. Comments are auto-moderated and published immediately if they pass content review.",
+      "namePlaceholder": "Your name or pseudonym",
+      "commentPlaceholder": "Share your perspective on Universe Dollar...",
+      "disclaimer": "I confirm that my comment is factual, respectful, and does not contain personal attacks, defamation, or financial advice. I understand that comments are publicly visible and auto-moderated.",
+      "submit": "Publish Comment",
+      "submitting": "Checking...",
+      "success": "Your comment has been published!",
+      "listTitle": "{count} comments"
+    },
+    "legalNote": "Legal Notice: Comments reflect the views of their authors, not of Prime Associates LLC. We reserve the right to remove content that violates applicable law. This page does not constitute financial, investment, or legal advice."
   }
 }

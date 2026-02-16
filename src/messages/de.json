@@ -6,7 +6,8 @@
     "glossary": "Glossar",
     "faq": "FAQ",
     "aboutUvd": "Über UVD",
-    "officialSite": "uvd.xyz"
+    "officialSite": "uvd.xyz",
+    "community": "Community"
   },
   "hero": {
     "badge": "Interaktiver Begleiter zu",
@@ -286,6 +287,10 @@
     "methodologyBasket": {
       "title": "Methodik: Souveräner Warenkorb — Zusammensetzung & Datenquellen",
       "description": "Volle Transparenz: Warenkorb-Zusammensetzung pro Land, Inflationsdaten, Preisprojektions-Formeln."
+    },
+    "community": {
+      "title": "Universe Dollar — Unabhängige Analyse & Community-Diskurs",
+      "description": "Unabhängige Analyse von UVD: Whitepaper-Review, Kian Hoss Hintergrund, technische Risiken, Community-Abstimmung."
     }
   },
   "faq": {
@@ -381,5 +386,57 @@
     "ctaSimulation": "Simulationen testen",
     "ctaGlossary": "Glossar lesen",
     "ctaOfficial": "uvd.xyz besuchen"
+  },
+  "community": {
+    "badge": "Unabhängige Analyse",
+    "title": "Universe Dollar — ",
+    "titleHighlight": "Offener Diskurs",
+    "subtitle": "Eine unabhängige, faktenbasierte Analyse des Universe Dollar (UVD) Protokolls. Wir sind nicht mit dem Projekt verbunden. Diese Seite dient der Information, nicht der Beratung.",
+    "independenceTitle": "Unabhängigkeitserklärung",
+    "independenceText": "Diese Website (uvd.trading) wird von Prime Associates LLC betrieben und ist nicht mit dem Universe Dollar Projekt, Kian Hoss (Kiarash Hossainpour) oder verbundenen Unternehmen affiliiert, unterstützt oder verbunden. Alle Analysen basieren auf öffentlich zugänglichen Dokumenten (Whitepaper, Shortpaper) und öffentlichen Aussagen. Dies ist keine Finanzberatung.",
+    "whatIsTitle": "Was ist Universe Dollar?",
+    "whatIsText": "Universe Dollar (UVD) ist ein vorgeschlagenes Kryptowährungs-Protokoll, beschrieben in einem Whitepaper auf uvd.money. Laut Dokument implementiert es die Relative Theorie des Geldes (RTM) von Stéphane Laborde auf einem Bitcoin-verankerten Zero-Knowledge-Rollup. Das Kernkonzept: Jeder verifizierte Teilnehmer erhält einen gleichen Anteil an neu geschaffenen Währungseinheiten — die Universelle Dividende.",
+    "whoTitle": "Wer steckt dahinter?",
+    "whoText": "Das Whitepaper wird mit Kiarash Hossainpour (bekannt als Kian Hoss) assoziiert, einem in Berlin geborenen Crypto-Influencer und Co-Host des \"Hoss & Hopf\" Podcasts. Er hat das Projekt über seinen YouTube-Kanal (@HossCrypto) und Instagram (@cryptobyhoss) beworben. Er beschreibt sich als Investor und Analyst mit über 8 Jahren Erfahrung im Kryptosektor.",
+    "techTitle": "Technische Aussagen",
+    "techText": "Laut Whitepaper soll UVD auf einem eigenen Zero-Knowledge-Rollup laufen, das State-Commitments in Bitcoin verankert — nicht auf Ethereum oder Solana. Es würde externe Preisfeeds (Oracles) für die Warenkorb-Bewertung nutzen. Derzeit gibt es keine Live-Implementierung, kein Mainnet und keinen Token. Das Projekt befindet sich in der Konzept-/Whitepaper-Phase.",
+    "debateTitle": "Öffentliche Debatte",
+    "debateText": "Das Projekt hat in der deutschen Crypto-Community erhebliche Diskussionen ausgelöst. Im Blocktrainer-Forum gibt es einen aktiven Thread mit dem Titel \"Hoss White Paper (UVD) Universe Dollar. Scam?\", in dem die Community die technische Machbarkeit, Oracle-Abhängigkeiten und das Versprechen des Projekts diskutiert. Die Meinungen reichen von vorsichtigem Interesse bis zu starker Skepsis.",
+    "keyQuestionsTitle": "Häufig gestellte Fragen",
+    "keyQuestions": {
+      "q1": "Gibt es ein funktionierendes Produkt oder nur ein Whitepaper?",
+      "a1": "Derzeit existieren nur ein Whitepaper und ein Shortpaper. Keine Live-Chain, kein Token, kein Testnet wurde angekündigt.",
+      "q2": "Ist UVD ein Scam?",
+      "a2": "Das können wir nicht beurteilen. Das Whitepaper beschreibt ein technisch ambitioniertes Konzept. Ob es wie beschrieben umgesetzt wird, bleibt abzuwarten. Wie bei jedem Pre-Launch-Projekt ist Vorsicht geboten.",
+      "q3": "Was sind die größten technischen Risiken?",
+      "a3": "Oracle-Abhängigkeit für Preisfeeds, die Komplexität eines eigenen ZK-Rollups auf Bitcoin und das Fehlen jeglicher funktionierender Implementierung sind die Hauptbedenken der Community.",
+      "q4": "Wie unterscheidet sich UVD von bestehenden Stablecoins?",
+      "a4": "Anders als USDT oder USDC, die an den US-Dollar gekoppelt sind, schlägt UVD eine warenkorb-indexierte Einheit mit symmetrischer Geldschöpfung vor. Die mathematische Basis (RTM) ist gut dokumentierte akademische Arbeit von Stéphane Laborde."
+    },
+    "yourVoiceTitle": "Deine Stimme zählt",
+    "yourVoiceText": "Wir glauben an offenen Diskurs. Teile deine Perspektive — ob du Innovation oder Anlass zur Sorge siehst. Alle Kommentare werden automatisch auf Inhaltsrichtlinien geprüft.",
+    "poll": {
+      "title": "Wie bewertest du Universe Dollar?",
+      "subtitle": "Anonyme Abstimmung — eine Stimme pro Besucher",
+      "options": {
+        "innovative": "Innovativ — vielversprechendes Konzept",
+        "interesting": "Interessant — beobachtenswert",
+        "skeptical": "Skeptisch — zu viele offene Fragen",
+        "no_opinion": "Noch keine Meinung"
+      },
+      "totalVotes": "{count} Stimmen insgesamt"
+    },
+    "comments": {
+      "title": "Community-Feedback",
+      "subtitle": "Teile deine Gedanken. Kommentare werden automatisch moderiert und sofort veröffentlicht, wenn sie die Inhaltsprüfung bestehen.",
+      "namePlaceholder": "Dein Name oder Pseudonym",
+      "commentPlaceholder": "Teile deine Sicht auf Universe Dollar...",
+      "disclaimer": "Ich bestätige, dass mein Kommentar sachlich, respektvoll ist und keine persönlichen Angriffe, Verleumdung oder Finanzberatung enthält. Ich verstehe, dass Kommentare öffentlich sichtbar und automatisch moderiert werden.",
+      "submit": "Kommentar veröffentlichen",
+      "submitting": "Wird geprüft...",
+      "success": "Dein Kommentar wurde veröffentlicht!",
+      "listTitle": "{count} Kommentare"
+    },
+    "legalNote": "Rechtlicher Hinweis: Kommentare geben die Meinung ihrer Autoren wieder, nicht die von Prime Associates LLC. Wir behalten uns das Recht vor, Inhalte zu entfernen, die gegen geltendes Recht verstoßen. Diese Seite stellt keine Finanz-, Anlage- oder Rechtsberatung dar."
   }
 }

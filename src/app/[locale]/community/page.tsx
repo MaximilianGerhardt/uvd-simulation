@@ -1,0 +1,169 @@
+"use client";
+
+import { useTranslations } from "next-intl";
+import { SubpageLayout } from "@/components/subpage-layout";
+import { ScrollReveal } from "@/components/scroll-reveal";
+import { CommunityPoll } from "@/components/community-poll";
+import { CommunityComments } from "@/components/community-comments";
+import { Shield, FileText, Users, Cpu, MessageCircle, HelpCircle } from "lucide-react";
+
+export default function CommunityPage() {
+  const t = useTranslations("community");
+
+  return (
+    <SubpageLayout>
+      <article className="px-6 py-16 bg-white">
+        <div className="mx-auto max-w-3xl">
+          {/* Hero */}
+          <ScrollReveal>
+            <p className="mb-4 text-sm font-medium uppercase tracking-[0.05em] text-[#FF6B00]">
+              {t("badge")}
+            </p>
+            <h1 className="mb-6 text-[clamp(2.5rem,5vw,4rem)] font-light tracking-[-0.04em] leading-[1.05] text-[#1b1b1b]">
+              {t("title")}
+              <span className="text-[#FF6B00]">{t("titleHighlight")}</span>
+            </h1>
+            <p className="mb-16 text-[clamp(1.125rem,2vw,1.25rem)] leading-[1.6] text-[#1b1b1b]/45">
+              {t("subtitle")}
+            </p>
+          </ScrollReveal>
+
+          {/* Independence Statement */}
+          <ScrollReveal>
+            <div className="mb-12 rounded-2xl border border-[#FF6B00]/20 bg-[#FF6B00]/5 p-6 sm:p-8">
+              <div className="mb-3 flex items-center gap-2">
+                <Shield className="h-5 w-5 text-[#FF6B00]" />
+                <h2 className="text-lg font-medium text-[#1b1b1b]">
+                  {t("independenceTitle")}
+                </h2>
+              </div>
+              <p className="text-sm leading-relaxed text-[#1b1b1b]/60">
+                {t("independenceText")}
+              </p>
+            </div>
+          </ScrollReveal>
+
+          {/* What is UVD */}
+          <ScrollReveal>
+            <section className="mb-12">
+              <div className="mb-3 flex items-center gap-2">
+                <FileText className="h-5 w-5 text-[#297FF3]" />
+                <h2 className="text-xl font-medium text-[#1b1b1b]">
+                  {t("whatIsTitle")}
+                </h2>
+              </div>
+              <p className="text-base leading-[1.8] text-[#1b1b1b]/60">
+                {t("whatIsText")}
+              </p>
+            </section>
+          </ScrollReveal>
+
+          {/* Who is behind it */}
+          <ScrollReveal>
+            <section className="mb-12">
+              <div className="mb-3 flex items-center gap-2">
+                <Users className="h-5 w-5 text-[#297FF3]" />
+                <h2 className="text-xl font-medium text-[#1b1b1b]">
+                  {t("whoTitle")}
+                </h2>
+              </div>
+              <p className="text-base leading-[1.8] text-[#1b1b1b]/60">
+                {t("whoText")}
+              </p>
+            </section>
+          </ScrollReveal>
+
+          {/* Technical Claims */}
+          <ScrollReveal>
+            <section className="mb-12">
+              <div className="mb-3 flex items-center gap-2">
+                <Cpu className="h-5 w-5 text-[#297FF3]" />
+                <h2 className="text-xl font-medium text-[#1b1b1b]">
+                  {t("techTitle")}
+                </h2>
+              </div>
+              <p className="text-base leading-[1.8] text-[#1b1b1b]/60">
+                {t("techText")}
+              </p>
+            </section>
+          </ScrollReveal>
+
+          {/* Public Debate */}
+          <ScrollReveal>
+            <section className="mb-12">
+              <div className="mb-3 flex items-center gap-2">
+                <MessageCircle className="h-5 w-5 text-[#297FF3]" />
+                <h2 className="text-xl font-medium text-[#1b1b1b]">
+                  {t("debateTitle")}
+                </h2>
+              </div>
+              <p className="text-base leading-[1.8] text-[#1b1b1b]/60">
+                {t("debateText")}
+              </p>
+            </section>
+          </ScrollReveal>
+
+          {/* Key Questions FAQ */}
+          <ScrollReveal>
+            <section className="mb-16">
+              <div className="mb-6 flex items-center gap-2">
+                <HelpCircle className="h-5 w-5 text-[#FF6B00]" />
+                <h2 className="text-xl font-medium text-[#1b1b1b]">
+                  {t("keyQuestionsTitle")}
+                </h2>
+              </div>
+              <div className="space-y-6">
+                {(["q1", "q2", "q3", "q4"] as const).map((key) => (
+                  <div
+                    key={key}
+                    className="rounded-2xl border border-[#D0D0D0]/50 bg-[#f8f8f8] p-6"
+                  >
+                    <h3 className="mb-2 text-sm font-medium text-[#1b1b1b]">
+                      {t(`keyQuestions.${key}`)}
+                    </h3>
+                    <p className="text-sm leading-relaxed text-[#1b1b1b]/60">
+                      {t(`keyQuestions.a${key.slice(1)}`)}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          </ScrollReveal>
+
+          {/* Your Voice Section */}
+          <ScrollReveal>
+            <section className="mb-8">
+              <h2 className="mb-2 text-2xl font-light tracking-[-0.02em] text-[#1b1b1b]">
+                {t("yourVoiceTitle")}
+              </h2>
+              <p className="mb-8 text-base leading-[1.6] text-[#1b1b1b]/45">
+                {t("yourVoiceText")}
+              </p>
+            </section>
+          </ScrollReveal>
+
+          {/* Poll */}
+          <ScrollReveal>
+            <div className="mb-12">
+              <CommunityPoll />
+            </div>
+          </ScrollReveal>
+
+          {/* Comments */}
+          <ScrollReveal>
+            <CommunityComments />
+          </ScrollReveal>
+
+          {/* Legal footer note */}
+          <ScrollReveal>
+            <div className="mt-16 border-t border-[#D0D0D0]/30 pt-8">
+              <p className="text-xs leading-relaxed text-[#1b1b1b]/25">
+                {t("legalNote")}
+              </p>
+            </div>
+          </ScrollReveal>
+        </div>
+      </article>
+    </SubpageLayout>
+  );
+}

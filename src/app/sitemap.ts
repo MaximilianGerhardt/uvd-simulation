@@ -11,6 +11,7 @@ const pages: { path: string; changeFrequency: MetadataRoute.Sitemap[number]["cha
   { path: "/faq", changeFrequency: "weekly", priority: 0.9 },
   { path: "/about-uvd", changeFrequency: "monthly", priority: 0.9 },
   { path: "/glossary", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/community", changeFrequency: "weekly", priority: 0.9 },
   { path: "/methodology/time-theft", changeFrequency: "monthly", priority: 0.7 },
   { path: "/methodology/rtm", changeFrequency: "monthly", priority: 0.7 },
   { path: "/methodology/basket", changeFrequency: "monthly", priority: 0.7 },

@@ -6,7 +6,8 @@
     "glossary": "Glossaire",
     "faq": "FAQ",
     "aboutUvd": "À propos d'UVD",
-    "officialSite": "uvd.xyz"
+    "officialSite": "uvd.xyz",
+    "community": "Communauté"
   },
   "hero": {
     "badge": "Compagnon interactif de",
@@ -286,6 +287,10 @@
     "methodologyBasket": {
       "title": "Méthodologie : Panier Souverain — Composition et Sources de Données",
       "description": "Transparence totale : composition du panier par pays, données d'inflation, formules de projection des prix."
+    },
+    "community": {
+      "title": "Universe Dollar — Analyse Indépendante et Discours Communautaire",
+      "description": "Analyse indépendante d'UVD : revue du whitepaper, contexte Kian Hoss, risques techniques, sondage communautaire."
     }
   },
   "faq": {
@@ -381,5 +386,57 @@
     "ctaSimulation": "Essayer les Simulations",
     "ctaGlossary": "Lire le Glossaire",
     "ctaOfficial": "Visiter uvd.xyz"
+  },
+  "community": {
+    "badge": "Analyse Indépendante",
+    "title": "Universe Dollar — ",
+    "titleHighlight": "Discours Ouvert",
+    "subtitle": "Une analyse indépendante et factuelle du protocole Universe Dollar (UVD). Nous ne sommes pas affiliés au projet. Cette page vise à informer, pas à conseiller.",
+    "independenceTitle": "Déclaration d'Indépendance",
+    "independenceText": "Ce site (uvd.trading) est exploité par Prime Associates LLC et n'est pas affilié, soutenu ni connecté au projet Universe Dollar, Kian Hoss (Kiarash Hossainpour) ou toute entité associée. Toutes les analyses sont basées sur des documents publics. Ceci n'est pas un conseil financier.",
+    "whatIsTitle": "Qu'est-ce que Universe Dollar ?",
+    "whatIsText": "Universe Dollar (UVD) est un protocole de cryptomonnaie proposé décrit dans un whitepaper sur uvd.money. Selon le document, il implémente la Théorie Relative de la Monnaie (TRM) de Stéphane Laborde sur un rollup à connaissance nulle ancré à Bitcoin.",
+    "whoTitle": "Qui est derrière ?",
+    "whoText": "Le whitepaper est associé à Kiarash Hossainpour (connu sous le nom de Kian Hoss), un influenceur crypto berlinois et co-animateur du podcast \"Hoss & Hopf\". Il a promu le projet via YouTube et Instagram.",
+    "techTitle": "Affirmations Techniques",
+    "techText": "Selon le whitepaper, UVD fonctionnerait sur un rollup ZK personnalisé ancrant les données dans Bitcoin. Actuellement, il n'y a pas d'implémentation active, de mainnet ni de token.",
+    "debateTitle": "Débat Public",
+    "debateText": "Le projet a suscité un débat important dans la communauté crypto allemande. Les avis vont de l'intérêt prudent au scepticisme marqué.",
+    "keyQuestionsTitle": "Questions Clés",
+    "keyQuestions": {
+      "q1": "Y a-t-il un produit fonctionnel ou seulement un whitepaper ?",
+      "a1": "Actuellement, seuls un whitepaper et un shortpaper existent. Aucune chaîne active ni token n'a été annoncé.",
+      "q2": "UVD est-il une arnaque ?",
+      "a2": "Nous ne pouvons pas le déterminer. Le whitepaper décrit un concept techniquement ambitieux. Comme pour tout projet pré-lancement, la prudence est de mise.",
+      "q3": "Quels sont les principaux risques techniques ?",
+      "a3": "La dépendance aux oracles, la complexité de construire un ZK-rollup sur Bitcoin et l'absence de toute implémentation fonctionnelle.",
+      "q4": "En quoi diffère-t-il des stablecoins existants ?",
+      "a4": "Contrairement à USDT ou USDC, UVD propose une unité indexée sur un panier avec création monétaire symétrique basée sur la TRM de Laborde."
+    },
+    "yourVoiceTitle": "Votre Voix Compte",
+    "yourVoiceText": "Nous croyons au discours ouvert. Partagez votre perspective. Tous les commentaires sont automatiquement modérés.",
+    "poll": {
+      "title": "Comment évaluez-vous Universe Dollar ?",
+      "subtitle": "Sondage anonyme — un vote par visiteur",
+      "options": {
+        "innovative": "Innovant — concept prometteur",
+        "interesting": "Intéressant — à surveiller",
+        "skeptical": "Sceptique — trop de questions ouvertes",
+        "no_opinion": "Pas encore d'opinion"
+      },
+      "totalVotes": "{count} votes au total"
+    },
+    "comments": {
+      "title": "Avis de la Communauté",
+      "subtitle": "Partagez vos réflexions. Les commentaires sont automatiquement modérés et publiés immédiatement s'ils passent la vérification.",
+      "namePlaceholder": "Votre nom ou pseudonyme",
+      "commentPlaceholder": "Partagez votre perspective sur Universe Dollar...",
+      "disclaimer": "Je confirme que mon commentaire est factuel, respectueux et ne contient pas d'attaques personnelles, de diffamation ou de conseils financiers.",
+      "submit": "Publier le Commentaire",
+      "submitting": "Vérification...",
+      "success": "Votre commentaire a été publié !",
+      "listTitle": "{count} commentaires"
+    },
+    "legalNote": "Mention Légale : Les commentaires reflètent les opinions de leurs auteurs, pas celles de Prime Associates LLC. Nous nous réservons le droit de supprimer tout contenu contraire à la loi. Cette page ne constitue pas un conseil financier, d'investissement ou juridique."
   }
 }

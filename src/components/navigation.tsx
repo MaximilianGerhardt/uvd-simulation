@@ -16,6 +16,7 @@ export function Navigation() {
     { href: "/simulation/rtm" as const, label: t("rtmModel") },
     { href: "/simulation/basket" as const, label: t("basketIndex") },
     { href: "/glossary" as const, label: t("glossary") },
+    { href: "/community" as const, label: t("community") },
   ];
 
   return (
