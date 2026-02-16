@@ -1,24 +1,49 @@
+import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
+import { routing } from "@/i18n/routing";
 import { SubpageLayout } from "@/components/subpage-layout";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { ExternalLink } from "lucide-react";
-import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Methodology: Time-Theft Calculator — Formulas, Data Sources, Assumptions",
-  description:
-    "Full transparency: purchasing power loss formula, inflation data from World Bank/ECB/FRED, calculation methodology and limitations. Open source.",
-  keywords: ["Inflation Calculator Methodology", "Purchasing Power Formula", "Inflation Data Sources", "World Bank CPI", "FRED", "ECB", "Open Source Finance Simulation"],
-  alternates: { canonical: "https://uvd.trading/methodology/time-theft" },
-  openGraph: {
-    title: "Methodology: Time-Theft Calculator — Every Number Traceable",
-    description: "Formulas, data sources, assumptions, and source code. Full transparency.",
-    url: "https://uvd.trading/methodology/time-theft",
-  },
-};
+const BASE_URL = "https://uvd.trading";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata" });
+  const prefix = locale === routing.defaultLocale ? "" : `/${locale}`;
+  const url = `${BASE_URL}${prefix}/methodology/time-theft`;
+  const alternates: Record<string, string> = {};
+  for (const loc of routing.locales) {
+    const p = loc === routing.defaultLocale ? "" : `/${loc}`;
+    alternates[loc] = `${BASE_URL}${p}/methodology/time-theft`;
+  }
+  return {
+    title: t("methodologyTimeTheft.title"),
+    description: t("methodologyTimeTheft.description"),
+    keywords: ["Inflation Calculator Methodology", "Purchasing Power Formula", "Inflation Data Sources", "World Bank CPI", "FRED", "ECB", "Open Source Finance Simulation"],
+    alternates: { canonical: url, languages: alternates },
+    openGraph: {
+      title: t("methodologyTimeTheft.title"),
+      description: t("methodologyTimeTheft.description"),
+      url,
+      siteName: "UVD Simulation",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("methodologyTimeTheft.title"),
+      description: t("methodologyTimeTheft.description"),
+    },
+  };
+}
 
 export default function TimeTheftMethodology() {
   return (
-    <SubpageLayout backLabel="Back to Overview">
+    <SubpageLayout>
       <article className="px-6 py-16 bg-white">
         <div className="mx-auto max-w-3xl">
           <ScrollReveal>

@@ -1,24 +1,49 @@
+import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
+import { routing } from "@/i18n/routing";
 import { SubpageLayout } from "@/components/subpage-layout";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { ExternalLink } from "lucide-react";
-import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Methodology: Sovereign Basket — Composition & Data Sources",
-  description:
-    "Full transparency: basket composition per country, inflation data from Destatis/BLS/World Bank, price projection formulas. Every number traceable.",
-  keywords: ["Basket Methodology", "Inflation Data Sources", "Destatis", "BLS CPI", "Sovereign Basket", "Price Stability", "UVD Basket Composition"],
-  alternates: { canonical: "https://uvd.trading/methodology/basket" },
-  openGraph: {
-    title: "Methodology: Sovereign Basket — Every Ingredient Traceable",
-    description: "Basket composition, inflation data, and projection formulas. Full transparency.",
-    url: "https://uvd.trading/methodology/basket",
-  },
-};
+const BASE_URL = "https://uvd.trading";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata" });
+  const prefix = locale === routing.defaultLocale ? "" : `/${locale}`;
+  const url = `${BASE_URL}${prefix}/methodology/basket`;
+  const alternates: Record<string, string> = {};
+  for (const loc of routing.locales) {
+    const p = loc === routing.defaultLocale ? "" : `/${loc}`;
+    alternates[loc] = `${BASE_URL}${p}/methodology/basket`;
+  }
+  return {
+    title: t("methodologyBasket.title"),
+    description: t("methodologyBasket.description"),
+    keywords: ["Basket Methodology", "Inflation Data Sources", "Destatis", "BLS CPI", "Sovereign Basket", "Price Stability", "UVD Basket Composition"],
+    alternates: { canonical: url, languages: alternates },
+    openGraph: {
+      title: t("methodologyBasket.title"),
+      description: t("methodologyBasket.description"),
+      url,
+      siteName: "UVD Simulation",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("methodologyBasket.title"),
+      description: t("methodologyBasket.description"),
+    },
+  };
+}
 
 export default function BasketMethodology() {
   return (
-    <SubpageLayout backLabel="Back to Overview">
+    <SubpageLayout>
       <article className="px-6 py-16 bg-white">
         <div className="mx-auto max-w-3xl">
           <ScrollReveal>

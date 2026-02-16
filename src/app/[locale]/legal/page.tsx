@@ -1,14 +1,41 @@
-import { SubpageLayout } from "@/components/subpage-layout";
 import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
+import { routing } from "@/i18n/routing";
+import { SubpageLayout } from "@/components/subpage-layout";
 
-export const metadata: Metadata = {
-  title: "Legal Notice",
-  description: "Legal notice and company information for UVD Simulation, operated by Prime Associates LLC.",
-};
+const BASE_URL = "https://uvd.trading";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata" });
+  const prefix = locale === routing.defaultLocale ? "" : `/${locale}`;
+  const url = `${BASE_URL}${prefix}/legal`;
+  const alternates: Record<string, string> = {};
+  for (const loc of routing.locales) {
+    const p = loc === routing.defaultLocale ? "" : `/${loc}`;
+    alternates[loc] = `${BASE_URL}${p}/legal`;
+  }
+  return {
+    title: t("legal.title"),
+    description: t("legal.description"),
+    alternates: { canonical: url, languages: alternates },
+    openGraph: {
+      title: t("legal.title"),
+      description: t("legal.description"),
+      url,
+      siteName: "UVD Simulation",
+      type: "website",
+    },
+  };
+}
 
 export default function LegalNotice() {
   return (
-    <SubpageLayout backLabel="Back to Overview">
+    <SubpageLayout>
       <article className="px-6 py-16 bg-white">
         <div className="mx-auto max-w-3xl">
           <h1 className="mb-12 text-[clamp(2.5rem,5vw,4rem)] font-light tracking-[-0.04em] leading-[1.05] text-[#1b1b1b]">

@@ -1,24 +1,49 @@
+import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
+import { routing } from "@/i18n/routing";
 import { SubpageLayout } from "@/components/subpage-layout";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { ExternalLink } from "lucide-react";
-import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Methodology: RTM Simulator — Universal Dividend Derivation",
-  description:
-    "Complete derivation of the Universal Dividend formula from the Relative Theory of Money. Mathematical proof, symmetry properties, implementation details.",
-  keywords: ["RTM Methodology", "Universal Dividend Formula", "Relative Theory of Money", "Stéphane Laborde", "Symmetric Money Creation Proof", "Duniter"],
-  alternates: { canonical: "https://uvd.trading/methodology/rtm" },
-  openGraph: {
-    title: "Methodology: RTM — Universal Dividend Mathematically Derived",
-    description: "Formula derivation, symmetry proof, and implementation of the Relative Theory of Money.",
-    url: "https://uvd.trading/methodology/rtm",
-  },
-};
+const BASE_URL = "https://uvd.trading";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata" });
+  const prefix = locale === routing.defaultLocale ? "" : `/${locale}`;
+  const url = `${BASE_URL}${prefix}/methodology/rtm`;
+  const alternates: Record<string, string> = {};
+  for (const loc of routing.locales) {
+    const p = loc === routing.defaultLocale ? "" : `/${loc}`;
+    alternates[loc] = `${BASE_URL}${p}/methodology/rtm`;
+  }
+  return {
+    title: t("methodologyRtm.title"),
+    description: t("methodologyRtm.description"),
+    keywords: ["RTM Methodology", "Universal Dividend Formula", "Relative Theory of Money", "Stéphane Laborde", "Symmetric Money Creation Proof", "Duniter"],
+    alternates: { canonical: url, languages: alternates },
+    openGraph: {
+      title: t("methodologyRtm.title"),
+      description: t("methodologyRtm.description"),
+      url,
+      siteName: "UVD Simulation",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("methodologyRtm.title"),
+      description: t("methodologyRtm.description"),
+    },
+  };
+}
 
 export default function RTMMethodology() {
   return (
-    <SubpageLayout backLabel="Back to Overview">
+    <SubpageLayout>
       <article className="px-6 py-16 bg-white">
         <div className="mx-auto max-w-3xl">
           <ScrollReveal>

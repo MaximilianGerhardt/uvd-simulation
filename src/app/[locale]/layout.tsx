@@ -126,6 +126,10 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale} dir={dir}>
       <head>
+        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/apple-icon.svg" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="theme-color" content="#1b1b1b" />
         <StructuredData />
         {routing.locales.map((loc) => {
           const prefix = loc === routing.defaultLocale ? "" : `/${loc}`;
