@@ -98,12 +98,21 @@ export async function generateMetadata({
       url: canonicalUrl,
       siteName: "UVD Simulation",
       locale: locale === "de" ? "de_DE" : locale === "ar" ? "ar_AE" : locale === "es" ? "es_ES" : locale === "fr" ? "fr_FR" : "en_US",
+      images: [
+        {
+          url: `${BASE_URL}/og${locale === "en" ? "" : `-${locale}`}.png`,
+          width: 1200,
+          height: 630,
+          alt: t("home.title"),
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title: t("home.title"),
       description: t("home.description"),
       creator: "@uvd99",
+      images: [`${BASE_URL}/og${locale === "en" ? "" : `-${locale}`}.png`],
     },
     other: {
       "geo.region": "US-FL",

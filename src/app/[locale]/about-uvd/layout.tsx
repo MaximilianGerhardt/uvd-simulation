@@ -30,11 +30,13 @@ export async function generateMetadata({
       siteName: "UVD Simulation",
       locale: locale === "de" ? "de_DE" : locale === "ar" ? "ar_AE" : locale === "es" ? "es_ES" : locale === "fr" ? "fr_FR" : "en_US",
       type: "website",
+      images: [{ url: `${BASE_URL}/og${locale === "en" ? "" : `-${locale}`}.png`, width: 1200, height: 630 }],
     },
     twitter: {
       card: "summary_large_image",
       title: t("aboutUvd.title"),
       description: t("aboutUvd.description"),
+      images: [`${BASE_URL}/og${locale === "en" ? "" : `-${locale}`}.png`],
     },
   };
 }

@@ -29,6 +29,13 @@ export async function generateMetadata({
       url,
       siteName: "UVD Simulation",
       type: "website",
+      images: [{ url: `${BASE_URL}/og${locale === "en" ? "" : `-${locale}`}.png`, width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("legal.title"),
+      description: t("legal.description"),
+      images: [`${BASE_URL}/og${locale === "en" ? "" : `-${locale}`}.png`],
     },
   };
 }
