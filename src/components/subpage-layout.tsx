@@ -9,14 +9,19 @@ import { Footer } from "@/components/footer";
 interface SubpageLayoutProps {
   children: React.ReactNode;
   backLabel?: string;
+  backHref?: string;
 }
 
-export function SubpageLayout({ children, backLabel }: SubpageLayoutProps) {
+export function SubpageLayout({ children, backLabel, backHref }: SubpageLayoutProps) {
   const t = useTranslations("subpage");
   const router = useRouter();
   const label = backLabel || t("backToOverview");
 
   const handleBack = () => {
+    if (backHref) {
+      router.push(backHref);
+      return;
+    }
     if (typeof window !== "undefined" && window.history.length > 1) {
       router.back();
     } else {

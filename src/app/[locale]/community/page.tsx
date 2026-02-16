@@ -11,7 +11,7 @@ export default function CommunityPage() {
   const t = useTranslations("community");
 
   return (
-    <SubpageLayout>
+    <SubpageLayout backHref="/">
       <article className="px-6 py-16 bg-white">
         <div className="mx-auto max-w-3xl">
           {/* Hero */}
