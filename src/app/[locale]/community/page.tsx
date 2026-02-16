@@ -5,7 +5,8 @@ import { SubpageLayout } from "@/components/subpage-layout";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { CommunityPoll } from "@/components/community-poll";
 import { CommunityComments } from "@/components/community-comments";
-import { Shield, FileText, Users, Cpu, MessageCircle, HelpCircle } from "lucide-react";
+import { Link } from "@/i18n/navigation";
+import { Shield, FileText, Users, Cpu, MessageCircle, HelpCircle, ArrowRight } from "lucide-react";
 
 export default function CommunityPage() {
   const t = useTranslations("community");
@@ -154,9 +155,62 @@ export default function CommunityPage() {
             <CommunityComments />
           </ScrollReveal>
 
+          {/* Related Pages — internal linking for SEO */}
+          <ScrollReveal>
+            <div className="mt-16 border-t border-[#D0D0D0]/30 pt-10">
+              <h2 className="mb-6 text-lg font-medium text-[#1b1b1b]">
+                {t("relatedTitle")}
+              </h2>
+              <div className="grid gap-4 sm:grid-cols-3">
+                <Link
+                  href="/faq"
+                  className="group rounded-2xl border border-[#D0D0D0]/50 bg-[#f8f8f8] p-5 transition-all hover:border-[#D0D0D0] hover:shadow-sm"
+                >
+                  <h3 className="mb-1 text-sm font-semibold text-[#1b1b1b] group-hover:text-[#FF6B00] transition-colors">
+                    {t("relatedFaq")}
+                  </h3>
+                  <p className="mb-3 text-xs leading-relaxed text-[#1b1b1b]/40">
+                    {t("relatedFaqDesc")}
+                  </p>
+                  <span className="inline-flex items-center gap-1 text-xs font-medium text-[#FF6B00]">
+                    <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1 rtl:rotate-180" />
+                  </span>
+                </Link>
+                <Link
+                  href="/about-uvd"
+                  className="group rounded-2xl border border-[#D0D0D0]/50 bg-[#f8f8f8] p-5 transition-all hover:border-[#D0D0D0] hover:shadow-sm"
+                >
+                  <h3 className="mb-1 text-sm font-semibold text-[#1b1b1b] group-hover:text-[#FF6B00] transition-colors">
+                    {t("relatedAbout")}
+                  </h3>
+                  <p className="mb-3 text-xs leading-relaxed text-[#1b1b1b]/40">
+                    {t("relatedAboutDesc")}
+                  </p>
+                  <span className="inline-flex items-center gap-1 text-xs font-medium text-[#FF6B00]">
+                    <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1 rtl:rotate-180" />
+                  </span>
+                </Link>
+                <Link
+                  href="/simulation/time-theft"
+                  className="group rounded-2xl border border-[#D0D0D0]/50 bg-[#f8f8f8] p-5 transition-all hover:border-[#D0D0D0] hover:shadow-sm"
+                >
+                  <h3 className="mb-1 text-sm font-semibold text-[#1b1b1b] group-hover:text-[#FF6B00] transition-colors">
+                    {t("relatedSimulation")}
+                  </h3>
+                  <p className="mb-3 text-xs leading-relaxed text-[#1b1b1b]/40">
+                    {t("relatedSimulationDesc")}
+                  </p>
+                  <span className="inline-flex items-center gap-1 text-xs font-medium text-[#FF6B00]">
+                    <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1 rtl:rotate-180" />
+                  </span>
+                </Link>
+              </div>
+            </div>
+          </ScrollReveal>
+
           {/* Legal footer note */}
           <ScrollReveal>
-            <div className="mt-16 border-t border-[#D0D0D0]/30 pt-8">
+            <div className="mt-10 border-t border-[#D0D0D0]/30 pt-8">
               <p className="text-xs leading-relaxed text-[#1b1b1b]/25">
                 {t("legalNote")}
               </p>

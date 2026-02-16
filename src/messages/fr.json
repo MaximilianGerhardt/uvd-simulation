@@ -438,6 +438,13 @@
       "success": "Votre commentaire a été publié !",
       "listTitle": "{count} commentaires"
     },
-    "legalNote": "Mention Légale : Les commentaires reflètent les opinions de leurs auteurs, pas celles de Prime Associates LLC. Nous nous réservons le droit de supprimer tout contenu contraire à la loi. Cette page ne constitue pas un conseil financier, d'investissement ou juridique."
+    "legalNote": "Mention Légale : Les commentaires reflètent les opinions de leurs auteurs, pas celles de Prime Associates LLC. Nous nous réservons le droit de supprimer tout contenu contraire à la loi. Cette page ne constitue pas un conseil financier, d'investissement ou juridique.",
+    "relatedTitle": "En savoir plus sur Universe Dollar",
+    "relatedFaq": "Questions fréquentes sur UVD",
+    "relatedFaqDesc": "UVD est-il une arnaque ? Comment fonctionne UVD ? Toutes les questions répondues.",
+    "relatedAbout": "Qu'est-ce que Universe Dollar (UVD) ?",
+    "relatedAboutDesc": "La Théorie Relative de la Monnaie, création monétaire symétrique et la vision derrière UVD.",
+    "relatedSimulation": "Essayer les simulations UVD",
+    "relatedSimulationDesc": "Calculateurs interactifs pour le vol de temps, les dividendes RTM et le panier souverain."
   }
 }

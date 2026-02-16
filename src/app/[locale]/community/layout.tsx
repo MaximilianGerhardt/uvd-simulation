@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
+import Script from "next/script";
 
 const BASE_URL = "https://uvd.trading";
 
@@ -74,10 +75,52 @@ export async function generateMetadata({
   };
 }
 
-export default function CommunityLayout({
+export default async function CommunityLayout({
   children,
+  params,
 }: {
   children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }) {
-  return children;
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "community" });
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: t("keyQuestions.q1"),
+        acceptedAnswer: { "@type": "Answer", text: t("keyQuestions.a1") },
+      },
+      {
+        "@type": "Question",
+        name: t("keyQuestions.q2"),
+        acceptedAnswer: { "@type": "Answer", text: t("keyQuestions.a2") },
+      },
+      {
+        "@type": "Question",
+        name: t("keyQuestions.q3"),
+        acceptedAnswer: { "@type": "Answer", text: t("keyQuestions.a3") },
+      },
+      {
+        "@type": "Question",
+        name: t("keyQuestions.q4"),
+        acceptedAnswer: { "@type": "Answer", text: t("keyQuestions.a4") },
+      },
+    ],
+  };
+
+  return (
+    <>
+      <Script
+        id="community-faq-schema"
+        type="application/ld+json"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      {children}
+    </>
+  );
 }

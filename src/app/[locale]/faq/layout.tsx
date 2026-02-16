@@ -1,8 +1,16 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
+import Script from "next/script";
 
 const BASE_URL = "https://uvd.trading";
+
+const ALL_FAQ_KEYS = [
+  "whatIsUvd", "whoCreated", "kianHoss", "whatIsThis",
+  "isScam", "isLegit", "regulated",
+  "howWorks", "stablecoin", "blockchain", "rtmExplained", "cantillonWhat", "inflationCalc",
+  "canBuy", "whenLaunch",
+] as const;
 
 export async function generateMetadata({
   params,
@@ -41,6 +49,35 @@ export async function generateMetadata({
   };
 }
 
-export default function FAQLayout({ children }: { children: React.ReactNode }) {
-  return children;
+export default async function FAQLayout({
+  children,
+  params,
+}: {
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "faq" });
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: ALL_FAQ_KEYS.map((key) => ({
+      "@type": "Question",
+      name: t(`items.${key}.q`),
+      acceptedAnswer: { "@type": "Answer", text: t(`items.${key}.a`) },
+    })),
+  };
+
+  return (
+    <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      {children}
+    </>
+  );
 }
