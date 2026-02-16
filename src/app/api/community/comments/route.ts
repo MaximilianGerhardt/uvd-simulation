@@ -1,9 +1,4 @@
-import { createClient } from "@supabase/supabase-js";
-
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-);
+import { getSupabase } from "@/lib/supabase";
 
 // Simple in-memory rate limiter
 const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
@@ -62,6 +57,7 @@ export async function GET(req: Request) {
   const limit = Math.min(parseInt(url.searchParams.get("limit") || "20"), 50);
   const offset = parseInt(url.searchParams.get("offset") || "0");
 
+  const supabase = getSupabase();
   const { data, error, count } = await supabase
     .from("community_comments")
     .select("id, author_name, comment_text, locale, created_at", { count: "exact" })
@@ -100,6 +96,8 @@ export async function POST(req: Request) {
 
     // AI moderation
     const moderation = await moderateContent(`${authorName}: ${commentText}`);
+
+    const supabase = getSupabase();
 
     if (moderation.flagged) {
       // Store as rejected for audit

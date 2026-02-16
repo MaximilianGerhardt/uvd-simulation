@@ -1,10 +1,5 @@
-import { createClient } from "@supabase/supabase-js";
+import { getSupabase } from "@/lib/supabase";
 import { createHash } from "crypto";
-
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-);
 
 const VALID_OPTIONS = ["innovative", "interesting", "skeptical", "no_opinion"];
 
@@ -13,6 +8,7 @@ function hashIp(ip: string): string {
 }
 
 export async function GET() {
+  const supabase = getSupabase();
   const { data, error } = await supabase
     .from("community_votes")
     .select("vote_option");
@@ -50,6 +46,7 @@ export async function POST(req: Request) {
       return Response.json({ error: "Invalid vote option" }, { status: 400 });
     }
 
+    const supabase = getSupabase();
     const { error } = await supabase
       .from("community_votes")
       .upsert({ vote_option: option, ip_hash: ipHash }, { onConflict: "ip_hash" });
