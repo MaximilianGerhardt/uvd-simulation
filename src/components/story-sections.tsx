@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { ArrowRight, Activity, ShoppingBasket, BookOpen } from "lucide-react";
+import { ArrowRight, Activity, ShoppingBasket, BookOpen, MessageCircle } from "lucide-react";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { Link } from "@/i18n/navigation";
 
@@ -254,6 +254,14 @@ export function StoryClosing() {
             >
               {t("ctaShortpaper")}
             </a>
+            <Link
+              href="/community"
+              className="group inline-flex items-center gap-2 rounded-full border border-[#FF6B00]/40 px-8 py-4 text-[clamp(0.9375rem,1.5vw,1.0625rem)] font-medium text-[#FF6B00] transition-all hover:border-[#FF6B00] hover:bg-[#FF6B00]/10"
+            >
+              <MessageCircle className="h-4 w-4" />
+              {t("ctaCommunity")}
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1 rtl:rotate-180" />
+            </Link>
           </div>
         </ScrollReveal>
       </div>
