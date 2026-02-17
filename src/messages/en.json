@@ -535,7 +535,7 @@
     "successText": "We just sent you a confirmation email. Since we're a new project, your email provider may have placed it in your spam or junk folder. Please check there and move it to your inbox.",
     "error": "Something went wrong. Please try again.",
     "rateLimited": "Too many attempts. Please wait a few minutes.",
-    "privacy": "We only store your email for notifications. No tracking, no sharing. Unsubscribe anytime.",
+    "privacy": "Your email is used for UVD ecosystem updates. Unsubscribe anytime.",
     "checkSpam": "Since UVD Trading is a new project, our confirmation email is most likely in your spam folder. Please check there now."
   },
   "newsletterCta": {

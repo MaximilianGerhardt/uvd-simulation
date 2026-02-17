@@ -78,7 +78,7 @@ function getConfirmationEmail(
     en: {
       heading: "Confirm your subscription",
       text: "You requested to join the UVD Ecosystem updates — new simulations, UWD protocol insights, and milestone announcements.",
-      privacyNote: "We take your privacy seriously. This confirmation ensures no one receives emails they didn't request. We only store your email address — no tracking, no profiling, no data sharing. Ever.",
+      privacyNote: "We take your privacy seriously. This confirmation step ensures no one receives emails they didn't explicitly request.",
       button: "Confirm Subscription",
       ignoreNote: "If you didn't request this, simply ignore this email. Your data will be automatically deleted.",
       unsubText: "Unsubscribe",
@@ -88,7 +88,7 @@ function getConfirmationEmail(
     de: {
       heading: "Bestätige dein Abonnement",
       text: "Du möchtest Teil der UVD Ökosystem Updates werden — neue Simulationen, UWD-Protokoll-Einblicke und Meilenstein-Ankündigungen.",
-      privacyNote: "Deine Privatsphäre ist uns wichtig. Diese Bestätigung stellt sicher, dass niemand ungewollte E-Mails erhält. Wir speichern nur deine E-Mail-Adresse — kein Tracking, kein Profiling, kein Datenverkauf. Niemals.",
+      privacyNote: "Deine Privatsphäre ist uns wichtig. Diese Bestätigung stellt sicher, dass niemand ungewollte E-Mails erhält.",
       button: "Abonnement bestätigen",
       ignoreNote: "Falls du das nicht angefordert hast, ignoriere diese E-Mail. Deine Daten werden automatisch gelöscht.",
       unsubText: "Abmelden",
@@ -98,7 +98,7 @@ function getConfirmationEmail(
     ar: {
       heading: "أكّد اشتراكك",
       text: "لقد طلبت الانضمام إلى تحديثات نظام UVD — محاكاة جديدة ورؤى بروتوكول UWD وإعلانات المعالم.",
-      privacyNote: "نحن نأخذ خصوصيتك على محمل الجد. هذا التأكيد يضمن عدم تلقي أي شخص رسائل لم يطلبها. نخزن بريدك الإلكتروني فقط — بدون تتبع أو تحليل أو مشاركة بيانات.",
+      privacyNote: "نحن نأخذ خصوصيتك على محمل الجد. هذا التأكيد يضمن عدم تلقي أي شخص رسائل لم يطلبها صراحة.",
       button: "تأكيد الاشتراك",
       ignoreNote: "إذا لم تطلب هذا، تجاهل هذا البريد. سيتم حذف بياناتك تلقائياً.",
       unsubText: "إلغاء الاشتراك",
@@ -108,7 +108,7 @@ function getConfirmationEmail(
     es: {
       heading: "Confirma tu suscripción",
       text: "Solicitaste unirte a las actualizaciones del ecosistema UVD — nuevas simulaciones, información del protocolo UWD y anuncios de hitos.",
-      privacyNote: "Tu privacidad es importante para nosotros. Esta confirmación garantiza que nadie reciba correos no solicitados. Solo almacenamos tu dirección de email — sin rastreo, sin perfilado, sin venta de datos. Nunca.",
+      privacyNote: "Tu privacidad es importante para nosotros. Esta confirmación garantiza que nadie reciba correos que no haya solicitado expresamente.",
       button: "Confirmar suscripción",
       ignoreNote: "Si no solicitaste esto, simplemente ignora este correo. Tus datos serán eliminados automáticamente.",
       unsubText: "Cancelar suscripción",
@@ -118,7 +118,7 @@ function getConfirmationEmail(
     fr: {
       heading: "Confirmez votre abonnement",
       text: "Vous souhaitez rejoindre les mises à jour de l'écosystème UVD — nouvelles simulations, aperçus du protocole UWD et annonces de jalons.",
-      privacyNote: "Votre vie privée est importante pour nous. Cette confirmation garantit que personne ne reçoit d'emails non sollicités. Nous ne stockons que votre adresse email — pas de tracking, pas de profilage, pas de partage de données. Jamais.",
+      privacyNote: "Votre vie privée est importante pour nous. Cette confirmation garantit que personne ne reçoit d'emails non sollicités.",
       button: "Confirmer l'abonnement",
       ignoreNote: "Si vous n'avez pas fait cette demande, ignorez simplement cet email. Vos données seront automatiquement supprimées.",
       unsubText: "Se désabonner",

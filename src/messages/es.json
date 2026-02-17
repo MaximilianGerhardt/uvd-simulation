@@ -535,7 +535,7 @@
     "successText": "Te notificaremos cuando haya algo nuevo.",
     "error": "Algo salió mal. Por favor, inténtalo de nuevo.",
     "rateLimited": "Demasiados intentos. Espera unos minutos.",
-    "privacy": "Solo almacenamos tu email para notificaciones. Sin rastreo ni uso compartido. Cancela cuando quieras.",
+    "privacy": "Tu email se usa para actualizaciones del ecosistema UVD. Cancela cuando quieras.",
     "checkSpam": "Como UVD Trading es un proyecto nuevo, nuestro email de confirmación probablemente está en tu carpeta de spam. Por favor, revísala ahora."
   },
   "newsletterCta": {
