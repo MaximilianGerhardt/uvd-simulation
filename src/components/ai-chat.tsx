@@ -147,13 +147,9 @@ export function AIChat() {
       </button>
 
       {/* Chat Panel */}
+      {open && (
       <div
-        className="fixed bottom-6 end-6 z-50 flex h-[min(600px,80vh)] w-[min(400px,calc(100vw-3rem))] flex-col overflow-hidden rounded-2xl border border-[#D0D0D0]/50 bg-white shadow-2xl transition-all duration-200"
-        style={{
-          transform: open ? "translateY(0) scale(1)" : "translateY(20px) scale(0.95)",
-          opacity: open ? 1 : 0,
-          pointerEvents: open ? "auto" : "none",
-        }}
+        className="fixed bottom-6 end-6 z-50 flex h-[min(600px,80vh)] w-[min(400px,calc(100vw-3rem))] flex-col overflow-hidden rounded-2xl border border-[#D0D0D0]/50 bg-white shadow-2xl"
       >
             {/* Header */}
             <div className="flex items-center justify-between border-b border-[#D0D0D0]/30 px-4 py-3">
@@ -272,6 +268,7 @@ export function AIChat() {
               </span>
             </div>
       </div>
+      )}
     </>
   );
 }
