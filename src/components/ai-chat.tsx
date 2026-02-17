@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect, useMemo } from "react";
 import { useLocale } from "next-intl";
-import { MessageCircle, X, Send, AlertTriangle, Loader2 } from "lucide-react";
+import { Sparkles, X, Send, AlertTriangle, Loader2 } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import { CHAT_TRANSLATIONS } from "@/lib/knowledge-base";
 
@@ -146,7 +146,7 @@ export function AIChat() {
       {/* Floating Button */}
       <button
         onClick={() => setOpen(true)}
-        className="fixed bottom-6 end-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#FF6B00] text-white shadow-lg shadow-[#FF6B00]/25 transition-all duration-200 hover:scale-105 active:scale-95"
+        className="fixed bottom-6 end-6 z-50 flex items-center gap-2 rounded-full bg-[#FF6B00] px-4 py-3 text-white shadow-lg shadow-[#FF6B00]/25 transition-all duration-200 hover:scale-105 active:scale-95"
         style={{
           transform: open ? "scale(0)" : "scale(1)",
           opacity: open ? 0 : 1,
@@ -154,7 +154,8 @@ export function AIChat() {
         }}
         aria-label={t.title}
       >
-        <MessageCircle className="h-6 w-6" />
+        <Sparkles className="h-5 w-5" />
+        <span className="text-sm font-medium">Ask AI</span>
       </button>
 
       {/* Chat Panel */}
@@ -166,7 +167,7 @@ export function AIChat() {
             <div className="flex items-center justify-between border-b border-[#D0D0D0]/30 px-4 py-3">
               <div className="flex items-center gap-2">
                 <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#FF6B00]/10">
-                  <MessageCircle className="h-4 w-4 text-[#FF6B00]" />
+                  <Sparkles className="h-4 w-4 text-[#FF6B00]" />
                 </div>
                 <div>
                   <p className="text-sm font-semibold text-[#1b1b1b]">{t.title}</p>
