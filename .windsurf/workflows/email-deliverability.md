@@ -258,7 +258,62 @@ NEWSLETTER_FROM_EMAIL=Brand Name <news@mail.domain.com>
 
 ---
 
-## 7. Deliverability Checklist
+## 7. Reading DMARC Aggregate Reports
+
+Google, Yahoo, and other providers send XML aggregate reports to the `rua` email address in your DMARC record. These arrive as `.xml.gz` or `.zip` attachments.
+
+### Report Structure
+```xml
+<feedback>
+  <report_metadata>      <!-- Who sent the report, date range -->
+  <policy_published>     <!-- Your DMARC policy as seen by the receiver -->
+  <record>               <!-- One per source IP group -->
+    <row>
+      <source_ip>        <!-- IP that sent the email -->
+      <count>            <!-- Number of emails from this IP -->
+      <policy_evaluated>
+        <disposition>    <!-- none | quarantine | reject -->
+        <dkim>           <!-- pass | fail -->
+        <spf>            <!-- pass | fail -->
+      </policy_evaluated>
+    </row>
+    <auth_results>       <!-- Detailed auth check results -->
+      <dkim domain="..." result="pass|fail" selector="..." />
+      <spf domain="..." result="pass|fail" />
+    </auth_results>
+  </record>
+</feedback>
+```
+
+### What to Check
+| Field | Good | Bad |
+|-------|------|-----|
+| `disposition` | `none` (email delivered normally) | `quarantine` or `reject` |
+| `dkim result` | `pass` | `fail` — check DKIM DNS record |
+| `spf result` | `pass` | `fail` — check SPF DNS record |
+| `source_ip` | Known IPs (Amazon SES: `54.240.x.x`) | Unknown IPs = possible spoofing |
+
+### Verified Working Configuration (UVD Trading / Resend)
+Based on a real Google DMARC report with 100% pass rate:
+```
+DMARC:  _dmarc.uvd.trading → v=DMARC1; p=quarantine; rua=mailto:info@p-a.llc
+SPF:    send.mail.uvd.trading → v=spf1 include:amazonses.com ~all
+DKIM:   resend._domainkey.mail.uvd.trading → [Resend public key]
+MX:     send.mail.uvd.trading → feedback-smtp.eu-west-1.amazonses.com (priority 10)
+```
+- All 11 emails passed DKIM + SPF
+- All source IPs were Amazon SES (`54.240.x.x`)
+- Disposition: `none` on all records (no emails quarantined or rejected)
+
+### Automated Report Monitoring
+For high-volume senders, use a DMARC report aggregator:
+- [Postmark DMARC](https://dmarc.postmarkapp.com/) — free
+- [dmarcian](https://dmarcian.com/) — free tier
+- [DMARC Analyzer](https://www.dmarcanalyzer.com/) — paid
+
+---
+
+## 8. Deliverability Checklist
 
 ### Before First Send
 - [ ] SPF record added and verified in Resend

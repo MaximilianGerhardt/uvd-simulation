@@ -206,6 +206,56 @@ Sitemap: https://www.example.com/sitemap.xml
 6. Request indexing via URL Inspection tool
 7. If multilingual: verify hreflang is correct (wrong hreflang = Google ignores all)
 
+### Accelerating Indexing
+
+#### Automated Post-Build Notifications (runs after every build)
+A `postbuild` script runs after `npm run build` (including Vercel deploys):
+```
+scripts/ping-sitemap.mjs:
+  1. Warms sitemap in CDN cache (fetches sitemap.xml so crawlers get fast response)
+  2. Sends IndexNow notification to Bing/Yandex for instant crawl trigger
+```
+**Note:** Google deprecated their `/ping` endpoint in 2023. Google discovers sitemaps via `robots.txt` and GSC submission only. There is no public Google ping API.
+
+#### Manual URL Inspection (GSC)
+For immediate indexing of specific pages:
+1. Open [Google Search Console](https://search.google.com/search-console)
+2. URL Inspection → paste URL → "Request Indexing"
+3. Limit: ~10 requests per day
+4. Priority pages to submit first:
+   - Homepage (all locales)
+   - Core feature pages (simulation, calculator)
+   - Blog/article pages
+   - Glossary/FAQ pages
+
+#### Google Indexing API (Advanced)
+Only works for `JobPosting` and `BroadcastEvent` structured data. NOT for general pages.
+For general pages, use the URL Inspection approach above.
+
+#### Bing URL Submission API
+Bing offers a more open URL submission API:
+1. Register at [Bing Webmaster Tools](https://www.bing.com/webmasters)
+2. Get API key from Settings → API Access
+3. POST to `https://ssl.bing.com/webmaster/api.svc/json/SubmitUrl`
+4. Quota: 10,000 URLs/day (much more generous than Google)
+
+#### IndexNow Protocol
+Supported by Bing, Yandex, and others (NOT Google):
+```
+GET https://www.bing.com/indexnow?url=https://www.uvd.trading/page&key=YOUR_KEY
+```
+- Drop a key file at `/.well-known/indexnow-key.txt`
+- Ping on every content change
+- Instant notification to all supporting engines
+
+#### Tips for New Sites
+- **First 2-4 weeks**: Google may index slowly — this is normal for new domains
+- **Internal linking**: Every page should be reachable within 3 clicks from homepage
+- **External backlinks**: Even 1-2 quality backlinks dramatically speed up crawling
+- **Social signals**: Share URLs on Twitter/LinkedIn — crawlers follow social links
+- **Google Business Profile**: If applicable, link your site there
+- **Sitemap in robots.txt**: Ensures crawlers find sitemap even without GSC
+
 ---
 
 ## 8. Google Analytics 4 (GA4)
