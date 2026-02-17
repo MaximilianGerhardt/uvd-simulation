@@ -552,9 +552,10 @@
     "homeButton": "Der Reise folgen",
     "homePrivacy": "Double Opt-In · Kein Spam · Jederzeit abbestellbar",
     "successTitle": "Wichtig — Prüfe jetzt dein Postfach!",
-    "successReason": "Wir haben dir gerade eine Bestätigungsmail geschickt. Bitte klicke auf den Link darin, um dein Abonnement zu aktivieren. Wir verlangen diesen Schritt zum Schutz deiner Privatsphäre — niemand soll E-Mails erhalten, die er nicht ausdrücklich angefordert hat. Das ist unser Standard.",
+    "successReason": "Wir haben dir gerade eine Bestätigungsmail geschickt. Bitte klicke auf den Link darin, um dein Abonnement zu aktivieren. Nicht gefunden? Schau in deinem Spam- oder Junk-Ordner nach — Bestätigungsmails landen dort manchmal. Verschiebe sie in den Posteingang, damit zukünftige E-Mails korrekt ankommen. Wir verlangen diesen Schritt zum Schutz deiner Privatsphäre — niemand soll E-Mails erhalten, die er nicht ausdrücklich angefordert hat.",
     "rateLimited": "Zu viele Versuche. Bitte warte ein paar Minuten.",
-    "error": "Etwas ist schiefgelaufen. Bitte versuche es erneut."
+    "error": "Etwas ist schiefgelaufen. Bitte versuche es erneut.",
+    "checkSpam": "Nicht im Posteingang? Schau im Spam- oder Junk-Ordner nach und verschiebe die Mail in den Posteingang."
   },
   "newsletterConfirmed": {
     "metaTitle": "Abonnement bestätigt",

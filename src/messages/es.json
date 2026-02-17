@@ -552,9 +552,10 @@
     "homeButton": "Seguir el camino",
     "homePrivacy": "Doble confirmación · Sin spam · Cancela cuando quieras",
     "successTitle": "Importante — ¡Revisa tu bandeja ahora!",
-    "successReason": "Te acabamos de enviar un email de confirmación. Por favor, haz clic en el enlace para activar tu suscripción. Requerimos este paso para proteger tu privacidad — nadie debería recibir correos que no haya solicitado expresamente. Ese es nuestro estándar.",
+    "successReason": "Te acabamos de enviar un email de confirmación. Por favor, haz clic en el enlace para activar tu suscripción. ¿No lo encuentras? Revisa tu carpeta de spam o correo no deseado — los emails de confirmación a veces terminan allí. Muévelo a tu bandeja de entrada para que los futuros correos lleguen correctamente. Requerimos este paso para proteger tu privacidad — nadie debería recibir correos que no haya solicitado expresamente.",
     "rateLimited": "Demasiados intentos. Espera unos minutos.",
-    "error": "Algo salió mal. Inténtalo de nuevo."
+    "error": "Algo salió mal. Inténtalo de nuevo.",
+    "checkSpam": "¿No está en tu bandeja? Revisa tu carpeta de spam o correo no deseado y muévelo a tu bandeja de entrada."
   },
   "newsletterConfirmed": {
     "metaTitle": "Suscripción confirmada",

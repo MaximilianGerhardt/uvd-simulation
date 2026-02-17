@@ -552,9 +552,10 @@
     "homeButton": "Suivre le parcours",
     "homePrivacy": "Double opt-in · Pas de spam · Désabonnement à tout moment",
     "successTitle": "Important — Vérifiez votre boîte maintenant !",
-    "successReason": "Nous venons de vous envoyer un email de confirmation. Veuillez cliquer sur le lien à l'intérieur pour activer votre abonnement. Nous exigeons cette étape pour protéger votre vie privée — personne ne devrait recevoir d'emails qu'il n'a pas explicitement demandés. C'est notre standard.",
+    "successReason": "Nous venons de vous envoyer un email de confirmation. Veuillez cliquer sur le lien à l'intérieur pour activer votre abonnement. Vous ne le trouvez pas ? Vérifiez votre dossier spam ou courrier indésirable — les emails de confirmation y arrivent parfois. Déplacez-le dans votre boîte de réception pour que les futurs emails arrivent correctement. Nous exigeons cette étape pour protéger votre vie privée — personne ne devrait recevoir d'emails qu'il n'a pas explicitement demandés.",
     "rateLimited": "Trop de tentatives. Veuillez patienter quelques minutes.",
-    "error": "Une erreur est survenue. Veuillez réessayer."
+    "error": "Une erreur est survenue. Veuillez réessayer.",
+    "checkSpam": "Pas dans votre boîte de réception ? Vérifiez votre dossier spam et déplacez l'email dans votre boîte de réception."
   },
   "newsletterConfirmed": {
     "metaTitle": "Abonnement confirmé",

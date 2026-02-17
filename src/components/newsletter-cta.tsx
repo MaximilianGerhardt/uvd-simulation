@@ -47,6 +47,7 @@ export function NewsletterCTA({ variant = "default" }: { variant?: "default" | "
             <div>
               <p className="text-sm font-semibold text-[#FF6B00]">{t("successTitle")}</p>
               <p className="mt-1 text-xs leading-relaxed text-white/50">{t("successReason")}</p>
+              <p className="mt-2 rounded-lg bg-white/5 px-3 py-2 text-[11px] font-medium text-white/40">📬 {t("checkSpam")}</p>
             </div>
           </div>
         </div>
@@ -103,6 +104,7 @@ export function NewsletterCTA({ variant = "default" }: { variant?: "default" | "
           </div>
           <h3 className="mb-2 text-lg font-semibold text-[#FF6B00]">{t("successTitle")}</h3>
           <p className="mx-auto max-w-md text-sm leading-relaxed text-[#1b1b1b]/50">{t("successReason")}</p>
+          <p className="mx-auto mt-3 max-w-sm rounded-xl bg-[#FF6B00]/8 px-4 py-2.5 text-xs font-medium text-[#FF6B00]/70">📬 {t("checkSpam")}</p>
         </div>
       );
     }
@@ -155,6 +157,7 @@ export function NewsletterCTA({ variant = "default" }: { variant?: "default" | "
           </div>
           <h2 className="mb-3 text-2xl font-semibold tracking-[-0.02em] text-[#FF6B00]">{t("successTitle")}</h2>
           <p className="mx-auto max-w-lg text-base leading-relaxed text-[#1b1b1b]/50">{t("successReason")}</p>
+          <p className="mx-auto mt-4 max-w-md rounded-xl bg-[#FF6B00]/8 px-5 py-3 text-sm font-medium text-[#FF6B00]/70">📬 {t("checkSpam")}</p>
         </div>
       </section>
     );

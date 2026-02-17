@@ -552,9 +552,10 @@
     "homeButton": "Follow the Journey",
     "homePrivacy": "Double opt-in · No spam · Unsubscribe anytime",
     "successTitle": "Important — Check your inbox now!",
-    "successReason": "We just sent you a confirmation email. Please click the link inside to activate your subscription. We require this step to protect your privacy — no one should receive emails they didn't explicitly request. That's our standard.",
+    "successReason": "We just sent you a confirmation email. Please click the link inside to activate your subscription. Can't find it? Check your spam or junk folder — confirmation emails sometimes end up there. Move it to your inbox so future emails arrive correctly. We require this step to protect your privacy — no one should receive emails they didn't explicitly request.",
     "rateLimited": "Too many attempts. Please wait a few minutes.",
-    "error": "Something went wrong. Please try again."
+    "error": "Something went wrong. Please try again.",
+    "checkSpam": "Not in your inbox? Check your spam or junk folder and move it to your inbox."
   },
   "newsletterConfirmed": {
     "metaTitle": "Subscription Confirmed",
