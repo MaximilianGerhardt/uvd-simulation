@@ -14,6 +14,8 @@ import {
 } from "@/components/story-sections";
 import { Glossary } from "@/components/glossary";
 import { Footer } from "@/components/footer";
+import { LatestUpdate } from "@/components/latest-update";
+import { NewsletterCTA } from "@/components/newsletter-cta";
 
 const TimeTheftCalculator = dynamic(
   () => import("@/components/time-theft-calculator").then((m) => m.TimeTheftCalculator),
@@ -46,6 +48,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       <Navigation />
       <main>
         <Hero />
+        <LatestUpdate />
         <StoryProblem />
         <TimeTheftCalculator />
         <StorySolution />
@@ -57,6 +60,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         <StoryLearn />
         <Glossary />
         <StoryClosing />
+        <NewsletterCTA />
       </main>
       <Footer />
     </div>

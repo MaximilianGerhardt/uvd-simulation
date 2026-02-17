@@ -7,7 +7,8 @@
     "faq": "FAQ",
     "aboutUvd": "About UVD",
     "officialSite": "uvd.xyz",
-    "community": "Community"
+    "community": "Community",
+    "updates": "Updates"
   },
   "hero": {
     "badge": "Interactive Companion to",
@@ -130,6 +131,8 @@
     "officialResources": "Official Resources",
     "shortpaper": "Shortpaper (IPFS)",
     "whitepaper": "Whitepaper (IPFS)",
+    "uwd": "UWD (Governance)",
+    "udrp": "UDRP (Protocol)",
     "twitter": "X / Twitter",
     "foundation": "Foundation",
     "relativeTheory": "Relative Theory of Money",
@@ -522,5 +525,211 @@
     "description": "The page you're looking for may have been moved or removed. Explore our simulations or return to the homepage.",
     "backHome": "Back to Home",
     "explore": "Explore Simulations"
+  },
+  "newsletter": {
+    "title": "Stay in the loop",
+    "description": "Get notified when we publish new analyses, simulations, or ecosystem updates. No spam — only substance.",
+    "placeholder": "your@email.com",
+    "subscribe": "Subscribe",
+    "successTitle": "You're in!",
+    "successText": "We'll notify you when something new drops. Check your inbox to confirm.",
+    "error": "Something went wrong. Please try again.",
+    "rateLimited": "Too many attempts. Please wait a few minutes.",
+    "privacy": "We only store your email for notifications. No tracking, no sharing. Unsubscribe anytime.",
+    "checkSpam": "Check your spam folder if you don't see it within a few minutes."
+  },
+  "newsletterCta": {
+    "footerTitle": "Follow the UVD Ecosystem",
+    "footerText": "New simulations, UWD updates, and protocol insights — directly to your inbox.",
+    "footerButton": "Subscribe",
+    "footerPrivacy": "Double opt-in · No spam · Unsubscribe anytime",
+    "placeholder": "your@email.com",
+    "articleTitle": "The UVD story is just beginning",
+    "articleText": "UWD, UDRP, and the UVD app are evolving. Be the first to know when we publish new deep-dives, simulation releases, or protocol milestones.",
+    "articleButton": "Get UVD Updates",
+    "homeTitle": "A new kind of money is being built",
+    "homeText": "UVD is more than a simulation — it's a window into an economic model designed for fairness. Follow our journey as UWD, UDRP, and the UVD app take shape.",
+    "homeButton": "Follow the Journey",
+    "homePrivacy": "Double opt-in · No spam · Unsubscribe anytime",
+    "successTitle": "Important — Check your inbox now!",
+    "successReason": "We just sent you a confirmation email. Please click the link inside to activate your subscription. We require this step to protect your privacy — no one should receive emails they didn't explicitly request. That's our standard.",
+    "rateLimited": "Too many attempts. Please wait a few minutes.",
+    "error": "Something went wrong. Please try again."
+  },
+  "newsletterConfirmed": {
+    "metaTitle": "Subscription Confirmed",
+    "successTitle": "You're confirmed!",
+    "successText": "You'll receive updates when we publish new analyses, simulations, or ecosystem news. Welcome aboard.",
+    "alreadyTitle": "Already confirmed",
+    "alreadyText": "Your subscription is already active. You're all set!",
+    "invalidTitle": "Invalid link",
+    "invalidText": "This confirmation link is invalid or has already been used. Please try subscribing again.",
+    "errorTitle": "Something went wrong",
+    "errorText": "We couldn't confirm your subscription. Please try again later.",
+    "shareTitle": "Sharing is Caring",
+    "shareText": "You help us keep this project alive by sharing it. Thank you for being interested in this extraordinary project — it means a lot.",
+    "shareMessage": "Check out UVD Simulation — interactive tools exploring the economic model behind Universe Dollar, a Bitcoin-secured stable currency.",
+    "copied": "Copied!",
+    "copyLink": "Copy link",
+    "goToUpdates": "Go to Updates"
+  },
+  "newsletterUnsubscribe": {
+    "title": "We're sorry to see you go",
+    "subtitle": "Before you leave — would you mind telling us why? This helps us improve.",
+    "reasonLabel": "Why are you unsubscribing?",
+    "reason_too_frequent": "Too many emails",
+    "reason_not_relevant": "Content isn't relevant to me",
+    "reason_never_subscribed": "I never subscribed",
+    "reason_other": "Other reason",
+    "feedbackLabel": "Anything else you'd like us to know? (optional)",
+    "feedbackPlaceholder": "Your feedback helps us improve...",
+    "confirmButton": "Confirm Unsubscribe",
+    "cancelButton": "Keep Subscription",
+    "error": "Something went wrong. Please try again.",
+    "errorTitle": "Invalid link",
+    "errorText": "This unsubscribe link is invalid or has expired.",
+    "privacyNote": "Your data will be removed from our active subscriber list upon confirmation."
+  },
+  "newsletterSettings": {
+    "title": "Newsletter Settings",
+    "subtitle": "Choose which language you'd like to receive UVD Ecosystem updates in.",
+    "languageLabel": "Preferred language",
+    "saved": "Language preference saved!",
+    "errorTitle": "Something went wrong",
+    "errorText": "We couldn't load your settings. Please try again.",
+    "invalidTitle": "Invalid link",
+    "invalidText": "This settings link is invalid or has expired.",
+    "note": "Changes apply to all future emails. Your email address is never shared."
+  },
+  "newsletterUnsubscribed": {
+    "metaTitle": "Unsubscribed",
+    "successTitle": "You've been unsubscribed",
+    "successText": "You won't receive any more emails from us. We're sorry to see you go.",
+    "dataNote": "Your email has been removed from our active list. No further data will be processed.",
+    "invalidTitle": "Invalid link",
+    "invalidText": "This unsubscribe link is invalid or has already been used.",
+    "errorTitle": "Something went wrong",
+    "errorText": "We couldn't process your request. Please try again later.",
+    "backHome": "Back to Home"
+  },
+  "latestUpdate": {
+    "tag": "New",
+    "date": "Feb 17, 2026",
+    "title": "The Countdown Is Over: UWD & UDRP Revealed — The Ecosystem Behind UVD"
+  },
+  "updates": {
+    "metaTitle": "Updates — UVD Ecosystem News",
+    "metaDescription": "Latest developments and analysis around the Universe Dollar ecosystem, including UWD and UDRP.",
+    "badge": "Ecosystem Updates",
+    "title": "What's happening in the ",
+    "titleHighlight": "UVD ecosystem.",
+    "subtitle": "Independent analysis and context on developments around Universe Dollar, United World Dynamics, and the broader protocol ecosystem.",
+    "entry1Date": "Feb 17, 2026",
+    "entry1Tag": "Major Release",
+    "entry1Title": "The Countdown Is Over: UWD & UDRP Revealed",
+    "entry1Excerpt": "The uvd.xyz countdown resolved at 01:00 CET revealing two foundational components: United World Dynamics (UWD) — a sovereign reform framework — and the United Digital Reserve Protocol (UDRP) — a settlement fabric for programmable CBDCs. Here's what it means for UVD.",
+    "readMore": "Read full analysis",
+    "externalTitle": "Official Sources",
+    "legalNote": "This page provides independent analysis and commentary on publicly available information. It is not affiliated with or endorsed by the Universe Dollar project. For authoritative information, refer exclusively to the official resources linked above."
+  },
+  "uwdReveal": {
+    "metaTitle": "UWD & UDRP Revealed — The Bigger Picture Behind UVD",
+    "metaDescription": "Analysis of the UWD (United World Dynamics) sovereign reform framework and UDRP (United Digital Reserve Protocol) — the ecosystem behind Universe Dollar.",
+    "breadcrumb": "UWD & UDRP Reveal",
+    "releaseBadge": "Released Feb 17, 2026 · 01:00 CET",
+    "title": "The bigger picture ",
+    "titleHighlight": "behind UVD.",
+    "subtitle": "The uvd.xyz countdown revealed the full ecosystem: a sovereign reform guidebook and a digital reserve protocol. UVD is not just a currency — it's the first product of a much larger architecture.",
+    "introText": "At 01:00 CET on February 17, 2026, the countdown on uvd.xyz resolved, revealing two new domains: uwd.xyz and uwd.xyz/udrp. These publications position Universe Dollar within a dramatically broader vision — one that spans sovereign governance, infrastructure, and a new neutral reserve layer for the digital age.",
+    "ecosystemTitle": "The Three-Layer Ecosystem",
+    "layerMacro": "Macro Framework",
+    "uwdName": "UWD — United World Dynamics",
+    "uwdShort": "A guidebook for sovereign reform covering six pillars: Money, Infrastructure, Resources, People, Cohesion, and Governance.",
+    "layerProtocol": "Protocol Layer",
+    "udrpName": "UDRP — United Digital Reserve Protocol",
+    "udrpShort": "A sovereign settlement fabric for programmable CBDCs and a neutral reserve layer between nations.",
+    "layerCurrency": "Currency Product",
+    "uvdName": "UVD — Universe Dollar",
+    "uvdShort": "A Bitcoin-secured, basket-indexed, fixed-supply stable currency. The first concrete application built on the UDRP infrastructure.",
+    "uwdTitle": "What is United World Dynamics?",
+    "uwdText": "UWD (United World Dynamics) presents itself as \"How to Run a Country\" — a comprehensive guidebook for sovereign reform. Rather than focusing solely on monetary policy, it addresses the complete architecture of a functioning state. The framework is built around six interconnected pillars, each representing a domain that must work in harmony for a society to thrive.",
+    "pillars": {
+      "money": {
+        "title": "Money",
+        "text": "Fair monetary creation, reserve architecture, and value stability for all participants."
+      },
+      "infrastructure": {
+        "title": "Infrastructure",
+        "text": "Digital and physical systems that enable a modern, connected, and resilient society."
+      },
+      "resources": {
+        "title": "Resources",
+        "text": "Sustainable management of natural resources, energy, and environmental commons."
+      },
+      "people": {
+        "title": "People",
+        "text": "Education, health, opportunity — investment in human capital as the true wealth of nations."
+      },
+      "cohesion": {
+        "title": "Cohesion",
+        "text": "Social contracts, trust mechanisms, and cultural frameworks that bind communities together."
+      },
+      "governance": {
+        "title": "Governance",
+        "text": "Transparent, accountable, and adaptive decision-making structures at every level."
+      }
+    },
+    "udrpTitle": "What is the United Digital Reserve Protocol?",
+    "udrpText": "UDRP (United Digital Reserve Protocol) is described as a \"Sovereign Settlement Fabric for Programmable CBDCs and a Neutral Reserve Layer.\" It sits between the macro vision of UWD and the concrete currency product (UVD), providing the technical and institutional infrastructure where digital currencies can operate across borders without requiring trust in any single nation-state.",
+    "udrpKeyFeaturesTitle": "Key characteristics based on available information:",
+    "udrpFeatures": {
+      "f1": "Sovereign settlement fabric — designed for nation-state level interoperability, not just individual transactions",
+      "f2": "Programmable CBDC compatibility — a layer where central bank digital currencies can interact through neutral infrastructure",
+      "f3": "Neutral reserve layer — positioned as a non-partisan, non-sovereign base layer for international settlement",
+      "f4": "Bitcoin-secured — leveraging Bitcoin's proof-of-work security as the ultimate settlement guarantee"
+    },
+    "uvdContextTitle": "Where UVD Fits In",
+    "uvdContextText": "With this reveal, Universe Dollar is no longer just a standalone currency concept. It is the first concrete implementation on top of the UDRP infrastructure, which itself operates within the UWD philosophical framework. Think of it as layers of a building:",
+    "analogyTitle": "The Building Analogy",
+    "analogies": {
+      "a1": "UWD is the architectural blueprint — the vision of what a well-run civilization looks like across all domains.",
+      "a2": "UDRP is the foundation and plumbing — the settlement infrastructure that makes digital value transfer between nations possible.",
+      "a3": "UVD is the first apartment — a Bitcoin-secured, basket-indexed stable currency that people can actually use, built on that foundation."
+    },
+    "sourcesTitle": "Read the Original Sources",
+    "sourcesText": "The full documents are available on the official sites. This page provides independent analysis — always verify with primary sources.",
+    "ctaUwd": "UWD — Full Document",
+    "ctaUdrp": "UDRP — Protocol Paper",
+    "ctaUvd": "uvd.xyz — Official Site",
+    "relatedTitle": "Continue Exploring",
+    "relatedAbout": "About UVD",
+    "relatedAboutDesc": "Learn the fundamentals of Universe Dollar and its economic model.",
+    "relatedRtm": "RTM Simulation",
+    "relatedRtmDesc": "Run the Relative Theory of Money model and see fair monetary creation in action.",
+    "relatedBasket": "Basket Index",
+    "relatedBasketDesc": "Explore the sovereign commodity basket that stabilizes UVD's purchasing power.",
+    "legalNote": "This analysis is based on publicly available metadata and descriptions from uwd.xyz and uwd.xyz/udrp as of February 17, 2026. It represents the author's independent interpretation and does not constitute endorsement, financial advice, or an official statement from the UVD project.",
+    "execTitle": "At a Glance",
+    "execSubtitle": "Three components, one ecosystem. Click any card to learn more.",
+    "execUwdTitle": "The Blueprint",
+    "execUwdText": "A guidebook for how nations should be structured — covering money, infrastructure, resources, people, cohesion, and governance.",
+    "execUdrpTitle": "The Infrastructure",
+    "execUdrpText": "A neutral settlement layer where digital currencies from different nations can interact — without trusting any single government.",
+    "execUvdTitle": "The Currency",
+    "execUvdText": "A stable digital currency backed by Bitcoin and indexed to a real-world commodity basket. The first product built on this infrastructure.",
+    "execDeepDive": "Deep dive",
+    "appTitle": "Built to hold. Built to spend.",
+    "appSubtitle": "The uvd.xyz update reveals a full consumer application — not just a protocol, but a product people can use daily.",
+    "appWalletTitle": "Reserve Basket & Wallet",
+    "appWalletText": "A portfolio view showing UVD holdings alongside BTC reserves, with real-time basket pricing and performance tracking.",
+    "appFeatures": {
+      "deposit": "Deposit — On-ramp fiat or crypto into UVD",
+      "swap": "Swap — Convert between UVD and BTC instantly",
+      "send": "Send — Transfer UVD to anyone, anywhere",
+      "verify": "Verify — Cryptographic proof of reserves on-chain"
+    },
+    "appCardTitle": "Card & Spending",
+    "appCardText": "A payment card connected to Apple Pay, enabling real-world spending with UVD — from groceries to subscriptions, settled in seconds.",
+    "appDisclaimer": "App UI shown on uvd.xyz. Product details are speculative based on publicly visible design. Not yet publicly available."
   }
 }

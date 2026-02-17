@@ -4,8 +4,14 @@ export function StructuredData({ locale = "en" }: { locale?: string }) {
     "@type": "Organization",
     name: "UVD Simulation",
     url: "https://www.uvd.trading",
+    logo: "https://www.uvd.trading/icon.svg",
     description:
       "Independent educational companion exploring the economic model behind Universe Dollar through interactive simulations.",
+    sameAs: [
+      "https://x.com/uvd99",
+      "https://github.com/MaximilianGerhardt/uvd-simulation",
+      "https://www.uvd.xyz",
+    ],
     parentOrganization: {
       "@type": "Organization",
       name: "Prime Associates LLC",
@@ -32,6 +38,11 @@ export function StructuredData({ locale = "en" }: { locale?: string }) {
     creator: {
       "@type": "Organization",
       name: "Prime Associates LLC",
+    },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: "https://www.uvd.trading/glossary?q={search_term_string}",
+      "query-input": "required name=search_term_string",
     },
   };
 
@@ -60,14 +71,17 @@ export function StructuredData({ locale = "en" }: { locale?: string }) {
     <>
       <script
         type="application/ld+json"
+        suppressHydrationWarning
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
       <script
         type="application/ld+json"
+        suppressHydrationWarning
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
       />
       <script
         type="application/ld+json"
+        suppressHydrationWarning
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
       />
     </>
@@ -99,6 +113,7 @@ export function PageBreadcrumb({ items }: { items: { name: string; path: string 
   return (
     <script
       type="application/ld+json"
+      suppressHydrationWarning
       dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
     />
   );

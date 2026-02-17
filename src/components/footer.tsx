@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { ExternalLink } from "lucide-react";
 import { reopenCookieConsent } from "@/components/cookie-consent";
 import { Link } from "@/i18n/navigation";
+import { NewsletterCTA } from "@/components/newsletter-cta";
 
 export function Footer() {
   const t = useTranslations("footer");
@@ -14,10 +15,12 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-4">
           {/* Brand */}
           <div>
-            <div className="mb-4 flex items-center gap-2.5">
-              <span className="text-base font-semibold text-white">
-                {t("brand")}
+            <div className="mb-4">
+              <span className="text-[17px] font-semibold tracking-tight leading-tight">
+                <span className="text-[#FF6B00]">UVD</span>
+                <span className="text-white">.TRADING</span>
               </span>
+              <p className="mt-0.5 text-[11px] text-white/30">Universe Dollar</p>
             </div>
             <p className="text-sm leading-relaxed text-white/40">
               {t("brandDescription")}
@@ -54,6 +57,30 @@ export function Footer() {
               >
                 {useTranslations("nav")("glossary")}
               </Link>
+              <Link
+                href="/community"
+                className="block text-sm text-white/50 hover:text-white transition-colors"
+              >
+                {useTranslations("nav")("community")}
+              </Link>
+              <Link
+                href="/updates"
+                className="block text-sm text-white/50 hover:text-white transition-colors"
+              >
+                {useTranslations("nav")("updates")}
+              </Link>
+              <Link
+                href="/about-uvd"
+                className="block text-sm text-white/50 hover:text-white transition-colors"
+              >
+                {useTranslations("nav")("aboutUvd")}
+              </Link>
+              <Link
+                href="/faq"
+                className="block text-sm text-white/50 hover:text-white transition-colors"
+              >
+                {useTranslations("nav")("faq")}
+              </Link>
             </div>
           </div>
 
@@ -88,6 +115,24 @@ export function Footer() {
                 className="flex items-center gap-1.5 text-sm text-white/50 hover:text-white transition-colors"
               >
                 {t("whitepaper")}
+                <ExternalLink className="h-3 w-3" />
+              </a>
+              <a
+                href="https://uwd.xyz"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 text-sm text-white/50 hover:text-white transition-colors"
+              >
+                {t("uwd")}
+                <ExternalLink className="h-3 w-3" />
+              </a>
+              <a
+                href="https://uwd.xyz/udrp"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 text-sm text-white/50 hover:text-white transition-colors"
+              >
+                {t("udrp")}
                 <ExternalLink className="h-3 w-3" />
               </a>
               <a
@@ -152,6 +197,11 @@ export function Footer() {
               </button>
             </div>
           </div>
+        </div>
+
+        {/* Newsletter CTA */}
+        <div className="mt-12">
+          <NewsletterCTA variant="footer" />
         </div>
 
         {/* Legal Disclaimer */}

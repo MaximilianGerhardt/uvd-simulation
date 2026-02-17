@@ -15,6 +15,8 @@ const pages: { path: string; changeFrequency: MetadataRoute.Sitemap[number]["cha
   { path: "/methodology/time-theft", changeFrequency: "monthly", priority: 0.7 },
   { path: "/methodology/rtm", changeFrequency: "monthly", priority: 0.7 },
   { path: "/methodology/basket", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/updates", changeFrequency: "weekly", priority: 0.9 },
+  { path: "/updates/uwd-reveal", changeFrequency: "monthly", priority: 0.8 },
   { path: "/legal", changeFrequency: "yearly", priority: 0.3 },
   { path: "/privacy", changeFrequency: "yearly", priority: 0.3 },
 ];

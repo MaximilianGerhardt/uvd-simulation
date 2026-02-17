@@ -13,7 +13,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 pt-16 bg-white">
+    <section className="relative flex min-h-[85vh] flex-col items-center justify-center overflow-hidden px-6 pt-16 bg-white">
       <div className="relative z-10 mx-auto max-w-5xl text-center">
         {/* Badge */}
         <div
