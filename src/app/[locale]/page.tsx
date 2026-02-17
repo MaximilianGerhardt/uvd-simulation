@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic";
 import { routing } from "@/i18n/routing";
 import { setRequestLocale } from "next-intl/server";
 import { PageBreadcrumb } from "@/components/structured-data";
@@ -11,12 +12,25 @@ import {
   StoryLearn,
   StoryClosing,
 } from "@/components/story-sections";
-import { TimeTheftCalculator } from "@/components/time-theft-calculator";
-import { RTMSimulator } from "@/components/rtm-simulator";
-import { BasketVisualizer } from "@/components/basket-visualizer";
-import { BasketBuilder } from "@/components/basket-builder";
 import { Glossary } from "@/components/glossary";
 import { Footer } from "@/components/footer";
+
+const TimeTheftCalculator = dynamic(
+  () => import("@/components/time-theft-calculator").then((m) => m.TimeTheftCalculator),
+  { ssr: true }
+);
+const RTMSimulator = dynamic(
+  () => import("@/components/rtm-simulator").then((m) => m.RTMSimulator),
+  { ssr: true }
+);
+const BasketVisualizer = dynamic(
+  () => import("@/components/basket-visualizer").then((m) => m.BasketVisualizer),
+  { ssr: true }
+);
+const BasketBuilder = dynamic(
+  () => import("@/components/basket-builder").then((m) => m.BasketBuilder),
+  { ssr: true }
+);
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
