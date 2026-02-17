@@ -1,8 +1,9 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useMemo } from "react";
 import { useLocale } from "next-intl";
 import { MessageCircle, X, Send, AlertTriangle, Loader2 } from "lucide-react";
+import ReactMarkdown from "react-markdown";
 import { CHAT_TRANSLATIONS } from "@/lib/knowledge-base";
 
 interface Message {
@@ -219,8 +220,32 @@ export function AIChat() {
                         : "border border-[#D0D0D0]/30 bg-[#f8f8f8] text-[#1b1b1b]/70"
                     }`}
                   >
-                    {msg.content || (
+                    {!msg.content ? (
                       <Loader2 className="h-4 w-4 animate-spin text-[#1b1b1b]/30" />
+                    ) : msg.role === "user" ? (
+                      msg.content
+                    ) : (
+                      <ReactMarkdown
+                        components={{
+                          h1: ({ children }) => <p className="font-semibold text-[#1b1b1b] mt-2 mb-1">{children}</p>,
+                          h2: ({ children }) => <p className="font-semibold text-[#1b1b1b] mt-2 mb-1">{children}</p>,
+                          h3: ({ children }) => <p className="font-medium text-[#1b1b1b] mt-1.5 mb-0.5">{children}</p>,
+                          p: ({ children }) => <p className="mb-1.5 last:mb-0">{children}</p>,
+                          strong: ({ children }) => <strong className="font-semibold text-[#1b1b1b]">{children}</strong>,
+                          em: ({ children }) => <em className="italic">{children}</em>,
+                          ul: ({ children }) => <ul className="ml-3 mb-1.5 space-y-0.5 list-disc">{children}</ul>,
+                          ol: ({ children }) => <ol className="ml-3 mb-1.5 space-y-0.5 list-decimal">{children}</ol>,
+                          li: ({ children }) => <li className="pl-0.5">{children}</li>,
+                          a: ({ href, children }) => (
+                            <a href={href} target="_blank" rel="noopener" className="text-[#FF6B00] underline underline-offset-2 hover:text-[#e55f00]">
+                              {children}
+                            </a>
+                          ),
+                          hr: () => <hr className="my-2 border-[#D0D0D0]/30" />,
+                        }}
+                      >
+                        {msg.content}
+                      </ReactMarkdown>
                     )}
                   </div>
                 </div>
