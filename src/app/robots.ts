@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/", "/newsletter/confirmed", "/newsletter/unsubscribed", "/newsletter/unsubscribe", "/newsletter/settings"],
+        disallow: ["/api/", "/admin", "/newsletter/confirmed", "/newsletter/unsubscribed", "/newsletter/unsubscribe", "/newsletter/settings"],
       },
     ],
     sitemap: "https://www.uvd.trading/sitemap.xml",
