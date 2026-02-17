@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Menu, X, ExternalLink } from "lucide-react";
-import { motion, AnimatePresence } from "motion/react";
 import { Link } from "@/i18n/navigation";
 import { LanguageSwitcher } from "@/components/language-switcher";
 
@@ -64,38 +63,36 @@ export function Navigation() {
         </div>
       </div>
 
-      <AnimatePresence>
-        {mobileOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="relative border-t border-[#D0D0D0]/50 bg-white/95 backdrop-blur-xl md:hidden"
+      <div
+        className="relative border-t border-[#D0D0D0]/50 bg-white/95 backdrop-blur-xl md:hidden overflow-hidden transition-all duration-300 ease-out"
+        style={{
+          maxHeight: mobileOpen ? "400px" : "0",
+          opacity: mobileOpen ? 1 : 0,
+          borderTopWidth: mobileOpen ? "1px" : "0",
+        }}
+      >
+        <div className="flex flex-col gap-1 p-4">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => setMobileOpen(false)}
+              className="rounded-lg px-4 py-3 text-sm text-[#1b1b1b]/60 transition-colors hover:bg-[#f8f8f8] hover:text-[#1b1b1b]"
+            >
+              {link.label}
+            </Link>
+          ))}
+          <a
+            href="https://www.uvd.xyz"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-2 flex items-center justify-center gap-1.5 rounded-full bg-[#1b1b1b] px-5 py-2.5 text-sm font-medium text-white"
           >
-            <div className="flex flex-col gap-1 p-4">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setMobileOpen(false)}
-                  className="rounded-lg px-4 py-3 text-sm text-[#1b1b1b]/60 transition-colors hover:bg-[#f8f8f8] hover:text-[#1b1b1b]"
-                >
-                  {link.label}
-                </Link>
-              ))}
-              <a
-                href="https://www.uvd.xyz"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-2 flex items-center justify-center gap-1.5 rounded-full bg-[#1b1b1b] px-5 py-2.5 text-sm font-medium text-white"
-              >
-                {t("officialSite")}
-                <ExternalLink className="h-3 w-3" />
-              </a>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            {t("officialSite")}
+            <ExternalLink className="h-3 w-3" />
+          </a>
+        </div>
+      </div>
     </nav>
   );
 }

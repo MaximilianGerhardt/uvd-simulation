@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { useTranslations } from "next-intl";
-import { motion, AnimatePresence } from "motion/react";
 import { Link } from "@/i18n/navigation";
 import { Cookie, X, ChevronDown, ChevronUp } from "lucide-react";
 
@@ -84,15 +83,15 @@ export function CookieConsent() {
   }, []);
 
   return (
-    <AnimatePresence>
+    <div
+      className="fixed bottom-0 left-0 right-0 z-50 p-4 sm:p-6 transition-all duration-300 ease-out"
+      style={{
+        transform: visible ? "translateY(0)" : "translateY(100%)",
+        opacity: visible ? 1 : 0,
+        pointerEvents: visible ? "auto" : "none",
+      }}
+    >
       {visible && (
-        <motion.div
-          initial={{ y: 100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: 100, opacity: 0 }}
-          transition={{ type: "spring", damping: 25, stiffness: 200 }}
-          className="fixed bottom-0 left-0 right-0 z-50 p-4 sm:p-6"
-        >
           <div className="mx-auto max-w-2xl rounded-2xl border border-[#D0D0D0]/50 bg-white p-5 shadow-2xl shadow-black/10">
             {/* Header */}
             <div className="mb-3 flex items-start justify-between gap-4">
@@ -134,15 +133,14 @@ export function CookieConsent() {
             </button>
 
             {/* Cookie Categories */}
-            <AnimatePresence>
+            <div
+              className="mb-4 overflow-hidden transition-all duration-200"
+              style={{
+                maxHeight: showDetails ? "300px" : "0",
+                opacity: showDetails ? 1 : 0,
+              }}
+            >
               {showDetails && (
-                <motion.div
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: "auto", opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.2 }}
-                  className="mb-4 overflow-hidden"
-                >
                   <div className="space-y-3 rounded-xl border border-[#D0D0D0]/30 bg-[#f8f8f8] p-4">
                     {/* Necessary */}
                     <div className="flex items-center justify-between">
@@ -209,9 +207,8 @@ export function CookieConsent() {
                       </button>
                     </div>
                   </div>
-                </motion.div>
               )}
-            </AnimatePresence>
+            </div>
 
             {/* Buttons */}
             <div className="flex flex-col gap-2 sm:flex-row">
@@ -235,9 +232,8 @@ export function CookieConsent() {
               </button>
             </div>
           </div>
-        </motion.div>
       )}
-    </AnimatePresence>
+    </div>
   );
 }
 

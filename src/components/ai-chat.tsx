@@ -3,7 +3,6 @@
 import { useState, useRef, useEffect } from "react";
 import { useLocale } from "next-intl";
 import { MessageCircle, X, Send, AlertTriangle, Loader2 } from "lucide-react";
-import { motion, AnimatePresence } from "motion/react";
 import { CHAT_TRANSLATIONS } from "@/lib/knowledge-base";
 
 interface Message {
@@ -134,31 +133,28 @@ export function AIChat() {
   return (
     <>
       {/* Floating Button */}
-      <AnimatePresence>
-        {!open && (
-          <motion.button
-            initial={{ scale: 0, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0, opacity: 0 }}
-            onClick={() => setOpen(true)}
-            className="fixed bottom-6 end-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#FF6B00] text-white shadow-lg shadow-[#FF6B00]/25 transition-transform hover:scale-105 active:scale-95"
-            aria-label={t.title}
-          >
-            <MessageCircle className="h-6 w-6" />
-          </motion.button>
-        )}
-      </AnimatePresence>
+      <button
+        onClick={() => setOpen(true)}
+        className="fixed bottom-6 end-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#FF6B00] text-white shadow-lg shadow-[#FF6B00]/25 transition-all duration-200 hover:scale-105 active:scale-95"
+        style={{
+          transform: open ? "scale(0)" : "scale(1)",
+          opacity: open ? 0 : 1,
+          pointerEvents: open ? "none" : "auto",
+        }}
+        aria-label={t.title}
+      >
+        <MessageCircle className="h-6 w-6" />
+      </button>
 
       {/* Chat Panel */}
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            initial={{ opacity: 0, y: 20, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            transition={{ duration: 0.2 }}
-            className="fixed bottom-6 end-6 z-50 flex h-[min(600px,80vh)] w-[min(400px,calc(100vw-3rem))] flex-col overflow-hidden rounded-2xl border border-[#D0D0D0]/50 bg-white shadow-2xl"
-          >
+      <div
+        className="fixed bottom-6 end-6 z-50 flex h-[min(600px,80vh)] w-[min(400px,calc(100vw-3rem))] flex-col overflow-hidden rounded-2xl border border-[#D0D0D0]/50 bg-white shadow-2xl transition-all duration-200"
+        style={{
+          transform: open ? "translateY(0) scale(1)" : "translateY(20px) scale(0.95)",
+          opacity: open ? 1 : 0,
+          pointerEvents: open ? "auto" : "none",
+        }}
+      >
             {/* Header */}
             <div className="flex items-center justify-between border-b border-[#D0D0D0]/30 px-4 py-3">
               <div className="flex items-center gap-2">
@@ -275,9 +271,7 @@ export function AIChat() {
                 </a>
               </span>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      </div>
     </>
   );
 }
