@@ -1,28 +1,17 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { ArrowDown, ExternalLink } from "lucide-react";
 
 export function Hero() {
   const t = useTranslations("hero");
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    requestAnimationFrame(() => setMounted(true));
-  }, []);
 
   return (
     <section className="relative flex min-h-[85vh] flex-col items-center justify-center overflow-hidden px-6 pt-16 bg-white">
       <div className="relative z-10 mx-auto max-w-5xl text-center">
         {/* Badge */}
         <div
-          className="mb-10 inline-flex items-center gap-2 rounded-full border border-[#D0D0D0] bg-white px-4 py-2"
-          style={{
-            opacity: mounted ? 1 : 0,
-            transform: mounted ? "none" : "translateY(20px)",
-            transition: "opacity 0.7s cubic-bezier(0.23,1,0.32,1), transform 0.7s cubic-bezier(0.23,1,0.32,1)",
-          }}
+          className="mb-10 inline-flex items-center gap-2 rounded-full border border-[#D0D0D0] bg-white px-4 py-2 animate-[fadeInUp_0.7s_cubic-bezier(0.23,1,0.32,1)_both]"
         >
           <div className="h-1.5 w-1.5 rounded-full bg-[#FF6B00] animate-pulse" />
           <span className="text-[clamp(0.75rem,1.2vw,0.875rem)] text-[#1b1b1b]/60">
@@ -52,12 +41,7 @@ export function Hero() {
 
         {/* CTA Buttons */}
         <div
-          className="flex flex-col items-center justify-center gap-4 sm:flex-row"
-          style={{
-            opacity: mounted ? 1 : 0,
-            transform: mounted ? "none" : "translateY(20px)",
-            transition: "opacity 0.7s cubic-bezier(0.23,1,0.32,1) 0.2s, transform 0.7s cubic-bezier(0.23,1,0.32,1) 0.2s",
-          }}
+          className="flex flex-col items-center justify-center gap-4 sm:flex-row animate-[fadeInUp_0.7s_cubic-bezier(0.23,1,0.32,1)_0.2s_both]"
         >
           <a
             href="#story"
@@ -80,11 +64,7 @@ export function Hero() {
 
       {/* Scroll Indicator */}
       <div
-        className="absolute bottom-8 start-1/2 -translate-x-1/2"
-        style={{
-          opacity: mounted ? 1 : 0,
-          transition: "opacity 0.5s ease 1.5s",
-        }}
+        className="absolute bottom-8 start-1/2 -translate-x-1/2 animate-[fadeIn_0.5s_ease_1.5s_both]"
       >
         <div className="animate-bounce">
           <ArrowDown className="h-4 w-4 text-[#1b1b1b]/20" />

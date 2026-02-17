@@ -612,6 +612,11 @@
     "errorText": "Wir konnten deine Anfrage nicht verarbeiten. Bitte versuche es später erneut.",
     "backHome": "Zurück zur Startseite"
   },
+  "latestUpdate": {
+    "tag": "Neu",
+    "date": "17. Feb 2026",
+    "title": "Der Countdown ist vorbei: UWD & UDRP enthüllt — Das Ökosystem hinter UVD"
+  },
   "updates": {
     "metaTitle": "Updates — Neuigkeiten zum UVD-Ökosystem",
     "metaDescription": "Aktuelle Entwicklungen und Analysen rund um das Universe Dollar Ökosystem, einschließlich UWD und UDRP.",
