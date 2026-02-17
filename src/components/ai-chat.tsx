@@ -72,6 +72,11 @@ export function AIChat() {
         assistantContent += decoder.decode(value, { stream: true });
         setMessages([...newMessages, { role: "assistant", content: assistantContent }]);
       }
+
+      if (!assistantContent.trim()) {
+        setMessages(newMessages);
+        throw new Error("Empty response from AI. Please try again.");
+      }
     } catch (err) {
       setError(err instanceof Error ? err.message : "An error occurred");
     } finally {
@@ -120,6 +125,11 @@ export function AIChat() {
             }
           };
           await read();
+
+          if (!assistantContent.trim()) {
+            setMessages(newMessages);
+            throw new Error("Empty response from AI. Please try again.");
+          }
         })
         .catch((err) => {
           setError(err instanceof Error ? err.message : "An error occurred");

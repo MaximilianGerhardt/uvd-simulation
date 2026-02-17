@@ -1,5 +1,5 @@
 import { anthropic } from "@ai-sdk/anthropic";
-import { streamText } from "ai";
+import { generateText } from "ai";
 import { SYSTEM_PROMPT } from "@/lib/knowledge-base";
 
 export const maxDuration = 30;
@@ -162,17 +162,40 @@ export async function POST(req: Request) {
         ? `\n\nThe user is browsing in "${locale}". Respond in the same language they write in.`
         : "";
 
-    const result = streamText({
-      model: anthropic("claude-3-5-haiku-20241022"),
+    const result = await generateText({
+      model: anthropic("claude-haiku-4-5-20251001"),
       system: SYSTEM_PROMPT + localeHint,
       messages: cleanMessages,
       maxOutputTokens: 400,
       temperature: 0.5,
     });
 
-    return result.toTextStreamResponse();
+    const text = result.text;
+    if (!text) {
+      return new Response(
+        JSON.stringify({ error: "No response generated. Please try again." }),
+        { status: 500, headers: { "Content-Type": "application/json" } }
+      );
+    }
+
+    // Stream the response in small chunks to maintain streaming UX
+    const encoder = new TextEncoder();
+    const stream = new ReadableStream({
+      async start(controller) {
+        const words = text.split(/(\s+)/);
+        for (const word of words) {
+          controller.enqueue(encoder.encode(word));
+          await new Promise((r) => setTimeout(r, 15));
+        }
+        controller.close();
+      },
+    });
+
+    return new Response(stream, {
+      headers: { "Content-Type": "text/plain; charset=utf-8" },
+    });
   } catch (error) {
-    console.error("Chat API error:", error);
+    console.error("Chat API error:", error instanceof Error ? error.message : error);
     return new Response(
       JSON.stringify({ error: "An error occurred. Please try again." }),
       { status: 500, headers: { "Content-Type": "application/json" } }
