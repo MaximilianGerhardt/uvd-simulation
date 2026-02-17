@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react";
 import { useTranslations } from "next-intl";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { Link } from "@/i18n/navigation";
 import { Activity, Users, Percent, Calendar, Info, Code2 } from "lucide-react";
 import {

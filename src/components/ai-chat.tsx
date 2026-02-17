@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import { useLocale } from "next-intl";
 import { MessageCircle, X, Send, AlertTriangle, Loader2 } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import { CHAT_TRANSLATIONS } from "@/lib/knowledge-base";
 
 interface Message {
