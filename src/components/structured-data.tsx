@@ -1,4 +1,4 @@
-export function StructuredData() {
+export function StructuredData({ locale = "en" }: { locale?: string }) {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -28,7 +28,7 @@ export function StructuredData() {
     url: "https://uvd.trading",
     description:
       "Run simulations on inflation impact, symmetric money creation, and sovereign basket pricing. Open source, fully transparent methodology.",
-    inLanguage: "en",
+    inLanguage: locale,
     creator: {
       "@type": "Organization",
       name: "Prime Associates LLC",
@@ -56,43 +56,6 @@ export function StructuredData() {
     ],
   };
 
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://uvd.trading",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Time-Theft Calculator",
-        item: "https://uvd.trading/simulation/time-theft",
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: "RTM Simulator",
-        item: "https://uvd.trading/simulation/rtm",
-      },
-      {
-        "@type": "ListItem",
-        position: 4,
-        name: "Sovereign Basket",
-        item: "https://uvd.trading/simulation/basket",
-      },
-      {
-        "@type": "ListItem",
-        position: 5,
-        name: "Glossary",
-        item: "https://uvd.trading/glossary",
-      },
-    ],
-  };
-
   return (
     <>
       <script
@@ -107,10 +70,36 @@ export function StructuredData() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
     </>
+  );
+}
+
+const BASE_URL = "https://uvd.trading";
+
+export function PageBreadcrumb({ items }: { items: { name: string; path: string }[] }) {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: BASE_URL,
+      },
+      ...items.map((item, index) => ({
+        "@type": "ListItem",
+        position: index + 2,
+        name: item.name,
+        item: `${BASE_URL}${item.path}`,
+      })),
+    ],
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+    />
   );
 }

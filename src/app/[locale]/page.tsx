@@ -1,3 +1,6 @@
+import { routing } from "@/i18n/routing";
+import { setRequestLocale } from "next-intl/server";
+import { PageBreadcrumb } from "@/components/structured-data";
 import { Navigation } from "@/components/navigation";
 import { Hero } from "@/components/hero";
 import {
@@ -15,9 +18,17 @@ import { BasketBuilder } from "@/components/basket-builder";
 import { Glossary } from "@/components/glossary";
 import { Footer } from "@/components/footer";
 
-export default function Home() {
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <div className="min-h-screen bg-white">
+      <PageBreadcrumb items={[]} />
       <Navigation />
       <main>
         <Hero />

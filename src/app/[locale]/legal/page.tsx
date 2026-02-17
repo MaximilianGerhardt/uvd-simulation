@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { SubpageLayout } from "@/components/subpage-layout";
+import { PageBreadcrumb } from "@/components/structured-data";
 
 const BASE_URL = "https://uvd.trading";
 
@@ -29,38 +30,47 @@ export async function generateMetadata({
       url,
       siteName: "UVD Simulation",
       type: "website",
-      images: [{ url: `${BASE_URL}/og${locale === "en" ? "" : `-${locale}`}.png`, width: 1200, height: 630 }],
+      images: [{ url: `${BASE_URL}/${locale}/og/legal`, width: 1200, height: 630 }],
     },
     twitter: {
       card: "summary_large_image",
       title: t("legal.title"),
       description: t("legal.description"),
-      images: [`${BASE_URL}/og${locale === "en" ? "" : `-${locale}`}.png`],
+      images: [`${BASE_URL}/${locale}/og/legal`],
     },
   };
 }
 
-export default function LegalNotice() {
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export default async function LegalNotice({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "legalPage" });
+
   return (
     <SubpageLayout>
+      <PageBreadcrumb items={[{ name: t("title"), path: "/legal" }]} />
       <article className="px-6 py-16 bg-white">
         <div className="mx-auto max-w-3xl">
           <h1 className="mb-12 text-[clamp(2.5rem,5vw,4rem)] font-light tracking-[-0.04em] leading-[1.05] text-[#1b1b1b]">
-            Legal Notice
+            {t("title")}
           </h1>
 
           <section className="mb-12">
             <h2 className="mb-4 text-xl font-medium text-[#1b1b1b]">
-              Company Information
+              {t("companyTitle")}
             </h2>
             <div className="space-y-1 text-base leading-[1.8] text-[#1b1b1b]/60">
-              <p className="font-medium text-[#1b1b1b]">Prime Associates LLC</p>
-              <p>23160 Fashion Dr Ste 220</p>
-              <p>Estero, FL 33928</p>
-              <p>United States</p>
+              <p className="font-medium text-[#1b1b1b]">{t("companyName")}</p>
+              <p>{t("companyAddress1")}</p>
+              <p>{t("companyAddress2")}</p>
+              <p>{t("companyCountry")}</p>
             </div>
             <p className="mt-2 text-base leading-[1.8] text-[#1b1b1b]/60">
-              <span className="text-[#1b1b1b]">Contact:</span>{" "}
+              <span className="text-[#1b1b1b]">{t("contactLabel")}</span>{" "}
               <a href="mailto:info@p-a.llc" className="text-[#297FF3] hover:underline">
                 info@p-a.llc
               </a>
@@ -69,55 +79,54 @@ export default function LegalNotice() {
 
           <section className="mb-12">
             <h2 className="mb-4 text-xl font-medium text-[#1b1b1b]">
-              About This Site
+              {t("aboutTitle")}
             </h2>
             <p className="text-base leading-[1.8] text-[#1b1b1b]/60">
-              UVD Simulation is an <span className="text-[#1b1b1b]">independent, non-commercial, open-source educational project</span>.
-              It is not affiliated with, endorsed by, or officially connected to the Universe Dollar (UVD)
-              project or its creators. This site provides interactive visualizations based on publicly
-              available economic theory. The source code is available on{" "}
-              <a
-                href="https://github.com/MaximilianGerhardt/uvd-simulation"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#297FF3] hover:underline"
-              >
-                GitHub
-              </a>.
+              {t.rich("aboutText", {
+                hl: (chunks) => <span className="text-[#1b1b1b]">{chunks}</span>,
+                github: (chunks) => (
+                  <a
+                    href="https://github.com/MaximilianGerhardt/uvd-simulation"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#297FF3] hover:underline"
+                  >
+                    {chunks}
+                  </a>
+                ),
+              })}
             </p>
           </section>
 
           <section className="mb-12">
             <h2 className="mb-4 text-xl font-medium text-[#1b1b1b]">
-              Disclaimer
+              {t("disclaimerTitle")}
             </h2>
             <p className="text-base leading-[1.8] text-[#1b1b1b]/60">
-              All content is for <span className="text-[#1b1b1b]">educational and informational purposes only</span> and
-              does not constitute financial, investment, or professional advice. Simulations are
-              theoretical models — they do not predict future outcomes. This website and its content
-              are provided &ldquo;as is&rdquo; without warranties of any kind. Use at your own risk.
+              {t.rich("disclaimerText", {
+                hl: (chunks) => <span className="text-[#1b1b1b]">{chunks}</span>,
+              })}
             </p>
           </section>
 
           <section className="mb-12">
             <h2 className="mb-4 text-xl font-medium text-[#1b1b1b]">
-              Intellectual Property
+              {t("ipTitle")}
             </h2>
             <p className="text-base leading-[1.8] text-[#1b1b1b]/60">
-              &ldquo;Universe Dollar,&rdquo; &ldquo;UVD,&rdquo; and associated trademarks belong to their respective
-              owners. This site uses these terms solely for educational reference.
+              {t("ipText")}
             </p>
           </section>
 
           <section>
             <h2 className="mb-4 text-xl font-medium text-[#1b1b1b]">
-              External Links
+              {t("linksTitle")}
             </h2>
             <p className="text-base leading-[1.8] text-[#1b1b1b]/60">
-              This site links to external resources. We assume no responsibility for third-party content.
+              {t("linksText")}
             </p>
             <p className="mt-8 text-sm text-[#1b1b1b]/30">
-              Last updated: February 2026
+              {t("lastUpdated")}
             </p>
           </section>
         </div>

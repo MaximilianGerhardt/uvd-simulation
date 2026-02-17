@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { SubpageLayout } from "@/components/subpage-layout";
+import { PageBreadcrumb } from "@/components/structured-data";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { ExternalLink } from "lucide-react";
 
@@ -24,7 +25,6 @@ export async function generateMetadata({
   return {
     title: t("methodologyBasket.title"),
     description: t("methodologyBasket.description"),
-    keywords: ["Basket Methodology", "Inflation Data Sources", "Destatis", "BLS CPI", "Sovereign Basket", "Price Stability", "UVD Basket Composition"],
     alternates: { canonical: url, languages: alternates },
     openGraph: {
       title: t("methodologyBasket.title"),
@@ -32,20 +32,31 @@ export async function generateMetadata({
       url,
       siteName: "UVD Simulation",
       type: "website",
-      images: [{ url: `${BASE_URL}/og${locale === "en" ? "" : `-${locale}`}.png`, width: 1200, height: 630 }],
+      images: [{ url: `${BASE_URL}/${locale}/og/methodology-basket`, width: 1200, height: 630 }],
     },
     twitter: {
       card: "summary_large_image",
       title: t("methodologyBasket.title"),
       description: t("methodologyBasket.description"),
-      images: [`${BASE_URL}/og${locale === "en" ? "" : `-${locale}`}.png`],
+      images: [`${BASE_URL}/${locale}/og/methodology-basket`],
     },
   };
 }
 
-export default function BasketMethodology() {
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export default async function BasketMethodology({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <SubpageLayout>
+      <PageBreadcrumb items={[
+        { name: "Sovereign Basket", path: "/simulation/basket" },
+        { name: "Methodology", path: "/methodology/basket" },
+      ]} />
       <article className="px-6 py-16 bg-white">
         <div className="mx-auto max-w-3xl">
           <ScrollReveal>

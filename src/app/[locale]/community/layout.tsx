@@ -22,23 +22,6 @@ export async function generateMetadata({
   return {
     title: t("community.title"),
     description: t("community.description"),
-    keywords: [
-      "Universe Dollar",
-      "UVD",
-      "Kian Hoss",
-      "Kiarash Hossainpour",
-      "UVD Scam",
-      "Universe Dollar Review",
-      "UVD Review",
-      "Hoss Crypto",
-      "UVD Whitepaper",
-      "Universe Dollar Kian Hoss",
-      "UVD Kian Hoss",
-      "Is UVD a Scam",
-      "Universe Dollar Scam",
-      "Hoss & Hopf",
-      "Crypto Review",
-    ],
     alternates: { canonical: url, languages: alternates },
     openGraph: {
       title: t("community.title"),
@@ -58,7 +41,7 @@ export async function generateMetadata({
       type: "website",
       images: [
         {
-          url: `${BASE_URL}/og${locale === "en" ? "" : `-${locale}`}.png`,
+          url: `${BASE_URL}/${locale}/og/community`,
           width: 1200,
           height: 630,
         },
@@ -69,7 +52,7 @@ export async function generateMetadata({
       title: t("community.title"),
       description: t("community.description"),
       images: [
-        `${BASE_URL}/og${locale === "en" ? "" : `-${locale}`}.png`,
+        `${BASE_URL}/${locale}/og/community`,
       ],
     },
   };

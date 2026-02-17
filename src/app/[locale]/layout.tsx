@@ -52,27 +52,6 @@ export async function generateMetadata({
       template: `%s — UVD Simulation`,
     },
     description: t("home.description"),
-    keywords: [
-      "UVD",
-      "Universe Dollar",
-      "Inflation Calculator",
-      "Relative Theory of Money",
-      "RTM",
-      "Symmetric Money Creation",
-      "Universal Dividend",
-      "Sovereign Basket",
-      "Cantillon Effect",
-      "Purchasing Power",
-      "Monetary Simulation",
-      "Fair Money",
-      "Money Creation",
-      "Inflation Protection",
-      "Cryptocurrency",
-      "Basket Currency",
-      "Kian Hoss",
-      "UVD Scam",
-      "UVD Review",
-    ],
     authors: [{ name: "Maximilian Gerhardt", url: BASE_URL }],
     creator: "Prime Associates LLC",
     publisher: "Prime Associates LLC",
@@ -114,10 +93,6 @@ export async function generateMetadata({
       creator: "@uvd99",
       images: [`${BASE_URL}/og${locale === "en" ? "" : `-${locale}`}.png`],
     },
-    other: {
-      "geo.region": "US-FL",
-      "geo.placename": "Estero",
-    },
   };
 }
 
@@ -139,7 +114,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         <link rel="apple-touch-icon" href="/apple-icon.svg" />
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#1b1b1b" />
-        <StructuredData />
+        <StructuredData locale={locale} />
         {routing.locales.map((loc) => {
           const prefix = loc === routing.defaultLocale ? "" : `/${loc}`;
           return (

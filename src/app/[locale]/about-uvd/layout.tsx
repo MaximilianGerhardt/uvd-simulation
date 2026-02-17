@@ -21,7 +21,6 @@ export async function generateMetadata({
   return {
     title: t("aboutUvd.title"),
     description: t("aboutUvd.description"),
-    keywords: ["Universe Dollar", "UVD Explained", "What is UVD", "UVD Crypto", "Symmetric Money", "Relative Theory of Money"],
     alternates: { canonical: url, languages: alternates },
     openGraph: {
       title: t("aboutUvd.title"),
@@ -30,13 +29,13 @@ export async function generateMetadata({
       siteName: "UVD Simulation",
       locale: locale === "de" ? "de_DE" : locale === "ar" ? "ar_AE" : locale === "es" ? "es_ES" : locale === "fr" ? "fr_FR" : "en_US",
       type: "website",
-      images: [{ url: `${BASE_URL}/og${locale === "en" ? "" : `-${locale}`}.png`, width: 1200, height: 630 }],
+      images: [{ url: `${BASE_URL}/${locale}/og/about-uvd`, width: 1200, height: 630 }],
     },
     twitter: {
       card: "summary_large_image",
       title: t("aboutUvd.title"),
       description: t("aboutUvd.description"),
-      images: [`${BASE_URL}/og${locale === "en" ? "" : `-${locale}`}.png`],
+      images: [`${BASE_URL}/${locale}/og/about-uvd`],
     },
   };
 }

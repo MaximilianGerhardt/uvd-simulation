@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { SubpageLayout } from "@/components/subpage-layout";
+import { PageBreadcrumb } from "@/components/structured-data";
 import { BasketVisualizer } from "@/components/basket-visualizer";
 
 const BASE_URL = "https://uvd.trading";
@@ -23,7 +24,6 @@ export async function generateMetadata({
   return {
     title: t("basket.title"),
     description: t("basket.description"),
-    keywords: ["Cost of Living", "Inflation Comparison", "Sovereign Basket", "Basket Currency", "UVD", "Purchasing Power", "Price Index"],
     alternates: { canonical: url, languages: alternates },
     openGraph: {
       title: t("basket.title"),
@@ -32,20 +32,28 @@ export async function generateMetadata({
       siteName: "UVD Simulation",
       locale: locale === "de" ? "de_DE" : locale === "ar" ? "ar_AE" : locale === "es" ? "es_ES" : locale === "fr" ? "fr_FR" : "en_US",
       type: "website",
-      images: [{ url: `${BASE_URL}/og${locale === "en" ? "" : `-${locale}`}.png`, width: 1200, height: 630 }],
+      images: [{ url: `${BASE_URL}/${locale}/og/basket`, width: 1200, height: 630 }],
     },
     twitter: {
       card: "summary_large_image",
       title: t("basket.title"),
       description: t("basket.description"),
-      images: [`${BASE_URL}/og${locale === "en" ? "" : `-${locale}`}.png`],
+      images: [`${BASE_URL}/${locale}/og/basket`],
     },
   };
 }
 
-export default function BasketPage() {
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export default async function BasketPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <SubpageLayout>
+      <PageBreadcrumb items={[{ name: "Sovereign Basket", path: "/simulation/basket" }]} />
       <BasketVisualizer />
     </SubpageLayout>
   );

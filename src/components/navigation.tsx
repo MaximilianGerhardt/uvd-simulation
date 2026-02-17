@@ -57,6 +57,7 @@ export function Navigation() {
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="text-[#1b1b1b]/60"
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
           >
             {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>

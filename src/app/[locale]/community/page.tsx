@@ -1,18 +1,25 @@
-"use client";
-
-import { useTranslations } from "next-intl";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { routing } from "@/i18n/routing";
 import { SubpageLayout } from "@/components/subpage-layout";
+import { PageBreadcrumb } from "@/components/structured-data";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { CommunityPoll } from "@/components/community-poll";
 import { CommunityComments } from "@/components/community-comments";
 import { Link } from "@/i18n/navigation";
 import { Shield, FileText, Users, Cpu, MessageCircle, HelpCircle, ArrowRight } from "lucide-react";
 
-export default function CommunityPage() {
-  const t = useTranslations("community");
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export default async function CommunityPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "community" });
 
   return (
     <SubpageLayout backHref="/">
+      <PageBreadcrumb items={[{ name: "Community", path: "/community" }]} />
       <article className="px-6 py-16 bg-white">
         <div className="mx-auto max-w-3xl">
           {/* Hero */}

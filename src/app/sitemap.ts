@@ -37,7 +37,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
       entries.push({
         url: getLocalizedUrl(locale, page.path),
-        lastModified: new Date(),
         changeFrequency: page.changeFrequency,
         priority: page.priority,
         alternates: {
