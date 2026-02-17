@@ -142,7 +142,8 @@
     "disclaimer": "This website is an independent educational companion and pitch deck created in support of the Universe Dollar project. It is not the official website of Universe Dollar — the official project is hosted at uvd.xyz. All content on this site represents the author's independent interpretation of publicly available research, including the Relative Theory of Money by Stéphane Laborde and publicly available economic data from the World Bank, ECB, and FRED. No content on this site constitutes financial advice, investment recommendation, or a solicitation of any kind. Simulation results are mathematical projections based on historical averages and do not guarantee future outcomes. The Universe Dollar protocol is under active development and subject to change. For authoritative information, refer exclusively to the official resources at uvd.xyz and the published whitepaper and shortpaper.",
     "independentSite": "Independent companion site",
     "notFinancialAdvice": "Not financial advice",
-    "copyright": "Prime Associates LLC"
+    "copyright": "Prime Associates LLC",
+    "builtBy": "Designed & built by"
   },
   "subpage": {
     "backToOverview": "Back to Overview"
@@ -458,7 +459,7 @@
     "aboutTitle": "About This Site",
     "aboutText": "UVD Simulation is an <hl>independent, non-commercial, open-source educational</hl> project. It is not affiliated with, endorsed by, or officially connected to the Universe Dollar (UVD) project or its creators. This site provides interactive visualizations based on publicly available economic theory. The source code is available on <github>GitHub</github>.",
     "disclaimerTitle": "Disclaimer",
-    "disclaimerText": "All content is for <hl>educational and informational purposes only</hl> and does not constitute financial, investment, or professional advice. Simulations are theoretical models \u2014 they do not predict future outcomes. This website and its content are provided \"as is\" without warranties of any kind. Use at your own risk.",
+    "disclaimerText": "All content is for <hl>educational and informational purposes only</hl> and does not constitute financial, investment, or professional advice. Simulations are theoretical models — they do not predict future outcomes. This website and its content are provided \"as is\" without warranties of any kind. Use at your own risk.",
     "ipTitle": "Intellectual Property",
     "ipText": "\"Universe Dollar,\" \"UVD,\" and associated trademarks belong to their respective owners. This site uses these terms solely for educational reference.",
     "linksTitle": "External Links",
@@ -472,10 +473,17 @@
     "whoAddress": "23160 Fashion Dr Ste 220, Estero, FL 33928, United States",
     "contactLabel": "Contact:",
     "overviewTitle": "2. Overview",
-    "overviewText": "This website is a non-commercial educational project. We collect as little personal data as possible. There is <hl>no user registration, no login, no forms</hl>, and <hl>no advertising or marketing tracking</hl>. All simulations and calculations run entirely in your browser \u2014 no input data is ever sent to our servers.",
+    "overviewText": "This website is a non-commercial educational project. We collect as little personal data as possible. There is <hl>no user registration, no login, no forms</hl>, and <hl>no advertising or marketing tracking</hl>. All simulations and calculations run entirely in your browser — no input data is ever sent to our servers.",
     "hostingTitle": "3. Hosting & Server Logs",
     "hostingText": "This website is hosted by <hl>Vercel Inc.</hl> (440 N Baxter St, Los Angeles, CA 90026, USA). When you visit this site, Vercel automatically collects standard server log data:",
-    "hostingLogs": ["IP address", "Date and time of access", "Pages requested", "Referring URL", "Browser type and operating system", "Data volume transferred"],
+    "hostingLogs": [
+      "IP address",
+      "Date and time of access",
+      "Pages requested",
+      "Referring URL",
+      "Browser type and operating system",
+      "Data volume transferred"
+    ],
     "hostingNote": "This data is processed by Vercel for the purpose of delivering the website and maintaining security. See <link>Vercel's Privacy Policy</link> for details.",
     "cookiesTitle": "4. Cookies",
     "cookiesText": "This website uses a <hl>custom cookie consent banner</hl> to manage your preferences. On your first visit, you can choose which cookie categories to accept:",
@@ -485,7 +493,7 @@
     "cookiesNote": "Your consent is stored locally in your browser (localStorage). No cookie data is sent to any external server. You can change your preferences at any time via the \"Cookie Settings\" link in the footer.",
     "externalTitle": "5. External Resources",
     "fontsTitle": "Google Fonts",
-    "fontsText": "We use the \"Inter\" typeface from Google Fonts. The font is downloaded at build time and served locally via Vercel (Next.js Font Optimization) \u2014 <hl>no direct requests are made to Google servers</hl>. No personal data is transmitted to Google.",
+    "fontsText": "We use the \"Inter\" typeface from Google Fonts. The font is downloaded at build time and served locally via Vercel (Next.js Font Optimization) — <hl>no direct requests are made to Google servers</hl>. No personal data is transmitted to Google.",
     "ipfsTitle": "IPFS (Pinata Gateway)",
     "ipfsText": "Links to the UVD whitepaper and shortpaper point to IPFS via a Pinata gateway. Clicking these links establishes a connection to Pinata servers. See <link>Pinata's Privacy Policy</link>.",
     "analyticsTitle": "6. Analytics & Tracking",

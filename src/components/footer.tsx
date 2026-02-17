@@ -171,9 +171,22 @@ export function Footer() {
             {" "}&middot;{" "}
             <Link href="/privacy" className="hover:text-white/40 transition-colors">{t("privacyPolicy")}</Link>
           </p>
-          <p className="text-xs text-white/20">
-            &copy; {new Date().getFullYear()} {t("copyright")}
-          </p>
+          <div className="flex flex-col items-center gap-1 md:items-end">
+            <p className="text-xs text-white/20">
+              &copy; {new Date().getFullYear()} {t("copyright")}
+            </p>
+            <p className="text-[10px] text-white/15">
+              {t("builtBy")}{" "}
+              <a
+                href="https://p-a.llc"
+                target="_blank"
+                rel="noopener"
+                className="text-white/25 hover:text-white/40 transition-colors"
+              >
+                Prime Associates LLC
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>

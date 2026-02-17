@@ -142,7 +142,8 @@
     "disclaimer": "Este sitio web es un compañero educativo independiente creado en apoyo del proyecto Universe Dollar. No es el sitio web oficial de Universe Dollar — el proyecto oficial se encuentra en uvd.xyz. Todo el contenido de este sitio representa la interpretación independiente del autor de investigación disponible públicamente, incluyendo la Teoría Relativa del Dinero de Stéphane Laborde y datos económicos disponibles públicamente del Banco Mundial, BCE y FRED. Ningún contenido de este sitio constituye asesoramiento financiero, recomendación de inversión o solicitud de ningún tipo. Los resultados de las simulaciones son proyecciones matemáticas basadas en promedios históricos y no garantizan resultados futuros.",
     "independentSite": "Sitio complementario independiente",
     "notFinancialAdvice": "No es asesoramiento financiero",
-    "copyright": "Prime Associates LLC"
+    "copyright": "Prime Associates LLC",
+    "builtBy": "Diseñado y desarrollado por"
   },
   "subpage": {
     "backToOverview": "Volver a la Vista General"

@@ -245,6 +245,7 @@ export function AIChat() {
                 onChange={(e) => setInput(e.target.value)}
                 placeholder={t.placeholder}
                 disabled={isLoading}
+                maxLength={500}
                 className="flex-1 bg-transparent text-sm text-[#1b1b1b] placeholder-[#1b1b1b]/30 outline-none disabled:opacity-50"
               />
               <button
@@ -259,6 +260,21 @@ export function AIChat() {
                 )}
               </button>
             </form>
+
+            {/* Attribution */}
+            <div className="border-t border-[#D0D0D0]/20 px-4 py-1.5 text-center">
+              <span className="text-[9px] text-[#1b1b1b]/25">
+                AI Assistant by{" "}
+                <a
+                  href="https://p-a.llc"
+                  target="_blank"
+                  rel="noopener"
+                  className="text-[#1b1b1b]/35 hover:text-[#297FF3] transition-colors"
+                >
+                  Prime Associates
+                </a>
+              </span>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
