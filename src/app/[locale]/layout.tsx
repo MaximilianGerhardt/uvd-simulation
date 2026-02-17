@@ -115,18 +115,6 @@ export default async function LocaleLayout({ children, params }: Props) {
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#1b1b1b" />
         <StructuredData locale={locale} />
-        {routing.locales.map((loc) => {
-          const prefix = loc === routing.defaultLocale ? "" : `/${loc}`;
-          return (
-            <link
-              key={loc}
-              rel="alternate"
-              hrefLang={loc}
-              href={`${BASE_URL}${prefix}`}
-            />
-          );
-        })}
-        <link rel="alternate" hrefLang="x-default" href={BASE_URL} />
       </head>
       <body className={`${inter.variable} antialiased`}>
         <NextIntlClientProvider>
