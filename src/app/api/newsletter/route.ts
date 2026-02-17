@@ -45,7 +45,8 @@ function generateToken(): string {
  * Radius:      16px card, 12px inner boxes, 100px buttons/pills
  * Max-width:   520px
  * Logo:        "Universe Dollar" in semibold #1b1b1b + orange dot accent
- *              or "UVD" bold #FF6B00 + ".TRADING" light #1b1b1b
+ *              or "UVD" bold #FF6B00 + "Trading" medium #1b1b1b
+ * Sender:      "UVD Trading" (Title Case, NO all-caps, no dots/special chars)
  * ═══════════════════════════════════════════════════════════════════════
  */
 
@@ -152,68 +153,40 @@ function getConfirmationEmail(
 
   const font = "Inter,-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',sans-serif";
 
-  const html = `
-<!DOCTYPE html>
+  // Plain text fallback improves spam score (text:html ratio)
+  const plainText = [b.heading, b.text, `${b.button}: ${confirmUrl}`, b.privacyNote, b.ignoreNote].join("\n\n");
+
+  const html = `<!DOCTYPE html>
 <html dir="${dir}" lang="${locale}">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
 <body style="margin:0;padding:0;background:#f8f8f8;font-family:${font}">
-  <div style="max-width:520px;margin:40px auto;background:#fff;border-radius:16px;overflow:hidden;border:1px solid #D0D0D0">
-
-    <!-- Header — matching website nav branding -->
-    <div style="padding:20px 28px;border-bottom:1px solid #D0D0D0;text-align:center">
-      <a href="${BASE_URL}" style="text-decoration:none;display:inline-block">
-        <span style="font-size:16px;font-weight:700;color:#FF6B00;letter-spacing:0.3px">UVD</span><span style="font-size:16px;font-weight:600;color:#1b1b1b;letter-spacing:0.3px">.TRADING</span>
-        <br/>
-        <span style="font-size:10px;color:rgba(27,27,27,0.35);letter-spacing:0.3px">Universe Dollar</span>
-      </a>
-    </div>
-
-    <!-- Body -->
-    <div style="padding:36px 28px;text-align:center">
-      <div style="margin-bottom:20px">
-        <span style="display:inline-block;width:48px;height:48px;border-radius:50%;background:rgba(255,107,0,0.08);line-height:48px;text-align:center;font-size:20px">✉️</span>
-      </div>
-
-      <h1 style="font-size:22px;font-weight:500;color:#1b1b1b;margin:0 0 12px;letter-spacing:-0.3px">${b.heading}</h1>
-      <p style="font-size:14px;color:rgba(27,27,27,0.55);line-height:1.7;margin:0 0 24px">${b.text}</p>
-
-      <!-- CTA Button — pill, matching website -->
-      <a href="${confirmUrl}" style="display:inline-block;background:#1b1b1b;color:#fff;text-decoration:none;padding:13px 36px;border-radius:100px;font-size:14px;font-weight:500;letter-spacing:0.2px">${b.button}</a>
-
-      <!-- Privacy reasoning box -->
-      <div style="background:#f8f8f8;border:1px solid #D0D0D0;border-radius:12px;padding:16px 20px;margin:28px 0 0;text-align:${textAlign}">
-        <p style="font-size:12px;color:rgba(27,27,27,0.45);line-height:1.7;margin:0">🔒 ${b.privacyNote}</p>
-      </div>
-
-      <p style="font-size:11px;color:rgba(27,27,27,0.3);margin:16px 0 0;line-height:1.6">${b.ignoreNote}</p>
-    </div>
-
-    <!-- Language selector strip -->
-    <div style="padding:14px 28px;background:#f8f8f8;border-top:1px solid #D0D0D0;text-align:center">
-      <span style="font-size:11px;color:rgba(27,27,27,0.4);margin-${marginDir}:8px;vertical-align:middle">${b.langLabel}</span>
-      ${langLinks}
-    </div>
-
-    <!-- Footer — light, subtle -->
-    <div style="padding:20px 28px;border-top:1px solid #D0D0D0;text-align:center">
-      <p style="margin:0 0 2px">
-        <a href="${BASE_URL}" style="text-decoration:none">
-          <span style="font-size:12px;font-weight:700;color:#FF6B00;letter-spacing:0.3px">UVD</span><span style="font-size:12px;font-weight:500;color:#1b1b1b;letter-spacing:0.3px">.TRADING</span>
-        </a>
-      </p>
-      <p style="margin:0 0 8px;font-size:9px;color:rgba(27,27,27,0.25)">Universe Dollar</p>
-      <p style="margin:0">
-        <a href="${settingsUrl}" style="font-size:11px;color:#FF6B00;text-decoration:none">${b.settingsText}</a>
-        <span style="font-size:11px;color:rgba(27,27,27,0.15);margin:0 6px">·</span>
-        <a href="${unsubUrl}" style="font-size:11px;color:rgba(27,27,27,0.3);text-decoration:none">${b.unsubText}</a>
-      </p>
-    </div>
-
-  </div>
+<div style="max-width:520px;margin:40px auto;background:#fff;border-radius:16px;overflow:hidden;border:1px solid #D0D0D0">
+<div style="padding:20px 28px;border-bottom:1px solid #D0D0D0;text-align:center">
+<a href="${BASE_URL}" style="text-decoration:none"><span style="font-size:16px;font-weight:700;color:#FF6B00">UVD</span> <span style="font-size:16px;font-weight:500;color:#1b1b1b">Trading</span></a>
+</div>
+<div style="padding:36px 28px;text-align:center">
+<h1 style="font-size:22px;font-weight:500;color:#1b1b1b;margin:0 0 12px">${b.heading}</h1>
+<p style="font-size:14px;color:#8a8a8a;line-height:1.7;margin:0 0 24px">${b.text}</p>
+<a href="${confirmUrl}" style="display:inline-block;background:#1b1b1b;color:#fff;text-decoration:none;padding:13px 36px;border-radius:100px;font-size:14px;font-weight:500">${b.button}</a>
+<div style="background:#f8f8f8;border:1px solid #D0D0D0;border-radius:12px;padding:16px 20px;margin:28px 0 0;text-align:${textAlign}">
+<p style="font-size:12px;color:#999;line-height:1.7;margin:0">${b.privacyNote}</p>
+</div>
+<p style="font-size:11px;color:#bbb;margin:16px 0 0;line-height:1.6">${b.ignoreNote}</p>
+</div>
+<div style="padding:14px 28px;background:#f8f8f8;border-top:1px solid #D0D0D0;text-align:center">
+<span style="font-size:11px;color:#999;margin-${marginDir}:8px;vertical-align:middle">${b.langLabel}</span>
+${langLinks}
+</div>
+<div style="padding:20px 28px;border-top:1px solid #D0D0D0;text-align:center">
+<p style="margin:0 0 2px"><a href="${BASE_URL}" style="text-decoration:none"><span style="font-size:12px;font-weight:700;color:#FF6B00">UVD</span> <span style="font-size:12px;font-weight:500;color:#1b1b1b">Trading</span></a></p>
+<p style="margin:0 0 8px;font-size:9px;color:#ccc">Universe Dollar</p>
+<p style="margin:0"><a href="${settingsUrl}" style="font-size:11px;color:#FF6B00;text-decoration:none">${b.settingsText}</a> <span style="font-size:11px;color:#ddd;margin:0 6px">·</span> <a href="${unsubUrl}" style="font-size:11px;color:#999;text-decoration:none">${b.unsubText}</a></p>
+</div>
+</div>
 </body>
 </html>`;
 
-  return { subject, html };
+  return { subject, html, plainText, unsubUrl };
 }
 
 export async function POST(request: NextRequest) {
@@ -273,18 +246,23 @@ export async function POST(request: NextRequest) {
 
     // Send confirmation email via Resend
     const resendKey = process.env.RESEND_API_KEY;
-    const fromEmail = process.env.NEWSLETTER_FROM_EMAIL || "UVD Simulation <noreply@uvd.trading>";
+    const fromEmail = process.env.NEWSLETTER_FROM_EMAIL || "UVD Trading <news@mail.uvd.trading>";
 
     if (resendKey) {
       const resend = new Resend(resendKey);
       const confirmUrl = `${BASE_URL}/api/newsletter/confirm?token=${token}&locale=${userLocale}`;
-      const { subject, html } = getConfirmationEmail(userLocale, confirmUrl, token, activeUnsubToken);
+      const { subject, html, plainText, unsubUrl } = getConfirmationEmail(userLocale, confirmUrl, token, activeUnsubToken);
 
       const { error: emailError } = await resend.emails.send({
         from: fromEmail,
         to: cleanEmail,
         subject,
         html,
+        text: plainText,
+        headers: {
+          "List-Unsubscribe": `<${unsubUrl}>`,
+          "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
+        },
       });
 
       if (emailError) {
