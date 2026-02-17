@@ -536,7 +536,7 @@
     "error": "Algo salió mal. Por favor, inténtalo de nuevo.",
     "rateLimited": "Demasiados intentos. Espera unos minutos.",
     "privacy": "Solo almacenamos tu email para notificaciones. Sin rastreo ni uso compartido. Cancela cuando quieras.",
-    "checkSpam": "Revisa tu carpeta de spam si no lo ves en unos minutos."
+    "checkSpam": "Como UVD Trading es un proyecto nuevo, nuestro email de confirmación probablemente está en tu carpeta de spam. Por favor, revísala ahora."
   },
   "newsletterCta": {
     "footerTitle": "Sigue el ecosistema UVD",
@@ -552,10 +552,10 @@
     "homeButton": "Seguir el camino",
     "homePrivacy": "Doble confirmación · Sin spam · Cancela cuando quieras",
     "successTitle": "Importante — ¡Revisa tu bandeja ahora!",
-    "successReason": "Te acabamos de enviar un email de confirmación. Por favor, haz clic en el enlace para activar tu suscripción. ¿No lo encuentras? Revisa tu carpeta de spam o correo no deseado — los emails de confirmación a veces terminan allí. Muévelo a tu bandeja de entrada para que los futuros correos lleguen correctamente. Requerimos este paso para proteger tu privacidad — nadie debería recibir correos que no haya solicitado expresamente.",
+    "successReason": "Te acabamos de enviar un email de confirmación. Como UVD Trading es un proyecto nuevo, es muy probable que tu proveedor de correo lo haya colocado en la carpeta de spam o correo no deseado. Por favor, revísala ahora y haz clic en el enlace de confirmación para activar tu suscripción. Muévelo a tu bandeja de entrada para que los futuros correos lleguen correctamente.",
     "rateLimited": "Demasiados intentos. Espera unos minutos.",
     "error": "Algo salió mal. Inténtalo de nuevo.",
-    "checkSpam": "¿No está en tu bandeja? Revisa tu carpeta de spam o correo no deseado y muévelo a tu bandeja de entrada."
+    "checkSpam": "Como somos un proyecto nuevo, nuestro email probablemente está en tu carpeta de spam — por favor, revísala ahora."
   },
   "newsletterConfirmed": {
     "metaTitle": "Suscripción confirmada",

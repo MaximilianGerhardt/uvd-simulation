@@ -532,11 +532,11 @@
     "placeholder": "your@email.com",
     "subscribe": "Subscribe",
     "successTitle": "You're in!",
-    "successText": "We'll notify you when something new drops. Check your inbox to confirm.",
+    "successText": "We just sent you a confirmation email. Since we're a new project, your email provider may have placed it in your spam or junk folder. Please check there and move it to your inbox.",
     "error": "Something went wrong. Please try again.",
     "rateLimited": "Too many attempts. Please wait a few minutes.",
     "privacy": "We only store your email for notifications. No tracking, no sharing. Unsubscribe anytime.",
-    "checkSpam": "Check your spam folder if you don't see it within a few minutes."
+    "checkSpam": "Since UVD Trading is a new project, our confirmation email is most likely in your spam folder. Please check there now."
   },
   "newsletterCta": {
     "footerTitle": "Follow the UVD Ecosystem",
@@ -552,10 +552,10 @@
     "homeButton": "Follow the Journey",
     "homePrivacy": "Double opt-in · No spam · Unsubscribe anytime",
     "successTitle": "Important — Check your inbox now!",
-    "successReason": "We just sent you a confirmation email. Please click the link inside to activate your subscription. Can't find it? Check your spam or junk folder — confirmation emails sometimes end up there. Move it to your inbox so future emails arrive correctly. We require this step to protect your privacy — no one should receive emails they didn't explicitly request.",
+    "successReason": "We just sent you a confirmation email. Since UVD Trading is a new project, your email provider will most likely place it in your spam or junk folder. Please check there now and click the confirmation link to activate your subscription. Moving it to your inbox ensures future emails arrive correctly.",
     "rateLimited": "Too many attempts. Please wait a few minutes.",
     "error": "Something went wrong. Please try again.",
-    "checkSpam": "Not in your inbox? Check your spam or junk folder and move it to your inbox."
+    "checkSpam": "Since we're a new project, our email is most likely in your spam folder — please check there now."
   },
   "newsletterConfirmed": {
     "metaTitle": "Subscription Confirmed",

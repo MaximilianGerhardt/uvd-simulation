@@ -536,7 +536,7 @@
     "error": "Une erreur est survenue. Veuillez réessayer.",
     "rateLimited": "Trop de tentatives. Veuillez patienter quelques minutes.",
     "privacy": "Nous ne stockons que votre email pour les notifications. Pas de tracking, pas de partage. Désabonnement à tout moment.",
-    "checkSpam": "Vérifiez votre dossier spam si vous ne le voyez pas dans quelques minutes."
+    "checkSpam": "Comme UVD Trading est un nouveau projet, notre email de confirmation se trouve très probablement dans votre dossier spam. Veuillez vérifier maintenant."
   },
   "newsletterCta": {
     "footerTitle": "Suivez l'écosystème UVD",
@@ -552,10 +552,10 @@
     "homeButton": "Suivre le parcours",
     "homePrivacy": "Double opt-in · Pas de spam · Désabonnement à tout moment",
     "successTitle": "Important — Vérifiez votre boîte maintenant !",
-    "successReason": "Nous venons de vous envoyer un email de confirmation. Veuillez cliquer sur le lien à l'intérieur pour activer votre abonnement. Vous ne le trouvez pas ? Vérifiez votre dossier spam ou courrier indésirable — les emails de confirmation y arrivent parfois. Déplacez-le dans votre boîte de réception pour que les futurs emails arrivent correctement. Nous exigeons cette étape pour protéger votre vie privée — personne ne devrait recevoir d'emails qu'il n'a pas explicitement demandés.",
+    "successReason": "Nous venons de vous envoyer un email de confirmation. Comme UVD Trading est un nouveau projet, votre fournisseur de messagerie l'a très probablement placé dans votre dossier spam ou courrier indésirable. Veuillez vérifier maintenant et cliquer sur le lien de confirmation pour activer votre abonnement. Déplacez-le dans votre boîte de réception pour que les futurs emails arrivent correctement.",
     "rateLimited": "Trop de tentatives. Veuillez patienter quelques minutes.",
     "error": "Une erreur est survenue. Veuillez réessayer.",
-    "checkSpam": "Pas dans votre boîte de réception ? Vérifiez votre dossier spam et déplacez l'email dans votre boîte de réception."
+    "checkSpam": "Comme nous sommes un nouveau projet, notre email se trouve très probablement dans votre dossier spam — veuillez vérifier maintenant."
   },
   "newsletterConfirmed": {
     "metaTitle": "Abonnement confirmé",
