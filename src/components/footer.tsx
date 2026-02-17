@@ -26,9 +26,9 @@ export function Footer() {
 
           {/* Simulations */}
           <div>
-            <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.05em] text-white/30">
+            <span role="heading" aria-level={3} className="mb-4 text-xs font-semibold uppercase tracking-[0.05em] text-white/30">
               {t("simulations")}
-            </h4>
+            </span>
             <div className="space-y-3">
               <Link
                 href="/simulation/time-theft"
@@ -59,9 +59,9 @@ export function Footer() {
 
           {/* Official Resources */}
           <div>
-            <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.05em] text-white/30">
+            <span role="heading" aria-level={3} className="mb-4 text-xs font-semibold uppercase tracking-[0.05em] text-white/30">
               {t("officialResources")}
-            </h4>
+            </span>
             <div className="space-y-3">
               <a
                 href="https://www.uvd.xyz"
@@ -104,9 +104,9 @@ export function Footer() {
 
           {/* Theory */}
           <div>
-            <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.05em] text-white/30">
+            <span role="heading" aria-level={3} className="mb-4 text-xs font-semibold uppercase tracking-[0.05em] text-white/30">
               {t("foundation")}
-            </h4>
+            </span>
             <div className="space-y-3">
               <a
                 href="https://trm.creationmonetaire.info/"
@@ -128,9 +128,9 @@ export function Footer() {
               </a>
             </div>
 
-            <h4 className="mb-4 mt-8 text-xs font-semibold uppercase tracking-[0.05em] text-white/30">
+            <span role="heading" aria-level={3} className="mb-4 mt-8 text-xs font-semibold uppercase tracking-[0.05em] text-white/30">
               {t("legal")}
-            </h4>
+            </span>
             <div className="space-y-3">
               <Link
                 href="/legal"
@@ -156,9 +156,9 @@ export function Footer() {
 
         {/* Legal Disclaimer */}
         <div className="mt-12 rounded-xl border border-white/[0.06] bg-white/[0.02] p-5">
-          <h5 className="mb-2 text-xs font-semibold uppercase tracking-[0.05em] text-white/30">
+          <span role="heading" aria-level={3} className="mb-2 text-xs font-semibold uppercase tracking-[0.05em] text-white/30">
             {t("disclaimerTitle")}
-          </h5>
+          </span>
           <p className="text-xs leading-[1.8] text-white/25">
             {t("disclaimer")}
           </p>

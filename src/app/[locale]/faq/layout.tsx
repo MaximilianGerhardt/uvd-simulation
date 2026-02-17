@@ -3,7 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import Script from "next/script";
 
-const BASE_URL = "https://uvd.trading";
+const BASE_URL = "https://www.uvd.trading";
 
 const ALL_FAQ_KEYS = [
   "whatIsUvd", "whoCreated", "kianHoss", "whatIsThis",

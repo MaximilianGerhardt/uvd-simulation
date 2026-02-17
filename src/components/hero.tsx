@@ -18,7 +18,7 @@ export function Hero() {
           className="mb-10 inline-flex items-center gap-2 rounded-full border border-[#D0D0D0] bg-white px-4 py-2"
         >
           <div className="h-1.5 w-1.5 rounded-full bg-[#FF6B00] animate-pulse" />
-          <span className="text-[clamp(0.75rem,1.2vw,0.875rem)] text-[#1b1b1b]/50">
+          <span className="text-[clamp(0.75rem,1.2vw,0.875rem)] text-[#1b1b1b]/60">
             {t("badge")}
           </span>
           <a

@@ -167,12 +167,12 @@ export function AIChat() {
                 </div>
                 <div>
                   <p className="text-sm font-semibold text-[#1b1b1b]">{t.title}</p>
-                  <p className="text-[10px] text-[#1b1b1b]/40">{t.disclaimer}</p>
+                  <p className="text-[10px] text-[#1b1b1b]/60">{t.disclaimer}</p>
                 </div>
               </div>
               <button
                 onClick={() => setOpen(false)}
-                className="rounded-full p-1.5 text-[#1b1b1b]/40 transition-colors hover:bg-[#f8f8f8] hover:text-[#1b1b1b]"
+                className="rounded-full p-1.5 text-[#1b1b1b]/60 transition-colors hover:bg-[#f8f8f8] hover:text-[#1b1b1b]"
               >
                 <X className="h-4 w-4" />
               </button>
@@ -181,7 +181,7 @@ export function AIChat() {
             {/* Disclaimer Banner */}
             <div className="flex items-center gap-2 border-b border-[#D0D0D0]/20 bg-[#FF6B00]/5 px-4 py-2">
               <AlertTriangle className="h-3 w-3 shrink-0 text-[#FF6B00]" />
-              <p className="text-[10px] text-[#1b1b1b]/50">{t.disclaimer}</p>
+              <p className="text-[10px] text-[#1b1b1b]/60">{t.disclaimer}</p>
             </div>
 
             {/* Messages */}
@@ -196,7 +196,7 @@ export function AIChat() {
                       <button
                         key={q}
                         onClick={() => handleSuggestion(q)}
-                        className="rounded-full border border-[#D0D0D0]/50 px-3 py-1.5 text-xs text-[#1b1b1b]/50 transition-all hover:border-[#FF6B00]/30 hover:text-[#FF6B00]"
+                        className="rounded-full border border-[#D0D0D0]/50 px-3 py-1.5 text-xs text-[#1b1b1b]/60 transition-all hover:border-[#FF6B00]/30 hover:text-[#FF6B00]"
                       >
                         {q}
                       </button>

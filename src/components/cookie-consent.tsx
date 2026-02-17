@@ -112,7 +112,7 @@ export function CookieConsent() {
             </div>
 
             {/* Description */}
-            <p className="mb-4 text-xs leading-relaxed text-[#1b1b1b]/50">
+            <p className="mb-4 text-xs leading-relaxed text-[#1b1b1b]/60">
               {t("description")}{" "}
               {t("learnMore")}{" "}
               <Link href="/privacy" className="text-[#297FF3] hover:underline">
@@ -123,7 +123,7 @@ export function CookieConsent() {
             {/* Details Toggle */}
             <button
               onClick={() => setShowDetails((v) => !v)}
-              className="mb-4 flex items-center gap-1.5 text-xs text-[#1b1b1b]/40 hover:text-[#1b1b1b]/60 transition-colors"
+              className="mb-4 flex items-center gap-1.5 text-xs text-[#1b1b1b]/60 hover:text-[#1b1b1b]/60 transition-colors"
             >
               {showDetails ? (
                 <ChevronUp className="h-3 w-3" />
@@ -150,7 +150,7 @@ export function CookieConsent() {
                         <p className="text-xs font-medium text-[#1b1b1b]">
                           {t("necessary")}
                         </p>
-                        <p className="text-[10px] text-[#1b1b1b]/40">
+                        <p className="text-[10px] text-[#1b1b1b]/60">
                           {t("necessaryDesc")}
                         </p>
                       </div>
@@ -165,7 +165,7 @@ export function CookieConsent() {
                         <p className="text-xs font-medium text-[#1b1b1b]">
                           {t("preferences")}
                         </p>
-                        <p className="text-[10px] text-[#1b1b1b]/40">
+                        <p className="text-[10px] text-[#1b1b1b]/60">
                           {t("preferencesDesc")}
                         </p>
                       </div>
@@ -190,7 +190,7 @@ export function CookieConsent() {
                         <p className="text-xs font-medium text-[#1b1b1b]">
                           {t("statistics")}
                         </p>
-                        <p className="text-[10px] text-[#1b1b1b]/40">
+                        <p className="text-[10px] text-[#1b1b1b]/60">
                           {t("statisticsDesc")}
                         </p>
                       </div>
@@ -229,7 +229,7 @@ export function CookieConsent() {
               </button>
               <button
                 onClick={decline}
-                className="flex-1 rounded-full px-5 py-2.5 text-xs font-medium text-[#1b1b1b]/40 transition-colors hover:text-[#1b1b1b]/60"
+                className="flex-1 rounded-full px-5 py-2.5 text-xs font-medium text-[#1b1b1b]/60 transition-colors hover:text-[#1b1b1b]/60"
               >
                 {t("necessaryOnly")}
               </button>

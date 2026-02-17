@@ -5,7 +5,7 @@ import { SubpageLayout } from "@/components/subpage-layout";
 import { PageBreadcrumb } from "@/components/structured-data";
 import { TimeTheftCalculator } from "@/components/time-theft-calculator";
 
-const BASE_URL = "https://uvd.trading";
+const BASE_URL = "https://www.uvd.trading";
 
 export async function generateMetadata({
   params,

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 
-const BASE_URL = "https://uvd.trading";
+const BASE_URL = "https://www.uvd.trading";
 
 export async function generateMetadata({
   params,

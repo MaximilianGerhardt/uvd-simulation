@@ -60,7 +60,7 @@ export function TimeTheftCalculator() {
           <h2 className="mb-4 text-[clamp(2.5rem,5vw,4rem)] font-light tracking-[-0.04em] leading-[1.05] text-[#1b1b1b]">
             {t("title")}<span className="text-[#FF6B00]">{t("titleHighlight")}</span>{t("titleEnd")}
           </h2>
-          <p className="mx-auto max-w-2xl text-base text-[#1b1b1b]/50 md:text-lg">
+          <p className="mx-auto max-w-2xl text-base text-[#1b1b1b]/60 md:text-lg">
             {t("subtitle")}
           </p>
         </motion.div>
@@ -81,11 +81,12 @@ export function TimeTheftCalculator() {
             <div className="space-y-6">
               {/* Birth Year */}
               <div>
-                <label className="mb-2 flex items-center justify-between text-sm text-[#1b1b1b]/60">
+                <label htmlFor="birth-year" className="mb-2 flex items-center justify-between text-sm text-[#1b1b1b]/60">
                   <span>{t("birthYear")}</span>
                   <span className="font-mono text-[#FF6B00]">{birthYear}</span>
                 </label>
                 <input
+                  id="birth-year"
                   type="range"
                   min={1950}
                   max={2005}
@@ -101,11 +102,12 @@ export function TimeTheftCalculator() {
 
               {/* Country */}
               <div>
-                <label className="mb-2 block text-sm text-[#1b1b1b]/60">
+                <label htmlFor="country-select" className="mb-2 block text-sm text-[#1b1b1b]/60">
                   {t("country")}
                 </label>
                 <div className="relative">
                   <select
+                    id="country-select"
                     value={country}
                     onChange={(e) => setCountry(e.target.value)}
                     className="w-full appearance-none rounded-xl border border-[#D0D0D0] bg-white px-4 py-3 pr-10 text-sm text-[#1b1b1b] outline-none transition-colors focus:border-[#FF6B00]/50"
@@ -122,13 +124,14 @@ export function TimeTheftCalculator() {
 
               {/* Monthly Income */}
               <div>
-                <label className="mb-2 flex items-center justify-between text-sm text-[#1b1b1b]/60">
+                <label htmlFor="monthly-income" className="mb-2 flex items-center justify-between text-sm text-[#1b1b1b]/60">
                   <span>{t("monthlyIncome")} ({countryInfo.currency})</span>
                   <span className="font-mono text-[#FF6B00]">
                     {income.toLocaleString()}
                   </span>
                 </label>
                 <input
+                  id="monthly-income"
                   type="range"
                   min={500}
                   max={20000}
@@ -152,14 +155,14 @@ export function TimeTheftCalculator() {
 
               <div className="flex items-start gap-2 rounded-xl border border-[#D0D0D0]/50 bg-[#f8f8f8] p-3">
                 <Info className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[#1b1b1b]/30" />
-                <p className="text-xs leading-relaxed text-[#1b1b1b]/40">
+                <p className="text-xs leading-relaxed text-[#1b1b1b]/60">
                   {t("disclaimer")}
                 </p>
               </div>
 
               <Link
                 href="/methodology/time-theft"
-                className="flex items-center justify-center gap-2 rounded-full border border-[#D0D0D0]/50 px-5 py-2.5 text-xs text-[#1b1b1b]/50 transition-all hover:border-[#D0D0D0] hover:text-[#1b1b1b]/70"
+                className="flex items-center justify-center gap-2 rounded-full border border-[#D0D0D0]/50 px-5 py-2.5 text-xs text-[#1b1b1b]/60 transition-all hover:border-[#D0D0D0] hover:text-[#1b1b1b]/70"
               >
                 <Code2 className="h-3.5 w-3.5" />
                 {t("methodology")}
@@ -182,7 +185,7 @@ export function TimeTheftCalculator() {
                   <div className="rounded-2xl border border-[#D0D0D0]/50 bg-white p-5">
                     <div className="mb-2 flex items-center gap-2">
                       <TrendingDown className="h-4 w-4 text-[#ef4444]" />
-                      <span className="text-xs text-[#1b1b1b]/40">
+                      <span className="text-xs text-[#1b1b1b]/60">
                         {t("purchasingPowerLost")}
                       </span>
                     </div>
@@ -197,7 +200,7 @@ export function TimeTheftCalculator() {
                   <div className="rounded-2xl border border-[#D0D0D0]/50 bg-white p-5">
                     <div className="mb-2 flex items-center gap-2">
                       <Clock className="h-4 w-4 text-[#FF6B00]" />
-                      <span className="text-xs text-[#1b1b1b]/40">
+                      <span className="text-xs text-[#1b1b1b]/60">
                         {t("totalValueLost")}
                       </span>
                     </div>
@@ -212,7 +215,7 @@ export function TimeTheftCalculator() {
                   <div className="rounded-2xl border border-[#D0D0D0]/50 bg-white p-5">
                     <div className="mb-2 flex items-center gap-2">
                       <Shield className="h-4 w-4 text-[#297FF3]" />
-                      <span className="text-xs text-[#1b1b1b]/40">
+                      <span className="text-xs text-[#1b1b1b]/60">
                         {t("uvdWouldPreserve")}
                       </span>
                     </div>
@@ -227,10 +230,10 @@ export function TimeTheftCalculator() {
 
                 {/* Chart */}
                 <div className="rounded-2xl border border-[#D0D0D0]/50 bg-white p-6">
-                  <h4 className="mb-1 text-sm font-semibold text-[#1b1b1b]">
+                  <h3 className="mb-1 text-sm font-semibold text-[#1b1b1b]">
                     {t("chartTitle")}
-                  </h4>
-                  <p className="mb-6 text-xs text-[#1b1b1b]/40">
+                  </h3>
+                  <p className="mb-6 text-xs text-[#1b1b1b]/60">
                     {t("chartSubtitle")}
                   </p>
                   <div className="h-[300px]">
@@ -328,7 +331,7 @@ export function TimeTheftCalculator() {
                   <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#f8f8f8]">
                     <Clock className="h-7 w-7 text-[#1b1b1b]/20" />
                   </div>
-                  <p className="text-sm text-[#1b1b1b]/40">
+                  <p className="text-sm text-[#1b1b1b]/60">
                     {t("emptyLine1")}
                   </p>
                   <p className="text-sm font-medium text-[#1b1b1b]/60">

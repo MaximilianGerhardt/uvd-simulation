@@ -246,7 +246,7 @@ export function BasketBuilder() {
                             2020: {entry.asset.example2020}
                           </span>
                           <span className="text-xs text-[#1b1b1b]/30">→</span>
-                          <span className="text-xs font-medium text-[#1b1b1b]/50">
+                          <span className="text-xs font-medium text-[#1b1b1b]/60">
                             2025: {entry.asset.example2025}
                           </span>
                         </div>
@@ -254,6 +254,7 @@ export function BasketBuilder() {
                       <div className="flex items-center gap-3 shrink-0">
                         <div className="flex items-center gap-1.5">
                           <input
+                            aria-label={`Weight for ${entry.asset.name}`}
                             type="range"
                             min={1}
                             max={60}
@@ -269,6 +270,7 @@ export function BasketBuilder() {
                         </div>
                         <button
                           onClick={() => removeFromBasket(entry.asset.id)}
+                          aria-label={`Remove ${entry.asset.name}`}
                           className="rounded-full p-1 text-[#D0D0D0] hover:text-[#ef4444] transition-colors"
                         >
                           <X className="h-4 w-4" />
@@ -285,7 +287,7 @@ export function BasketBuilder() {
                   {/* Weight Balance Bar */}
                   <div className="rounded-2xl border border-[#D0D0D0]/50 bg-[#f8f8f8] p-5">
                     <div className="mb-3 flex items-center justify-between">
-                      <span className="text-xs font-medium text-[#1b1b1b]/40">Basket Composition</span>
+                      <span className="text-xs font-medium text-[#1b1b1b]/60">Basket Composition</span>
                       <span className="font-mono text-xs text-[#1b1b1b]/30">
                         {totalWeight}% allocated
                       </span>
@@ -308,7 +310,7 @@ export function BasketBuilder() {
                       {basket.map((entry) => (
                         <div key={entry.asset.id} className="flex items-center gap-1.5">
                           <div className="h-2 w-2 rounded-full" style={{ backgroundColor: entry.asset.color }} />
-                          <span className="text-xs text-[#1b1b1b]/40">
+                          <span className="text-xs text-[#1b1b1b]/60">
                             {entry.asset.symbol}{" "}
                             {totalWeight > 0 ? Math.round((entry.weight / totalWeight) * 100) : 0}%
                           </span>
@@ -326,7 +328,7 @@ export function BasketBuilder() {
                         ) : (
                           <TrendingUp className="h-4 w-4 text-[#4ade80]" />
                         )}
-                        <span className="text-xs text-[#1b1b1b]/40">Net Inflation</span>
+                        <span className="text-xs text-[#1b1b1b]/60">Net Inflation</span>
                       </div>
                       <div className={`text-xl font-bold ${weightedInflation > 0.02 ? "text-[#ef4444]" : weightedInflation < 0 ? "text-[#4ade80]" : "text-[#FF6B00]"}`}>
                         {weightedInflation > 0 ? "+" : ""}{(weightedInflation * 100).toFixed(1)}%
@@ -337,7 +339,7 @@ export function BasketBuilder() {
                     <div className="rounded-2xl border border-[#D0D0D0]/50 bg-white p-4">
                       <div className="mb-2 flex items-center gap-2">
                         <AlertTriangle className="h-4 w-4 text-[#FF6B00]" />
-                        <span className="text-xs text-[#1b1b1b]/40">Volatility</span>
+                        <span className="text-xs text-[#1b1b1b]/60">Volatility</span>
                       </div>
                       <div className="text-xl font-bold text-[#1b1b1b]">
                         {(weightedVolatility * 100).toFixed(1)}%
@@ -348,7 +350,7 @@ export function BasketBuilder() {
                     <div className="rounded-2xl border border-[#D0D0D0]/50 bg-white p-4">
                       <div className="mb-2 flex items-center gap-2">
                         <Scale className="h-4 w-4 text-[#297FF3]" />
-                        <span className="text-xs text-[#1b1b1b]/40">Diversification</span>
+                        <span className="text-xs text-[#1b1b1b]/60">Diversification</span>
                       </div>
                       <div className="text-xl font-bold text-[#297FF3]">
                         {Math.round(diversificationScore)}
@@ -359,7 +361,7 @@ export function BasketBuilder() {
                     <div className="rounded-2xl border border-[#D0D0D0]/50 bg-white p-4">
                       <div className="mb-2 flex items-center gap-2">
                         <Shield className="h-4 w-4 text-[#4ade80]" />
-                        <span className="text-xs text-[#1b1b1b]/40">Stability Score</span>
+                        <span className="text-xs text-[#1b1b1b]/60">Stability Score</span>
                       </div>
                       <div className={`text-xl font-bold ${stabilityScore > 60 ? "text-[#4ade80]" : stabilityScore > 35 ? "text-[#FF6B00]" : "text-[#ef4444]"}`}>
                         {Math.round(stabilityScore)}
@@ -370,7 +372,7 @@ export function BasketBuilder() {
 
                   {/* Fiat vs Hard Assets Balance */}
                   <div className="rounded-2xl border border-[#D0D0D0]/50 bg-[#f8f8f8] p-5">
-                    <div className="mb-3 text-xs font-medium text-[#1b1b1b]/40">
+                    <div className="mb-3 text-xs font-medium text-[#1b1b1b]/60">
                       Fiat vs. Hard Asset Balance
                     </div>
                     <div className="flex items-center gap-4">

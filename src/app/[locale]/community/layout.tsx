@@ -3,7 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import Script from "next/script";
 
-const BASE_URL = "https://uvd.trading";
+const BASE_URL = "https://www.uvd.trading";
 
 export async function generateMetadata({
   params,

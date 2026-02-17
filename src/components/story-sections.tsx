@@ -149,7 +149,7 @@ export function StoryInstitutional() {
               <p className="mb-2 text-sm font-semibold text-[#1b1b1b]">
                 {t("card1Title")}
               </p>
-              <p className="text-xs leading-relaxed text-[#1b1b1b]/40">
+              <p className="text-xs leading-relaxed text-[#1b1b1b]/60">
                 {t("card1Text")}
               </p>
             </div>
@@ -157,7 +157,7 @@ export function StoryInstitutional() {
               <p className="mb-2 text-sm font-semibold text-[#1b1b1b]">
                 {t("card2Title")}
               </p>
-              <p className="text-xs leading-relaxed text-[#1b1b1b]/40">
+              <p className="text-xs leading-relaxed text-[#1b1b1b]/60">
                 {t("card2Text")}
               </p>
             </div>
@@ -165,7 +165,7 @@ export function StoryInstitutional() {
               <p className="mb-2 text-sm font-semibold text-[#1b1b1b]">
                 {t("card3Title")}
               </p>
-              <p className="text-xs leading-relaxed text-[#1b1b1b]/40">
+              <p className="text-xs leading-relaxed text-[#1b1b1b]/60">
                 {t("card3Text")}
               </p>
             </div>

@@ -11,7 +11,7 @@ import { CookieConsent } from "@/components/cookie-consent";
 import { AIChat } from "@/components/ai-chat";
 import "../globals.css";
 
-const BASE_URL = "https://uvd.trading";
+const BASE_URL = "https://www.uvd.trading";
 
 const inter = Inter({
   variable: "--font-inter",

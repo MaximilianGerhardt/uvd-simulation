@@ -52,7 +52,7 @@ export function BasketVisualizer() {
           <h2 className="mb-4 text-[clamp(2.5rem,5vw,4rem)] font-light tracking-[-0.04em] leading-[1.05] text-[#1b1b1b]">
             {t("title")}<span className="text-[#FF6B00]">{t("titleHighlight")}</span>
           </h2>
-          <p className="mx-auto max-w-2xl text-base text-[#1b1b1b]/50 md:text-lg">
+          <p className="mx-auto max-w-2xl text-base text-[#1b1b1b]/60 md:text-lg">
             {t("subtitle")}
           </p>
         </motion.div>
@@ -66,7 +66,7 @@ export function BasketVisualizer() {
               className={`rounded-full border px-5 py-2.5 text-sm font-medium transition-all ${
                 selectedCountry === code
                   ? "border-[#FF6B00]/40 bg-[#FF6B00]/10 text-[#FF6B00]"
-                  : "border-[#D0D0D0]/50 bg-white text-[#1b1b1b]/40 hover:text-[#1b1b1b]/60 hover:border-[#D0D0D0]"
+                  : "border-[#D0D0D0]/50 bg-white text-[#1b1b1b]/60 hover:text-[#1b1b1b]/60 hover:border-[#D0D0D0]"
               }`}
             >
               {b.country}
@@ -76,8 +76,9 @@ export function BasketVisualizer() {
 
         {/* Year Slider */}
         <div className="mb-8 flex items-center justify-center gap-4">
-          <span className="text-sm text-[#1b1b1b]/40">{t("projection")}</span>
+          <span className="text-sm text-[#1b1b1b]/60">{t("projection")}</span>
           <input
+            aria-label={t("projection")}
             type="range"
             min={5}
             max={40}
@@ -97,10 +98,10 @@ export function BasketVisualizer() {
             transition={{ duration: 0.4 }}
             className="rounded-2xl border border-[#D0D0D0]/50 bg-white p-6"
           >
-            <h4 className="mb-1 text-sm font-semibold text-[#1b1b1b]">
+            <h3 className="mb-1 text-sm font-semibold text-[#1b1b1b]">
               {t("basketLabel")} {basket.country}
-            </h4>
-            <p className="mb-5 text-xs text-[#1b1b1b]/40">
+            </h3>
+            <p className="mb-5 text-xs text-[#1b1b1b]/60">
               {t("monthlyCostIndex")} — {basket.currency}
             </p>
 
@@ -167,21 +168,21 @@ export function BasketVisualizer() {
           {/* Chart */}
           <div className="rounded-2xl border border-[#D0D0D0]/50 bg-white p-6 lg:col-span-2">
             <div className="mb-1 flex items-center justify-between">
-              <h4 className="text-sm font-semibold text-[#1b1b1b]">
+              <h3 className="text-sm font-semibold text-[#1b1b1b]">
                 {t("chartTitle")}
-              </h4>
+              </h3>
               <div className="flex items-center gap-4">
                 <div className="flex items-center gap-1.5">
                   <div className="h-2 w-2 rounded-full bg-[#ef4444]" />
-                  <span className="text-xs text-[#1b1b1b]/40">{basket.currency}</span>
+                  <span className="text-xs text-[#1b1b1b]/60">{basket.currency}</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <div className="h-2 w-2 rounded-full bg-[#297FF3]" />
-                  <span className="text-xs text-[#1b1b1b]/40">UVD</span>
+                  <span className="text-xs text-[#1b1b1b]/60">UVD</span>
                 </div>
               </div>
             </div>
-            <p className="mb-6 text-xs text-[#1b1b1b]/40">
+            <p className="mb-6 text-xs text-[#1b1b1b]/60">
               {t("chartSubtitle")} — {country.name} ({(country.rate * 100).toFixed(1)}% {t("avgInflation")})
             </p>
 
@@ -255,7 +256,7 @@ export function BasketVisualizer() {
         <div className="mt-6 flex justify-center">
           <Link
             href="/methodology/basket"
-            className="inline-flex items-center gap-2 rounded-full border border-[#D0D0D0]/50 px-5 py-2.5 text-xs text-[#1b1b1b]/50 transition-all hover:border-[#D0D0D0] hover:text-[#1b1b1b]/70"
+            className="inline-flex items-center gap-2 rounded-full border border-[#D0D0D0]/50 px-5 py-2.5 text-xs text-[#1b1b1b]/60 transition-all hover:border-[#D0D0D0] hover:text-[#1b1b1b]/70"
           >
             <Code2 className="h-3.5 w-3.5" />
             {t("methodology")}

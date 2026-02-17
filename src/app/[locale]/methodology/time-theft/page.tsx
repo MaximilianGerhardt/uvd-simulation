@@ -6,7 +6,7 @@ import { PageBreadcrumb } from "@/components/structured-data";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { ExternalLink } from "lucide-react";
 
-const BASE_URL = "https://uvd.trading";
+const BASE_URL = "https://www.uvd.trading";
 
 export async function generateMetadata({
   params,

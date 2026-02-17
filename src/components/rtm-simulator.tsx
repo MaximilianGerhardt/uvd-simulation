@@ -54,7 +54,7 @@ export function RTMSimulator() {
           <h2 className="mb-4 text-[clamp(2.5rem,5vw,4rem)] font-light tracking-[-0.04em] leading-[1.05] text-[#1b1b1b]">
             {t("title")}<span className="gradient-text">{t("titleHighlight")}</span>
           </h2>
-          <p className="mx-auto max-w-2xl text-base text-[#1b1b1b]/50 md:text-lg">
+          <p className="mx-auto max-w-2xl text-base text-[#1b1b1b]/60 md:text-lg">
             {t("subtitle")}
           </p>
         </motion.div>
@@ -76,6 +76,7 @@ export function RTMSimulator() {
               {members.toLocaleString()}
             </div>
             <input
+              aria-label={t("members")}
               type="range"
               min={100}
               max={1000000}
@@ -101,6 +102,7 @@ export function RTMSimulator() {
               {growthRate}%
             </div>
             <input
+              aria-label={t("growthRate")}
               type="range"
               min={1}
               max={20}
@@ -126,6 +128,7 @@ export function RTMSimulator() {
               {years}
             </div>
             <input
+              aria-label={t("simPeriod")}
               type="range"
               min={5}
               max={80}
@@ -150,7 +153,7 @@ export function RTMSimulator() {
           className="mb-8 flex items-center justify-center"
         >
           <div className="inline-flex items-center gap-4 rounded-full border border-[#D0D0D0]/50 bg-[#f8f8f8] px-6 py-3">
-            <span className="text-xs text-[#1b1b1b]/40">{t("formulaLabel")}</span>
+            <span className="text-xs text-[#1b1b1b]/60">{t("formulaLabel")}</span>
             <code className="font-mono text-sm text-[#FF6B00]">
               UD(t+1) = UD(t) + c&sup2; &times; (M(t) / N(t+1))
             </code>
@@ -167,10 +170,10 @@ export function RTMSimulator() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="rounded-2xl border border-[#D0D0D0]/50 bg-white p-6"
           >
-            <h4 className="mb-1 text-sm font-semibold text-[#1b1b1b]">
+            <h3 className="mb-1 text-sm font-semibold text-[#1b1b1b]">
               {t("moneySupplyTitle")}
-            </h4>
-            <p className="mb-6 text-xs text-[#1b1b1b]/40">
+            </h3>
+            <p className="mb-6 text-xs text-[#1b1b1b]/60">
               {t("moneySupplyDesc")}
             </p>
             <div className="h-[280px]">
@@ -259,10 +262,10 @@ export function RTMSimulator() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="rounded-2xl border border-[#D0D0D0]/50 bg-white p-6"
           >
-            <h4 className="mb-1 text-sm font-semibold text-[#1b1b1b]">
+            <h3 className="mb-1 text-sm font-semibold text-[#1b1b1b]">
               {t("udPerPersonTitle")}
-            </h4>
-            <p className="mb-6 text-xs text-[#1b1b1b]/40">
+            </h3>
+            <p className="mb-6 text-xs text-[#1b1b1b]/60">
               {t("udPerPersonDesc")}
             </p>
             <div className="h-[280px]">
@@ -347,10 +350,10 @@ export function RTMSimulator() {
           <div className="flex items-start gap-3">
             <Info className="mt-0.5 h-5 w-5 shrink-0 text-[#FF6B00]" />
             <div>
-              <h4 className="mb-2 text-sm font-semibold text-[#1b1b1b]">
+              <h3 className="mb-2 text-sm font-semibold text-[#1b1b1b]">
                 {t("keyInsightTitle")}
-              </h4>
-              <p className="text-sm leading-relaxed text-[#1b1b1b]/50">
+              </h3>
+              <p className="text-sm leading-relaxed text-[#1b1b1b]/60">
                 {t("keyInsightP1")}<span className="text-[#FF6B00]">{t("cantillonEffect")}</span>{t("keyInsightP2")}<span className="font-mono text-[#1b1b1b]">{years} {t("yrs")}</span>{t("keyInsightP3")}<span className="font-mono text-[#FF6B00]">{latestData.cumulativeUdPerPerson.toLocaleString()}</span>{t("keyInsightP4")}<span className="text-[#1b1b1b]">{t("temporalSymmetry")}</span>.
               </p>
             </div>
@@ -360,7 +363,7 @@ export function RTMSimulator() {
         <div className="mt-6 flex justify-center">
           <Link
             href="/methodology/rtm"
-            className="inline-flex items-center gap-2 rounded-full border border-[#D0D0D0]/50 px-5 py-2.5 text-xs text-[#1b1b1b]/50 transition-all hover:border-[#D0D0D0] hover:text-[#1b1b1b]/70"
+            className="inline-flex items-center gap-2 rounded-full border border-[#D0D0D0]/50 px-5 py-2.5 text-xs text-[#1b1b1b]/60 transition-all hover:border-[#D0D0D0] hover:text-[#1b1b1b]/70"
           >
             <Code2 className="h-3.5 w-3.5" />
             {t("methodology")}

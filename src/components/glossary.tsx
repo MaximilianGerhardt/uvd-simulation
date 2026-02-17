@@ -31,15 +31,15 @@ export function Glossary() {
           className="mb-16 text-center"
         >
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#D0D0D0] bg-[#f8f8f8] px-4 py-1.5">
-            <BookOpen className="h-3.5 w-3.5 text-[#1b1b1b]/50" />
-            <span className="text-xs font-medium text-[#1b1b1b]/50">
+            <BookOpen className="h-3.5 w-3.5 text-[#1b1b1b]/60" />
+            <span className="text-xs font-medium text-[#1b1b1b]/60">
               {t("badge")}
             </span>
           </div>
           <h2 className="mb-4 text-[clamp(2.5rem,5vw,4rem)] font-light tracking-[-0.04em] leading-[1.05] text-[#1b1b1b]">
             {t("title")}<span className="gradient-text">{t("titleHighlight")}</span>
           </h2>
-          <p className="mx-auto max-w-2xl text-base text-[#1b1b1b]/50 md:text-lg">
+          <p className="mx-auto max-w-2xl text-base text-[#1b1b1b]/60 md:text-lg">
             {t("subtitle")}
           </p>
         </motion.div>
@@ -89,7 +89,7 @@ export function Glossary() {
                     className="overflow-hidden"
                   >
                     <div className="mx-6 mt-1 rounded-b-xl border-x border-b border-[#D0D0D0]/30 bg-[#f8f8f8] px-6 py-4">
-                      <p className="ps-3 text-sm leading-relaxed text-[#1b1b1b]/50 border-s-2 border-[#FF6B00]/30">
+                      <p className="ps-3 text-sm leading-relaxed text-[#1b1b1b]/60 border-s-2 border-[#FF6B00]/30">
                         {t(`terms.${entry.key}.deepDive`)}
                       </p>
                       {entry.sourceUrl && (
