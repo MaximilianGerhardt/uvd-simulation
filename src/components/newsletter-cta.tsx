@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
 import { Mail, Loader2, AlertCircle, Shield, Inbox } from "lucide-react";
+import { trackEvent } from "@/lib/analytics";
 
 function useNewsletterSubmit() {
   const locale = useLocale();
@@ -24,6 +25,7 @@ function useNewsletterSubmit() {
       if (!res.ok) { setStatus("error"); return; }
       setStatus("success");
       setEmail("");
+      trackEvent({ action: "newsletter_signup", category: "conversion" });
     } catch {
       setStatus("error");
     }

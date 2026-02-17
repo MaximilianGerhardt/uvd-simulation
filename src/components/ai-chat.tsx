@@ -5,6 +5,7 @@ import { useLocale } from "next-intl";
 import { Sparkles, X, Send, AlertTriangle, Loader2 } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import { CHAT_TRANSLATIONS } from "@/lib/knowledge-base";
+import { trackEvent } from "@/lib/analytics";
 
 interface Message {
   role: "user" | "assistant";
@@ -43,6 +44,7 @@ export function AIChat() {
     setMessages(newMessages);
     setInput("");
     setIsLoading(true);
+    trackEvent({ action: "ai_chat_message", category: "engagement", label: trimmed.slice(0, 100) });
 
     try {
       const res = await fetch("/api/chat", {
@@ -145,7 +147,7 @@ export function AIChat() {
     <>
       {/* Floating Button */}
       <button
-        onClick={() => setOpen(true)}
+        onClick={() => { setOpen(true); trackEvent({ action: "ai_chat_open", category: "engagement" }); }}
         className="fixed bottom-6 end-6 z-50 flex items-center gap-2 rounded-full bg-[#FF6B00] px-4 py-3 text-white shadow-lg shadow-[#FF6B00]/25 transition-all duration-200 hover:scale-105 active:scale-95"
         style={{
           transform: open ? "scale(0)" : "scale(1)",
