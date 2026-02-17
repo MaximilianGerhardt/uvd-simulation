@@ -9,7 +9,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { StructuredData } from "@/components/structured-data";
 import { CookieConsent } from "@/components/cookie-consent";
 import { AIChat } from "@/components/ai-chat";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import { AnalyticsProvider } from "@/components/analytics-provider";
 import "../globals.css";
 
 const BASE_URL = "https://www.uvd.trading";
@@ -123,7 +123,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           <AIChat />
           <CookieConsent />
         </NextIntlClientProvider>
-        <GoogleAnalytics gaId="G-5ZLEQ8LZY0" />
+        <AnalyticsProvider />
       </body>
     </html>
   );

@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Cookie, X, ChevronDown, ChevronUp } from "lucide-react";
+import { applyConsent } from "@/lib/analytics";
 
 const CONSENT_KEY = "uvd_cookie_consent";
 const CONSENT_VERSION = "1";
@@ -57,14 +58,17 @@ export function CookieConsent() {
 
   const accept = useCallback(
     (all: boolean) => {
+      const statsConsent = all ? true : statistics;
+      const prefsConsent = all ? true : preferences;
       const consent: ConsentState = {
         necessary: true,
-        preferences: all ? true : preferences,
-        statistics: all ? true : statistics,
+        preferences: prefsConsent,
+        statistics: statsConsent,
         version: CONSENT_VERSION,
         timestamp: new Date().toISOString(),
       };
       storeConsent(consent);
+      applyConsent(statsConsent, prefsConsent);
       setVisible(false);
     },
     [preferences, statistics]
@@ -79,6 +83,7 @@ export function CookieConsent() {
       timestamp: new Date().toISOString(),
     };
     storeConsent(consent);
+    applyConsent(false, false);
     setVisible(false);
   }, []);
 
