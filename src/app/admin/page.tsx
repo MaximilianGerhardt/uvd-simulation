@@ -18,9 +18,16 @@ import {
   MailCheck,
   MailX,
   MailQuestion,
+  HelpCircle,
+  ExternalLink,
+  BookOpen,
+  AlertCircle,
+  CheckCircle,
+  ChevronDown,
+  ChevronRight,
 } from "lucide-react";
 
-type Tab = "overview" | "comments" | "chat" | "newsletter" | "votes";
+type Tab = "overview" | "comments" | "chat" | "newsletter" | "votes" | "faq";
 
 interface StatsData {
   votes: {
@@ -186,6 +193,7 @@ export default function AdminDashboard() {
     { id: "chat", label: "Chat Questions", icon: <Sparkles className="h-4 w-4" /> },
     { id: "newsletter", label: "Newsletter", icon: <Mail className="h-4 w-4" /> },
     { id: "votes", label: "Votes", icon: <Vote className="h-4 w-4" /> },
+    { id: "faq", label: "FAQ Insights", icon: <HelpCircle className="h-4 w-4" /> },
   ];
 
   return (
@@ -261,6 +269,7 @@ export default function AdminDashboard() {
             {tab === "chat" && <ChatTab data={data} />}
             {tab === "newsletter" && <NewsletterTab data={data} />}
             {tab === "votes" && <VotesTab data={data} />}
+            {tab === "faq" && <FaqInsightsTab data={data} />}
           </>
         )}
       </div>
@@ -691,6 +700,375 @@ function VotesTab({ data }: { data: StatsData }) {
           {data.votes.raw.length === 0 && (
             <p className="text-sm text-[#1b1b1b]/30">No votes yet.</p>
           )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ──────────────── FAQ INSIGHTS TAB ──────────────── */
+
+type CoverageStatus = "covered" | "partial" | "uncovered" | "needs_kian";
+
+interface FaqTheme {
+  id: string;
+  label: string;
+  keywords: string[];
+  coverage: CoverageStatus;
+  faqKeys: string[];
+  note: string;
+}
+
+const FAQ_THEMES: FaqTheme[] = [
+  {
+    id: "what_is_uvd",
+    label: "Was ist UVD? / Erkläre...",
+    keywords: ["was ist universe", "what is universe", "was ist uvd", "what is uvd", "erkläre", "explain", "wie funktioniert uvd", "how does uvd"],
+    coverage: "covered",
+    faqKeys: ["whatIsUvd", "howWorks"],
+    note: "Covered in FAQ + Knowledge Base",
+  },
+  {
+    id: "buy_acquire",
+    label: "Kaufen / Erwerben / Wo?",
+    keywords: ["kaufen", "erwerben", "holen", "bekommen", "wo kann", "purchase", "buy", "acquire", "how to get"],
+    coverage: "covered",
+    faqKeys: ["canBuy"],
+    note: "FAQ: canBuy → redirects to uvd.xyz",
+  },
+  {
+    id: "when_launch",
+    label: "Wann Launch / Start?",
+    keywords: ["wann", "launch", "start", "when", "release", "timeline"],
+    coverage: "covered",
+    faqKeys: ["whenLaunch"],
+    note: "FAQ: whenLaunch → redirects to uvd.xyz",
+  },
+  {
+    id: "security_scam",
+    label: "Sicherheit / Scam / Vertrauen",
+    keywords: ["sicher", "security", "safe", "hack", "scam", "betrug", "vertrauen", "trust", "legit", "rugpull"],
+    coverage: "covered",
+    faqKeys: ["isScam", "isLegit", "regulated"],
+    note: "FAQ: isScam, isLegit, regulated",
+  },
+  {
+    id: "kian_founder",
+    label: "Kian Hoss / Gründer / Associates LLC",
+    keywords: ["kian", "gründer", "founder", "associates", "llc", "wer steckt", "wer ist"],
+    coverage: "covered",
+    faqKeys: ["kianHoss", "whoCreated", "whatIsThis"],
+    note: "FAQ: kianHoss, whoCreated, whatIsThis",
+  },
+  {
+    id: "rtm_theory",
+    label: "RTM / Geldtheorie / Laborde",
+    keywords: ["rtm", "relative", "theorie", "laborde", "stéphane", "geldtheorie", "monetary theory"],
+    coverage: "covered",
+    faqKeys: ["rtmExplained"],
+    note: "FAQ: rtmExplained + Knowledge Base",
+  },
+  {
+    id: "cantillon",
+    label: "Cantillon-Effekt",
+    keywords: ["cantillon"],
+    coverage: "covered",
+    faqKeys: ["cantillonWhat"],
+    note: "FAQ: cantillonWhat",
+  },
+  {
+    id: "inflation_protection",
+    label: "Inflation / Schutz / Kaufkraft",
+    keywords: ["inflation", "schutz", "protect", "kaufkraft", "purchasing power", "time theft", "deflation"],
+    coverage: "partial",
+    faqKeys: ["inflationCalc"],
+    note: "FAQ covers calculator, but not 'will UVD protect me from inflation?'",
+  },
+  {
+    id: "decentralization",
+    label: "Dezentral / Blockchain / Validierung",
+    keywords: ["dezentral", "decentral", "blockchain", "proof of", "mining", "validier", "netzwerk", "consensus"],
+    coverage: "partial",
+    faqKeys: ["blockchain"],
+    note: "FAQ: blockchain exists but is vague. WoT in knowledge base.",
+  },
+  {
+    id: "udrp_dividend",
+    label: "UDRP / Dividende / Ausschüttung",
+    keywords: ["udrp", "dividende", "dividend", "ausschüttung", "universal dividend"],
+    coverage: "partial",
+    faqKeys: [],
+    note: "In knowledge base (UD section) but no dedicated FAQ entry",
+  },
+  {
+    id: "uwd_token",
+    label: "UWD / Token / Währung / Coin",
+    keywords: ["uwd", "token", "coin", "währung", "currency", "stablecoin"],
+    coverage: "partial",
+    faqKeys: ["stablecoin"],
+    note: "FAQ: stablecoin. UWD-specific questions not fully covered.",
+  },
+  {
+    id: "wallet_card_app",
+    label: "Wallet / Karte / App",
+    keywords: ["wallet", "karte", "card", "app", "mastercard", "visa"],
+    coverage: "needs_kian",
+    faqKeys: [],
+    note: "⚠️ NEEDS KIAN: We don't have info about wallet/card/app details",
+  },
+  {
+    id: "basket",
+    label: "Sovereign Basket / Warenkorb",
+    keywords: ["basket", "warenkorb", "korb", "busket", "sovereign basket"],
+    coverage: "covered",
+    faqKeys: [],
+    note: "Covered in Knowledge Base (Sovereign Basket section)",
+  },
+  {
+    id: "whitepaper",
+    label: "Whitepaper / Shortpaper",
+    keywords: ["whitepaper", "shortpaper", "paper", "dokument"],
+    coverage: "partial",
+    faqKeys: [],
+    note: "Mentioned in FAQ answers but no dedicated FAQ entry",
+  },
+  {
+    id: "performance_profit",
+    label: "Performance / Rendite / Profit",
+    keywords: ["performance", "rendite", "return", "profit", "gewinn", "investition", "invest", "geld verdienen"],
+    coverage: "needs_kian",
+    faqKeys: [],
+    note: "⚠️ NEEDS KIAN: We cannot make performance/profit claims",
+  },
+  {
+    id: "price_value",
+    label: "Preis / Wert / Umrechnung",
+    keywords: ["preis", "price", "wert", "value", "kostet", "cost", "umwandeln", "convert", "wieviel"],
+    coverage: "needs_kian",
+    faqKeys: [],
+    note: "⚠️ NEEDS KIAN: No pricing info available",
+  },
+  {
+    id: "offtopic",
+    label: "Off-Topic / Spam",
+    keywords: ["rezept", "kuchen", "800 mal", "wie geht", "lass mal", "schwach von dir", "test", "hallo", "hi "],
+    coverage: "covered",
+    faqKeys: [],
+    note: "Irrelevant — AI correctly refuses these",
+  },
+];
+
+const COVERAGE_STYLES: Record<CoverageStatus, { bg: string; text: string; label: string; icon: React.ReactNode }> = {
+  covered: { bg: "bg-green-50 border-green-200", text: "text-green-700", label: "Covered", icon: <CheckCircle className="h-3 w-3" /> },
+  partial: { bg: "bg-yellow-50 border-yellow-200", text: "text-yellow-700", label: "Partial", icon: <AlertTriangle className="h-3 w-3" /> },
+  uncovered: { bg: "bg-red-50 border-red-200", text: "text-red-700", label: "Not Covered", icon: <XCircle className="h-3 w-3" /> },
+  needs_kian: { bg: "bg-purple-50 border-purple-200", text: "text-purple-700", label: "Needs Kian", icon: <AlertCircle className="h-3 w-3" /> },
+};
+
+function classifyQuestion(q: string): string {
+  const lower = q.toLowerCase();
+  for (const theme of FAQ_THEMES) {
+    if (theme.keywords.some((k) => lower.includes(k))) return theme.id;
+  }
+  return "uncategorized";
+}
+
+function FaqInsightsTab({ data }: { data: StatsData }) {
+  const [filter, setFilter] = useState<"all" | "needs_kian" | "partial" | "uncategorized">("all");
+  const [expandedTheme, setExpandedTheme] = useState<string | null>(null);
+
+  const questions = data.chat.items;
+  const clustered = new Map<string, typeof questions>();
+
+  for (const q of questions) {
+    const themeId = classifyQuestion(q.question);
+    if (!clustered.has(themeId)) clustered.set(themeId, []);
+    clustered.get(themeId)!.push(q);
+  }
+
+  // Sort themes by question count descending
+  const sortedThemes = [...FAQ_THEMES].sort(
+    (a, b) => (clustered.get(b.id)?.length || 0) - (clustered.get(a.id)?.length || 0)
+  );
+
+  const uncategorized = clustered.get("uncategorized") || [];
+  const needsKianCount = FAQ_THEMES.filter((t) => t.coverage === "needs_kian").reduce(
+    (acc, t) => acc + (clustered.get(t.id)?.length || 0), 0
+  );
+  const partialCount = FAQ_THEMES.filter((t) => t.coverage === "partial").reduce(
+    (acc, t) => acc + (clustered.get(t.id)?.length || 0), 0
+  );
+
+  const filteredThemes = sortedThemes.filter((t) => {
+    if (filter === "all") return true;
+    if (filter === "needs_kian") return t.coverage === "needs_kian";
+    if (filter === "partial") return t.coverage === "partial";
+    return false;
+  });
+
+  return (
+    <div>
+      {/* Summary Stats */}
+      <div className="mb-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
+        <StatCard label="Total Questions" value={questions.length} icon={<Sparkles className="h-4 w-4" />} color="#297FF3" />
+        <StatCard label="Needs Kian" value={needsKianCount} icon={<AlertCircle className="h-4 w-4" />} color="#8b5cf6" />
+        <StatCard label="Partial Coverage" value={partialCount} icon={<AlertTriangle className="h-4 w-4" />} color="#FF6B00" />
+        <StatCard label="Uncategorized" value={uncategorized.length} icon={<HelpCircle className="h-4 w-4" />} color="#999" />
+      </div>
+
+      {/* Filters */}
+      <div className="mb-6 flex gap-2">
+        {(["all", "needs_kian", "partial", "uncategorized"] as const).map((f) => (
+          <button
+            key={f}
+            onClick={() => setFilter(f)}
+            className={`rounded-full border px-3 py-1.5 text-xs font-medium transition-colors ${
+              filter === f ? "border-[#1b1b1b] bg-[#1b1b1b] text-white" : "border-[#D0D0D0] text-[#1b1b1b]/50 hover:border-[#999]"
+            }`}
+          >
+            {f === "all" ? "All Themes" : f === "needs_kian" ? "⚠️ Needs Kian" : f === "partial" ? "⚡ Partial" : "❓ Uncategorized"}
+          </button>
+        ))}
+      </div>
+
+      {/* Theme Clusters */}
+      <div className="space-y-3">
+        {filter !== "uncategorized" && filteredThemes.map((theme) => {
+          const items = clustered.get(theme.id) || [];
+          if (items.length === 0 && filter !== "all") return null;
+          const isExpanded = expandedTheme === theme.id;
+          const style = COVERAGE_STYLES[theme.coverage];
+
+          return (
+            <div key={theme.id} className="rounded-2xl border border-[#D0D0D0] bg-white overflow-hidden">
+              <button
+                onClick={() => setExpandedTheme(isExpanded ? null : theme.id)}
+                className="flex w-full items-center justify-between px-5 py-4 text-left hover:bg-[#f8f8f8] transition-colors"
+              >
+                <div className="flex items-center gap-3">
+                  <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#f0f0f0] text-sm font-bold text-[#1b1b1b]">
+                    {items.length}
+                  </span>
+                  <div>
+                    <p className="text-sm font-medium text-[#1b1b1b]">{theme.label}</p>
+                    <p className="text-[11px] text-[#1b1b1b]/40">{theme.note}</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[11px] font-medium ${style.bg} ${style.text}`}>
+                    {style.icon}
+                    {style.label}
+                  </span>
+                  {isExpanded ? <ChevronDown className="h-4 w-4 text-[#1b1b1b]/30" /> : <ChevronRight className="h-4 w-4 text-[#1b1b1b]/30" />}
+                </div>
+              </button>
+
+              {isExpanded && items.length > 0 && (
+                <div className="border-t border-[#D0D0D0] px-5 py-3">
+                  <div className="space-y-2 max-h-[400px] overflow-y-auto">
+                    {items.map((q) => (
+                      <div key={q.id} className="flex items-start justify-between gap-2 rounded-lg bg-[#f8f8f8] px-3 py-2">
+                        <p className="text-xs text-[#1b1b1b]/70 break-words flex-1">{q.question}</p>
+                        <div className="flex shrink-0 items-center gap-2">
+                          <LocaleBadge locale={q.locale} />
+                          <span className="text-[10px] text-[#1b1b1b]/30 whitespace-nowrap">{formatDate(q.created_at)}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  {theme.faqKeys.length > 0 && (
+                    <div className="mt-3 flex items-center gap-2 border-t border-[#D0D0D0] pt-3">
+                      <BookOpen className="h-3 w-3 text-[#1b1b1b]/30" />
+                      <span className="text-[11px] text-[#1b1b1b]/40">
+                        FAQ Keys: {theme.faqKeys.join(", ")}
+                      </span>
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+          );
+        })}
+
+        {/* Uncategorized Questions */}
+        {(filter === "all" || filter === "uncategorized") && uncategorized.length > 0 && (
+          <div className="rounded-2xl border border-[#D0D0D0] bg-white overflow-hidden">
+            <button
+              onClick={() => setExpandedTheme(expandedTheme === "uncategorized" ? null : "uncategorized")}
+              className="flex w-full items-center justify-between px-5 py-4 text-left hover:bg-[#f8f8f8] transition-colors"
+            >
+              <div className="flex items-center gap-3">
+                <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#f0f0f0] text-sm font-bold text-[#1b1b1b]">
+                  {uncategorized.length}
+                </span>
+                <div>
+                  <p className="text-sm font-medium text-[#1b1b1b]">Uncategorized / New Topics</p>
+                  <p className="text-[11px] text-[#1b1b1b]/40">Questions that don&apos;t match any known theme — review for new FAQ entries</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="inline-flex items-center gap-1 rounded-full border border-gray-200 bg-gray-50 px-2 py-0.5 text-[11px] font-medium text-gray-600">
+                  <HelpCircle className="h-3 w-3" />
+                  Review
+                </span>
+                {expandedTheme === "uncategorized" ? <ChevronDown className="h-4 w-4 text-[#1b1b1b]/30" /> : <ChevronRight className="h-4 w-4 text-[#1b1b1b]/30" />}
+              </div>
+            </button>
+
+            {expandedTheme === "uncategorized" && (
+              <div className="border-t border-[#D0D0D0] px-5 py-3">
+                <div className="space-y-2 max-h-[400px] overflow-y-auto">
+                  {uncategorized.map((q) => (
+                    <div key={q.id} className="flex items-start justify-between gap-2 rounded-lg bg-[#f8f8f8] px-3 py-2">
+                      <p className="text-xs text-[#1b1b1b]/70 break-words flex-1">{q.question}</p>
+                      <div className="flex shrink-0 items-center gap-2">
+                        <LocaleBadge locale={q.locale} />
+                        <span className="text-[10px] text-[#1b1b1b]/30 whitespace-nowrap">{formatDate(q.created_at)}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+
+      {/* Newsletter FAQ Summary */}
+      <div className="mt-8 rounded-2xl border border-[#FF6B00]/20 bg-[#FF6B00]/5 p-6">
+        <div className="flex items-center gap-2 mb-3">
+          <Mail className="h-4 w-4 text-[#FF6B00]" />
+          <h3 className="text-sm font-semibold text-[#FF6B00]">Weekly FAQ Newsletter — Top Questions</h3>
+        </div>
+        <p className="text-xs text-[#1b1b1b]/50 mb-4">
+          Based on {questions.length} questions from {new Set(questions.map((q) => q.session_hash)).size} unique users.
+          Top themes by volume, suitable for a newsletter digest:
+        </p>
+        <div className="space-y-2">
+          {sortedThemes
+            .filter((t) => t.id !== "offtopic" && (clustered.get(t.id)?.length || 0) > 0)
+            .slice(0, 7)
+            .map((t, i) => {
+              const count = clustered.get(t.id)?.length || 0;
+              const style = COVERAGE_STYLES[t.coverage];
+              return (
+                <div key={t.id} className="flex items-center justify-between rounded-lg bg-white px-4 py-2.5 border border-[#D0D0D0]">
+                  <div className="flex items-center gap-3">
+                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#FF6B00]/10 text-[11px] font-bold text-[#FF6B00]">
+                      {i + 1}
+                    </span>
+                    <span className="text-xs font-medium text-[#1b1b1b]">{t.label}</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="text-[11px] text-[#1b1b1b]/40">{count}× asked</span>
+                    <span className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[10px] font-medium ${style.bg} ${style.text}`}>
+                      {style.icon}
+                      {style.label}
+                    </span>
+                  </div>
+                </div>
+              );
+            })}
         </div>
       </div>
     </div>
