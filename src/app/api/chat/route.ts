@@ -1,6 +1,7 @@
 import { anthropic } from "@ai-sdk/anthropic";
 import { generateText } from "ai";
 import { SYSTEM_PROMPT } from "@/lib/knowledge-base";
+import { getSupabase } from "@/lib/supabase";
 
 export const maxDuration = 30;
 
@@ -48,28 +49,20 @@ function isPromptInjection(text: string): boolean {
 // --- Anonymous Question Logging (fire-and-forget to Supabase) ---
 async function logQuestion(question: string, locale: string, ip: string) {
   try {
-    const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
-    const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-    if (!url || !key) return;
-
+    const supabase = getSupabase();
     const sessionHash = await hashString(ip + new Date().toISOString().slice(0, 10));
 
-    await fetch(`${url}/rest/v1/chat_questions`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        apikey: key,
-        Authorization: `Bearer ${key}`,
-        Prefer: "return=minimal",
-      },
-      body: JSON.stringify({
-        question: question.slice(0, 500),
-        locale,
-        session_hash: sessionHash,
-      }),
+    const { error } = await supabase.from("chat_questions").insert({
+      question: question.slice(0, 500),
+      locale,
+      session_hash: sessionHash,
     });
-  } catch {
-    // Silent fail — logging must never break the chat
+
+    if (error) {
+      console.error("Chat question log failed:", error.message, error.code);
+    }
+  } catch (err) {
+    console.error("Chat question log error:", err instanceof Error ? err.message : err);
   }
 }
 
