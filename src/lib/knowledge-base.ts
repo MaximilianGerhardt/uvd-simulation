@@ -65,8 +65,8 @@ Interactive visualization of Universal Dividend mechanics. Users can adjust memb
 ### Sovereign Basket Index (on this site)
 Compares cost of living in fiat vs. UVD across countries (Germany, US, UK, Nigeria, UAE). Shows how the same basket of goods costs more in fiat over time while remaining stable in UVD. Available at uvd.trading/simulation/basket.
 
-### Kian Hoss
-Kian Hoss has been associated with promoting the Universe Dollar project on social media. This companion site is an independent educational project and is NOT affiliated with, endorsed by, or created by Kian Hoss. For official information, refer to uvd.xyz.
+### Kiyan Sasan
+The project is publicly represented by Kiyan Sasan. This companion site is an independent educational project and is NOT affiliated with, endorsed by, or created by Kiyan Sasan or the official project. For official information, refer to uvd.xyz.
 
 ### About This Website
 uvd.trading is an independent educational companion site operated by Prime Associates LLC (p-a.llc). It was designed and built by Prime Associates as an open-source project. It is NOT the official Universe Dollar website — that is uvd.xyz. The source code is available on GitHub.

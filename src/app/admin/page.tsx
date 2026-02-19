@@ -754,8 +754,8 @@ const FAQ_THEMES: FaqTheme[] = [
   },
   {
     id: "kian_founder",
-    label: "Kian Hoss / Gründer / Associates LLC",
-    keywords: ["kian", "gründer", "founder", "associates", "llc", "wer steckt", "wer ist"],
+    label: "Kiyan Sasan / Gründer / Associates LLC",
+    keywords: ["kian", "kiyan", "sasan", "gründer", "founder", "associates", "llc", "wer steckt", "wer ist"],
     coverage: "covered",
     faqKeys: ["kianHoss", "whoCreated", "whatIsThis"],
     note: "FAQ: kianHoss, whoCreated, whatIsThis",

@@ -275,7 +275,7 @@
     },
     "faq": {
       "title": "FAQ — Universe Dollar Fragen beantwortet",
-      "description": "Häufig gestellte Fragen zu Universe Dollar (UVD). Ist UVD Betrug? Wie funktioniert es? Wer steckt dahinter? Kian Hoss UVD erklärt."
+      "description": "Häufig gestellte Fragen zu Universe Dollar (UVD). Ist UVD Betrug? Wie funktioniert es? Wer steckt dahinter? UVD einfach erklärt."
     },
     "aboutUvd": {
       "title": "Was ist Universe Dollar (UVD)? — Einfach erklärt",
@@ -295,7 +295,7 @@
     },
     "community": {
       "title": "Universe Dollar — Unabhängige Analyse & Community-Diskurs",
-      "description": "Unabhängige Analyse von UVD: Whitepaper-Review, Kian Hoss Hintergrund, technische Risiken, Community-Abstimmung."
+      "description": "Unabhängige Analyse von UVD: Whitepaper-Review, technische Risiken, Community-Abstimmung. Nicht affiliiert."
     }
   },
   "faq": {
@@ -332,8 +332,8 @@
         "a": "Krypto-Protokolle operieren in einer sich schnell entwickelnden regulatorischen Landschaft. Uns sind keine spezifischen regulatorischen Genehmigungen oder Ablehnungen bekannt. Diese Begleitseite bietet keine Rechts- oder Regulierungsberatung. Konsultiere einen qualifizierten Rechtsexperten in deiner Jurisdiktion."
       },
       "kianHoss": {
-        "q": "Was hat Kian Hoss mit UVD zu tun?",
-        "a": "Kian Hoss wird mit der Promotion des Universe Dollar Projekts in sozialen Medien in Verbindung gebracht. Diese Begleitseite ist ein unabhängiges Bildungsprojekt und ist weder mit Kian Hoss verbunden, noch von ihm unterstützt oder erstellt. Für offizielle Informationen beziehe dich auf uvd.xyz."
+        "q": "Wer steckt hinter Universe Dollar?",
+        "a": "Das Projekt wird öffentlich von Kiyan Sasan vertreten. Offizielle Updates findest du auf seinem X-Profil. Diese Begleitseite ist ein unabhängiges Bildungsprojekt und steht in keiner Verbindung zum offiziellen Projekt. Für offizielle Informationen besuche uvd.xyz."
       },
       "howWorks": {
         "q": "Wie funktioniert UVD technisch?",
@@ -398,15 +398,15 @@
     "titleHighlight": "Offener Diskurs",
     "subtitle": "Eine unabhängige, faktenbasierte Analyse des Universe Dollar (UVD) Protokolls. Wir sind nicht mit dem Projekt verbunden. Diese Seite dient der Information, nicht der Beratung.",
     "independenceTitle": "Unabhängigkeitserklärung",
-    "independenceText": "Diese Website (uvd.trading) wird von Prime Associates LLC betrieben und ist nicht mit dem Universe Dollar Projekt, Kian Hoss (Kiarash Hossainpour) oder verbundenen Unternehmen affiliiert, unterstützt oder verbunden. Alle Analysen basieren auf öffentlich zugänglichen Dokumenten (Whitepaper, Shortpaper) und öffentlichen Aussagen. Dies ist keine Finanzberatung.",
+    "independenceText": "Diese Website (uvd.trading) wird von Prime Associates LLC betrieben und ist nicht verbunden mit, unterstützt von oder in Verbindung mit dem Universe Dollar Projekt oder verwandten Einheiten. Alle Analysen basieren auf öffentlich verfügbaren Dokumenten (Whitepaper, Shortpaper) und öffentlichen Aussagen. Dies ist keine Finanzberatung.",
     "whatIsTitle": "Was ist Universe Dollar?",
     "whatIsText": "Universe Dollar (UVD) ist ein vorgeschlagenes Kryptowährungs-Protokoll, beschrieben in einem Whitepaper auf uvd.money. Laut Dokument implementiert es die Relative Theorie des Geldes (RTM) von Stéphane Laborde auf einem Bitcoin-verankerten Zero-Knowledge-Rollup. Das Kernkonzept: Jeder verifizierte Teilnehmer erhält einen gleichen Anteil an neu geschaffenen Währungseinheiten — die Universelle Dividende.",
     "whoTitle": "Wer steckt dahinter?",
-    "whoText": "Das Whitepaper wird mit Kiarash Hossainpour (bekannt als Kian Hoss) assoziiert, einem in Berlin geborenen Crypto-Influencer und Co-Host des \"Hoss & Hopf\" Podcasts. Er hat das Projekt über seinen YouTube-Kanal (@HossCrypto) und Instagram (@cryptobyhoss) beworben. Er beschreibt sich als Investor und Analyst mit über 8 Jahren Erfahrung im Kryptosektor.",
+    "whoText": "Das Projekt wird öffentlich von Kiyan Sasan vertreten. Für offizielle Informationen und Updates folge seinem X-Profil (@KiyanSasan). Diese Begleitseite (uvd.trading) ist ein unabhängiges Bildungsprojekt von Prime Associates LLC und steht in keiner Verbindung zum offiziellen Projekt.",
     "techTitle": "Technische Aussagen",
     "techText": "Laut Whitepaper soll UVD auf einem eigenen Zero-Knowledge-Rollup laufen, das State-Commitments in Bitcoin verankert — nicht auf Ethereum oder Solana. Es würde externe Preisfeeds (Oracles) für die Warenkorb-Bewertung nutzen. Derzeit gibt es keine Live-Implementierung, kein Mainnet und keinen Token. Das Projekt befindet sich in der Konzept-/Whitepaper-Phase.",
     "debateTitle": "Öffentliche Debatte",
-    "debateText": "Das Projekt hat in der deutschen Crypto-Community erhebliche Diskussionen ausgelöst. Im Blocktrainer-Forum gibt es einen aktiven Thread mit dem Titel \"Hoss White Paper (UVD) Universe Dollar. Scam?\", in dem die Community die technische Machbarkeit, Oracle-Abhängigkeiten und das Versprechen des Projekts diskutiert. Die Meinungen reichen von vorsichtigem Interesse bis zu starker Skepsis.",
+    "debateText": "Das Projekt hat erhebliche Diskussionen in der Krypto-Community ausgelöst. In Foren und auf Social Media wird die technische Machbarkeit, Oracle-Abhängigkeiten und die Frage diskutiert, ob das Projekt seine Versprechen hält. Die Meinungen reichen von vorsichtigem Interesse bis starker Skepsis.",
     "keyQuestionsTitle": "Häufig gestellte Fragen",
     "keyQuestions": {
       "q1": "Gibt es ein funktionierendes Produkt oder nur ein Whitepaper?",
