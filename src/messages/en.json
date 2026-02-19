@@ -402,7 +402,7 @@
     "whatIsTitle": "What is Universe Dollar?",
     "whatIsText": "Universe Dollar (UVD) is a proposed cryptocurrency protocol described in a whitepaper published at uvd.money. According to the document, it implements the Relative Theory of Money (RTM) by Stéphane Laborde on a Bitcoin-anchored zero-knowledge rollup. The core concept: every verified participant receives an equal share of newly created currency units — the Universal Dividend.",
     "whoTitle": "Who is behind it?",
-    "whoText": "The project is publicly represented by Kiyan Sasan. For official information and updates, follow his X profile (@KiyanSasan). This companion site (uvd.trading) is an independent educational project by Prime Associates LLC and is not affiliated with the official project.",
+    "whoText": "The project is publicly represented by Kiyan Sasan. For official information and updates, follow his X profile (@kian_sasan). This companion site (uvd.trading) is an independent educational project by Prime Associates LLC and is not affiliated with the official project.",
     "techTitle": "Technical Claims",
     "techText": "According to the whitepaper, UVD would run on a custom zero-knowledge rollup that anchors state commitments to Bitcoin — not on Ethereum or Solana. It would use external price feeds (oracles) for basket valuation. As of now, there is no live implementation, mainnet, or token. The project remains in the conceptual/whitepaper phase.",
     "debateTitle": "Public Debate",
