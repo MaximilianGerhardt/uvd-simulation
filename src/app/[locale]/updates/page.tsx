@@ -49,6 +49,34 @@ export default async function UpdatesPage({ params }: { params: Promise<{ locale
 
           {/* Updates Feed */}
           <div className="space-y-6">
+            {/* Entry: Entropy Network */}
+            <ScrollReveal>
+              <Link
+                href="/updates/entropy-network"
+                className="group block rounded-2xl border border-[#D0D0D0]/50 bg-white p-6 sm:p-8 transition-all hover:border-[#D0D0D0] hover:shadow-md"
+              >
+                <div className="mb-3 flex items-center gap-3">
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-[#FF6B00]/10 px-3 py-1 text-xs font-medium text-[#FF6B00]">
+                    <Clock className="h-3 w-3" />
+                    {t("entry2Date")}
+                  </span>
+                  <span className="rounded-full bg-[#FF6B00] px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-white">
+                    {t("entry2Tag")}
+                  </span>
+                </div>
+                <h2 className="mb-2 text-xl font-semibold text-[#1b1b1b] group-hover:text-[#FF6B00] transition-colors">
+                  {t("entry2Title")}
+                </h2>
+                <p className="mb-4 text-sm leading-relaxed text-[#1b1b1b]/50">
+                  {t("entry2Excerpt")}
+                </p>
+                <span className="inline-flex items-center gap-1.5 text-sm font-medium text-[#FF6B00]">
+                  {t("readMore")}
+                  <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1 rtl:rotate-180" />
+                </span>
+              </Link>
+            </ScrollReveal>
+
             {/* Entry: UWD/UDRP Reveal */}
             <ScrollReveal>
               <Link

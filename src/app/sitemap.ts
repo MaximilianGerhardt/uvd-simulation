@@ -17,6 +17,7 @@ const pages: { path: string; changeFrequency: MetadataRoute.Sitemap[number]["cha
   { path: "/methodology/basket", changeFrequency: "monthly", priority: 0.7, lastModified: "2026-02-10" },
   { path: "/updates", changeFrequency: "weekly", priority: 0.9, lastModified: "2026-02-18" },
   { path: "/updates/uwd-reveal", changeFrequency: "monthly", priority: 0.8, lastModified: "2026-02-10" },
+  { path: "/updates/entropy-network", changeFrequency: "weekly", priority: 0.9, lastModified: "2026-02-20" },
   { path: "/legal", changeFrequency: "yearly", priority: 0.3, lastModified: "2026-01-29" },
   { path: "/privacy", changeFrequency: "yearly", priority: 0.3, lastModified: "2026-01-29" },
 ];

@@ -629,6 +629,10 @@
     "entry1Tag": "Großes Release",
     "entry1Title": "Der Countdown ist vorbei: UWD & UDRP enthüllt",
     "entry1Excerpt": "Der Countdown auf uvd.xyz hat sich um 01:00 Uhr MEZ aufgelöst und zwei grundlegende Komponenten enthüllt: United World Dynamics (UWD) — ein Framework für souveräne Reform — und das United Digital Reserve Protocol (UDRP) — eine Settlement-Infrastruktur für programmierbare CBDCs. Was bedeutet das für UVD?",
+    "entry2Date": "20. Feb 2026",
+    "entry2Tag": "Breaking",
+    "entry2Title": "Entropy Network: Die Revolution des Settlements?",
+    "entry2Excerpt": "Exklusive Insights aus dem durchgesickerten Whitepaper v0.8.1 von Kiyan Sasan. Thermodynamisches Settlement, ein neuer Konsensmechanismus namens \"Proof of Infinity\" und die direkte Verbindung zum Universe Dollar — was steckt hinter dem viralen Hype auf X und Instagram?",
     "readMore": "Vollständige Analyse lesen",
     "externalTitle": "Offizielle Quellen",
     "legalNote": "Diese Seite bietet unabhängige Analysen und Kommentare zu öffentlich verfügbaren Informationen. Sie ist weder mit dem Universe Dollar Projekt verbunden noch von diesem autorisiert. Für verbindliche Informationen beziehen Sie sich ausschließlich auf die oben verlinkten offiziellen Ressourcen."
@@ -732,5 +736,87 @@
     "appCardTitle": "Karte & Ausgaben",
     "appCardText": "Eine Zahlungskarte mit Apple Pay, die reale Ausgaben mit UVD ermöglicht — vom Einkauf bis zum Abo, in Sekunden abgewickelt.",
     "appDisclaimer": "App-UI gezeigt auf uvd.xyz. Produktdetails sind spekulativ basierend auf öffentlich sichtbarem Design. Noch nicht öffentlich verfügbar."
+  },
+  "entropyNetwork": {
+    "metaTitle": "Entropy Network — Die Revolution des Settlements? Exklusive Whitepaper-Leaks",
+    "metaDescription": "Erste Insights aus dem Entropy Network Whitepaper v0.8.1 von Kiyan Sasan. Thermodynamisches Settlement, Proof of Infinity und die Verbindung zu uvd.trading.",
+    "breadcrumb": "Entropy Network",
+    "releaseBadge": "Breaking · 20. Feb 2026",
+    "title": "Entropy Network: Die Revolution des ",
+    "titleHighlight": "Settlements.",
+    "subtitle": "Was steckt wirklich hinter den kryptischen Postings auf X und Instagram? Wir haben die Puzzleteile zusammengefügt. Erfahre hier alles über das Entropy Network, Kiyan Sasan und die Zukunft von uvd.trading.",
+    "introText": "In den letzten Tagen überschlugen sich die Ereignisse in den sozialen Medien. Zwischen Instagram-Stories, Reels und viralen Threads auf X (ehemals Twitter) tauchten immer wieder Screenshots eines Dokuments auf, das die Krypto-Welt im Kern erschüttern könnte: Das Whitepaper zum Entropy Network (v0.8.1). Bei uvd.trading haben wir keine Mühen gescheut und die Fragmente einer tiefgehenden Recherche unterzogen. Hier sind die exklusiven Insights, die wir bisher aus den Leaks von Kiyan Sasan und den öffentlichen Datenbanken extrahieren konnten.",
+    "sourceTitle": "Die Quelle des Hypes",
+    "sourceSubtitle": "Was wir bisher wissen.",
+    "sourceText": "Die Informationen basieren auf einer Analyse von Original-Screenshots des Whitepapers mit dem Titel \"Entropy Network: A thermodynamic base layer for universal settlement\", datiert auf den 19. Februar 2026. Verfasst wurde es von Kiyan Sasan, einer Figur, die bereits durch strategische Domain-Käufe wie ala.xyz (für 50.000 USD im Dezember 2025) und die Entwicklung des uvd.xyz-Ökosystems Aufmerksamkeit erregte.",
+    "dashboardTitle": "Das Dashboard: Ein Blick in die Maschine",
+    "dashboardText": "Eines der spannendsten Bilder aus den Reels zeigt ein aktives Testnet-Dashboard. Die Zahlen sprechen für sich:",
+    "dashboardLive": "Live",
+    "dashboardStats": {
+      "network": {
+        "label": "Netzwerk",
+        "value": "Entropy Testnet (Immutable Base Layer)"
+      },
+      "transactions": {
+        "label": "Transaktionen",
+        "value": "10,2 Mrd. verarbeitete Einheiten"
+      },
+      "tps": {
+        "label": "Performance",
+        "value": "223,5 Tx/sec"
+      },
+      "status": {
+        "label": "Status",
+        "value": "Market Convergence Monitor aktiv"
+      }
+    },
+    "dashboardQuote": "I'll redesign the fabric of reality so your bloodline is forced to operate within the systems built from my legacy...",
+    "pillarsTitle": "Die 3 Säulen des Entropy Networks",
+    "pillarsSubtitle": "Was unterscheidet das Entropy Network von bestehenden Blockchains?",
+    "pillars": {
+      "thermodynamic": {
+        "title": "Thermodynamisches Modell statt Politik",
+        "text": "Settlement wird nicht als Verhandlungssache, sondern als physikalische Konstante behandelt. Volatilität wird als \"Entropie-Signal\" genutzt, um das System über eine mathematische \"Issuance Surface\" stabil zu halten."
+      },
+      "zeroGovernance": {
+        "title": "Zero Governance — Das Ende der Admin-Keys",
+        "text": "Sasan verfolgt einen \"Eisernen Geld\"-Ansatz. Es gibt keine Räte, keine Upgrades per Abstimmung und keine Notfall-Knöpfe. Das Protokoll ist bei Genesis fixiert — Änderungen sind nur durch Hard-Forks und freiwillige Migration der Nutzer möglich."
+      },
+      "proofOfInfinity": {
+        "title": "Proof of Infinity",
+        "text": "Ein völlig neuer Konsensmechanismus, der auf minimalen Rechenaufwand bei maximalem Durchsatz optimiert ist. Ziel ist ein System, das so leichtgewichtig ist, dass es auf Hardware der \"Smartphone-Klasse\" verifiziert werden kann."
+      }
+    },
+    "connectionTitle": "Warum das für uvd.trading entscheidend ist",
+    "connectionText": "Die Verbindung zwischen dem Entropy Network und uvd.trading wird immer deutlicher. In den Dokumenten wird das Universe Dollar (UVD) Projekt als eine Bitcoin-besicherte, korb-indizierte Währung beschrieben, die auf einem Zero-Knowledge-Rollup basiert. Während in Foren wie Blocktrainer bereits heiß darüber diskutiert wird, ob es sich um eine geniale Innovation oder ein gewagtes Experiment handelt, positioniert sich das Entropy Network als der Base Layer, auf dem UVD operieren wird.",
+    "connectionKeyTitle": "Die entscheidenden Verbindungen:",
+    "connectionKeys": {
+      "k1": "UVD als Bitcoin-besicherte, korb-indizierte Währung auf dem Entropy Network",
+      "k2": "Zero-Knowledge-Rollup für maximale Privatsphäre und Skalierbarkeit",
+      "k3": "Wertstabiler \"Inflation Hedge\" mit deutlich weniger Volatilität als Bitcoin",
+      "k4": "Basierend auf Bitcoins Proof-of-Work-Sicherheit als ultimative Settlement-Garantie"
+    },
+    "countdownTitle": "Der finale Countdown",
+    "countdownSubtitle": "In den Stories von Branchen-Insidern ist ein Countdown aufgetaucht, der nichts Geringeres als das Ende einer Ära verspricht.",
+    "countdownGenesis": "08:08:08",
+    "countdownGenesisDesc": "Genesis Calibration — Countdown bis zum offiziellen Testnet-Launch",
+    "countdownHegemony": "06:06:00",
+    "countdownHegemonyDesc": "End of US Dollar Hegemony — Der dramatische zweite Countdown",
+    "countdownQuote": "Die Berechnungen wurden abgeschlossen und jedes Ergebnis wurde kartiert, lange bevor du deinen ersten Zug gemacht hast. Die Realität wird nun das Urteil der Unausweichlichkeit verkünden.",
+    "conclusionTitle": "Fazit: Es wird spannend",
+    "conclusionText": "Wir wissen aktuell noch nicht alles, und viele technische Details des \"Proof of Infinity\" oder der exakten Preisfindungsformel bleiben (noch) im Verborgenen. Doch eines ist klar: Das Entropy Network ist angetreten, um Settlement neu zu definieren. Bleib am Ball! Die Entwicklungen rund um Kiyan Sasan und das Entropy Network bewegen sich mit Lichtgeschwindigkeit. Wir bei uvd.trading halten dich über jeden neuen Leak und jedes Update auf dem Laufenden.",
+    "conclusionTagline": "Law across light. Trade beyond stars.",
+    "sourcesTitle": "Verfolge die Quellen",
+    "sourcesText": "Die Informationen basieren auf öffentlich verfügbaren Leaks und Social-Media-Posts. Für offizielle Ankündigungen folge den direkten Kanälen.",
+    "ctaUvd": "uvd.xyz — Offizielle Seite",
+    "ctaX": "X / Twitter — @uvd99",
+    "relatedTitle": "Weiter entdecken",
+    "relatedUwd": "UWD & UDRP Enthüllung",
+    "relatedUwdDesc": "Das große Bild hinter UVD — United World Dynamics und das Digital Reserve Protocol.",
+    "relatedAbout": "Über UVD",
+    "relatedAboutDesc": "Lerne die Grundlagen von Universe Dollar und seinem ökonomischen Modell.",
+    "relatedRtm": "RTM-Simulation",
+    "relatedRtmDesc": "Starte das Relative Theorie des Geldes Modell und sieh faire Geldschöpfung in Aktion.",
+    "legalNote": "Diese Analyse basiert auf öffentlich verfügbaren Screenshots, Social-Media-Posts und Metadaten, Stand 20. Februar 2026. Sie stellt die unabhängige Interpretation des Autors dar und stellt keine Empfehlung, Finanzberatung oder offizielle Stellungnahme des Entropy Network oder UVD-Projekts dar. Für verbindliche Informationen beziehen Sie sich ausschließlich auf offizielle Quellen."
   }
 }
