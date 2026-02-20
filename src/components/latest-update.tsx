@@ -11,7 +11,7 @@ export function LatestUpdate() {
     <section className="px-6 py-6">
       <div className="mx-auto max-w-7xl">
         <Link
-          href="/updates/entropy-network"
+          href="/entropy-network"
           className="group flex items-center gap-4 rounded-2xl border border-[#FF6B00]/15 bg-gradient-to-r from-[#FF6B00]/5 via-white to-[#297FF3]/5 px-5 py-4 transition-all hover:border-[#FF6B00]/30 hover:shadow-sm sm:px-6"
         >
           <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#FF6B00]/10">

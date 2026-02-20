@@ -118,6 +118,15 @@ export function Footer() {
                 <ExternalLink className="h-3 w-3" />
               </a>
               <a
+                href="https://o.day"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 text-sm text-white/50 hover:text-white transition-colors"
+              >
+                o.day
+                <ExternalLink className="h-3 w-3" />
+              </a>
+              <a
                 href="https://uwd.xyz"
                 target="_blank"
                 rel="noopener noreferrer"

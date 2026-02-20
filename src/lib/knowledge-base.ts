@@ -65,8 +65,17 @@ Interactive visualization of Universal Dividend mechanics. Users can adjust memb
 ### Sovereign Basket Index (on this site)
 Compares cost of living in fiat vs. UVD across countries (Germany, US, UK, Nigeria, UAE). Shows how the same basket of goods costs more in fiat over time while remaining stable in UVD. Available at uvd.trading/simulation/basket.
 
+### Entropy Network
+The Entropy Network is a proposed blockchain protocol described in Whitepaper v0.8.1 by Kiyan Sasan (dated February 19, 2026). It treats settlement as a thermodynamic process rather than a political one. Three key pillars: (1) Thermodynamic Settlement — uses market volatility as an "entropy signal" fed into a mathematical Issuance Surface, (2) Zero Governance — no admin keys, no upgrade votes, protocol fixed at genesis, (3) Proof of Infinity — a new consensus mechanism designed for smartphone-class verification. UVD is designed as a zero-knowledge rollup that anchors to the Entropy Network. A testnet has been observed with 10.2 billion processed units and 223.5 Tx/sec. For more details, visit uvd.trading/entropy-network.
+
+### o.day
+o.day is a domain publicly referenced by Kiyan Sasan alongside uvd.xyz on February 20, 2026. It appears connected to the Entropy Network's testnet launch. A "genesis calibration" countdown was spotted showing 03:06:40 until testnet launch. The exact purpose has not been officially announced. For more details, visit uvd.trading/entropy-network.
+
+### UWD & UDRP
+UWD (United World Dynamics) is a sovereign reform framework — described as "How to Run a Country." It covers six pillars: Money, Infrastructure, Resources, People, Cohesion, and Governance. UDRP (United Digital Reserve Protocol) is a sovereign settlement fabric for programmable CBDCs and a neutral reserve layer between nations. UVD is the first currency product built on this architecture. For more details, visit uvd.trading/uwd.
+
 ### Kiyan Sasan
-The project is publicly represented by Kiyan Sasan. This companion site is an independent educational project and is NOT affiliated with, endorsed by, or created by Kiyan Sasan or the official project. For official information, refer to uvd.xyz.
+The public figure behind the Entropy Network and the broader UVD ecosystem. Known for strategic domain acquisitions (ala.xyz for $50,000, uvd.xyz, o.day) and bold public statements. This companion site is NOT affiliated with Kiyan Sasan or his projects.
 
 ### About This Website
 uvd.trading is an independent educational companion site operated by Prime Associates LLC (p-a.llc). It was designed and built by Prime Associates as an open-source project. It is NOT the official Universe Dollar website — that is uvd.xyz. The source code is available on GitHub.

@@ -296,6 +296,14 @@
     "community": {
       "title": "Universe Dollar — Analyse Indépendante et Discours Communautaire",
       "description": "Analyse indépendante d'UVD : revue du whitepaper, risques techniques, sondage communautaire. Non affilié."
+    },
+    "entropyNetwork": {
+      "title": "Entropy Network — Couche de Règlement Thermodynamique par Kiyan Sasan",
+      "description": "Tout sur Entropy Network : consensus Proof of Infinity, règlement thermodynamique, testnet o.day, Whitepaper v0.8.1 et la connexion avec Universe Dollar."
+    },
+    "uwdPillar": {
+      "title": "UWD & UDRP — United World Dynamics et le Protocole de Réserve Numérique",
+      "description": "Guide complet sur United World Dynamics (UWD), le cadre de réforme souveraine, et UDRP, le protocole de règlement derrière Universe Dollar."
     }
   },
   "faq": {
@@ -616,7 +624,7 @@
   "latestUpdate": {
     "tag": "Urgent",
     "date": "20 fév 2026",
-    "title": "Entropy Network : La révolution du settlement ? Fuites exclusives du whitepaper"
+    "title": "Entropy Network & o.day — Compte à rebours testnet, fuites du whitepaper, tout ce qu'il faut savoir"
   },
   "updates": {
     "metaTitle": "Actualités — Nouvelles de l'écosystème UVD",
@@ -780,7 +788,7 @@
     },
     "countdownTitle": "Le compte à rebours final",
     "countdownSubtitle": "Un compte à rebours est apparu dans les stories d'initiés qui ne promet rien de moins que la fin d'une ère.",
-    "countdownGenesis": "08:08:08",
+    "countdownGenesis": "03:06:40",
     "countdownGenesisDesc": "Genesis Calibration — Compte à rebours jusqu'au lancement officiel du testnet",
     "countdownHegemony": "06:06:00",
     "countdownHegemonyDesc": "Fin de l'hégémonie du dollar américain — Le dramatique second compte à rebours",
@@ -800,5 +808,182 @@
     "relatedRtm": "Simulation RTM",
     "relatedRtmDesc": "Lancez le modèle de la Théorie Relative de la Monnaie et observez la création monétaire équitable en action.",
     "legalNote": "Cette analyse repose sur des captures d'écran, publications sur les réseaux sociaux et métadonnées accessibles publiquement en date du 20 février 2026. Elle représente l'interprétation indépendante de l'auteur et ne constitue ni approbation, ni conseil financier, ni déclaration officielle d'Entropy Network ou du projet UVD."
+  },
+  "entropyPillar": {
+    "metaTitle": "Entropy Network — Couche de Règlement Thermodynamique par Kiyan Sasan",
+    "metaDescription": "Tout sur Entropy Network : Proof of Infinity, règlement thermodynamique, testnet o.day, Whitepaper v0.8.1 et la connexion avec Universe Dollar (UVD).",
+    "breadcrumb": "Entropy Network",
+    "badge": "Guide Complet",
+    "title": "Qu'est-ce que ",
+    "titleHighlight": "l'Entropy Network ?",
+    "subtitle": "Une couche de base thermodynamique pour le règlement universel — conçue pour rendre la gouvernance optionnelle et le règlement une constante physique. Voici tout ce que nous savons.",
+    "overviewTitle": "Aperçu",
+    "overviewText": "L'Entropy Network est un protocole blockchain proposé décrit dans le Whitepaper v0.8.1 par Kiyan Sasan (daté du 19 février 2026). Contrairement aux blockchains conventionnelles qui reposent sur des modèles de gouvernance politique, l'Entropy Network traite le règlement comme un processus thermodynamique — utilisant la volatilité comme 'signal d'entropie' pour maintenir la stabilité à travers une 'Surface d'Émission' mathématique. Le protocole vise à être la couche de base sur laquelle opère Universe Dollar (UVD).",
+    "pillarsTitle": "Les Trois Piliers",
+    "pillarsSubtitle": "Ce qui distingue fondamentalement l'Entropy Network des blockchains existantes.",
+    "pillars": {
+      "thermodynamic": {
+        "title": "Règlement Thermodynamique",
+        "text": "Le règlement n'est pas traité comme une question de négociation mais comme une constante physique. Au lieu de votes de gouvernance sur la politique monétaire, le protocole utilise la volatilité du marché comme 'signal d'entropie' — l'alimentant dans une Surface d'Émission mathématique qui s'ajuste automatiquement.",
+        "detail": "Le whitepaper décrit un modèle où la stabilité des prix émerge des mathématiques du système lui-même, pas d'une gestion active. C'est fondamentalement différent des stablecoins algorithmiques (qui ont échoué, ex. Terra/Luna) car il ne tente pas de s'ancrer à quoi que ce soit — il crée la stabilité par la conception structurelle."
+      },
+      "zeroGovernance": {
+        "title": "Zéro Gouvernance — La Fin des Clés Admin",
+        "text": "L'approche 'Monnaie de Fer' de Kiyan Sasan : pas de conseils, pas de votes de mise à jour, pas de boutons d'urgence, pas de clés admin. Le protocole est figé à la genèse. Les changements ne sont possibles que par des hard forks et une migration volontaire des utilisateurs.",
+        "detail": "C'est la rupture la plus radicale avec les projets crypto existants. Même Bitcoin a des développeurs principaux qui peuvent proposer des changements. L'Entropy Network vise l'immutabilité absolue — un protocole qui ne peut être modifié par personne, jamais."
+      },
+      "proofOfInfinity": {
+        "title": "Proof of Infinity",
+        "text": "Un mécanisme de consensus entièrement nouveau optimisé pour un effort de calcul minimal avec un débit maximal. L'objectif : un système si léger qu'il peut être vérifié sur du matériel de 'classe smartphone'.",
+        "detail": "Bien que les détails techniques soient encore limités, le whitepaper décrit un mécanisme de consensus qui évolue sans augmenter proportionnellement les exigences en ressources. S'il est atteint, cela résoudrait l'un des trilemmes fondamentaux de la blockchain."
+      }
+    },
+    "odayTitle": "o.day — Le Domaine Genèse",
+    "odaySubtitle": "Un nouveau domaine a rejoint l'écosystème.",
+    "odayText": "Le 20 février 2026, Kiyan Sasan a fait référence publiquement à o.day aux côtés de uvd.xyz pour la première fois. Le domaine semble être connecté au lancement du testnet d'Entropy Network — un compte à rebours de 'calibration genèse' a été repéré, affichant 03:06:40 jusqu'au lancement du testnet.",
+    "odayQuote": "no one built uvd.xyz or o.day before me, not because they lacked intelligence, but because they were threatened, pressured, neutralized before they could even start.",
+    "odayCountdownTitle": "Compte à Rebours Testnet",
+    "odayCountdownValue": "03:06:40",
+    "odayCountdownLabel": "Calibration Genèse — jusqu'au lancement du testnet",
+    "whitepaperTitle": "Whitepaper v0.8.1",
+    "whitepaperSubtitle": "Affirmations clés du document fuité.",
+    "whitepaperText": "Le document intitulé 'Entropy Network: A thermodynamic base layer for universal settlement' est daté du 19 février 2026 et rédigé par Kiyan Sasan.",
+    "whitepaperClaims": {
+      "c1": "Le règlement comme processus thermodynamique, pas politique",
+      "c2": "Zéro gouvernance : protocole figé à la genèse, sans clés admin",
+      "c3": "Proof of Infinity : nouveau mécanisme de consensus pour vérification sur smartphone",
+      "c4": "Surface d'Émission : modèle mathématique remplaçant la politique monétaire humaine",
+      "c5": "Sécurisé par Bitcoin via ancrage proof-of-work"
+    },
+    "uvdConnectionTitle": "Connexion avec Universe Dollar",
+    "uvdConnectionText": "L'Entropy Network se positionne comme la couche de base sur laquelle opère UVD. Universe Dollar est décrit comme une monnaie sécurisée par Bitcoin et indexée sur un panier, construite comme un zero-knowledge rollup ancré à l'Entropy Network.",
+    "uvdConnectionPoints": {
+      "p1": "UVD fonctionne comme un zero-knowledge rollup sur l'Entropy Network",
+      "p2": "La sécurité proof-of-work de Bitcoin sert de garantie définitive de règlement",
+      "p3": "Le Panier Souverain assure la stabilité de valeur sans ancrage fiat",
+      "p4": "Proof of Infinity permet la vérification sur matériel grand public"
+    },
+    "dashboardTitle": "Tableau de Bord Testnet",
+    "dashboardText": "Des captures d'écran fuitées d'Instagram Reels montrent un testnet actif avec les statistiques suivantes :",
+    "dashboardLive": "En Direct",
+    "dashboardStats": {
+      "network": { "label": "Réseau", "value": "Entropy Testnet (Couche de Base Immuable)" },
+      "transactions": { "label": "Transactions", "value": "10,2 milliards d'unités traitées" },
+      "tps": { "label": "Performance", "value": "223,5 Tx/sec" },
+      "status": { "label": "Statut", "value": "Moniteur de Convergence de Marché actif" }
+    },
+    "sasanTitle": "Qui est Kiyan Sasan ?",
+    "sasanText": "Kiyan Sasan est la figure publique derrière l'Entropy Network et l'écosystème UVD plus large. Connu pour des acquisitions stratégiques de domaines (ala.xyz pour 50 000 $ en décembre 2025, uvd.xyz, o.day) et des déclarations publiques audacieuses, il se décrit comme un 'milliardaire autodidacte de 26 ans, parti de zéro.'",
+    "sasanDisclaimer": "Ceci est un profil indépendant basé sur des informations accessibles publiquement. Ce site n'est pas affilié à Kiyan Sasan ou à l'un de ses projets.",
+    "timelineTitle": "Chronologie des Révélations",
+    "timeline": {
+      "t1date": "17 fév 2026",
+      "t1event": "Le compte à rebours de uvd.xyz se résout — UWD et UDRP révélés",
+      "t2date": "19 fév 2026",
+      "t2event": "Whitepaper d'Entropy Network v0.8.1 daté — premières captures apparaissent sur les réseaux sociaux",
+      "t3date": "20 fév 2026",
+      "t3event": "Analyse d'Entropy Network publiée — fuites du whitepaper analysées, trois piliers identifiés",
+      "t4date": "20 fév 2026",
+      "t4event": "Domaine o.day révélé — Kiyan Sasan référence o.day aux côtés de uvd.xyz, compte à rebours testnet repéré"
+    },
+    "faqTitle": "Questions Fréquentes",
+    "faq": {
+      "q1": "L'Entropy Network est-il en fonctionnement ?",
+      "a1": "Au 20 février 2026, seul un testnet a été observé. Un compte à rebours de 'calibration genèse' suggère un lancement imminent du testnet, mais aucun mainnet n'existe encore.",
+      "q2": "Qu'est-ce que o.day ?",
+      "a2": "o.day est un domaine référencé par Kiyan Sasan aux côtés de uvd.xyz. Il semble connecté au lancement du testnet d'Entropy Network. L'objectif exact n'a pas été officiellement annoncé.",
+      "q3": "En quoi est-ce différent d'Ethereum ou Solana ?",
+      "a3": "L'approche 'Zéro Gouvernance' d'Entropy Network signifie : pas de mises à jour, pas de votes de conseil, pas de clés admin — le protocole est immuable dès la genèse.",
+      "q4": "UVD est-il construit sur l'Entropy Network ?",
+      "a4": "Selon les documents disponibles, UVD est conçu comme un zero-knowledge rollup ancré à l'Entropy Network, utilisant le proof-of-work de Bitcoin comme garantie définitive de règlement."
+    },
+    "sourcesTitle": "Sources Officielles",
+    "sourcesText": "Toutes les informations sont basées sur des documents et publications sur les réseaux sociaux accessibles publiquement. Vérifiez toujours auprès des sources primaires.",
+    "ctaUvd": "uvd.xyz",
+    "ctaOday": "o.day",
+    "ctaX": "X / Twitter — @uvd99",
+    "ctaWhitepaper": "Whitepaper (IPFS)",
+    "relatedTitle": "Continuez l'Exploration",
+    "relatedUwd": "United World Dynamics",
+    "relatedUwdDesc": "Le cadre macro — UWD et UDRP, le tableau d'ensemble derrière UVD.",
+    "relatedAbout": "À propos d'UVD",
+    "relatedAboutDesc": "Les fondamentaux d'Universe Dollar et de son modèle économique.",
+    "relatedRtm": "Simulation RTM",
+    "relatedRtmDesc": "Observez la création monétaire équitable en action avec le simulateur RTM.",
+    "relatedNews": "Urgent : Fuites du Whitepaper",
+    "relatedNewsDesc": "L'article original avec des aperçus exclusifs du whitepaper fuité.",
+    "legalNote": "Cette page fournit une analyse indépendante basée sur des documents, publications sur les réseaux sociaux et métadonnées accessibles publiquement. Elle ne constitue ni approbation, ni conseil financier, ni déclaration officielle."
+  },
+  "uwdPillar": {
+    "metaTitle": "UWD & UDRP — United World Dynamics et le Protocole de Réserve Numérique",
+    "metaDescription": "Guide complet sur United World Dynamics (UWD), le cadre de réforme souveraine, et UDRP, le protocole de règlement derrière Universe Dollar.",
+    "breadcrumb": "UWD & UDRP",
+    "badge": "Guide Complet",
+    "title": "Qu'est-ce que ",
+    "titleHighlight": "United World Dynamics ?",
+    "subtitle": "Un guide de réforme souveraine et un protocole de réserve numérique — l'architecture complète de l'écosystème derrière Universe Dollar.",
+    "ecosystemTitle": "L'Écosystème à Trois Couches",
+    "ecosystemSubtitle": "UVD n'est pas une monnaie autonome. C'est le premier produit d'une architecture bien plus grande.",
+    "layers": {
+      "macro": { "label": "Cadre Macro", "name": "UWD — United World Dynamics", "text": "Un guide pour la réforme souveraine couvrant six piliers : Monnaie, Infrastructure, Ressources, Personnes, Cohésion et Gouvernance." },
+      "protocol": { "label": "Couche Protocole", "name": "UDRP — United Digital Reserve Protocol", "text": "Un tissu de règlement souverain pour les CBDCs programmables et une couche de réserve neutre entre les nations." },
+      "currency": { "label": "Produit Monétaire", "name": "UVD — Universe Dollar", "text": "Une monnaie stable sécurisée par Bitcoin, indexée sur un panier, à offre fixe. La première application concrète construite sur l'infrastructure UDRP." }
+    },
+    "uwdTitle": "Qu'est-ce que UWD ?",
+    "uwdSubtitle": "\"Comment Diriger un Pays\" — un guide complet pour la réforme souveraine.",
+    "uwdText": "UWD (United World Dynamics) se présente comme un guide complet pour la réforme souveraine. Plutôt que de se concentrer uniquement sur la politique monétaire, il aborde l'architecture complète d'un État fonctionnel.",
+    "pillarsTitle": "Les Six Piliers de UWD",
+    "pillars": {
+      "money": { "title": "Monnaie", "text": "Création monétaire équitable, architecture de réserve et stabilité de valeur pour tous les participants." },
+      "infrastructure": { "title": "Infrastructure", "text": "Systèmes numériques et physiques permettant une société moderne, connectée et résiliente." },
+      "resources": { "title": "Ressources", "text": "Gestion durable des ressources naturelles, de l'énergie et des biens communs environnementaux." },
+      "people": { "title": "Personnes", "text": "Éducation, santé, opportunité — investissement dans le capital humain comme la vraie richesse des nations." },
+      "cohesion": { "title": "Cohésion", "text": "Contrats sociaux, mécanismes de confiance et cadres culturels qui lient les communautés." },
+      "governance": { "title": "Gouvernance", "text": "Structures décisionnelles transparentes, responsables et adaptatives à chaque niveau de la société." }
+    },
+    "udrpTitle": "Qu'est-ce que UDRP ?",
+    "udrpSubtitle": "Un Tissu de Règlement Souverain pour les CBDCs Programmables.",
+    "udrpText": "UDRP (United Digital Reserve Protocol) se situe entre la vision macro de UWD et le produit monétaire concret (UVD), fournissant l'infrastructure technique et institutionnelle où les monnaies numériques peuvent opérer au-delà des frontières.",
+    "udrpFeaturesTitle": "Caractéristiques Clés",
+    "udrpFeatures": {
+      "f1": "Tissu de règlement souverain — conçu pour l'interopérabilité au niveau des États-nations",
+      "f2": "Compatibilité CBDC programmable — une couche où les monnaies numériques des banques centrales interagissent via une infrastructure neutre",
+      "f3": "Couche de réserve neutre — positionnée comme couche de base non partisane et non souveraine pour le règlement international",
+      "f4": "Sécurisé par Bitcoin — exploitant la sécurité proof-of-work de Bitcoin comme garantie définitive"
+    },
+    "uvdContextTitle": "Où UVD S'intègre",
+    "uvdContextText": "Avec cette architecture, Universe Dollar n'est plus seulement un concept monétaire autonome. C'est la première implémentation concrète sur l'infrastructure UDRP.",
+    "analogyTitle": "L'Analogie du Bâtiment",
+    "analogies": {
+      "a1": "UWD est le plan architectural — la vision de ce à quoi ressemble une civilisation bien gérée dans tous les domaines.",
+      "a2": "UDRP est la fondation et la plomberie — l'infrastructure de règlement qui rend possible le transfert de valeur numérique entre nations.",
+      "a3": "UVD est le premier appartement — une monnaie stable sécurisée par Bitcoin et indexée sur un panier que les gens peuvent réellement utiliser."
+    },
+    "faqTitle": "Questions Fréquentes",
+    "faq": {
+      "q1": "UWD est-il une initiative gouvernementale ?",
+      "a1": "Non. UWD se présente comme un cadre théorique — un guide pour la réforme souveraine. Il n'est affilié à aucun gouvernement ni organisation internationale.",
+      "q2": "Qu'est-ce qui différencie UDRP de SWIFT ?",
+      "a2": "SWIFT est un système de messagerie contrôlé par des institutions occidentales. UDRP vise à être une couche de règlement neutre, sécurisée par Bitcoin, où aucune nation n'a le contrôle.",
+      "q3": "UVD est-il un stablecoin ?",
+      "a3": "UVD est décrit comme une 'monnaie stable indexée sur un panier' — non arrimé à une seule monnaie fiat comme USDT, mais indexé sur un panier souverain de biens réels.",
+      "q4": "Où puis-je lire les documents originaux ?",
+      "a4": "Le cadre UWD complet est disponible sur uwd.xyz, et le paper du protocole UDRP sur uwd.xyz/udrp."
+    },
+    "sourcesTitle": "Lire les Sources Originales",
+    "sourcesText": "Les documents complets sont disponibles sur les sites officiels. Cette page fournit une analyse indépendante — vérifiez toujours auprès des sources primaires.",
+    "ctaUwd": "UWD — Document Complet",
+    "ctaUdrp": "UDRP — Paper du Protocole",
+    "ctaUvd": "uvd.xyz — Site Officiel",
+    "relatedTitle": "Continuez l'Exploration",
+    "relatedEntropy": "Entropy Network",
+    "relatedEntropyDesc": "La couche de base thermodynamique — Proof of Infinity, o.day et la révolution du règlement.",
+    "relatedAbout": "À propos d'UVD",
+    "relatedAboutDesc": "Les fondamentaux d'Universe Dollar et de son modèle économique.",
+    "relatedBasket": "Indice du Panier",
+    "relatedBasketDesc": "Explorez le panier souverain de commodités qui stabilise le pouvoir d'achat d'UVD.",
+    "relatedNews": "Révélation UWD & UDRP",
+    "relatedNewsDesc": "L'article original couvrant la résolution du compte à rebours du 17 février.",
+    "legalNote": "Cette page fournit une analyse indépendante basée sur des métadonnées et descriptions accessibles publiquement de uwd.xyz et uwd.xyz/udrp. Elle ne constitue ni approbation, ni conseil financier, ni déclaration officielle."
   }
 }

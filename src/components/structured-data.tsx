@@ -11,6 +11,8 @@ export function StructuredData({ locale = "en" }: { locale?: string }) {
       "https://x.com/uvd99",
       "https://github.com/MaximilianGerhardt/uvd-simulation",
       "https://www.uvd.xyz",
+      "https://o.day",
+      "https://uwd.xyz",
     ],
     parentOrganization: {
       "@type": "Organization",
