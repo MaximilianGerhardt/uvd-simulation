@@ -8,7 +8,9 @@
     "aboutUvd": "حول UVD",
     "officialSite": "uvd.xyz",
     "community": "المجتمع",
-    "updates": "التحديثات"
+    "updates": "التحديثات",
+    "entropyNetwork": "شبكة Entropy",
+    "uwd": "UWD & UDRP"
   },
   "hero": {
     "badge": "رفيق تفاعلي لـ",
@@ -127,6 +129,7 @@
   "footer": {
     "brand": "UVD Simulation",
     "brandDescription": "رفيق تعليمي مستقل يستكشف النموذج الاقتصادي وراء بروتوكول Universe Dollar.",
+    "explore": "استكشف",
     "simulations": "المحاكاة",
     "officialResources": "الموارد الرسمية",
     "shortpaper": "الورقة المختصرة (IPFS)",

@@ -49,13 +49,23 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       authors: ["Prime Associates LLC"],
       tags: ["Entropy Network", "Kiyan Sasan", "UVD", "Universe Dollar", "Proof of Infinity", "Settlement", "Blockchain"],
       url,
-      siteName: "UVD Simulation",
+      siteName: "UVD Trading",
+      modifiedTime: "2026-02-20T21:00:00Z",
+      images: [
+        {
+          url: `${BASE_URL}/og${locale === "en" ? "" : `-${locale}`}.png`,
+          width: 1200,
+          height: 630,
+          alt: t("metaTitle"),
+        },
+      ],
       locale: locale === "de" ? "de_DE" : locale === "ar" ? "ar_AE" : locale === "es" ? "es_ES" : locale === "fr" ? "fr_FR" : "en_US",
     },
     twitter: {
       card: "summary_large_image",
       title: t("metaTitle"),
       description: t("metaDescription"),
+      images: [`${BASE_URL}/og${locale === "en" ? "" : `-${locale}`}.png`],
     },
   };
 }

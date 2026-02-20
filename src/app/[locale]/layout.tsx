@@ -50,7 +50,7 @@ export async function generateMetadata({
     metadataBase: new URL(BASE_URL),
     title: {
       default: t("home.title"),
-      template: `%s — UVD Simulation`,
+      template: `%s — UVD Trading`,
     },
     description: t("home.description"),
     authors: [{ name: "Maximilian Gerhardt", url: BASE_URL }],
@@ -76,7 +76,7 @@ export async function generateMetadata({
       description: t("home.description"),
       type: "website",
       url: canonicalUrl,
-      siteName: "UVD Simulation",
+      siteName: "UVD Trading",
       locale: locale === "de" ? "de_DE" : locale === "ar" ? "ar_AE" : locale === "es" ? "es_ES" : locale === "fr" ? "fr_FR" : "en_US",
       images: [
         {

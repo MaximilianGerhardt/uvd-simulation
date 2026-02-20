@@ -30,7 +30,7 @@ export async function generateMetadata({
       title: t("methodologyTimeTheft.title"),
       description: t("methodologyTimeTheft.description"),
       url,
-      siteName: "UVD Simulation",
+      siteName: "UVD Trading",
       type: "website",
       images: [{ url: `${BASE_URL}/${locale}/og/methodology-time-theft`, width: 1200, height: 630 }],
     },

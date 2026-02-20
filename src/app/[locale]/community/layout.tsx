@@ -27,7 +27,7 @@ export async function generateMetadata({
       title: t("community.title"),
       description: t("community.description"),
       url,
-      siteName: "UVD Simulation",
+      siteName: "UVD Trading",
       locale:
         locale === "de"
           ? "de_DE"

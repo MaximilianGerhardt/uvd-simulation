@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       title: t("aboutUvd.title"),
       description: t("aboutUvd.description"),
       url,
-      siteName: "UVD Simulation",
+      siteName: "UVD Trading",
       locale: locale === "de" ? "de_DE" : locale === "ar" ? "ar_AE" : locale === "es" ? "es_ES" : locale === "fr" ? "fr_FR" : "en_US",
       type: "website",
     },

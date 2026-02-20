@@ -29,7 +29,7 @@ export async function generateMetadata({
       title: t("glossary.title"),
       description: t("glossary.description"),
       url,
-      siteName: "UVD Simulation",
+      siteName: "UVD Trading",
       locale: locale === "de" ? "de_DE" : locale === "ar" ? "ar_AE" : locale === "es" ? "es_ES" : locale === "fr" ? "fr_FR" : "en_US",
       type: "website",
       images: [{ url: `${BASE_URL}/${locale}/og/glossary`, width: 1200, height: 630 }],

@@ -8,7 +8,9 @@
     "aboutUvd": "Sobre UVD",
     "officialSite": "uvd.xyz",
     "community": "Comunidad",
-    "updates": "Novedades"
+    "updates": "Novedades",
+    "entropyNetwork": "Entropy Network",
+    "uwd": "UWD & UDRP"
   },
   "hero": {
     "badge": "Compañero interactivo de",
@@ -127,6 +129,7 @@
   "footer": {
     "brand": "UVD Simulation",
     "brandDescription": "Un compañero educativo independiente que explora el modelo económico detrás del protocolo Universe Dollar.",
+    "explore": "Explorar",
     "simulations": "Simulaciones",
     "officialResources": "Recursos Oficiales",
     "shortpaper": "Shortpaper (IPFS)",

@@ -18,7 +18,7 @@ import {
   BookOpen,
 } from "lucide-react";
 import { SubpageLayout } from "@/components/subpage-layout";
-import { PageBreadcrumb, FAQPageSchema } from "@/components/structured-data";
+import { PageBreadcrumb, FAQPageSchema, ArticleSchema } from "@/components/structured-data";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { GenesisCountdown } from "@/components/genesis-countdown";
 import { Link } from "@/i18n/navigation";
@@ -59,7 +59,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       title: t("metaTitle"),
       description: t("metaDescription"),
       url,
-      siteName: "UVD Simulation",
+      siteName: "UVD Trading",
+      images: [
+        {
+          url: `${BASE_URL}/og${locale === "en" ? "" : `-${locale}`}.png`,
+          width: 1200,
+          height: 630,
+          alt: t("metaTitle"),
+        },
+      ],
       locale: locale === "de" ? "de_DE" : locale === "ar" ? "ar_AE" : locale === "es" ? "es_ES" : locale === "fr" ? "fr_FR" : "en_US",
       type: "article",
       publishedTime: "2026-02-20T00:00:00Z",
@@ -71,6 +79,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       card: "summary_large_image",
       title: t("metaTitle"),
       description: t("metaDescription"),
+      images: [`${BASE_URL}/og${locale === "en" ? "" : `-${locale}`}.png`],
     },
   };
 }
@@ -87,6 +96,15 @@ export default async function EntropyNetworkPillarPage({ params }: { params: Pro
   return (
     <SubpageLayout>
       <PageBreadcrumb items={[{ name: t("breadcrumb"), path: "/entropy-network" }]} />
+      <ArticleSchema
+        headline={t("metaTitle")}
+        description={t("metaDescription")}
+        datePublished="2026-02-20T00:00:00Z"
+        dateModified="2026-02-20T21:00:00Z"
+        locale={locale}
+        path="/entropy-network"
+        keywords={["Entropy Network", "o.day", "Kiyan Sasan", "Proof of Infinity", "Thermodynamic Settlement", "UVD", "Universe Dollar", "Testnet", "Blockchain"]}
+      />
       <FAQPageSchema
         items={FAQ_KEYS.map((key) => ({
           question: t(`faq.${key}`),

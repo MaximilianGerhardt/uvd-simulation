@@ -30,7 +30,7 @@ export async function generateMetadata({
       title: t("methodologyRtm.title"),
       description: t("methodologyRtm.description"),
       url,
-      siteName: "UVD Simulation",
+      siteName: "UVD Trading",
       type: "website",
       images: [{ url: `${BASE_URL}/${locale}/og/methodology-rtm`, width: 1200, height: 630 }],
     },

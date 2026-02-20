@@ -2,7 +2,7 @@ export function StructuredData({ locale = "en" }: { locale?: string }) {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "UVD Simulation",
+    name: "UVD Trading",
     url: "https://www.uvd.trading",
     logo: "https://www.uvd.trading/icon.svg",
     description:
@@ -32,7 +32,7 @@ export function StructuredData({ locale = "en" }: { locale?: string }) {
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "UVD Simulation — Interactive Companion to Universe Dollar",
+    name: "UVD Trading — Interactive Companion to Universe Dollar",
     url: "https://www.uvd.trading",
     description:
       "Run simulations on inflation impact, symmetric money creation, and sovereign basket pricing. Open source, fully transparent methodology.",
@@ -51,7 +51,7 @@ export function StructuredData({ locale = "en" }: { locale?: string }) {
   const softwareSchema = {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    name: "UVD Simulation Terminal",
+    name: "UVD Trading Terminal",
     url: "https://www.uvd.trading",
     applicationCategory: "FinanceApplication",
     operatingSystem: "Web Browser",

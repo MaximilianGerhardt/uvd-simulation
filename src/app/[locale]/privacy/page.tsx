@@ -28,7 +28,7 @@ export async function generateMetadata({
       title: t("privacy.title"),
       description: t("privacy.description"),
       url,
-      siteName: "UVD Simulation",
+      siteName: "UVD Trading",
       type: "website",
       images: [{ url: `${BASE_URL}/${locale}/og/privacy`, width: 1200, height: 630 }],
     },

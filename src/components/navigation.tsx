@@ -11,11 +11,11 @@ export function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const navLinks = [
+    { href: "/entropy-network" as const, label: t("entropyNetwork") },
+    { href: "/uwd" as const, label: t("uwd") },
     { href: "/simulation/time-theft" as const, label: t("timeTheft") },
     { href: "/simulation/rtm" as const, label: t("rtmModel") },
     { href: "/simulation/basket" as const, label: t("basketIndex") },
-    { href: "/glossary" as const, label: t("glossary") },
-    { href: "/community" as const, label: t("community") },
     { href: "/updates" as const, label: t("updates") },
   ];
 

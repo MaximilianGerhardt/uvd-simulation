@@ -30,7 +30,7 @@ export async function generateMetadata({
       title: t("methodologyBasket.title"),
       description: t("methodologyBasket.description"),
       url,
-      siteName: "UVD Simulation",
+      siteName: "UVD Trading",
       type: "website",
       images: [{ url: `${BASE_URL}/${locale}/og/methodology-basket`, width: 1200, height: 630 }],
     },

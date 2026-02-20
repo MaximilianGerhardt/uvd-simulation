@@ -27,12 +27,36 @@ export function Footer() {
             </p>
           </div>
 
-          {/* Simulations */}
+          {/* Explore */}
           <div>
             <span role="heading" aria-level={3} className="mb-4 text-xs font-semibold uppercase tracking-[0.05em] text-white/30">
-              {t("simulations")}
+              {t("explore")}
             </span>
             <div className="space-y-3">
+              <Link
+                href="/entropy-network"
+                className="block text-sm text-white/50 hover:text-white transition-colors"
+              >
+                {useTranslations("nav")("entropyNetwork")}
+              </Link>
+              <Link
+                href="/uwd"
+                className="block text-sm text-white/50 hover:text-white transition-colors"
+              >
+                {useTranslations("nav")("uwd")}
+              </Link>
+              <Link
+                href="/updates"
+                className="block text-sm text-white/50 hover:text-white transition-colors"
+              >
+                {useTranslations("nav")("updates")}
+              </Link>
+              <Link
+                href="/about-uvd"
+                className="block text-sm text-white/50 hover:text-white transition-colors"
+              >
+                {useTranslations("nav")("aboutUvd")}
+              </Link>
               <Link
                 href="/simulation/time-theft"
                 className="block text-sm text-white/50 hover:text-white transition-colors"
@@ -62,18 +86,6 @@ export function Footer() {
                 className="block text-sm text-white/50 hover:text-white transition-colors"
               >
                 {useTranslations("nav")("community")}
-              </Link>
-              <Link
-                href="/updates"
-                className="block text-sm text-white/50 hover:text-white transition-colors"
-              >
-                {useTranslations("nav")("updates")}
-              </Link>
-              <Link
-                href="/about-uvd"
-                className="block text-sm text-white/50 hover:text-white transition-colors"
-              >
-                {useTranslations("nav")("aboutUvd")}
               </Link>
               <Link
                 href="/faq"

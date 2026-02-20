@@ -16,7 +16,7 @@ import {
   Landmark,
 } from "lucide-react";
 import { SubpageLayout } from "@/components/subpage-layout";
-import { PageBreadcrumb, FAQPageSchema } from "@/components/structured-data";
+import { PageBreadcrumb, FAQPageSchema, ArticleSchema } from "@/components/structured-data";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { Link } from "@/i18n/navigation";
 
@@ -57,9 +57,19 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       title: t("metaTitle"),
       description: t("metaDescription"),
       url,
-      siteName: "UVD Simulation",
+      siteName: "UVD Trading",
+      images: [
+        {
+          url: `${BASE_URL}/og${locale === "en" ? "" : `-${locale}`}.png`,
+          width: 1200,
+          height: 630,
+          alt: t("metaTitle"),
+        },
+      ],
       locale: locale === "de" ? "de_DE" : locale === "ar" ? "ar_AE" : locale === "es" ? "es_ES" : locale === "fr" ? "fr_FR" : "en_US",
       type: "article",
+      publishedTime: "2026-02-18T00:00:00Z",
+      modifiedTime: "2026-02-20T21:00:00Z",
       authors: ["Prime Associates LLC"],
       tags: ["UWD", "United World Dynamics", "UDRP", "United Digital Reserve Protocol", "UVD", "Universe Dollar", "Sovereign Reform", "CBDC"],
     },
@@ -67,6 +77,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       card: "summary_large_image",
       title: t("metaTitle"),
       description: t("metaDescription"),
+      images: [`${BASE_URL}/og${locale === "en" ? "" : `-${locale}`}.png`],
     },
   };
 }
@@ -83,6 +94,15 @@ export default async function UWDPillarPage({ params }: { params: Promise<{ loca
   return (
     <SubpageLayout>
       <PageBreadcrumb items={[{ name: t("breadcrumb"), path: "/uwd" }]} />
+      <ArticleSchema
+        headline={t("metaTitle")}
+        description={t("metaDescription")}
+        datePublished="2026-02-18T00:00:00Z"
+        dateModified="2026-02-20T21:00:00Z"
+        locale={locale}
+        path="/uwd"
+        keywords={["UWD", "United World Dynamics", "UDRP", "United Digital Reserve Protocol", "UVD", "Universe Dollar", "Sovereign Reform", "CBDC"]}
+      />
       <FAQPageSchema
         items={FAQ_KEYS.map((key) => ({
           question: t(`faq.${key}`),
