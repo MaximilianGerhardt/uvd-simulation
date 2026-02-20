@@ -332,33 +332,40 @@ export async function POST(request: NextRequest) {
       const locale = sub.locale || "de";
       const { subject, html, plainText, unsubUrl } = getEntropyNetworkEmail(locale, sub.unsubscribe_token);
 
-      try {
-        const { error: emailError } = await resend.emails.send({
-          from: fromEmail,
-          to: sub.email,
-          subject,
-          html,
-          text: plainText,
-          headers: {
-            "List-Unsubscribe": `<${unsubUrl}>`,
-            "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
-          },
-        });
-
-        if (emailError) {
-          console.error(`Error sending to ${sub.email}:`, emailError);
-          errors++;
-        } else {
-          sent++;
+      let success = false;
+      for (let attempt = 0; attempt < 3 && !success; attempt++) {
+        if (attempt > 0) {
+          await new Promise((resolve) => setTimeout(resolve, 2000 * attempt));
         }
-      } catch (err) {
-        console.error(`Exception sending to ${sub.email}:`, err);
-        errors++;
+        try {
+          const { error: emailError } = await resend.emails.send({
+            from: fromEmail,
+            to: sub.email,
+            subject,
+            html,
+            text: plainText,
+            headers: {
+              "List-Unsubscribe": `<${unsubUrl}>`,
+              "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
+            },
+          });
+
+          if (emailError) {
+            console.error(`Error sending to ${sub.email} (attempt ${attempt + 1}):`, emailError);
+            if (attempt === 2) errors++;
+          } else {
+            sent++;
+            success = true;
+          }
+        } catch (err) {
+          console.error(`Exception sending to ${sub.email} (attempt ${attempt + 1}):`, err);
+          if (attempt === 2) errors++;
+        }
       }
 
-      // Rate limit: small delay between sends
+      // Rate limit: 600ms between sends (Resend allows max 2/sec)
       if (subscribers.length > 1) {
-        await new Promise((resolve) => setTimeout(resolve, 200));
+        await new Promise((resolve) => setTimeout(resolve, 600));
       }
     }
 
