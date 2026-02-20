@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { SubpageLayout } from "@/components/subpage-layout";
-import { PageBreadcrumb } from "@/components/structured-data";
+import { PageBreadcrumb, HowToSchema } from "@/components/structured-data";
 import { RTMSimulator } from "@/components/rtm-simulator";
 
 const BASE_URL = "https://www.uvd.trading";
@@ -54,6 +54,16 @@ export default async function RTMPage({ params }: { params: Promise<{ locale: st
   return (
     <SubpageLayout>
       <PageBreadcrumb items={[{ name: "RTM Simulator", path: "/simulation/rtm" }]} />
+      <HowToSchema
+        name="Simulate Symmetric Money Creation with RTM"
+        description="Visualize how the Relative Theory of Money works: see how a Universal Dividend distributes new money equally and how wealth converges over time."
+        steps={[
+          { name: "Set the number of members", text: "Choose how many participants are in the monetary system to observe how the Universal Dividend scales." },
+          { name: "Adjust the growth rate", text: "Set the annual monetary growth rate (c) to see how it affects the Universal Dividend and relative balances." },
+          { name: "Run the simulation", text: "Watch the RTM simulation play out over multiple periods, showing how each member's relative balance converges toward equilibrium." },
+          { name: "Analyze the results", text: "Compare balances across members and time periods to understand spatial and temporal symmetry in money creation." },
+        ]}
+      />
       <RTMSimulator />
     </SubpageLayout>
   );

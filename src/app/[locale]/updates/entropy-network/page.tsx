@@ -29,14 +29,33 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "entropyNetwork" });
+  const BASE_URL = "https://www.uvd.trading";
+  const prefix = locale === routing.defaultLocale ? "" : `/${locale}`;
+  const url = `${BASE_URL}${prefix}/updates/entropy-network`;
+  const alternates: Record<string, string> = {};
+  for (const loc of routing.locales) {
+    const p = loc === routing.defaultLocale ? "" : `/${loc}`;
+    alternates[loc] = `${BASE_URL}${p}/updates/entropy-network`;
+  }
   return {
     title: t("metaTitle"),
     description: t("metaDescription"),
+    alternates: { canonical: url, languages: alternates },
     openGraph: {
+      title: t("metaTitle"),
+      description: t("metaDescription"),
       type: "article",
       publishedTime: "2026-02-20T00:00:00Z",
       authors: ["Prime Associates LLC"],
       tags: ["Entropy Network", "Kiyan Sasan", "UVD", "Universe Dollar", "Proof of Infinity", "Settlement", "Blockchain"],
+      url,
+      siteName: "UVD Simulation",
+      locale: locale === "de" ? "de_DE" : locale === "ar" ? "ar_AE" : locale === "es" ? "es_ES" : locale === "fr" ? "fr_FR" : "en_US",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("metaTitle"),
+      description: t("metaDescription"),
     },
   };
 }

@@ -136,6 +136,10 @@ export function ArticleSchema({
       },
     },
     isAccessibleForFree: true,
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["article h1", "article > div > p:first-of-type"],
+    },
     ...(keywords && keywords.length > 0 && { keywords: keywords.join(", ") }),
   };
 
@@ -144,6 +148,98 @@ export function ArticleSchema({
       type="application/ld+json"
       suppressHydrationWarning
       dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+    />
+  );
+}
+
+export function FAQPageSchema({ items }: { items: { question: string; answer: string }[] }) {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      suppressHydrationWarning
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+    />
+  );
+}
+
+export function GlossarySchema({ terms }: { terms: { name: string; description: string; url?: string }[] }) {
+  const glossarySchema = {
+    "@context": "https://schema.org",
+    "@type": "DefinedTermSet",
+    name: "UVD Glossary",
+    url: BASE_URL + "/glossary",
+    hasDefinedTerm: terms.map((term) => ({
+      "@type": "DefinedTerm",
+      name: term.name,
+      description: term.description,
+      ...(term.url && { url: term.url }),
+    })),
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      suppressHydrationWarning
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(glossarySchema) }}
+    />
+  );
+}
+
+export function ItemListSchema({ name, items }: { name: string; items: { name: string; url: string }[] }) {
+  const listSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name,
+    numberOfItems: items.length,
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      url: item.url,
+    })),
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      suppressHydrationWarning
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(listSchema) }}
+    />
+  );
+}
+
+export function HowToSchema({ name, description, steps }: { name: string; description: string; steps: { name: string; text: string }[] }) {
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name,
+    description,
+    step: steps.map((step, index) => ({
+      "@type": "HowToStep",
+      position: index + 1,
+      name: step.name,
+      text: step.text,
+    })),
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      suppressHydrationWarning
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
     />
   );
 }

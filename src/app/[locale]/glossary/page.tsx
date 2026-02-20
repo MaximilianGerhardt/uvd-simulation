@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { SubpageLayout } from "@/components/subpage-layout";
-import { PageBreadcrumb } from "@/components/structured-data";
+import { PageBreadcrumb, GlossarySchema } from "@/components/structured-data";
 import { Glossary } from "@/components/glossary";
 
 const BASE_URL = "https://www.uvd.trading";
@@ -47,13 +47,22 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
+const GLOSSARY_KEYS = ["inflation", "cantillon", "rtm", "ud", "wot", "basket", "timeEquity", "lazyClaiming"] as const;
+
 export default async function GlossaryPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "glossary" });
 
   return (
     <SubpageLayout>
       <PageBreadcrumb items={[{ name: "Glossary", path: "/glossary" }]} />
+      <GlossarySchema
+        terms={GLOSSARY_KEYS.map((key) => ({
+          name: t(`terms.${key}.term`),
+          description: t(`terms.${key}.definition`),
+        }))}
+      />
       <Glossary />
     </SubpageLayout>
   );

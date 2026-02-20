@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { SubpageLayout } from "@/components/subpage-layout";
-import { PageBreadcrumb } from "@/components/structured-data";
+import { PageBreadcrumb, HowToSchema } from "@/components/structured-data";
 import { BasketVisualizer } from "@/components/basket-visualizer";
 
 const BASE_URL = "https://www.uvd.trading";
@@ -54,6 +54,16 @@ export default async function BasketPage({ params }: { params: Promise<{ locale:
   return (
     <SubpageLayout>
       <PageBreadcrumb items={[{ name: "Sovereign Basket", path: "/simulation/basket" }]} />
+      <HowToSchema
+        name="Compare Cost of Living: Fiat vs UVD"
+        description="Use the Sovereign Basket Visualizer to compare how the cost of essential goods (rent, energy, groceries) changes under fiat inflation versus UVD stability over 20 years."
+        steps={[
+          { name: "Select a country", text: "Choose a country to load its specific cost of living data for housing, energy, food, and transport." },
+          { name: "Review the basket composition", text: "See the standardized Sovereign Basket of essential goods and services used to measure real purchasing power." },
+          { name: "Compare fiat vs UVD", text: "Watch side-by-side how the same basket costs more in fiat money over time due to inflation, while remaining stable when priced in UVD." },
+          { name: "Explore the 20-year projection", text: "Analyze the long-term divergence between fiat-priced and UVD-priced baskets to understand the impact of monetary policy on everyday life." },
+        ]}
+      />
       <BasketVisualizer />
     </SubpageLayout>
   );

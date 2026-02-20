@@ -1,22 +1,46 @@
+import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { Newspaper, Clock, ArrowRight, ExternalLink } from "lucide-react";
 import { SubpageLayout } from "@/components/subpage-layout";
-import { PageBreadcrumb } from "@/components/structured-data";
+import { PageBreadcrumb, ItemListSchema } from "@/components/structured-data";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { Link } from "@/i18n/navigation";
 import { NewsletterSignup } from "@/components/newsletter-signup";
+
+const BASE_URL = "https://www.uvd.trading";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "updates" });
+  const prefix = locale === routing.defaultLocale ? "" : `/${locale}`;
+  const url = `${BASE_URL}${prefix}/updates`;
+  const alternates: Record<string, string> = {};
+  for (const loc of routing.locales) {
+    const p = loc === routing.defaultLocale ? "" : `/${loc}`;
+    alternates[loc] = `${BASE_URL}${p}/updates`;
+  }
   return {
     title: t("metaTitle"),
     description: t("metaDescription"),
+    alternates: { canonical: url, languages: alternates },
+    openGraph: {
+      title: t("metaTitle"),
+      description: t("metaDescription"),
+      url,
+      siteName: "UVD Simulation",
+      locale: locale === "de" ? "de_DE" : locale === "ar" ? "ar_AE" : locale === "es" ? "es_ES" : locale === "fr" ? "fr_FR" : "en_US",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("metaTitle"),
+      description: t("metaDescription"),
+    },
   };
 }
 
@@ -28,6 +52,13 @@ export default async function UpdatesPage({ params }: { params: Promise<{ locale
   return (
     <SubpageLayout backHref="/">
       <PageBreadcrumb items={[{ name: "Updates", path: "/updates" }]} />
+      <ItemListSchema
+        name={t("metaTitle")}
+        items={[
+          { name: t("entry2Title"), url: `${BASE_URL}/updates/entropy-network` },
+          { name: t("entry1Title"), url: `${BASE_URL}/updates/uwd-reveal` },
+        ]}
+      />
       <article className="px-6 py-16 bg-white">
         <div className="mx-auto max-w-3xl">
           {/* Hero */}

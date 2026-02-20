@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { Info, ArrowRight, ExternalLink } from "lucide-react";
@@ -6,12 +7,44 @@ import { PageBreadcrumb } from "@/components/structured-data";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { Link } from "@/i18n/navigation";
 
+const BASE_URL = "https://www.uvd.trading";
+
 const SECTIONS = [
   { titleKey: "whatTitle" as const, textKey: "whatText" as const },
   { titleKey: "howTitle" as const, textKey: "howText" as const },
   { titleKey: "whyTitle" as const, textKey: "whyText" as const },
   { titleKey: "whoTitle" as const, textKey: "whoText" as const },
 ];
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata" });
+  const prefix = locale === routing.defaultLocale ? "" : `/${locale}`;
+  const url = `${BASE_URL}${prefix}/about-uvd`;
+  const alternates: Record<string, string> = {};
+  for (const loc of routing.locales) {
+    const p = loc === routing.defaultLocale ? "" : `/${loc}`;
+    alternates[loc] = `${BASE_URL}${p}/about-uvd`;
+  }
+  return {
+    title: t("aboutUvd.title"),
+    description: t("aboutUvd.description"),
+    alternates: { canonical: url, languages: alternates },
+    openGraph: {
+      title: t("aboutUvd.title"),
+      description: t("aboutUvd.description"),
+      url,
+      siteName: "UVD Simulation",
+      locale: locale === "de" ? "de_DE" : locale === "ar" ? "ar_AE" : locale === "es" ? "es_ES" : locale === "fr" ? "fr_FR" : "en_US",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("aboutUvd.title"),
+      description: t("aboutUvd.description"),
+    },
+  };
+}
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));

@@ -1,8 +1,18 @@
+import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { HelpCircle, ChevronDown, AlertTriangle } from "lucide-react";
 import { SubpageLayout } from "@/components/subpage-layout";
-import { PageBreadcrumb } from "@/components/structured-data";
+import { PageBreadcrumb, FAQPageSchema } from "@/components/structured-data";
+
+const BASE_URL = "https://www.uvd.trading";
+
+const ALL_FAQ_KEYS = [
+  "whatIsUvd", "whoCreated", "kianHoss", "whatIsThis",
+  "isScam", "isLegit", "regulated",
+  "howWorks", "stablecoin", "blockchain", "rtmExplained", "cantillonWhat", "inflationCalc",
+  "canBuy", "whenLaunch",
+] as const;
 
 const FAQ_SECTIONS = [
   {
@@ -23,6 +33,36 @@ const FAQ_SECTIONS = [
   },
 ];
 
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata" });
+  const prefix = locale === routing.defaultLocale ? "" : `/${locale}`;
+  const url = `${BASE_URL}${prefix}/faq`;
+  const alternates: Record<string, string> = {};
+  for (const loc of routing.locales) {
+    const p = loc === routing.defaultLocale ? "" : `/${loc}`;
+    alternates[loc] = `${BASE_URL}${p}/faq`;
+  }
+  return {
+    title: t("faq.title"),
+    description: t("faq.description"),
+    alternates: { canonical: url, languages: alternates },
+    openGraph: {
+      title: t("faq.title"),
+      description: t("faq.description"),
+      url,
+      siteName: "UVD Simulation",
+      locale: locale === "de" ? "de_DE" : locale === "ar" ? "ar_AE" : locale === "es" ? "es_ES" : locale === "fr" ? "fr_FR" : "en_US",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("faq.title"),
+      description: t("faq.description"),
+    },
+  };
+}
+
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
@@ -37,6 +77,12 @@ export default async function FAQPage({ params }: { params: Promise<{ locale: st
   return (
     <SubpageLayout>
       <PageBreadcrumb items={[{ name: "FAQ", path: "/faq" }]} />
+      <FAQPageSchema
+        items={ALL_FAQ_KEYS.map((key) => ({
+          question: t(`items.${key}.q`),
+          answer: t(`items.${key}.a`),
+        }))}
+      />
       <section className="px-6 py-16">
         <div className="mx-auto max-w-4xl">
           <div className="mb-16 text-center">

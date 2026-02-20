@@ -1,12 +1,47 @@
+import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { SubpageLayout } from "@/components/subpage-layout";
-import { PageBreadcrumb } from "@/components/structured-data";
+import { PageBreadcrumb, FAQPageSchema } from "@/components/structured-data";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { CommunityPoll } from "@/components/community-poll";
 import { CommunityComments } from "@/components/community-comments";
 import { Link } from "@/i18n/navigation";
 import { Shield, FileText, Users, Cpu, MessageCircle, HelpCircle, ArrowRight } from "lucide-react";
+
+const BASE_URL = "https://www.uvd.trading";
+
+const COMMUNITY_FAQ_KEYS = ["q1", "q2", "q3", "q4"] as const;
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata" });
+  const prefix = locale === routing.defaultLocale ? "" : `/${locale}`;
+  const url = `${BASE_URL}${prefix}/community`;
+  const alternates: Record<string, string> = {};
+  for (const loc of routing.locales) {
+    const p = loc === routing.defaultLocale ? "" : `/${loc}`;
+    alternates[loc] = `${BASE_URL}${p}/community`;
+  }
+  return {
+    title: t("community.title"),
+    description: t("community.description"),
+    alternates: { canonical: url, languages: alternates },
+    openGraph: {
+      title: t("community.title"),
+      description: t("community.description"),
+      url,
+      siteName: "UVD Simulation",
+      locale: locale === "de" ? "de_DE" : locale === "ar" ? "ar_AE" : locale === "es" ? "es_ES" : locale === "fr" ? "fr_FR" : "en_US",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("community.title"),
+      description: t("community.description"),
+    },
+  };
+}
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -20,6 +55,12 @@ export default async function CommunityPage({ params }: { params: Promise<{ loca
   return (
     <SubpageLayout backHref="/">
       <PageBreadcrumb items={[{ name: "Community", path: "/community" }]} />
+      <FAQPageSchema
+        items={COMMUNITY_FAQ_KEYS.map((key) => ({
+          question: t(`keyQuestions.${key}`),
+          answer: t(`keyQuestions.a${key.slice(1)}`),
+        }))}
+      />
       <article className="px-6 py-16 bg-white">
         <div className="mx-auto max-w-3xl">
           {/* Hero */}
