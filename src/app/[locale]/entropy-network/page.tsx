@@ -20,6 +20,7 @@ import {
 import { SubpageLayout } from "@/components/subpage-layout";
 import { PageBreadcrumb, FAQPageSchema } from "@/components/structured-data";
 import { ScrollReveal } from "@/components/scroll-reveal";
+import { GenesisCountdown } from "@/components/genesis-countdown";
 import { Link } from "@/i18n/navigation";
 
 const BASE_URL = "https://www.uvd.trading";
@@ -194,20 +195,12 @@ export default async function EntropyNetworkPillarPage({ params }: { params: Pro
                 </p>
                 <p className="text-[10px] text-white/20">— Kiyan Sasan, X, Feb 20 2026</p>
               </div>
-              <div className="rounded-2xl border border-[#4ade80]/20 bg-[#4ade80]/5 p-6 text-center">
-                <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-[#4ade80]/10">
-                  <Timer className="h-5 w-5 text-[#4ade80]" />
-                </div>
-                <p className="mb-1 text-xs font-semibold uppercase tracking-[0.05em] text-[#4ade80]/80">
-                  {t("odayCountdownTitle")}
-                </p>
-                <p className="text-3xl font-light tracking-[-0.02em] text-[#1b1b1b] font-mono">
-                  {t("odayCountdownValue")}
-                </p>
-                <p className="mt-1 text-xs text-[#1b1b1b]/40">
-                  {t("odayCountdownLabel")}
-                </p>
-              </div>
+              <GenesisCountdown
+                title={t("odayCountdownTitle")}
+                labelBefore={t("odayCountdownLabel")}
+                labelAfter={t("odayCountdownLabelAfter")}
+                ctaText={t("odayCountdownCta")}
+              />
             </section>
           </ScrollReveal>
 
