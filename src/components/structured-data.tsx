@@ -90,6 +90,64 @@ export function StructuredData({ locale = "en" }: { locale?: string }) {
 
 const BASE_URL = "https://www.uvd.trading";
 
+interface ArticleSchemaProps {
+  headline: string;
+  description: string;
+  datePublished: string;
+  dateModified?: string;
+  locale: string;
+  path: string;
+  keywords?: string[];
+}
+
+export function ArticleSchema({
+  headline,
+  description,
+  datePublished,
+  dateModified,
+  locale,
+  path,
+  keywords,
+}: ArticleSchemaProps) {
+  const url = `${BASE_URL}${locale === "en" ? "" : `/${locale}`}${path}`;
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    headline,
+    description,
+    datePublished,
+    dateModified: dateModified || datePublished,
+    url,
+    inLanguage: locale,
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    author: {
+      "@type": "Organization",
+      name: "UVD Trading",
+      url: BASE_URL,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "UVD Trading",
+      url: BASE_URL,
+      logo: {
+        "@type": "ImageObject",
+        url: `${BASE_URL}/icon.svg`,
+      },
+    },
+    isAccessibleForFree: true,
+    ...(keywords && keywords.length > 0 && { keywords: keywords.join(", ") }),
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      suppressHydrationWarning
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+    />
+  );
+}
+
 export function PageBreadcrumb({ items }: { items: { name: string; path: string }[] }) {
   const breadcrumbSchema = {
     "@context": "https://schema.org",

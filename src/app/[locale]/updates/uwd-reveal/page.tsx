@@ -21,7 +21,7 @@ import {
   BadgeCheck,
 } from "lucide-react";
 import { SubpageLayout } from "@/components/subpage-layout";
-import { PageBreadcrumb } from "@/components/structured-data";
+import { PageBreadcrumb, ArticleSchema } from "@/components/structured-data";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { Link } from "@/i18n/navigation";
 import { NewsletterCTA } from "@/components/newsletter-cta";
@@ -65,6 +65,25 @@ export default async function UWDRevealPage({ params }: { params: Promise<{ loca
         items={[
           { name: "Updates", path: "/updates" },
           { name: t("breadcrumb"), path: "/updates/uwd-reveal" },
+        ]}
+      />
+      <ArticleSchema
+        headline={t("metaTitle")}
+        description={t("metaDescription")}
+        datePublished="2026-02-17T01:00:00Z"
+        locale={locale}
+        path="/updates/uwd-reveal"
+        keywords={[
+          "UWD",
+          "United World Dynamics",
+          "UDRP",
+          "United Digital Reserve Protocol",
+          "UVD",
+          "Universe Dollar",
+          "Sovereign Reform",
+          "CBDC",
+          "Bitcoin",
+          "Digital Reserve",
         ]}
       />
       <article className="px-6 py-16 bg-white">

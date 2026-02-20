@@ -17,7 +17,7 @@ import {
   Timer,
 } from "lucide-react";
 import { SubpageLayout } from "@/components/subpage-layout";
-import { PageBreadcrumb } from "@/components/structured-data";
+import { PageBreadcrumb, ArticleSchema } from "@/components/structured-data";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { Link } from "@/i18n/navigation";
 import { NewsletterCTA } from "@/components/newsletter-cta";
@@ -65,6 +65,27 @@ export default async function EntropyNetworkPage({ params }: { params: Promise<{
         items={[
           { name: "Updates", path: "/updates" },
           { name: t("breadcrumb"), path: "/updates/entropy-network" },
+        ]}
+      />
+      <ArticleSchema
+        headline={t("metaTitle")}
+        description={t("metaDescription")}
+        datePublished="2026-02-20T00:00:00Z"
+        locale={locale}
+        path="/updates/entropy-network"
+        keywords={[
+          "Entropy Network",
+          "Kiyan Sasan",
+          "uvd.trading",
+          "Universe Dollar",
+          "Proof of Infinity",
+          "Thermodynamic Settlement",
+          "Zero Governance",
+          "Blockchain",
+          "Crypto News",
+          "Whitepaper Leak",
+          "ala.xyz",
+          "US Dollar Hegemony",
         ]}
       />
       <article className="px-6 py-16 bg-white">
