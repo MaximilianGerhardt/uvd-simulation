@@ -302,7 +302,7 @@
     },
     "entropyNetwork": {
       "title": "Entropy Network — Capa de Liquidación Termodinámica de Kiyan Sasan",
-      "description": "Todo sobre Entropy Network: consenso Proof of Infinity, liquidación termodinámica, testnet o.day, Whitepaper v0.8.1 y la conexión con Universe Dollar."
+      "description": "Guía educativa independiente sobre Entropy Network: Proof of Infinity, liquidación termodinámica, testnet o.day y Whitepaper v0.8.1 de Kiyan Sasan."
     },
     "uwdPillar": {
       "title": "UWD & UDRP — United World Dynamics y el Protocolo de Reserva Digital",
@@ -643,7 +643,7 @@
     "entry2Date": "20 feb 2026",
     "entry2Tag": "Urgente",
     "entry2Title": "Entropy Network: ¿La revolución del settlement?",
-    "entry2Excerpt": "Revelaciones exclusivas del Whitepaper filtrado v0.8.1 de Kiyan Sasan. Settlement termodinámico, un nuevo mecanismo de consenso llamado \"Proof of Infinity\" y la conexión directa con Universe Dollar — ¿qué hay detrás del hype viral en X e Instagram?",
+    "entry2Excerpt": "Revelaciones exclusivas del Whitepaper filtrado v0.8.1 de Kiyan Sasan. Settlement termodinámico, un nuevo mecanismo de consenso llamado \"Proof of Infinity\" y lo que los documentos afirman sobre Universe Dollar — nuestro análisis independiente del hype viral.",
     "readMore": "Leer análisis completo",
     "externalTitle": "Fuentes oficiales",
     "legalNote": "Esta página proporciona análisis y comentarios independientes sobre información disponible públicamente. No está afiliada ni respaldada por el proyecto Universe Dollar."
@@ -732,12 +732,12 @@
   },
   "entropyNetwork": {
     "metaTitle": "Entropy Network — ¿La revolución del settlement? Filtraciones exclusivas del whitepaper",
-    "metaDescription": "Primeras revelaciones del Whitepaper v0.8.1 de Entropy Network por Kiyan Sasan. Settlement termodinámico, Proof of Infinity y la conexión con uvd.trading.",
+    "metaDescription": "Análisis independiente del Whitepaper v0.8.1 de Entropy Network por Kiyan Sasan. Settlement termodinámico, Proof of Infinity y lo que revelan los documentos filtrados.",
     "breadcrumb": "Entropy Network",
     "releaseBadge": "Urgente · 20 Feb 2026",
     "title": "Entropy Network: La revolución del ",
     "titleHighlight": "Settlement.",
-    "subtitle": "¿Qué se esconde realmente detrás de las publicaciones crípticas en X e Instagram? Hemos unido las piezas del rompecabezas. Descubre todo sobre Entropy Network, Kiyan Sasan y el futuro de uvd.trading.",
+    "subtitle": "¿Qué se esconde realmente detrás de las publicaciones crípticas en X e Instagram? Hemos analizado la información disponible públicamente. Aquí está nuestro análisis independiente de Entropy Network y Kiyan Sasan.",
     "introText": "En los últimos días, los eventos en redes sociales se han sucedido a un ritmo vertiginoso. Entre Stories de Instagram, Reels e hilos virales en X (antes Twitter), aparecieron repetidamente capturas de pantalla de un documento que podría sacudir el mundo cripto hasta sus cimientos: El Whitepaper de Entropy Network (v0.8.1). En uvd.trading, no escatimamos esfuerzos en someter estos fragmentos a una investigación exhaustiva. Aquí están las revelaciones exclusivas que hemos podido extraer de las filtraciones de Kiyan Sasan y las bases de datos públicas.",
     "sourceTitle": "La fuente del hype",
     "sourceSubtitle": "Lo que sabemos hasta ahora.",
@@ -780,9 +780,9 @@
         "text": "Un mecanismo de consenso completamente nuevo optimizado para el mínimo esfuerzo computacional con el máximo rendimiento. El objetivo es un sistema tan ligero que pueda verificarse en hardware de \"clase smartphone\"."
       }
     },
-    "connectionTitle": "Por qué esto importa para uvd.trading",
-    "connectionText": "La conexión entre Entropy Network y uvd.trading se vuelve cada vez más clara. En los documentos, el proyecto Universe Dollar (UVD) se describe como una moneda respaldada por Bitcoin e indexada a una canasta, construida sobre un rollup de conocimiento cero. Mientras foros ya debaten acaloradamente si esto es una innovación brillante o un experimento audaz, Entropy Network se posiciona como la capa base sobre la que operará UVD.",
-    "connectionKeyTitle": "Las conexiones clave:",
+    "connectionTitle": "Lo que el Whitepaper afirma sobre UVD",
+    "connectionText": "Según los documentos filtrados, el proyecto Universe Dollar (UVD) se describe como una moneda respaldada por Bitcoin e indexada a una canasta, construida sobre un rollup de conocimiento cero. Foros ya debaten si esto es una innovación brillante o un experimento audaz. El whitepaper posiciona Entropy Network como la capa base sobre la que operaría UVD.",
+    "connectionKeyTitle": "Afirmaciones clave del whitepaper:",
     "connectionKeys": {
       "k1": "UVD como moneda respaldada por Bitcoin e indexada a canasta en Entropy Network",
       "k2": "Rollup de conocimiento cero para máxima privacidad y escalabilidad",
@@ -814,7 +814,7 @@
   },
   "entropyPillar": {
     "metaTitle": "Entropy Network — Capa de Liquidación Termodinámica de Kiyan Sasan",
-    "metaDescription": "Todo sobre Entropy Network: Proof of Infinity, liquidación termodinámica, testnet o.day, Whitepaper v0.8.1 y la conexión con Universe Dollar (UVD).",
+    "metaDescription": "Guía independiente sobre Entropy Network: Proof of Infinity, liquidación termodinámica, testnet o.day y Whitepaper v0.8.1 de Kiyan Sasan.",
     "breadcrumb": "Entropy Network",
     "badge": "Guía Completa",
     "title": "¿Qué es ",
@@ -860,10 +860,10 @@
       "c4": "Superficie de Emisión: modelo matemático que reemplaza la política monetaria humana",
       "c5": "Asegurado por Bitcoin mediante anclaje proof-of-work"
     },
-    "uvdConnectionTitle": "Conexión con Universe Dollar",
-    "uvdConnectionText": "Entropy Network se posiciona como la capa base sobre la que opera UVD. Universe Dollar se describe como una moneda asegurada por Bitcoin e indexada a una canasta, construida como un zero-knowledge rollup que se ancla a Entropy Network.",
+    "uvdConnectionTitle": "UVD según el Whitepaper",
+    "uvdConnectionText": "Según el whitepaper, Entropy Network está diseñado como la capa base sobre la que operaría UVD. Universe Dollar se describe como una moneda asegurada por Bitcoin e indexada a una canasta, construida como un zero-knowledge rollup anclado a Entropy Network. Si se realiza como se describe, UVD sería la primera aplicación de esta arquitectura propuesta.",
     "uvdConnectionPoints": {
-      "p1": "UVD funciona como un zero-knowledge rollup en Entropy Network",
+      "p1": "UVD descrito como un zero-knowledge rollup en Entropy Network",
       "p2": "La seguridad proof-of-work de Bitcoin sirve como garantía definitiva de liquidación",
       "p3": "La Canasta Soberana proporciona estabilidad de valor sin vinculación fiat",
       "p4": "Proof of Infinity permite la verificación en hardware de consumo"
